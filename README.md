@@ -28,7 +28,7 @@
 |10 | [state와 prop의 차이점은?](#what-is-the-difference-between-state-and-props) |
 |11 | [왜 state를 직접 update하면 안되나?](#why-should-we-not-update-the-state-directly) |
 |12 | [setState()의 argument로 callback 함수를 사용하는 이유는?](#what-is-the-purpose-of-callback-function-as-an-argument-of-setstate)
-|13 | [HTML과 React의 event handling의 차이점은?](#what-is-the-difference-between-html-and-react-event-handling) |
+|13 | [HTML과 React의 event handling의 차이점은?](#HTML과-React의-event-handling의-차이점은) |
 |14 | [How to bind methods or event handlers in JSX callbacks?](#how-to-bind-methods-or-event-handlers-in-jsx-callbacks) |
 |15 | [How to pass a parameter to an event handler or callback?](#how-to-pass-a-parameter-to-an-event-handler-or-callback) |
 |16 | [What are synthetic events in React?](#what-are-synthetic-events-in-react) |
@@ -523,27 +523,27 @@
     setState({ name: 'John' }, () => console.log('The name has updated and component re-rendered'))
     ```
 
-13. ### What is the difference between HTML and React event handling?
+13. ### HTML과 React의 event handling의 차이점은?
 
-    1. In HTML, the event name should be in *lowercase*:
+    1. HTML에서, 이벤트 이름은 *소문자*여야 한다:
 
     ```html
     <button onclick='activateLasers()'>
     ```
 
-    Whereas in React it follows *camelCase* convention:
+    반면에 React에서는 *camelCase* 규칙을 따른다:
 
     ```jsx harmony
     <button onClick={activateLasers}>
     ```
 
-    1. In HTML, you can return `false` to prevent default behavior:
+    1.  HTML에서, 기본 동작 방지를 위해 `false`를 반환할 수 있다:
 
     ```html
     <a href='#' onclick='console.log("The link was clicked."); return false;' />
     ```
 
-    Whereas in React you must call `preventDefault()` explicitly:
+    반면에 React에서는 `preventDefault()`를 명시적으로 호출해야 한다:
 
     ```javascript
     function handleClick(event) {

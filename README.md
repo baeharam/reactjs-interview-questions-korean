@@ -27,7 +27,7 @@
 |9  | [React에서 props는 무엇인가?](#what-are-props-in-react) |
 |10 | [state와 prop의 차이점은?](#what-is-the-difference-between-state-and-props) |
 |11 | [왜 state를 직접 update하면 안되나?](#왜-state를-직접-update하면-안되나) |
-|12 | [setState()의 argument로 callback 함수를 사용하는 이유는?](#what-is-the-purpose-of-callback-function-as-an-argument-of-setstate)
+|12 | [setState()의 argument로 callback 함수를 사용하는 이유는?](#setState()의-argument로-callback-함수를-사용하는-이유는)
 |13 | [HTML과 React의 event handling의 차이점은?](#what-is-the-difference-between-html-and-react-event-handling) |
 |14 | [How to bind methods or event handlers in JSX callbacks?](#how-to-bind-methods-or-event-handlers-in-jsx-callbacks) |
 |15 | [How to pass a parameter to an event handler or callback?](#how-to-pass-a-parameter-to-an-event-handler-or-callback) |
@@ -513,11 +513,11 @@
 
     **Note:** *constructor*에서나 최신 Javascript의 class 선언 구문을 사용해서 state 객체에 직접 할당할 수 있다.
 
-12. ### What is the purpose of callback function as an argument of `setState()`?
+12. ### `setState()`의 argument로 callback 함수를 사용하는 이유는?
 
-    The callback function is invoked when setState finished and the component gets rendered. Since `setState()` is **asynchronous** the callback function is used for any post action.
+    callback 함수는 setState가 끝나고 컴포넌트가 render 되었을 때 작동한다. `setState()`는 **비동기식**이여서 callback 함수는 모든 작업 후 사용된다.
 
-    **Note:** It is recommended to use lifecycle method rather than this callback function.
+    **Note:** 이 callback 함수보다는 lifecycle 메소드를 사용하는 것이 좋다.
 
     ```javascript
     setState({ name: 'John' }, () => console.log('The name has updated and component re-rendered'))

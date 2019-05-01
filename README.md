@@ -26,9 +26,9 @@
 |8  | [React에서 state는 무엇인가?](#what-is-state-in-react) |
 |9  | [React에서 props는 무엇인가?](#what-are-props-in-react) |
 |10 | [state와 prop의 차이점은?](#what-is-the-difference-between-state-and-props) |
-|11 | [왜 state를 직접 update하면 안되나?](#why-should-we-not-update-the-state-directly) |
-|12 | [setState()의 argument로 callback 함수를 사용하는 이유는?](#what-is-the-purpose-of-callback-function-as-an-argument-of-setstate)
-|13 | [HTML과 React의 event handling의 차이점은?](#what-is-the-difference-between-html-and-react-event-handling) |
+|11 | [왜 state를 직접 update하면 안되나?](#왜-state를-직접-update하면-안되나) |
+|12 | [setState()의 argument로 callback 함수를 사용하는 이유는?](#setState()의-argument로-callback-함수를-사용하는-이유는) |
+|13 | [HTML과 React의 event handling의 차이점은?](#HTML과-React의-event-handling의-차이점은) |
 |14 | [How to bind methods or event handlers in JSX callbacks?](#how-to-bind-methods-or-event-handlers-in-jsx-callbacks) |
 |15 | [How to pass a parameter to an event handler or callback?](#how-to-pass-a-parameter-to-an-event-handler-or-callback) |
 |16 | [What are synthetic events in React?](#what-are-synthetic-events-in-react) |
@@ -495,55 +495,55 @@
 
     Both *props* and *state* are plain JavaScript objects. While both of them hold information that influences the output of render, they are different in their functionality with respect to component. Props get passed to the component similar to function parameters whereas state is managed within the component similar to variables declared within a function.
 
-11. ### Why should we not update the state directly?
+11. ### 왜 state를 직접 update하면 안되나?
 
-    If you try to update state directly then it won't re-render the component.
+    혹시라도 state를 직접적으로 업데이트를 하게 되면 컴포넌트는 re-render를 하지 않는다.
 
     ```javascript
     //Wrong
     this.state.message = 'Hello world'
     ```
 
-    Instead use `setState()` method. It schedules an update to a component's state object. When state changes, the component responds by re-rendering.
+    대신에 `setState()` 메소드를 사용한다. 이 메소드는 컴포넌트의 state 객체에 대한 업데이트를 예약한다. state가 바뀌게 되면, 컴포넌트는 re-rendering으로 응답을 한다.
 
     ```javascript
     //Correct
     this.setState({ message: 'Hello World' })
     ```
 
-    **Note:** You can directly assign to the state object either in *constructor* or using latest javascript's class field declaration syntax.
+    **Note:** *constructor*에서나 최신 Javascript의 class 선언 구문을 사용해서 state 객체에 직접 할당할 수 있다.
 
-12. ### What is the purpose of callback function as an argument of `setState()`?
+12. ### `setState()`의 argument로 callback 함수를 사용하는 이유는?
 
-    The callback function is invoked when setState finished and the component gets rendered. Since `setState()` is **asynchronous** the callback function is used for any post action.
+    callback 함수는 setState가 끝나고 컴포넌트가 render 되었을 때 작동한다. `setState()`는 **비동기식**이여서 callback 함수는 모든 작업 후 사용된다.
 
-    **Note:** It is recommended to use lifecycle method rather than this callback function.
+    **Note:** 이 callback 함수보다는 lifecycle 메소드를 사용하는 것이 좋다.
 
     ```javascript
     setState({ name: 'John' }, () => console.log('The name has updated and component re-rendered'))
     ```
 
-13. ### What is the difference between HTML and React event handling?
+13. ### HTML과 React의 event handling의 차이점은?
 
-    1. In HTML, the event name should be in *lowercase*:
+    1. HTML에서, 이벤트 이름은 *소문자*여야 한다:
 
     ```html
     <button onclick='activateLasers()'>
     ```
 
-    Whereas in React it follows *camelCase* convention:
+    반면에 React에서는 *camelCase* 규칙을 따른다:
 
     ```jsx harmony
     <button onClick={activateLasers}>
     ```
 
-    1. In HTML, you can return `false` to prevent default behavior:
+    1.  HTML에서, 기본 동작 방지를 위해 `false`를 반환할 수 있다:
 
     ```html
     <a href='#' onclick='console.log("The link was clicked."); return false;' />
     ```
 
-    Whereas in React you must call `preventDefault()` explicitly:
+    반면에 React에서는 `preventDefault()`를 명시적으로 호출해야 한다:
 
     ```javascript
     function handleClick(event) {

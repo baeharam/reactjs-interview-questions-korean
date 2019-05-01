@@ -26,7 +26,7 @@
 |8  | [React에서 state는 무엇인가?](#what-is-state-in-react) |
 |9  | [React에서 props는 무엇인가?](#what-are-props-in-react) |
 |10 | [state와 prop의 차이점은?](#what-is-the-difference-between-state-and-props) |
-|11 | [왜 state를 직접 update하면 안되나?](#why-should-we-not-update-the-state-directly) |
+|11 | [왜 state를 직접 update하면 안되나?](#왜-state를-직접-update하면-안되나) |
 |12 | [setState()의 argument로 callback 함수를 사용하는 이유는?](#setState()의-argument로-callback-함수를-사용하는-이유는)
 |13 | [HTML과 React의 event handling의 차이점은?](#what-is-the-difference-between-html-and-react-event-handling) |
 |14 | [How to bind methods or event handlers in JSX callbacks?](#how-to-bind-methods-or-event-handlers-in-jsx-callbacks) |
@@ -495,23 +495,23 @@
 
     Both *props* and *state* are plain JavaScript objects. While both of them hold information that influences the output of render, they are different in their functionality with respect to component. Props get passed to the component similar to function parameters whereas state is managed within the component similar to variables declared within a function.
 
-11. ### Why should we not update the state directly?
+11. ### 왜 state를 직접 update하면 안되나?
 
-    If you try to update state directly then it won't re-render the component.
+    혹시라도 state를 직접적으로 업데이트를 하게 되면 컴포넌트는 re-render를 하지 않는다.
 
     ```javascript
     //Wrong
     this.state.message = 'Hello world'
     ```
 
-    Instead use `setState()` method. It schedules an update to a component's state object. When state changes, the component responds by re-rendering.
+    대신에 `setState()` 메소드를 사용한다. 이 메소드는 컴포넌트의 state 객체에 대한 업데이트를 예약한다. state가 바뀌게 되면, 컴포넌트는 re-rendering으로 응답을 한다.
 
     ```javascript
     //Correct
     this.setState({ message: 'Hello World' })
     ```
 
-    **Note:** You can directly assign to the state object either in *constructor* or using latest javascript's class field declaration syntax.
+    **Note:** *constructor*에서나 최신 Javascript의 class 선언 구문을 사용해서 state 객체에 직접 할당할 수 있다.
 
 12. ### `setState()`의 argument로 callback 함수를 사용하는 이유는?
 

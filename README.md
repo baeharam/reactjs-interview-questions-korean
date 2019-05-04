@@ -432,14 +432,14 @@
         }
         ```
 
-6. ### When to use a Class Component over a Function Component?
+6. ### 언제 Function Component 대신에 Class Component를 사용하나?
 
-    If the component needs *state or lifecycle methods* then use class component otherwise use function component.
+    만약, 컴포넌트가 `state나 lifecycle methods`가 필요하다면 class 컴포넌트를 사용하고 아니라면 function 컴포넌트를 사용한다.
+    
+7. ### Pure Components란 무엇인가?
 
-7. ### What are Pure Components?
-
-    *`React.PureComponent`* is exactly the same as *`React.Component`* except that it handles the `shouldComponentUpdate()` method for you. When props or state changes, *PureComponent* will do a shallow comparison on both props and state. *Component* on the other hand won't compare current props and state to next out of the box. Thus, the component will re-render by default whenever `shouldComponentUpdate` is called.
-
+    *`React.PureComponent`* 는 `shouldComponentUpdate()` 메서드를 제어하는 것을 제외하면 *`React.Component`*와 다르지 않다. props나 state가 변경되면 *PureComponent* 는 props와 state 에 대해서 얕은 비교를 수행한다. 반면에 *Component* 는 현재의 props와 state에 대해 비교를 하지 않는다. 따라서 `shouldComponentUpdate`가 호출될 때마다 리렌더링된다.
+    
 8. ### What is state in React?
 
     *State* of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components. Let's create an user component with message state,

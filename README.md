@@ -24,8 +24,8 @@
 |3  | [JSX란 무엇인가?](#JSX란-무엇인가) |
 |4  | [Element와 Component의 차이점은?](#element와-component의-차이점은) |
 |5  | [React에서 components는 어떻게 만드나?](#React에서-components는-어떻게-만드나) |
-|6  | [언제 Function Component 대신에 Class Component를 사용하나?](#when-to-use-a-class-component-over-a-function-component) |
-|7  | [Pure Components란 무엇인가?](#what-are-pure-components) |
+|6  | [언제 Function Component 대신에 Class Component를 사용하나?](#언제-Function-Component-대신에-Class-Component를-사용하나) |
+|7  | [Pure Components란 무엇인가?](#Pure-Components란-무엇인가) |
 |8  | [React에서 state는 무엇인가?](#what-is-state-in-react) |
 |9  | [React에서 props는 무엇인가?](#what-are-props-in-react) |
 |10 | [state와 prop의 차이점은?](#what-is-the-difference-between-state-and-props) |
@@ -439,7 +439,7 @@
 
     만약, 컴포넌트가 `state나 lifecycle methods`가 필요하다면 class 컴포넌트를 사용하고 아니라면 function 컴포넌트를 사용한다.
     
-7. ### Pure Components란 무엇인가?
+7. ### PureComponent란 무엇인가?
 
     *`React.PureComponent`* 는 `shouldComponentUpdate()` 메서드를 제어하는 것을 제외하면 *`React.Component`*와 다르지 않다. props나 state가 변경되면 *PureComponent* 는 props와 state 에 대해서 얕은 비교를 수행한다. 반면에 *Component* 는 현재의 props와 state에 대해 비교를 하지 않는다. 따라서 `shouldComponentUpdate`가 호출될 때마다 리렌더링된다.
     

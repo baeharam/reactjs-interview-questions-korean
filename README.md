@@ -32,7 +32,7 @@
 |11 | [왜 state를 직접 update하면 안되나?](#왜-state를-직접-update하면-안되나) |
 |12 | [setState()의 argument로 callback 함수를 사용하는 이유는?](#setState()의-argument로-callback-함수를-사용하는-이유는) |
 |13 | [HTML과 React의 event handling의 차이점은?](#HTML과-React의-event-handling의-차이점은) |
-|14 | [How to bind methods or event handlers in JSX callbacks?](#how-to-bind-methods-or-event-handlers-in-jsx-callbacks) |
+|14 | [어떻게 JSX 콜백에서 메서드와 이벤트 핸들러를 바인드하나?](#어떻게-JSX-콜백에서-메서드와-이벤트-핸들러를-바인드하나) |
 |15 | [어떻게 이벤트 핸들러나 콜백에 매개 변수를 전달하나?](#어떻게-이벤트-핸들러나-콜백에-매개-변수를-전달하나) |
 |16 | [What are synthetic events in React?](#what-are-synthetic-events-in-react) |
 |17 | [What is inline conditional expressions?](#what-is-inline-conditional-expressions) |
@@ -555,11 +555,11 @@
     }
     ```
 
-14. ### How to bind methods or event handlers in JSX callbacks?
+14. ### 어떻게 JSX 콜백에서 메서드와 이벤트 핸들러를 바인드하나?
 
-    There are 3 possible ways to achieve this:
+    이를 이루기 위한 3가지 방법이 있다.
 
-    1.	**Binding in Constructor:** In JavaScript classes, the methods are not bound by default. The same thing applies for React event handlers defined as class methods. Normally we bind them in constructor.
+    1.	**생성자에서 바인딩:** JavaScript 클래스에서, 메서드는 기본적으로 바인딩 되지 않는다. 클래스 메서드로 정의된 React  이벤트 핸들러에게서도 똑같은 문제가 적용된다. 일반적으로 우리는 생성자 안에서 바인드를 한다.
 
     ```javascript
     class Component extends React.Componenet {
@@ -574,7 +574,7 @@
     }
     ```
 
-    1. **Public class fields syntax:** If you don't like to use bind approach then *public class fields syntax* can be used to correctly bind callbacks.
+    1. **Public 클래스 필드 구문:** 바인드 접근법이 싫다면 콜백을 올바르게 바인드하기 위해 *public 클래스 필드 구문* 을 사용할 수 있다.
 
     ```jsx harmony
     handleClick = () => {
@@ -588,7 +588,7 @@
     </button>
     ```
 
-    1. **Arrow functions in callbacks:** You can use *arrow functions* directly in the callbacks.
+    1. **콜백 안에서 화살표 함수:** 콜백 안에서 직접 *화살표 함수*를 사용할 수 있다.
 
     ```jsx harmony
     <button onClick={(event) => this.handleClick(event)}>
@@ -596,7 +596,7 @@
     </button>
     ```
 
-    **Note:** If the callback is passed as prop to child components, those components might do an extra re-rendering. In those cases, it is preferred to go with `.bind()` or *public class fields syntax* approach considering performance.
+    **Note:** 콜백이 자식 컴포넌트에 prop으로 전달이 되면, 해당 컴포넌트는 추가 리렌더링을 수행할 수 있다. 이 경우에, 성능을 고려하여 `.bind()` 또는 *public 클래스 필드 구문* 접근법을 사용하는 것이 좋다.
 
 15. ### 어떻게 이벤트 핸들러나 콜백에 매개 변수를 전달하나?
 

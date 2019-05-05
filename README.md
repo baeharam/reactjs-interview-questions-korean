@@ -5,6 +5,9 @@
 <a href="https://github.com/SeonHyungJo" target="_blank" rel="nofollow">
 	<img src="https://avatars2.githubusercontent.com/u/24274424?s=60&v=4">
 </a>
+<a href="https://github.com/BKJang" target="_blank" rel="nofollow">
+	<img src="https://avatars2.githubusercontent.com/u/24209005?s=60&v=4">
+</a>
 
 > * :clipboard: 본 문서는 [sudheerj](https://github.com/sudheerj)의 [reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions)의 번역본입니다.
 > * :star: 이 프로젝트가 마음에 드셨다면 **STAR**를 눌러주세요.
@@ -30,7 +33,7 @@
 |12 | [setState()의 argument로 callback 함수를 사용하는 이유는?](#setState()의-argument로-callback-함수를-사용하는-이유는) |
 |13 | [HTML과 React의 event handling의 차이점은?](#HTML과-React의-event-handling의-차이점은) |
 |14 | [어떻게 JSX 콜백에서 메서드와 이벤트 핸들러를 바인드하나?](#어떻게-JSX-콜백에서-메서드와-이벤트-핸들러를-바인드하나) |
-|15 | [How to pass a parameter to an event handler or callback?](#how-to-pass-a-parameter-to-an-event-handler-or-callback) |
+|15 | [어떻게 이벤트 핸들러나 콜백에 매개 변수를 전달하나?](#어떻게-이벤트-핸들러나-콜백에-매개-변수를-전달하나) |
 |16 | [What are synthetic events in React?](#what-are-synthetic-events-in-react) |
 |17 | [What is inline conditional expressions?](#what-is-inline-conditional-expressions) |
 |18 | [What are "key" props and what is the benefit of using them in arrays of elements?](#what-are-key-props-and-what-is-the-benefit-of-using-them-in-arrays-of-elements) |
@@ -432,14 +435,14 @@
         }
         ```
 
-6. ### When to use a Class Component over a Function Component?
+6. ### 언제 Function Component 대신에 Class Component를 사용하나?
 
-    If the component needs *state or lifecycle methods* then use class component otherwise use function component.
+    만약, 컴포넌트가 `state나 lifecycle methods`가 필요하다면 class 컴포넌트를 사용하고 아니라면 function 컴포넌트를 사용한다.
+    
+7. ### Pure Components란 무엇인가?
 
-7. ### What are Pure Components?
-
-    *`React.PureComponent`* is exactly the same as *`React.Component`* except that it handles the `shouldComponentUpdate()` method for you. When props or state changes, *PureComponent* will do a shallow comparison on both props and state. *Component* on the other hand won't compare current props and state to next out of the box. Thus, the component will re-render by default whenever `shouldComponentUpdate` is called.
-
+    *`React.PureComponent`* 는 `shouldComponentUpdate()` 메서드를 제어하는 것을 제외하면 *`React.Component`*와 다르지 않다. props나 state가 변경되면 *PureComponent* 는 props와 state 에 대해서 얕은 비교를 수행한다. 반면에 *Component* 는 현재의 props와 state에 대해 비교를 하지 않는다. 따라서 `shouldComponentUpdate`가 호출될 때마다 리렌더링된다.
+    
 8. ### What is state in React?
 
     *State* of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components. Let's create an user component with message state,
@@ -595,15 +598,15 @@
 
     **Note:** 콜백이 자식 컴포넌트에 prop으로 전달이 되면, 해당 컴포넌트는 추가 리렌더링을 수행할 수 있다. 이 경우에, 성능을 고려하여 `.bind()` 또는 *public 클래스 필드 구문* 접근법을 사용하는 것이 좋다.
 
-15. ### How to pass a parameter to an event handler or callback?
+15. ### 어떻게 이벤트 핸들러나 콜백에 매개 변수를 전달하나?
 
-    You can use an *arrow function* to wrap around an *event handler* and pass parameters:
+    *화살표 함수*를 사용해서 *이벤트 핸들러*를 감싸고 매개변수를 전달할 수 있다.
 
     ```jsx harmony
     <button onClick={() => this.handleClick(id)} />
     ```
 
-    This is an equivalent to calling `.bind`:
+    `.bind`를 호출하는 것과 동일하다:
 
     ```jsx harmony
     <button onClick={this.handleClick.bind(this, id)} />

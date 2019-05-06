@@ -27,15 +27,15 @@
 |6  | [언제 Function Component 대신에 Class Component를 사용하나?](#언제-Function-Component-대신에-Class-Component를-사용하나) |
 |7  | [Pure Components란 무엇인가?](#Pure-Components란-무엇인가) |
 |8  | [React에서 state는 무엇인가?](#React에서-state는-무엇인가) |
-|9  | [React에서 props는 무엇인가?](#what-are-props-in-react) |
+|9  | [React에서 props는 무엇인가?](#React에서-props는-무엇인가) |
 |10 | [state와 prop의 차이점은?](#state와-prop의-차이점은) |
 |11 | [왜 state를 직접 update하면 안되나?](#왜-state를-직접-update하면-안되나) |
 |12 | [setState()의 argument로 callback 함수를 사용하는 이유는?](#setState()의-argument로-callback-함수를-사용하는-이유는) |
 |13 | [HTML과 React의 event handling의 차이점은?](#HTML과-React의-event-handling의-차이점은) |
 |14 | [어떻게 JSX 콜백에서 메서드와 이벤트 핸들러를 바인드하나?](#어떻게-JSX-콜백에서-메서드와-이벤트-핸들러를-바인드하나) |
 |15 | [어떻게 이벤트 핸들러나 콜백에 매개 변수를 전달하나?](#어떻게-이벤트-핸들러나-콜백에-매개-변수를-전달하나) |
-|16 | [What are synthetic events in React?](#what-are-synthetic-events-in-react) |
-|17 | [What is inline conditional expressions?](#what-is-inline-conditional-expressions) |
+|16 | [React에 SyntheticEvent란 무엇인가?](#React에-SyntheticEvent란-무엇인가) |
+|17 | [인라인 조건 표현식이란?](#인라인-조건-표현식이란) |
 |18 | [What are "key" props and what is the benefit of using them in arrays of elements?](#what-are-key-props-and-what-is-the-benefit-of-using-them-in-arrays-of-elements) |
 |19 | [What is the use of refs?](#what-is-the-use-of-refs) |
 |20 | [How to create refs?](#how-to-create-refs)
@@ -471,23 +471,23 @@
 
     state는 props와 비슷하지만 private 하며 컴포넌트에 의해 제어된다. 즉, 상태는 이를 가지고 있거나 설정할 수 있는 컴포넌트 이외에는 접근할 수 없다.
 
-9. ### What are props in React?
+9. ### React에서 props는 무엇인가?
 
-    *Props* are inputs to components. They are single values or objects containing a set of values that are passed to components on creation using a naming convention similar to HTML-tag attributes. They are data passed down from a parent component to a child component.
+      *Props*는 컴포넌트에 대한 입력이다. Props는 HTML 태그 속성과 같은 작명 규칙을 사용하여 컴포넌트에 전달되는 단일 값 혹은 객체다. props는 부모 컴포넌트에서 자식 컴포넌트로 전달된다.
 
-    The primary purpose of props in React is to provide following component functionality:
+      React에서 props의 주목적은 다음과 같은 컴포넌트의 기능들을 제공하는 것이다.
 
-    1. Pass custom data to your component.
-    2. Trigger state changes.
-    3. Use via `this.props.reactProp` inside component's `render()` method.
+      1. 커스텀 데이터를 컴포넌트로 전달한다.
+      2. state의 변경을 일으킨다.
+      3. 컴포넌트의 `render()` 메서드 내에서 `this.props.reactProp` 를 통해 사용한다.
 
-    For example, let us create an element with `reactProp` property:
+      예를 들어 `reactProp` 요소를 가진 엘리먼트를 만들어보자.
 
     ```jsx harmony
     <Element reactProp={'1'} />
     ```
-
-    This `reactProp` (or whatever you came up with) name then becomes a property attached to React's native props object which originally already exists on all components created using React library.
+    
+    이 `reactProp` (또는 여러분이 만든 것은 무엇이든) React를 사용하여 생성된 모든 컴포넌트에 원래 존재하는 props 객체의 속성이 된다.
 
     ```
     props.reactProp
@@ -611,13 +611,13 @@
     <button onClick={this.handleClick.bind(this, id)} />
     ```
 
-16. ### What are synthetic events in React?
+16. ### React에 SyntheticEvent란 무엇인가?
 
-    `SyntheticEvent` is a cross-browser wrapper around the browser's native event. It's API is same as the browser's native event, including `stopPropagation()` and `preventDefault()`, except the events work identically across all browsers.
+    `SyntheticEvent`는 브라우저의 기본 이벤트를 감싼 cross-browser wrapper이다. `stopPropagation()`과 `preventDefault()`를 포함한 API로, 브라우저의 기본 이벤트와 동일하지만, 모든 브라우저에서 동일하게 작동한다는 점이 다르다.
 
-17. ### What is inline conditional expressions?
+17. ### 인라인 조건 표현식이란?
 
-    You can use either *if statements* or *ternary expressions* which are available from JS to conditionally render expressions. Apart from these approaches, you can also embed any expressions in JSX by wrapping them in curly braces and then followed by JS logical operator `&&`.
+    JS에서 조건부로 식을 표현하기 위해서 *if 문* 이나 *삼항 표현식* 을 사용할 수 있다. 이러한 접근법 외에도, JS 논리연산자인 `&&`가 있는 중괄호로 감싼 표현식을 JSX에 포함할 수도 있다.
 
     ```jsx harmony
     <h1>Hello!</h1>

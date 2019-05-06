@@ -28,7 +28,7 @@
 |7  | [Pure Components란 무엇인가?](#Pure-Components란-무엇인가) |
 |8  | [React에서 state는 무엇인가?](#React에서-state는-무엇인가) |
 |9  | [React에서 props는 무엇인가?](#React에서-props는-무엇인가) |
-|10 | [state와 prop의 차이점은?](#what-is-the-difference-between-state-and-props) |
+|10 | [state와 prop의 차이점은?](#state와-prop의-차이점은) |
 |11 | [왜 state를 직접 update하면 안되나?](#왜-state를-직접-update하면-안되나) |
 |12 | [setState()의 argument로 callback 함수를 사용하는 이유는?](#setState()의-argument로-callback-함수를-사용하는-이유는) |
 |13 | [HTML과 React의 event handling의 차이점은?](#HTML과-React의-event-handling의-차이점은) |
@@ -493,9 +493,9 @@
     props.reactProp
     ```
 
-10. ### What is the difference between state and props?
+10. ### state와 prop의 차이점은?
 
-    Both *props* and *state* are plain JavaScript objects. While both of them hold information that influences the output of render, they are different in their functionality with respect to component. Props get passed to the component similar to function parameters whereas state is managed within the component similar to variables declared within a function.
+    *props*와 *state*는 모두 순수 자바스크립트 객체다. 둘 다 렌더링 결과에 영향을 주는 정보를 가지고 있지만, 컴포넌트와 관련된 기능 면에서 다르다. props는 함수의 매개변수와 비슷하게 컴포넌트로 전달되는 반면, state는 함수 내에서 선언된 변수와 유사하게 컴포넌트 내에서 관리된다.
 
 11. ### 왜 state를 직접 update하면 안되나?
 

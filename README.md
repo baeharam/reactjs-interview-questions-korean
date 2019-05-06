@@ -445,7 +445,7 @@
     
 8. ### React에서 state는 무엇인가?
 
-    컴포넌트의 *State*는 컴포넌트의 변경 될 수 있는 정보를 보유하는 객체이다. 가능한 한 간단하게 상태를 만들고 stateful 컴포넌트의 수를 최소화해야한다. message state가 를 가진 User 컴포넌트를 만들어보자.
+    컴포넌트의 *State*는 컴포넌트의 변경 될 수 있는 정보를 보유하는 객체이다. 가능한 한 간단하게 상태를 만들고 stateful 컴포넌트의 수를 최소화해야 한다. message state를 가진 User 컴포넌트를 만들어보자.
 
     ```jsx harmony
     class User extends React.Component {
@@ -469,7 +469,7 @@
 
     ![state](images/state.jpg)
 
-    state는 props와 비슷하지만 private하며 컴포넌트에 의해 제어된다. 즉, 상태는 이를 가지고 있거나 설정 할 수 있는 컴포넌트 이외에는 접근할 수 없다.
+    state는 props와 비슷하지만 private 하며 컴포넌트에 의해 제어된다. 즉, 상태는 이를 가지고 있거나 설정할 수 있는 컴포넌트 이외에는 접근할 수 없다.
 
 9. ### What are props in React?
 

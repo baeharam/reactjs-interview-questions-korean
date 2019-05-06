@@ -36,7 +36,7 @@
 |15 | [어떻게 이벤트 핸들러나 콜백에 매개 변수를 전달하나?](#어떻게-이벤트-핸들러나-콜백에-매개-변수를-전달하나) |
 |16 | [React에 SyntheticEvent란 무엇인가?](#React에-SyntheticEvent란-무엇인가) |
 |17 | [인라인 조건 표현식이란?](#인라인-조건-표현식이란) |
-|18 | [What are "key" props and what is the benefit of using them in arrays of elements?](#what-are-key-props-and-what-is-the-benefit-of-using-them-in-arrays-of-elements) |
+|18 | ["key" props는 무엇이며 elements의 배열에서 사용하면 이점이 무엇인가?](#key-props는-무엇이며-elements의-배열에서-사용하면-이점이-무엇인가) |
 |19 | [What is the use of refs?](#what-is-the-use-of-refs) |
 |20 | [How to create refs?](#how-to-create-refs)
 |21 | [What are forward refs?](#what-are-forward-refs) |
@@ -633,11 +633,11 @@
     }
     ```
 
-18. ### What are "key" props and what is the benefit of using them in arrays of elements?
+18. ### "key" props는 무엇이며 elements의 배열에서 사용하면 이점이 무엇인가?
 
-    A `key` is a special string attribute you **should** include when creating arrays of elements. *Keys* help React identify which items have changed, are added, or are removed.
+    `key`는 elements 배열을 만들 때 포함**시켜야 하는** 특수 문자열 속성이다. *Keys*는 React가 변경, 추가, 제거된 항목을 식별하는 데 도움을 준다.
 
-    Most often we use IDs from our data as *keys*:
+    우리는 대개 데이터에서 ID를 *keys*로 사용한다.
 
     ```jsx harmony
     const todoItems = todos.map((todo) =>
@@ -647,7 +647,7 @@
     )
     ```
 
-    When you don't have stable IDs for rendered items, you may use the item *index* as a *key* as a last resort:
+    렌더링된 항목 중 안정적인 ID가 없을 때, 마지막 수단으로 항목의 *index*를 *key*로 사용할 수 있다.
 
     ```jsx harmony
     const todoItems = todos.map((todo, index) =>
@@ -659,9 +659,9 @@
 
     **Note:**
 
-    1. Using *indexes* for *keys* is **not recommended** if the order of items may change. This can negatively impact performance and may cause issues with component state.
-    2. If you extract list item as separate component then apply *keys* on list component instead of `li` tag.
-    3. There will be a warning message in the console if the `key` prop is not present on list items.
+    1. 항목의 순서가 변경될 수 있는 경우 *index*를 *keys*로 사용하는 것은 **추천하지 않는다.** 이는 성능 저하와 컴포넌트 state에 문제를 발생시킬 수 있다.
+    2. 리스트 항목을 별도의 컴포넌트로 추출하는 경우 `li` 태그 대신에 리스트 컴포넌트에 *keys*를 적용해라.
+    3. 리스트 항목에 `key` prop가 없으면 console에 경고 메시지가 표시될 것이다.
 
 19. ### What is the use of refs?
 

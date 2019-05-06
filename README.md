@@ -27,7 +27,7 @@
 |6  | [언제 Function Component 대신에 Class Component를 사용하나?](#언제-Function-Component-대신에-Class-Component를-사용하나) |
 |7  | [Pure Components란 무엇인가?](#Pure-Components란-무엇인가) |
 |8  | [React에서 state는 무엇인가?](#React에서-state는-무엇인가) |
-|9  | [React에서 props는 무엇인가?](#what-are-props-in-react) |
+|9  | [React에서 props는 무엇인가?](#React에서-props는-무엇인가) |
 |10 | [state와 prop의 차이점은?](#what-is-the-difference-between-state-and-props) |
 |11 | [왜 state를 직접 update하면 안되나?](#왜-state를-직접-update하면-안되나) |
 |12 | [setState()의 argument로 callback 함수를 사용하는 이유는?](#setState()의-argument로-callback-함수를-사용하는-이유는) |
@@ -471,23 +471,23 @@
 
     state는 props와 비슷하지만 private 하며 컴포넌트에 의해 제어된다. 즉, 상태는 이를 가지고 있거나 설정할 수 있는 컴포넌트 이외에는 접근할 수 없다.
 
-9. ### What are props in React?
+9. ### React에서 props는 무엇인가?
 
-    *Props* are inputs to components. They are single values or objects containing a set of values that are passed to components on creation using a naming convention similar to HTML-tag attributes. They are data passed down from a parent component to a child component.
+    *Props*는 컴포넌트에 대한 입력이다. Props는 HTML 태그 속성과 같은 작명 규칙을 사용하여 컴포넌트에 전달 되는 단일 값 혹은 객체다. props는 부모 컴포넌트에서 자식 컴포넌트로 전달된다.
 
-    The primary purpose of props in React is to provide following component functionality:
+    React에서 props의 주 목적은 다음과 같은 컴포넌트의 기능들을 제공하는 것이다.
 
-    1. Pass custom data to your component.
-    2. Trigger state changes.
-    3. Use via `this.props.reactProp` inside component's `render()` method.
+    1. 커스텀 데이터를 컴포넌트로 전달한다.
+    2. state의 변경을 일으킨다.
+    3. 컴포넌트의`render ()`메소드 내에서`this.props.reactProp`를 통해 사용한다.
 
-    For example, let us create an element with `reactProp` property:
+    예를 들어 `reactProp` 요소를 가진 엘리먼트를 만들어보자.
 
     ```jsx harmony
     <Element reactProp={'1'} />
     ```
-
-    This `reactProp` (or whatever you came up with) name then becomes a property attached to React's native props object which originally already exists on all components created using React library.
+    
+    이 `reactProp` (또는 여러분이 만든 것은 무엇이든) React를 사용하여 생성 된 모든 컴포넌트에 원래 존재하는 props 객체의 속성이 된다.
 
     ```
     props.reactProp

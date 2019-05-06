@@ -765,7 +765,7 @@
     1. *React가 현재 실행 중인 컴포넌트를 추적하도록 강제된다*. 이는 react 모듈을 stateful 하게 만들고, react 모듈이 번들에 복제될 때 이상한 오류를 유발하기 때문에 문제가 된다.
     2. *composable* 하지 않다. — 라이브러리가 전달된 자식에 ref를 넣으면, 사용자는 다른 ref를 추가할 수 없다. Callback ref는 완벽하게 구성이 가능하다.
     3. Flow와 같은 *정적 분석에서는 작동하지 않는다*. Flow는 프레임워크가 String Refs를 `this.refs`에 표시하도록 하는 마법과 그것의 타입(다를 수 있음)을 추측할 수 없다. Callback ref는 정적 분석에 친숙합니다..
-    4. 대부분 사람들이 생각하는 "render callback" 패턴으로 작동하지 않는다. (예). `<DataGrid renderRow={this.renderRow} />`)
+    4. 대부분의 사람이 생각하는 "render callback" 패턴으로 작동하지 않는다. (예). `<DataGrid renderRow={this.renderRow} />`)
        ```jsx harmony
        class MyComponent extends Component {
          renderRow = (index) => {

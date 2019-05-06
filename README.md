@@ -26,7 +26,7 @@
 |5  | [React에서 components는 어떻게 만드나?](#React에서-components는-어떻게-만드나) |
 |6  | [언제 Function Component 대신에 Class Component를 사용하나?](#언제-Function-Component-대신에-Class-Component를-사용하나) |
 |7  | [Pure Components란 무엇인가?](#Pure-Components란-무엇인가) |
-|8  | [React에서 state는 무엇인가?](#what-is-state-in-react) |
+|8  | [React에서 state는 무엇인가?](#React에서-state는-무엇인가) |
 |9  | [React에서 props는 무엇인가?](#what-are-props-in-react) |
 |10 | [state와 prop의 차이점은?](#what-is-the-difference-between-state-and-props) |
 |11 | [왜 state를 직접 update하면 안되나?](#왜-state를-직접-update하면-안되나) |
@@ -443,10 +443,9 @@
 
     *`React.PureComponent`* 는 `shouldComponentUpdate()` 메서드를 제어하는 것을 제외하면 *`React.Component`*와 다르지 않다. props나 state가 변경되면 *PureComponent* 는 props와 state 에 대해서 얕은 비교를 수행한다. 반면에 *Component* 는 현재의 props와 state에 대해 비교를 하지 않는다. 따라서 `shouldComponentUpdate`가 호출될 때마다 리렌더링된다.
     
-8. ### What is state in React?
+8. ### React에서 state는 무엇인가?
 
-    *State* of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components. Let's create an user component with message state,
-
+    컴포넌트의 *State*는 컴포넌트의 변경 될 수 있는 정보를 보유하는 객체이다. 가능한 한 간단하게 상태를 만들고 stateful 컴포넌트의 수를 최소화해야한다. message state가 를 가진 User 컴포넌트를 만들어보자.
 
     ```jsx harmony
     class User extends React.Component {
@@ -470,7 +469,7 @@
 
     ![state](images/state.jpg)
 
-    State is similar to props, but it is private and fully controlled by the component. i.e, It is not accessible to any component other than the one that owns and sets it.
+    state는 props와 비슷하지만 private하며 컴포넌트에 의해 제어된다. 즉, 상태는 이를 가지고 있거나 설정 할 수 있는 컴포넌트 이외에는 접근할 수 없다.
 
 9. ### What are props in React?
 

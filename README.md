@@ -24,8 +24,8 @@
 |3  | [JSX란 무엇인가?](#JSX란-무엇인가) |
 |4  | [Element와 Component의 차이점은?](#element와-component의-차이점은) |
 |5  | [React에서 components는 어떻게 만드나?](#React에서-components는-어떻게-만드나) |
-|6  | [언제 Function Component 대신에 Class Component를 사용하나?](#when-to-use-a-class-component-over-a-function-component) |
-|7  | [Pure Components란 무엇인가?](#what-are-pure-components) |
+|6  | [언제 Function Component 대신에 Class Component를 사용하나?](#언제-Function-Component-대신에-Class-Component를-사용하나) |
+|7  | [Pure Components란 무엇인가?](#Pure-Components란-무엇인가) |
 |8  | [React에서 state는 무엇인가?](#what-is-state-in-react) |
 |9  | [React에서 props는 무엇인가?](#what-are-props-in-react) |
 |10 | [state와 prop의 차이점은?](#what-is-the-difference-between-state-and-props) |

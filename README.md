@@ -44,7 +44,7 @@
 |23 | [Why are String Refs legacy?](#why-are-string-refs-legacy) |
 |24 | [What is Virtual DOM?](#what-is-virtual-dom) |
 |25 | [How Virtual DOM works?](#how-virtual-dom-works) |
-|26 | [What is the difference between Shadow DOM and Virtual DOM?](#what-is-the-difference-between-shadow-dom-and-virtual-dom) |
+|26 | [Shadow DOM과 Virtual DOM의 차이점](#Shadow-DOM과-Virtual-DOM의-차이점) |
 |27 | [What is React Fiber?](#what-is-react-fiber) |
 |28 | [What is the main goal of React Fiber?](#what-is-the-main-goal-of-react-fiber) |
 |29 | [What are controlled components?](#what-are-controlled-components) |
@@ -798,9 +798,9 @@
     3. Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
         ![vdom3](images/vdom3.png)
 
-26. ### What is the difference between Shadow DOM and Virtual DOM?
+26. ### Shadow DOM과 Virtual DOM의 차이점
 
-    The *Shadow DOM* is a browser technology designed primarily for scoping variables and CSS in *web components*. The *Virtual DOM* is a concept implemented by libraries in JavaScript on top of browser APIs.
+    *Shadow DOM* 주로 *웹 컴포넌트*에서 변수와 CSS의 범위 지정을 위해 디자인된 브라우저 기술이다. *Virtual DOM*는 브라우저 API를 기반으로 Javascript 라이브러리로 구현된 개념이다.
 
 27. ### What is React Fiber?
 

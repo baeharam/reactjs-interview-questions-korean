@@ -728,9 +728,9 @@
 
 22. ### callback refs 및 findDOMNode()에서 선호되는 옵션은?
 
-    `findDOMNode()` API 위에 *callback refs*를 사용하는 것이 좋다. `findDOMNode()`이 향후에 React의 특정 개선을 막기 때문이다.
+    `findDOMNode()` API 위에 *callback refs*를 사용하는 것이 좋다. `findDOMNode()`이 추후 React에서의 개선 사항을 방해하기 때문이다.
 
-    `findDOMNode`를 사용하는 **legacy** 접근법 :
+    `findDOMNode`를 사용하는 **legacy** 접근법은 다음과 같다.
 
     ```javascript
     class MyComponent extends Component {
@@ -744,7 +744,7 @@
     }
     ```
 
-    권장되는 접근법은 :
+    권장되는 접근법은 다음과 같다.
 
     ```javascript
     class MyComponent extends Component {

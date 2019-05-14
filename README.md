@@ -855,7 +855,7 @@
     }
     ```
 
-    대부분의 경우 양식을 구현하는데 controlled components를 사용하는 것을 추천한다.
+    대부분의 경우 양식을 구현하는 데 controlled components를 사용하는 것을 추천한다.
 
 31. ### What is the difference between createElement and cloneElement?
 

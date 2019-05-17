@@ -50,7 +50,7 @@
 |29 | [What are controlled components?](#what-are-controlled-components) |
 |30 | [What are uncontrolled components?](#what-are-uncontrolled-components) |
 |31 | [What is the difference between createElement and cloneElement?](#what-is-the-difference-between-createelement-and-cloneelement) |
-|32 | [What is Lifting State Up in React?](#what-is-lifting-state-up-in-react) |
+|32 | [React에서 Lifting State Up란?](#React에서-Lifting-State-Up란) |
 |33 | [What are the different phases of component lifecycle?](#what-are-the-different-phases-of-component-lifecycle) |
 |34 | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react) |
 |35 | [What are Higher-Order components?](#what-are-higher-order-components) |
@@ -861,9 +861,9 @@
 
     JSX elements will be transpiled to `React.createElement()` functions to create React elements which are going to be used for the object representation of UI. Whereas `cloneElement` is used to clone an element and pass it new props.
 
-32. ### What is Lifting State Up in React?
+32. ### React에서 Lifting State Up란?
 
-    When several components need to share the same changing data then it is recommended to *lift the shared state up* to their closest common ancestor. That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
+    여러 components가 동일한 변경 데이터를 공유해야하는 경우 가장 가까운 공통 조상으로 *lift the shared state up*을 하는 것을 추천한다. 즉 2개의 자식 compoenents가 부모로부터 동일한 데이터를 공유하는 경우, 자식 components 모두에서 로컬 상태를 유지하는 대신에 상태를 부모로 이동해서 유지하는 것이다.
 
 33. ### What are the different phases of component lifecycle?
 

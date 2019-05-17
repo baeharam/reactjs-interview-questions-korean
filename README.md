@@ -40,7 +40,7 @@
 |19 | [What is the use of refs?](#what-is-the-use-of-refs) |
 |20 | [How to create refs?](#how-to-create-refs)
 |21 | [What are forward refs?](#what-are-forward-refs) |
-|22 | [Which is preferred option with in callback refs and findDOMNode()?](#which-is-preferred-option-with-in-callback-refs-and-finddomnode) |
+|22 | [callback refs 및 findDOMNode()에서 선호되는 옵션은?](#callback-refs-및-findDOMNode()에서-선호되는-옵션은) |
 |23 | [Why are String Refs legacy?](#why-are-string-refs-legacy) |
 |24 | [What is Virtual DOM?](#what-is-virtual-dom) |
 |25 | [Virtual DOM은 어떻게 작동하나?](#Virtual-DOM은-어떻게-작동하나) |
@@ -726,11 +726,11 @@
     <ButtonElement ref={ref}>{'Forward Ref'}</ButtonElement>
     ```
 
-22. ### Which is preferred option with in callback refs and findDOMNode()?
+22. ### callback refs 및 findDOMNode()에서 선호되는 옵션은?
 
-    It is preferred to use *callback refs* over `findDOMNode()` API. Because `findDOMNode()` prevents certain improvements in React in the future.
+    `findDOMNode()` API 위에 *callback refs*를 사용하는 것이 좋다. `findDOMNode()`이 추후 React에서의 개선 사항을 방해하기 때문이다.
 
-    The **legacy** approach of using `findDOMNode`:
+    `findDOMNode`를 사용하는 **legacy** 접근법은 다음과 같다.
 
     ```javascript
     class MyComponent extends Component {
@@ -744,7 +744,7 @@
     }
     ```
 
-    The recommended approach is:
+    권장되는 접근법은 다음과 같다.
 
     ```javascript
     class MyComponent extends Component {

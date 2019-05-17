@@ -42,7 +42,7 @@
 |21 | [What are forward refs?](#what-are-forward-refs) |
 |22 | [callback refs 및 findDOMNode()에서 선호되는 옵션은?](#callback-refs-및-findDOMNode()에서-선호되는-옵션은) |
 |23 | [String Refs가 왜 legacy인가?](#String-Refs가-왜-legacy인가) |
-|24 | [What is Virtual DOM?](#what-is-virtual-dom) |
+|24 | [Virtual DOM이란?](#Virtual-DOM이란) 
 |25 | [Virtual DOM은 어떻게 작동하나?](#Virtual-DOM은-어떻게-작동하나) |
 |26 | [Shadow DOM과 Virtual DOM의 차이점](#Shadow-DOM과-Virtual-DOM의-차이점) |
 |27 | [What is React Fiber?](#what-is-react-fiber) |
@@ -781,9 +781,9 @@
          }
        }
        ```
-24. ### What is Virtual DOM?
+24. ### Virtual DOM이란?
 
-    The *Virtual DOM* (VDOM) is an in-memory representation of *Real DOM*. The representation of a UI is kept in memory and synced with the "real" DOM. It's a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called *reconciliation*.
+    *Virtual DOM* (VDOM)는 *실제 DOM*의 인-메모리 표현이다. UI 표현은 메모리에 유지되고 "실제" DOM과 동기화된다. 이는 렌더 함수의 호출과 화면상 elements를 표현하는 사이에 발생하는 단계이다. 이 전체 프로세스는 *조정* 이라고 한다.
 
 25. ### Virtual DOM은 어떻게 작동하나?
 

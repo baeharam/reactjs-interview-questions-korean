@@ -36,15 +36,15 @@
 |15 | [어떻게 이벤트 핸들러나 콜백에 매개 변수를 전달하나?](#어떻게-이벤트-핸들러나-콜백에-매개-변수를-전달하나) |
 |16 | [React에 SyntheticEvent란 무엇인가?](#React에-SyntheticEvent란-무엇인가) |
 |17 | [인라인 조건 표현식이란?](#인라인-조건-표현식이란) |
-|18 | [What are "key" props and what is the benefit of using them in arrays of elements?](#what-are-key-props-and-what-is-the-benefit-of-using-them-in-arrays-of-elements) |
+|18 | ["key" props는 무엇이며 elements의 배열에서 사용하면 이점이 무엇인가?](#key-props는-무엇이며-elements의-배열에서-사용하면-이점이-무엇인가) |
 |19 | [What is the use of refs?](#what-is-the-use-of-refs) |
 |20 | [How to create refs?](#how-to-create-refs)
 |21 | [What are forward refs?](#what-are-forward-refs) |
-|22 | [Which is preferred option with in callback refs and findDOMNode()?](#which-is-preferred-option-with-in-callback-refs-and-finddomnode) |
-|23 | [Why are String Refs legacy?](#why-are-string-refs-legacy) |
-|24 | [Virtual DOM이란?](#Virtual-DOM이란) |
-|25 | [How Virtual DOM works?](#how-virtual-dom-works) |
-|26 | [What is the difference between Shadow DOM and Virtual DOM?](#what-is-the-difference-between-shadow-dom-and-virtual-dom) |
+|22 | [callback refs 및 findDOMNode()에서 선호되는 옵션은?](#callback-refs-및-findDOMNode()에서-선호되는-옵션은) |
+|23 | [String Refs가 왜 legacy인가?](#String-Refs가-왜-legacy인가) |
+|24 | [Virtual DOM이란?](#Virtual-DOM이란) 
+|25 | [Virtual DOM은 어떻게 작동하나?](#Virtual-DOM은-어떻게-작동하나) |
+|26 | [Shadow DOM과 Virtual DOM의 차이점](#Shadow-DOM과-Virtual-DOM의-차이점) |
 |27 | [What is React Fiber?](#what-is-react-fiber) |
 |28 | [What is the main goal of React Fiber?](#what-is-the-main-goal-of-react-fiber) |
 |29 | [What are controlled components?](#what-are-controlled-components) |
@@ -633,11 +633,11 @@
     }
     ```
 
-18. ### What are "key" props and what is the benefit of using them in arrays of elements?
+18. ### "key" props는 무엇이며 elements의 배열에서 사용하면 이점이 무엇인가?
 
-    A `key` is a special string attribute you **should** include when creating arrays of elements. *Keys* help React identify which items have changed, are added, or are removed.
+    `key`는 elements 배열을 만들 때 포함**시켜야 하는** 특수 문자열 속성이다. *Keys*는 React가 변경, 추가, 제거된 항목을 식별하는 데 도움을 준다.
 
-    Most often we use IDs from our data as *keys*:
+    우리는 대개 데이터에서 ID를 *keys*로 사용한다.
 
     ```jsx harmony
     const todoItems = todos.map((todo) =>
@@ -647,7 +647,7 @@
     )
     ```
 
-    When you don't have stable IDs for rendered items, you may use the item *index* as a *key* as a last resort:
+    렌더링된 항목 중 안정적인 ID가 없을 때, 마지막 수단으로 항목의 *index*를 *key*로 사용할 수 있다.
 
     ```jsx harmony
     const todoItems = todos.map((todo, index) =>
@@ -659,9 +659,9 @@
 
     **Note:**
 
-    1. Using *indexes* for *keys* is **not recommended** if the order of items may change. This can negatively impact performance and may cause issues with component state.
-    2. If you extract list item as separate component then apply *keys* on list component instead of `li` tag.
-    3. There will be a warning message in the console if the `key` prop is not present on list items.
+    1. 항목의 순서가 변경될 수 있는 경우 *index*를 *keys*로 사용하는 것은 **추천하지 않는다.** 이는 성능 저하와 컴포넌트 state에 문제를 발생시킬 수 있다.
+    2. 리스트 항목을 별도의 컴포넌트로 추출하는 경우 `li` 태그 대신에 리스트 컴포넌트에 *keys*를 적용해라.
+    3. 리스트 항목에 `key` prop가 없으면 console에 경고 메시지가 표시될 것이다.
 
 19. ### What is the use of refs?
 
@@ -726,11 +726,11 @@
     <ButtonElement ref={ref}>{'Forward Ref'}</ButtonElement>
     ```
 
-22. ### Which is preferred option with in callback refs and findDOMNode()?
+22. ### callback refs 및 findDOMNode()에서 선호되는 옵션은?
 
-    It is preferred to use *callback refs* over `findDOMNode()` API. Because `findDOMNode()` prevents certain improvements in React in the future.
+    `findDOMNode()` API 위에 *callback refs*를 사용하는 것이 좋다. `findDOMNode()`이 추후 React에서의 개선 사항을 방해하기 때문이다.
 
-    The **legacy** approach of using `findDOMNode`:
+    `findDOMNode`를 사용하는 **legacy** 접근법은 다음과 같다.
 
     ```javascript
     class MyComponent extends Component {
@@ -744,7 +744,7 @@
     }
     ```
 
-    The recommended approach is:
+    권장되는 접근법은 다음과 같다.
 
     ```javascript
     class MyComponent extends Component {
@@ -758,14 +758,14 @@
     }
     ```
 
-23. ### Why are String Refs legacy?
+23. ### String Refs가 왜 legacy인가?
 
-    If you worked with React before, you might be familiar with an older API where the `ref` attribute is a string, like `ref={'textInput'}`, and the DOM node is accessed as `this.refs.textInput`. We advise against it because *string refs have below issues*, and are considered legacy. String refs were **removed in React v16**.
+    React를 사용해보기 전이라면, 예전 API에서 `ref={'textInput'}`과 같은 `ref` 속성이 문자열인 것과 DOM node가 `this.refs.textInput`과 같이 액세스 되는 것에 익숙할 것이다. *String Refs에 문제가 있어*, legacy로 간주하기 때문에 사용하지 않기를 바란다. String Refs는 **React v16에 제거되었다**.
 
-    1. They *force React to keep track of currently executing component*. This is problematic because it makes react module stateful, and thus causes weird errors when react module is duplicated in the bundle.
-    2. They are *not composable* — if a library puts a ref on the passed child, the user can't put another ref on it. Callback refs are perfectly composable.
-    3. They *don't work with static analysis* like Flow. Flow can't guess the magic that framework does to make the string ref appear on `this.refs`, as well as its type (which could be different). Callback refs are friendlier to static analysis.
-    4. It doesn't work as most people would expect with the "render callback" pattern (e.g. <DataGrid renderRow={this.renderRow} />)
+    1. *React가 현재 실행 중인 컴포넌트를 추적하도록 강제된다*. 이는 react 모듈을 stateful 하게 만들고, react 모듈이 번들에 복제될 때 이상한 오류를 유발하기 때문에 문제가 된다.
+    2. *composable* 하지 않다. — 라이브러리가 전달된 자식에 ref를 넣으면, 사용자는 다른 ref를 추가할 수 없다. Callback ref는 완벽하게 구성이 가능하다.
+    3. Flow와 같은 *정적 분석에서는 작동하지 않는다*. Flow는 프레임워크가 String Refs를 `this.refs`에 표시하도록 하는 마법과 그것의 타입(다를 수 있음)을 추측할 수 없다. Callback ref는 정적 분석에 친숙합니다..
+    4. 대부분의 사람이 생각하는 "render callback" 패턴으로 작동하지 않는다. (예). `<DataGrid renderRow={this.renderRow} />`)
        ```jsx harmony
        class MyComponent extends Component {
          renderRow = (index) => {
@@ -785,22 +785,22 @@
 
     *Virtual DOM* (VDOM)는 *실제 DOM*의 인-메모리 표현이다. UI 표현은 메모리에 유지되고 "실제" DOM과 동기화된다. 이는 렌더 함수의 호출과 화면상 elements를 표현하는 사이에 발생하는 단계이다. 이 전체 프로세스는 *조정* 이라고 한다.
 
-25. ### How Virtual DOM works?
+25. ### Virtual DOM은 어떻게 작동하나?
 
-    The *Virtual DOM* works in three simple steps.
+    *Virtual DOM*는 세 가지 간단한 단계로 작동한다.
 
-    1. Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
+    1. 기본 데이터가 변경될 때마다, 전체 UI는 Virtual DOM 표현으로 리렌더링 된다.
         ![vdom](images/vdom1.png)
 
-    2. Then the difference between the previous DOM representation and the new one is calculated.
+    2. 이전 DOM 표현과 새로운 표현 사이의 차이를 계산한다.
         ![vdom2](images/vdom2.png)
 
-    3. Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
+    3. 계산이 완료되면, 실제 DOM은 실제로 변경된 것만 업데이트할 것이다.
         ![vdom3](images/vdom3.png)
 
-26. ### What is the difference between Shadow DOM and Virtual DOM?
+26. ### Shadow DOM과 Virtual DOM의 차이점
 
-    The *Shadow DOM* is a browser technology designed primarily for scoping variables and CSS in *web components*. The *Virtual DOM* is a concept implemented by libraries in JavaScript on top of browser APIs.
+    *Shadow DOM* 주로 *웹 컴포넌트*에서 변수와 CSS의 범위 지정을 위해 디자인된 브라우저 기술이다. *Virtual DOM*는 브라우저 API를 기반으로 Javascript 라이브러리로 구현된 개념이다.
 
 27. ### What is React Fiber?
 

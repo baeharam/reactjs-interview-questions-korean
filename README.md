@@ -863,7 +863,7 @@
 
 32. ### React에서 Lifting State Up란?
 
-    여러 components가 동일한 변경 데이터를 공유해야 하는 경우 가장 가까운 공통 조상으로 *lift the shared state up*을 하는 것을 추천한다. 즉 2개의 자식 compoenents가 부모로부터 동일한 데이터를 공유하는 경우, 자식 components 모두에서 로컬 상태를 유지하는 대신에 상태를 부모로 이동해서 유지하는 것이다.
+    여러 컴포넌트가 동일한 변경 데이터를 공유해야 하는 경우 가장 가까운 공통 조상으로 *lift the shared state up*을 하는 것을 추천한다. 즉 2개의 자식 컴포넌트가 부모로부터 동일한 데이터를 공유하는 경우, 모든 자식 컴포넌트에서 로컬 상태를 유지하는 대신에 상태를 부모에서 유지하는 것이다.
 
 33. ### What are the different phases of component lifecycle?
 

@@ -47,7 +47,7 @@
 |26 | [Shadow DOM과 Virtual DOM의 차이점](#Shadow-DOM과-Virtual-DOM의-차이점) |
 |27 | [React Fiber란?](#React-Fiber란) |
 |28 | [What is the main goal of React Fiber?](#what-is-the-main-goal-of-react-fiber) |
-|29 | [What are controlled components?](#what-are-controlled-components) |
+|29 | [controlled components란?](#controlled-components란) |
 |30 | [What are uncontrolled components?](#what-are-uncontrolled-components) |
 |31 | [What is the difference between createElement and cloneElement?](#what-is-the-difference-between-createelement-and-cloneelement) |
 |32 | [What is Lifting State Up in React?](#what-is-lifting-state-up-in-react) |
@@ -810,11 +810,11 @@
 
     The goal of *React Fiber* is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is **incremental rendering**: the ability to split rendering work into chunks and spread it out over multiple frames.
 
-29. ### What are controlled components?
+29. ### controlled components란?
 
-    A component that controls the input elements within the forms on subsequent user input is called **Controlled Component**, i.e, every state mutation will have an associated handler function.
+    사용자가 입력한 뒤 폼의 입력창을 제어하는 component를 **Controlled Component**라고 한다. 즉 모든 상태 변이에는 관련된 핸들러 함수가 있다.
 
-    For example, to write all the names in uppercase letters, we use handleChange as below,
+    예를 들어, 모든 이름을 대문자로 작성하기 위해서, 아래와 같은 handleChange를 사용한다.
 
     ```javascript
     handleChange(event) {

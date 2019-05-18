@@ -54,7 +54,7 @@
 |33 | [What are the different phases of component lifecycle?](#what-are-the-different-phases-of-component-lifecycle) |
 |34 | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react) |
 |35 | [What are Higher-Order components?](#what-are-higher-order-components) |
-|36 | [How to create props proxy for HOC component?](#how-to-create-props-proxy-for-hoc-component) |
+|36 | [HOC 컴포넌트를 사용해서 props 프록시를 만드는 방법은?](#HOC-컴포넌트를-사용해서-props-프록시를-만드는-방법은) |
 |37 | [What is context?](#what-is-context) |
 |38 | [What is children prop?](#what-is-children-prop) |
 |39 | [How to write comments in React?](#how-to-write-comments-in-react) |
@@ -930,9 +930,9 @@
     3. State abstraction and manipulation.
     4. Props manipulation.
 
-36. ### How to create props proxy for HOC component?
+36. ### HOC 컴포넌트를 사용해서 props 프록시를 만드는 방법은?
 
-    You can add/edit props passed to the component using *props proxy* pattern like this:
+    다음과 같이 *props proxy* 패턴을 사용하여 컴포넌트에 전달된 props를 추가/편집할 수 있다.
 
     ```jsx harmony
     function HOC(WrappedComponent) {

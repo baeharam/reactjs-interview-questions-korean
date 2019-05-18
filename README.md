@@ -49,7 +49,7 @@
 |28 | [What is the main goal of React Fiber?](#what-is-the-main-goal-of-react-fiber) |
 |29 | [controlled components란?](#controlled-components란) |
 |30 | [uncontrolled components란?](#uncontrolled-components란) |
-|31 | [What is the difference between createElement and cloneElement?](#what-is-the-difference-between-createelement-and-cloneelement) |
+|31 | [createElement와 cloneElement의 차이점은?](#createElement와-cloneElement의-차이점은?) |
 |32 | [What is Lifting State Up in React?](#what-is-lifting-state-up-in-react) |
 |33 | [What are the different phases of component lifecycle?](#what-are-the-different-phases-of-component-lifecycle) |
 |34 | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react) |
@@ -857,9 +857,9 @@
 
     대부분의 경우 양식을 구현하는 데 controlled components를 사용하는 것을 추천한다.
 
-31. ### What is the difference between createElement and cloneElement?
+31. ### createElement와 cloneElement의 차이점은?
 
-    JSX elements will be transpiled to `React.createElement()` functions to create React elements which are going to be used for the object representation of UI. Whereas `cloneElement` is used to clone an element and pass it new props.
+    JSX elements는 `React.createElement()` 함수로 옮겨져서 UI의 객체 표현에 사용되는 React elements를 만든다. 반면에 `cloneElement`은 element를 복사하고 새로운 props로 전달하는 데 사용된다.
 
 32. ### What is Lifting State Up in React?
 

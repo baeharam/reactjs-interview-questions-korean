@@ -48,7 +48,7 @@
 |27 | [React Fiber란?](#React-Fiber란) |
 |28 | [What is the main goal of React Fiber?](#what-is-the-main-goal-of-react-fiber) |
 |29 | [controlled components란?](#controlled-components란) |
-|30 | [What are uncontrolled components?](#what-are-uncontrolled-components) |
+|30 | [uncontrolled components란?](#uncontrolled-components란) |
 |31 | [What is the difference between createElement and cloneElement?](#what-is-the-difference-between-createelement-and-cloneelement) |
 |32 | [What is Lifting State Up in React?](#what-is-lifting-state-up-in-react) |
 |33 | [What are the different phases of component lifecycle?](#what-are-the-different-phases-of-component-lifecycle) |
@@ -822,11 +822,11 @@
     }
     ```
 
-30. ### What are uncontrolled components?
+30. ### uncontrolled components란?
 
-    The **Uncontrolled Components** are the ones that store their own state internally, and you query the DOM using a ref to find its current value when you need it. This is a bit more like traditional HTML.
+    The **Uncontrolled Components**는 내부적으로 자신의 상태를 저장하는 것으로, 현재의 값을 찾기 위해 필요하다면 ref를 사용하여 DOM에서 찾아온다. 이것은 전통적인 HTML과 더 비슷하다.
 
-    In the below UserProfile component, the `name` input is accessed using ref.
+    아래의 UserProfile component에서, `이름` 입력은 ref를 사용해서 액세스한다.
 
     ```jsx harmony
     class UserProfile extends React.Component {
@@ -855,7 +855,7 @@
     }
     ```
 
-    In most cases, it's recommend to use controlled components to implement forms.
+    대부분의 경우 양식을 구현하는 데 controlled components를 사용하는 것을 추천한다.
 
 31. ### What is the difference between createElement and cloneElement?
 

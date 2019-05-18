@@ -55,7 +55,7 @@
 |34 | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react) |
 |35 | [What are Higher-Order components?](#what-are-higher-order-components) |
 |36 | [How to create props proxy for HOC component?](#how-to-create-props-proxy-for-hoc-component) |
-|37 | [What is context?](#what-is-context) |
+|37 | [context란?](#context란) |
 |38 | [What is children prop?](#what-is-children-prop) |
 |39 | [How to write comments in React?](#how-to-write-comments-in-react) |
 |40 | [What is the purpose of using super constructor with props argument?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
@@ -951,9 +951,9 @@
     }
     ```
 
-37. ### What is context?
+37. ### context란?
 
-    *Context* provides a way to pass data through the component tree without having to pass props down manually at every level. For example, authenticated user, locale preference, UI theme need to be accessed in the application by many components.
+    *Context*는 수동으로 모든 단계에 props를 전달하지 않고 컴포넌트 트리를 통해 데이터를 전달하는 방법을 제공한다. 예를 들어, 인증된 사용자, locale 기본 설정, UI 테마는 많은 컴포넌트로 응용 프로그램에서 액세스해야 한다.
 
     ```javascript
     const {Provider, Consumer} = React.createContext(defaultValue)

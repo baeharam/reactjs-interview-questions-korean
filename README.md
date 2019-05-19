@@ -53,7 +53,7 @@
 |32 | [React에서 Lifting State Up란?](#React에서-Lifting-State-Up란) |
 |33 | [컴포넌트 라이프 사이클의 다른 단계들은?](#컴포넌트-라이프-사이클의-다른-단계들은?) |
 |34 | [React의 라이프 사이클 메서드에는 무엇이 있나?](#React의-라이프-사이클-메서드에는-무엇이-있나?) |
-|35 | [What are Higher-Order components?](#what-are-higher-order-components) |
+|35 | [고차(Higher-Order) 컴포넌트란?](#고차(Higher-Order)-컴포넌트란?) |
 |36 | [HOC 컴포넌트를 사용해서 props 프록시를 만드는 방법은?](#HOC-컴포넌트를-사용해서-props-프록시를-만드는-방법은) |
 |37 | [What is context?](#what-is-context) |
 |38 | [What is children prop?](#what-is-children-prop) |
@@ -913,22 +913,22 @@
     - **componentDidUpdate:** 주로 props나 state 변경에 대한 응답으로 DOM을 업데이트하는 데 사용된다.
     - **componentWillUnmount:** 나가는 네트워크 요청을 취소하거나 컴포넌트와 관련된 모든 이벤트 리스너를 제거하는 데 사용된다.
 
-35. ### What are Higher-Order Components?
+35. ### 고차(Higher-Order) 컴포넌트란?
 
-    A *higher-order component* (*HOC*) is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.
+    *고차(Higher-Order) 컴포넌트* (*HOC*)는 컴포넌트를 가져와서 새로운 컴포넌트를 반환하는 함수이다. 기본적으로, 컴포넌트 구성상의 본질에서 파생된 패턴이다.
 
-    We call them **pure components** because they can accept any dynamically provided child component but they won't modify or copy any behavior from their input components.
+    동적으로 제공된 자식 컴포넌트는 허용할 수 있지만, 입력 컴포넌트의 어떠한 동작을 수정하거나 복사하지 않으므로 **순수 컴포넌트(pure components)** 라고 부른다. 
 
     ```javascript
     const EnhancedComponent = higherOrderComponent(WrappedComponent)
     ```
 
-    HOC can be used for many use cases:
+    HOC는 아래와 같은 많은 사례에서 사용할 수 있다.
 
-    1. Code reuse, logic and bootstrap abstraction.
-    2. Render hijacking.
-    3. State abstraction and manipulation.
-    4. Props manipulation.
+    1. 코드 재사용, 논리 및 부트스트랩 추상화
+    2. 도용 렌더링
+    3. State 추상화 및 조작
+    4. Props 조작.
 
 36. ### HOC 컴포넌트를 사용해서 props 프록시를 만드는 방법은?
 

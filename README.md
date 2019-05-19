@@ -917,7 +917,7 @@
 
     *고차(Higher-Order) 컴포넌트* (*HOC*)는 컴포넌트를 가져와서 새로운 컴포넌트를 반환하는 함수이다. 기본적으로, 컴포넌트 구성상의 본질에서 파생된 패턴이다.
 
-    동적으로 제공된 자식 컴포넌트는 허용할 수 있지만, 입력 컴포넌트의 모든 동작을 수정하거나 복사하지 않으므로 **pure components** 라고 부른다. 
+    동적으로 제공된 자식 컴포넌트는 허용할 수 있지만, 입력 컴포넌트의 어떠한 동작을 수정하거나 복사하지 않으므로 **순수 컴포넌트(pure components)** 라고 부른다. 
 
     ```javascript
     const EnhancedComponent = higherOrderComponent(WrappedComponent)

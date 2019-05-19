@@ -808,7 +808,7 @@
 
 28. ### React Fiber의 주요 목표는??
 
-    *React Fiber*의 목표는 애니메이션, 레이아웃, 제스처, 작업 일시중지, 중단, 재사용 같은 영역에 대한 적합성을 높이는 것이다. 주요 기능은 **incremental rendering**으로 렌더링 작업을 청크로 분할하고 여러 프레임에 걸쳐 펼치는 기능이다.
+    *React Fiber*의 목표는 애니메이션, 레이아웃, 제스처, 작업 일시중지, 중단, 재사용 같은 영역에 대한 적합성을 높이는 것이다. 주요 기능은 **incremental rendering**으로 렌더링 작업을 청크(chunk)로 분할하고 여러 프레임에 걸쳐 펼치는 기능이다.
 
 29. ### What are controlled components?
 

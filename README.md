@@ -953,7 +953,7 @@
 
 37. ### context란?
 
-    *Context*는 수동으로 모든 단계에 props를 전달하지 않고 컴포넌트 트리를 통해 데이터를 전달하는 방법을 제공한다. 예를 들어, 인증된 사용자, locale 기본 설정, UI 테마는 많은 컴포넌트로 응용 프로그램에서 액세스해야 한다.
+    *Context*는 수동으로 모든 단계에 props를 전달하지 않고 컴포넌트 트리를 통해 데이터를 전달하는 방법을 제공한다. 예를 들어, 인증된 사용자, locale 기본 설정, UI 테마는 많은 컴포넌트를 통해 응용 프로그램에서 액세스해야 한다.
 
     ```javascript
     const {Provider, Consumer} = React.createContext(defaultValue)

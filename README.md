@@ -50,11 +50,11 @@
 |29 | [controlled components란?](#controlled-components란) |
 |30 | [uncontrolled components란?](#uncontrolled-components란) |
 |31 | [createElement와 cloneElement의 차이점은?](#createElement와-cloneElement의-차이점은?) |
-|32 | [What is Lifting State Up in React?](#what-is-lifting-state-up-in-react) |
-|33 | [What are the different phases of component lifecycle?](#what-are-the-different-phases-of-component-lifecycle) |
-|34 | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react) |
+|32 | [React에서 Lifting State Up란?](#React에서-Lifting-State-Up란) |
+|33 | [컴포넌트 라이프 사이클의 다른 단계들은?](#컴포넌트-라이프-사이클의-다른-단계들은?) |
+|34 | [React의 라이프 사이클 메서드에는 무엇이 있나?](#React의-라이프-사이클-메서드에는-무엇이-있나?) |
 |35 | [고차(Higher-Order) 컴포넌트란?](#고차(Higher-Order)-컴포넌트란?) |
-|36 | [How to create props proxy for HOC component?](#how-to-create-props-proxy-for-hoc-component) |
+|36 | [HOC 컴포넌트를 사용해서 props 프록시를 만드는 방법은?](#HOC-컴포넌트를-사용해서-props-프록시를-만드는-방법은) |
 |37 | [What is context?](#what-is-context) |
 |38 | [What is children prop?](#what-is-children-prop) |
 |39 | [How to write comments in React?](#how-to-write-comments-in-react) |
@@ -861,57 +861,57 @@
 
     JSX elements는 `React.createElement()` 함수로 옮겨져서 UI의 객체 표현에 사용되는 React elements를 만든다. 반면에 `cloneElement`은 element를 복사하고 새로운 props로 전달하는 데 사용된다.
 
-32. ### What is Lifting State Up in React?
+32. ### React에서 Lifting State Up란?
 
-    When several components need to share the same changing data then it is recommended to *lift the shared state up* to their closest common ancestor. That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
+    여러 컴포넌트가 동일한 변경 데이터를 공유해야 하는 경우 가장 가까운 공통 조상으로 *lift the shared state up*을 하는 것을 추천한다. 즉 2개의 자식 컴포넌트가 부모로부터 동일한 데이터를 공유하는 경우, 모든 자식 컴포넌트에서 로컬 상태를 유지하는 대신에 상태를 부모에서 관리하는 것이다.
 
-33. ### What are the different phases of component lifecycle?
+33. ### 컴포넌트 라이프 사이클의 다른 단계들은?
 
-    The component lifecycle has three distinct lifecycle phases:
+    컴포넌트 라이프 사이클는 세 가지의 고유한 단계가 있다.
 
-    1. **Mounting:** The component is ready to mount in the browser DOM. This phase covers initialization from `constructor()`, `getDerivedStateFromProps()`, `render()`, and `componentDidMount()` lifecycle methods.
+    1. **Mounting:** 컴포넌트가 브라우저 DOM에 mount 할 준비가 되었다. 이 단계는 `constructor()`, `getDerivedStateFromProps()`, `render()`, `componentDidMount()` 라이프 사이클 메서드의 초기화에 대해 다룬다.
 
-    2. **Updating:** In this phase, the component get updated in two ways, sending the new props and updating the state either from `setState()` or `forceUpdate()`. This phase covers `getDerivedStateFromProps()`, `shouldComponentUpdate()`, `render()`, `getSnapshotBeforeUpdate()` and `componentDidUpdate()` lifecycle methods.
+    2. **Updating:** 이 단계에서는, 컴포넌트는 두 가지 방법으로 업데이트가 되는데, 새로운 props를 보내거나, `setState()` 또는 `forceUpdate()`으로 state를 업데이트하는 것이다. 이 단계에서는 `getDerivedStateFromProps()`, `shouldComponentUpdate()`, `render()`, `getSnapshotBeforeUpdate()`, `componentDidUpdate()` 라이프 사이클 메서드를 다룬다.
 
-    3. **Unmounting:** In this last phase, the component is not needed and get unmounted from the browser DOM. This phase includes `componentWillUnmount()` lifecycle method.
+    3. **Unmounting:** 이 마지막 단계에서는, 컴포넌트는 필요하지 않으며 브라우저 DOM에서 unmount된다. 이 단계에서는 `componentWillUnmount()` 라이프 사이클 메서드가 포함된다.
 
-    It's worth mentioning that React internally has a concept of phases when applying changes to the DOM. They are separated as follows
+    React는 DOM에 변경 사항을 적용할 때 내부적으로 단계의 개념을 가지고 있다는 것을 언급할 필요가 있다. 다음과 같이 분리된다.
 
-    1. **Render** The component will render without any side-effects. This applies for Pure components and in this phase, React can pause, abort, or restart the render.
+    1. **Render** 컴포넌트는 부수 효과 없이 렌더링 된다. Pure 컴포넌트에 적용되며 이 단계에서 React는 렌더링을 일시 정지, 중단 또는 재시작할 수 있다.
 
-    2. **Pre-commit** Before the component actually applies the changes to the DOM, there is a moment that allows React to read from the DOM through the `getSnapshotBeforeUpdate()`.
+    2. **Pre-commit** 컴포넌트가 실제로 DOM에 변경사항을 적용하기 전에, React가 `getSnapshotBeforeUpdate()`를 통해서 DOM을 읽을 수 있는 순간이다.
 
-    3. **Commit** React works with the DOM and executes the final lifecycles respectively `componentDidMount()` for mounting, `componentDidUpdate()` for updating, and `componentWillUnmount()` for unmounting.
+    3. **Commit** React는 DOM과 함께 작동하고 Mount를 위한 `componentDidMount()`, 업데이트를 위한 `componentDidMount()`, Unmount를 위한 `componentWillUnmount()`의 최종 라이프 사이클을 각각 실행한다.
 
-    React 16.3+ Phases (or an [interactive version](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/))
+    React 16.3+ 단계 (또는) [일반적인 버전](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/))
 
     ![phases 16.3+](images/phases16.3.jpg)
 
-    Before React 16.3
+    React 16.3 전에는
 
     ![phases 16.2](images/phases.png)
 
 
-34. ### What are the lifecycle methods of React?
+34. ### React의 라이프 사이클 메서드에는 무엇이 있나?
 
     React 16.3+
 
-    - **getDerivedStateFromProps:** Invoked right before calling `render()` and is invoked on *every* render. This exists for rare use cases where you need derived state. Worth reading [if you need derived state](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html).
-    - **componentDidMount:** Executed after first rendering and here all AJAX requests, DOM or state updates, and set up event listeners should occur.
-    - **shouldComponentUpdate:** Determines if the component will be updated or not. By default it returns `true`. If you are sure that the component doesn't need to render after state or props are updated, you can return false value. It is a great place to improve performance as it allows you to prevent a re-render if component receives new prop.
-    - **getSnapshotBeforeUpdate:** Executed right before rendered output is committed to the DOM. Any value returned by this will be passed into `componentDidUpdate()`. This is useful to capture information from the DOM i.e. scroll position.
-    - **componentDidUpdate:** Mostly it is used to update the DOM in response to prop or state changes. This will not fire if `shouldComponentUpdate()` returns `false`.
-    - **componentWillUnmount** It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component.
+    - **getDerivedStateFromProps:** `render()`가 호출되기 바로 전에 호출되며 *모든* 렌더링에서 호출된다. 이전 state가 필요한 드문 경우에 사용이 된다. [이전 state가 필요하면](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html) 읽을만한 가치가 있다.
+    - **componentDidMount:** 첫 번째 렌더링 이후에 실행되고, 여기서 모든 AJAX 요청, DOM 또는 state 업데이트 및 이벤트 리스너가 설정된다.
+    - **shouldComponentUpdate:** 컴포넌트를 업데이트 해야 할지 여부를 결정한다. 기본적으로 `true`를 반환한다. state나 props가 업데이트된 후에 컴포넌트를 렌더링할 필요 없다고 확신하는 경우 false를 반환할 수 있다. 컴포넌트가 새로운 props를 받으면 리렌더링하는 것을 방지할 수 있어 성능을 향상하는데 매우 좋다.
+    - **getSnapshotBeforeUpdate:** 렌더링 된 출력이 DOM에 커밋되기 바로 직전에 실행된다. 이로 인해 모든 값은 `componentDidUpdate()`에 전달이 된다. DOM에서 스크롤 위치 같은 정보를 가져오는 데 유용하다.
+    - **componentDidUpdate:** 주로 props나 state의 변경에 대한 응답으로 DOM을 업데이트하는데 사용된다. `shouldComponentUpdate()`가 `false`를 반환하면 실행되지 않는다.
+    - **componentWillUnmount** 나가는 네트워크 요청을 취소하거나 컴포넌트와 관련된 모든 이벤트 리스너를 제거하는 데 사용된다.
 
     Before 16.3
 
-    - **componentWillMount:** Executed before rendering and is used for App level configuration in your root component.
-    - **componentDidMount:** Executed after first rendering and here all AJAX requests, DOM or state updates, and set up event listeners should occur.
-    - **componentWillReceiveProps:** Executed when particular prop updates to trigger state transitions.
-    - **shouldComponentUpdate:** Determines if the component will be updated or not. By default it returns `true`. If you are sure that the component doesn't need to render after state or props are updated, you can return false value. It is a great place to improve performance as it allows you to prevent a re-render if component receives new prop.
-    - **componentWillUpdate:** Executed before re-rendering the component when there are props & state changes confirmed by `shouldComponentUpdate()` which returns true.
-    - **componentDidUpdate:** Mostly it is used to update the DOM in response to prop or state changes.
-    - **componentWillUnmount:** It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component.
+    - **componentWillMount:** 렌더링 전에 실행되며 root 컴포넌트의 App 수준 구성을 하는 데 사용된다.
+    - **componentDidMount:** 첫 번째 렌더링 이후에 실행되고, 여기서 모든 AJAX 요청, DOM 또는 state 업데이트 및 이벤트 리스너가 설정된다.
+    - **componentWillReceiveProps:** 특정 props 업데이트가 state 전환을 일으킬 때 실행된다.
+    - **shouldComponentUpdate:** 컴포넌트를 업데이트 해야 할지 여부를 결정한다. 기본적으로 `true`를 반환한다. state나 props가 업데이트된 후에 컴포넌트를 렌더링할 필요 없다고 확신하는 경우 false를 반환할 수 있다. 컴포넌트가 새로운 props를 받으면 리렌더링하는 것을 방지할 수 있어 성능을 향상하는데 매우 좋다.
+    - **componentWillUpdate:** true를 반환하는 `shouldComponentUpdate()`에 의해 확인된 props 및 state 변경이 있을 때 컴포넌트를 리렌더링하기 전에 실행된다.
+    - **componentDidUpdate:** 주로 props나 state 변경에 대한 응답으로 DOM을 업데이트하는 데 사용된다.
+    - **componentWillUnmount:** 나가는 네트워크 요청을 취소하거나 컴포넌트와 관련된 모든 이벤트 리스너를 제거하는 데 사용된다.
 
 35. ### 고차(Higher-Order) 컴포넌트란?
 
@@ -930,9 +930,9 @@
     3. State 추상화 및 조작
     4. Props 조작.
 
-36. ### How to create props proxy for HOC component?
+36. ### HOC 컴포넌트를 사용해서 props 프록시를 만드는 방법은?
 
-    You can add/edit props passed to the component using *props proxy* pattern like this:
+    다음과 같이 *props proxy* 패턴을 사용하여 컴포넌트에 전달된 props를 추가/편집할 수 있다.
 
     ```jsx harmony
     function HOC(WrappedComponent) {

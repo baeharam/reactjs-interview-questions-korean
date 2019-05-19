@@ -683,7 +683,7 @@
       }
     }
     ```
-    1. React 버전에 관계 없이 ref 콜백 접근법을 사용할 수도 있다. 예를 들어, 검색창 컴포넌트의 입력 엘리먼트에서는 다음과 같이 접근된다.
+    1. React 버전에 관계없이 ref 콜백 접근법을 사용할 수도 있다. 예를 들어, 검색창 컴포넌트의 입력 엘리먼트에서는 다음과 같이 접근된다.
     ```jsx harmony
     class SearchBar extends Component {
        constructor(props) {
@@ -709,8 +709,8 @@
     ```
 
     **클로저(closures)** 를 사용하여 함수형 컴포넌트에서 *refs*를 사용할 수도 있다.
-    **참고**: 권장하진 않지만 인라인 ref 콜백을 이용할 수도 있다.
-    
+    **참고**: 권장하진 않지만, 인라인 ref 콜백을 이용할 수도 있다.
+
 21. ### What are forward refs?
 
     *Ref forwarding* is a feature that lets some components take a *ref* they receive, and pass it further down to a child.

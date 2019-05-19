@@ -51,7 +51,7 @@
 |30 | [uncontrolled components란?](#uncontrolled-components란) |
 |31 | [createElement와 cloneElement의 차이점은?](#createElement와-cloneElement의-차이점은?) |
 |32 | [What is Lifting State Up in React?](#what-is-lifting-state-up-in-react) |
-|33 | [What are the different phases of component lifecycle?](#what-are-the-different-phases-of-component-lifecycle) |
+|33 | [컴포넌트 라이프 사이클의 다른 단계들은?](#컴포넌트-라이프-사이클의-다른-단계들은?) |
 |34 | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react) |
 |35 | [What are Higher-Order components?](#what-are-higher-order-components) |
 |36 | [How to create props proxy for HOC component?](#how-to-create-props-proxy-for-hoc-component) |
@@ -865,29 +865,29 @@
 
     When several components need to share the same changing data then it is recommended to *lift the shared state up* to their closest common ancestor. That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
 
-33. ### What are the different phases of component lifecycle?
+33. ### 컴포넌트 라이프 사이클의 다른 단계들은?
 
-    The component lifecycle has three distinct lifecycle phases:
+    컴포넌트 라이프 사이클는 세 가지의 고유한 단계가 있다.
 
-    1. **Mounting:** The component is ready to mount in the browser DOM. This phase covers initialization from `constructor()`, `getDerivedStateFromProps()`, `render()`, and `componentDidMount()` lifecycle methods.
+    1. **Mounting:** 컴포넌트가 브라우저 DOM에 mount 할 준비가 되었다. 이 단계는 `constructor()`, `getDerivedStateFromProps()`, `render()`, `componentDidMount()` 라이프 사이클 메서드의 초기화에 대해 다룬다.
 
-    2. **Updating:** In this phase, the component get updated in two ways, sending the new props and updating the state either from `setState()` or `forceUpdate()`. This phase covers `getDerivedStateFromProps()`, `shouldComponentUpdate()`, `render()`, `getSnapshotBeforeUpdate()` and `componentDidUpdate()` lifecycle methods.
+    2. **Updating:** 이 단계에서는, 컴포넌트는 두 가지 방법으로 업데이트가 되는데, 새로운 props를 보내거나, `setState()` 또는 `forceUpdate()`으로 state를 업데이트하는 것이다. 이 단계에서는 `getDerivedStateFromProps()`, `shouldComponentUpdate()`, `render()`, `getSnapshotBeforeUpdate()`, `componentDidUpdate()` 라이프 사이클 메서드를 다룬다.
 
-    3. **Unmounting:** In this last phase, the component is not needed and get unmounted from the browser DOM. This phase includes `componentWillUnmount()` lifecycle method.
+    3. **Unmounting:** 이 마지막 단계에서는, 컴포넌트는 필요하지 않으며 브라우저 DOM에서 unmount된다. 이 단계에서는 `componentWillUnmount()` 라이프 사이클 메서드가 포함된다.
 
-    It's worth mentioning that React internally has a concept of phases when applying changes to the DOM. They are separated as follows
+    React는 DOM에 변경 사항을 적용할 때 내부적으로 단계의 개념을 가지고 있다는 것을 언급할 필요가 있다. 다음과 같이 분리된다.
 
-    1. **Render** The component will render without any side-effects. This applies for Pure components and in this phase, React can pause, abort, or restart the render.
+    1. **Render** 컴포넌트는 부수 효과 없이 렌더링 된다. Pure 컴포넌트에 적용되며 이 단계에서 React는 렌더링을 일시 정지, 중단 또는 재시작할 수 있다.
 
-    2. **Pre-commit** Before the component actually applies the changes to the DOM, there is a moment that allows React to read from the DOM through the `getSnapshotBeforeUpdate()`.
+    2. **Pre-commit** 컴포넌트가 실제로 DOM에 변경사항을 적용하기 전에, React가 `getSnapshotBeforeUpdate()`를 통해서 DOM을 읽을 수 있는 순간이다.
 
-    3. **Commit** React works with the DOM and executes the final lifecycles respectively `componentDidMount()` for mounting, `componentDidUpdate()` for updating, and `componentWillUnmount()` for unmounting.
+    3. **Commit** React는 DOM과 함께 작동하고 Mount를 위한 `componentDidMount()`, 업데이트를 위한 `componentDidMount()`, Unmount를 위한 `componentWillUnmount()`의 최종 라이프 사이클을 각각 실행한다.
 
-    React 16.3+ Phases (or an [interactive version](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/))
+    React 16.3+ 단계 (또는) [일반적인 버전](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/))
 
     ![phases 16.3+](images/phases16.3.jpg)
 
-    Before React 16.3
+    React 16.3 전에는
 
     ![phases 16.2](images/phases.png)
 

@@ -37,7 +37,7 @@
 |16 | [React에 SyntheticEvent란 무엇인가?](#React에-SyntheticEvent란-무엇인가) |
 |17 | [인라인 조건 표현식이란?](#인라인-조건-표현식이란) |
 |18 | ["key" props는 무엇이며 elements의 배열에서 사용하면 이점이 무엇인가?](#key-props는-무엇이며-elements의-배열에서-사용하면-이점이-무엇인가) |
-|19 | [What is the use of refs?](#what-is-the-use-of-refs) |
+|19 | [refs의 사용성은 무엇인가?](#refs의-사용성은-무엇인가) |
 |20 | [How to create refs?](#how-to-create-refs)
 |21 | [What are forward refs?](#what-are-forward-refs) |
 |22 | [callback refs 및 findDOMNode()에서 선호되는 옵션은?](#callback-refs-및-findDOMNode()에서-선호되는-옵션은) |
@@ -663,9 +663,9 @@
     2. 리스트 항목을 별도의 컴포넌트로 추출하는 경우 `li` 태그 대신에 리스트 컴포넌트에 *keys*를 적용해라.
     3. 리스트 항목에 `key` prop가 없으면 console에 경고 메시지가 표시될 것이다.
 
-19. ### What is the use of refs?
+19. ### refs의 사용성은 무엇인가?
 
-    The *ref* is used to return a reference to the element. They *should be avoided* in most cases, however, they can be useful when you need a direct access to the DOM element or an instance of a component.
+    *ref*는 엘리먼트에 대한 참조를 반환하는 데 사용된다. 대부분의 경우에서 *피하는 것이 좋지만*, DOM 엘리먼트나 컴포넌트의 인스턴스에 직접 접근하는 경우 유용할 수 있다.
 
 20. ### How to create refs?
 

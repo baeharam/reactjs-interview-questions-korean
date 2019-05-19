@@ -46,7 +46,7 @@
 |25 | [Virtual DOM은 어떻게 작동하나?](#Virtual-DOM은-어떻게-작동하나) |
 |26 | [Shadow DOM과 Virtual DOM의 차이점](#Shadow-DOM과-Virtual-DOM의-차이점) |
 |27 | [React Fiber란?](#React-Fiber란) |
-|28 | [What is the main goal of React Fiber?](#what-is-the-main-goal-of-react-fiber) |
+|28 | [React Fiber의 주요 목표는?](#React-Fiber의-주요-목표는) |
 |29 | [controlled components란?](#controlled-components란) |
 |30 | [uncontrolled components란?](#uncontrolled-components란) |
 |31 | [createElement와 cloneElement의 차이점은?](#createElement와-cloneElement의-차이점은?) |
@@ -806,9 +806,9 @@
 
     Fiber는 React v16에서 새로운 *조정된* 엔진 또는 핵심 알고리즘의 재구현이다. React Fiber의 목표는 애니메이션, 레이아웃, 제스처, 작업 일시중지, 중단, 재사용 같은 영역에 대한 적합성을 높이고 다양한 유형의 업데이트에 우선순위를 정하는 것이다. 
 
-28. ### What is the main goal of React Fiber?
+28. ### React Fiber의 주요 목표는??
 
-    The goal of *React Fiber* is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is **incremental rendering**: the ability to split rendering work into chunks and spread it out over multiple frames.
+    *React Fiber*의 목표는 애니메이션, 레이아웃, 제스처, 작업 일시중지, 중단, 재사용 같은 영역에 대한 적합성을 높이는 것이다. 주요 기능은 **incremental rendering**으로 렌더링 작업을 청크(chunk)로 분할하고 여러 프레임에 걸쳐 펼치는 기능이다.
 
 29. ### controlled components란?
 

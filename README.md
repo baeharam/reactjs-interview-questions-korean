@@ -40,16 +40,16 @@
 |19 | [What is the use of refs?](#what-is-the-use-of-refs) |
 |20 | [How to create refs?](#how-to-create-refs)
 |21 | [What are forward refs?](#what-are-forward-refs) |
-|22 | [Which is preferred option with in callback refs and findDOMNode()?](#which-is-preferred-option-with-in-callback-refs-and-finddomnode) |
-|23 | [Why are String Refs legacy?](#why-are-string-refs-legacy) |
-|24 | [What is Virtual DOM?](#what-is-virtual-dom) |
+|22 | [callback refs 및 findDOMNode()에서 선호되는 옵션은?](#callback-refs-및-findDOMNode()에서-선호되는-옵션은) |
+|23 | [String Refs가 왜 legacy인가?](#String-Refs가-왜-legacy인가) |
+|24 | [Virtual DOM이란?](#Virtual-DOM이란) 
 |25 | [Virtual DOM은 어떻게 작동하나?](#Virtual-DOM은-어떻게-작동하나) |
 |26 | [Shadow DOM과 Virtual DOM의 차이점](#Shadow-DOM과-Virtual-DOM의-차이점) |
-|27 | [What is React Fiber?](#what-is-react-fiber) |
+|27 | [React Fiber란?](#React-Fiber란) |
 |28 | [React Fiber의 주요 목표는?](#React-Fiber의-주요-목표는) |
-|29 | [What are controlled components?](#what-are-controlled-components) |
-|30 | [What are uncontrolled components?](#what-are-uncontrolled-components) |
-|31 | [What is the difference between createElement and cloneElement?](#what-is-the-difference-between-createelement-and-cloneelement) |
+|29 | [controlled components란?](#controlled-components란) |
+|30 | [uncontrolled components란?](#uncontrolled-components란) |
+|31 | [createElement와 cloneElement의 차이점은?](#createElement와-cloneElement의-차이점은?) |
 |32 | [What is Lifting State Up in React?](#what-is-lifting-state-up-in-react) |
 |33 | [What are the different phases of component lifecycle?](#what-are-the-different-phases-of-component-lifecycle) |
 |34 | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react) |
@@ -726,11 +726,11 @@
     <ButtonElement ref={ref}>{'Forward Ref'}</ButtonElement>
     ```
 
-22. ### Which is preferred option with in callback refs and findDOMNode()?
+22. ### callback refs 및 findDOMNode()에서 선호되는 옵션은?
 
-    It is preferred to use *callback refs* over `findDOMNode()` API. Because `findDOMNode()` prevents certain improvements in React in the future.
+    `findDOMNode()` API 위에 *callback refs*를 사용하는 것이 좋다. `findDOMNode()`이 추후 React에서의 개선 사항을 방해하기 때문이다.
 
-    The **legacy** approach of using `findDOMNode`:
+    `findDOMNode`를 사용하는 **legacy** 접근법은 다음과 같다.
 
     ```javascript
     class MyComponent extends Component {
@@ -744,7 +744,7 @@
     }
     ```
 
-    The recommended approach is:
+    권장되는 접근법은 다음과 같다.
 
     ```javascript
     class MyComponent extends Component {
@@ -758,14 +758,14 @@
     }
     ```
 
-23. ### Why are String Refs legacy?
+23. ### String Refs가 왜 legacy인가?
 
-    If you worked with React before, you might be familiar with an older API where the `ref` attribute is a string, like `ref={'textInput'}`, and the DOM node is accessed as `this.refs.textInput`. We advise against it because *string refs have below issues*, and are considered legacy. String refs were **removed in React v16**.
+    React를 사용해보기 전이라면, 예전 API에서 `ref={'textInput'}`과 같은 `ref` 속성이 문자열인 것과 DOM node가 `this.refs.textInput`과 같이 액세스 되는 것에 익숙할 것이다. *String Refs에 문제가 있어*, legacy로 간주하기 때문에 사용하지 않기를 바란다. String Refs는 **React v16에 제거되었다**.
 
-    1. They *force React to keep track of currently executing component*. This is problematic because it makes react module stateful, and thus causes weird errors when react module is duplicated in the bundle.
-    2. They are *not composable* — if a library puts a ref on the passed child, the user can't put another ref on it. Callback refs are perfectly composable.
-    3. They *don't work with static analysis* like Flow. Flow can't guess the magic that framework does to make the string ref appear on `this.refs`, as well as its type (which could be different). Callback refs are friendlier to static analysis.
-    4. It doesn't work as most people would expect with the "render callback" pattern (e.g. <DataGrid renderRow={this.renderRow} />)
+    1. *React가 현재 실행 중인 컴포넌트를 추적하도록 강제된다*. 이는 react 모듈을 stateful 하게 만들고, react 모듈이 번들에 복제될 때 이상한 오류를 유발하기 때문에 문제가 된다.
+    2. *composable* 하지 않다. — 라이브러리가 전달된 자식에 ref를 넣으면, 사용자는 다른 ref를 추가할 수 없다. Callback ref는 완벽하게 구성이 가능하다.
+    3. Flow와 같은 *정적 분석에서는 작동하지 않는다*. Flow는 프레임워크가 String Refs를 `this.refs`에 표시하도록 하는 마법과 그것의 타입(다를 수 있음)을 추측할 수 없다. Callback ref는 정적 분석에 친숙합니다..
+    4. 대부분의 사람이 생각하는 "render callback" 패턴으로 작동하지 않는다. (예). `<DataGrid renderRow={this.renderRow} />`)
        ```jsx harmony
        class MyComponent extends Component {
          renderRow = (index) => {
@@ -781,9 +781,9 @@
          }
        }
        ```
-24. ### What is Virtual DOM?
+24. ### Virtual DOM이란?
 
-    The *Virtual DOM* (VDOM) is an in-memory representation of *Real DOM*. The representation of a UI is kept in memory and synced with the "real" DOM. It's a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called *reconciliation*.
+    *Virtual DOM* (VDOM)는 *실제 DOM*의 인-메모리 표현이다. UI 표현은 메모리에 유지되고 "실제" DOM과 동기화된다. 이는 렌더 함수의 호출과 화면상 elements를 표현하는 사이에 발생하는 단계이다. 이 전체 프로세스는 *조정* 이라고 한다.
 
 25. ### Virtual DOM은 어떻게 작동하나?
 
@@ -802,19 +802,19 @@
 
     *Shadow DOM* 주로 *웹 컴포넌트*에서 변수와 CSS의 범위 지정을 위해 디자인된 브라우저 기술이다. *Virtual DOM*는 브라우저 API를 기반으로 Javascript 라이브러리로 구현된 개념이다.
 
-27. ### What is React Fiber?
+27. ### React Fiber란?
 
-    Fiber is the new *reconciliation* engine or reimplementation of core algorithm in React v16. The goal of React Fiber is to increase its suitability for areas like animation, layout, gestures, ability to pause, abort, or reuse work and assign priority to different types of updates; and new concurrency primitives.
+    Fiber는 React v16에서 새로운 *조정된* 엔진 또는 핵심 알고리즘의 재구현이다. React Fiber의 목표는 애니메이션, 레이아웃, 제스처, 작업 일시중지, 중단, 재사용 같은 영역에 대한 적합성을 높이고 다양한 유형의 업데이트에 우선순위를 정하는 것이다. 
 
 28. ### React Fiber의 주요 목표는??
 
     *React Fiber*의 목표는 애니메이션, 레이아웃, 제스처, 작업 일시중지, 중단, 재사용 같은 영역에 대한 적합성을 높이는 것이다. 주요 기능은 **incremental rendering**으로 렌더링 작업을 청크(chunk)로 분할하고 여러 프레임에 걸쳐 펼치는 기능이다.
 
-29. ### What are controlled components?
+29. ### controlled components란?
 
-    A component that controls the input elements within the forms on subsequent user input is called **Controlled Component**, i.e, every state mutation will have an associated handler function.
+    사용자가 입력한 뒤 폼의 입력창을 제어하는 component를 **Controlled Component**라고 한다. 즉 모든 상태 변이에는 관련된 핸들러 함수가 있다.
 
-    For example, to write all the names in uppercase letters, we use handleChange as below,
+    예를 들어, 모든 이름을 대문자로 작성하기 위해서, 아래와 같은 handleChange를 사용한다.
 
     ```javascript
     handleChange(event) {
@@ -822,11 +822,11 @@
     }
     ```
 
-30. ### What are uncontrolled components?
+30. ### uncontrolled components란?
 
-    The **Uncontrolled Components** are the ones that store their own state internally, and you query the DOM using a ref to find its current value when you need it. This is a bit more like traditional HTML.
+    The **Uncontrolled Components**는 내부적으로 자신의 상태를 저장하는 것으로, 현재의 값을 찾기 위해 필요하다면 ref를 사용하여 DOM에서 찾아온다. 이것은 전통적인 HTML과 더 비슷하다.
 
-    In the below UserProfile component, the `name` input is accessed using ref.
+    아래의 UserProfile component에서, `이름` 입력은 ref를 사용해서 액세스한다.
 
     ```jsx harmony
     class UserProfile extends React.Component {
@@ -855,11 +855,11 @@
     }
     ```
 
-    In most cases, it's recommend to use controlled components to implement forms.
+    대부분의 경우 양식을 구현하는 데 controlled components를 사용하는 것을 추천한다.
 
-31. ### What is the difference between createElement and cloneElement?
+31. ### createElement와 cloneElement의 차이점은?
 
-    JSX elements will be transpiled to `React.createElement()` functions to create React elements which are going to be used for the object representation of UI. Whereas `cloneElement` is used to clone an element and pass it new props.
+    JSX elements는 `React.createElement()` 함수로 옮겨져서 UI의 객체 표현에 사용되는 React elements를 만든다. 반면에 `cloneElement`은 element를 복사하고 새로운 props로 전달하는 데 사용된다.
 
 32. ### What is Lifting State Up in React?
 

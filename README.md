@@ -45,11 +45,11 @@
 |24 | [Virtual DOM이란?](#Virtual-DOM이란) 
 |25 | [Virtual DOM은 어떻게 작동하나?](#Virtual-DOM은-어떻게-작동하나) |
 |26 | [Shadow DOM과 Virtual DOM의 차이점](#Shadow-DOM과-Virtual-DOM의-차이점) |
-|27 | [What is React Fiber?](#what-is-react-fiber) |
+|27 | [React Fiber란?](#React-Fiber란) |
 |28 | [What is the main goal of React Fiber?](#what-is-the-main-goal-of-react-fiber) |
-|29 | [What are controlled components?](#what-are-controlled-components) |
-|30 | [What are uncontrolled components?](#what-are-uncontrolled-components) |
-|31 | [What is the difference between createElement and cloneElement?](#what-is-the-difference-between-createelement-and-cloneelement) |
+|29 | [controlled components란?](#controlled-components란) |
+|30 | [uncontrolled components란?](#uncontrolled-components란) |
+|31 | [createElement와 cloneElement의 차이점은?](#createElement와-cloneElement의-차이점은?) |
 |32 | [React에서 Lifting State Up란?](#React에서-Lifting-State-Up란) |
 |33 | [What are the different phases of component lifecycle?](#what-are-the-different-phases-of-component-lifecycle) |
 |34 | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react) |
@@ -802,19 +802,19 @@
 
     *Shadow DOM* 주로 *웹 컴포넌트*에서 변수와 CSS의 범위 지정을 위해 디자인된 브라우저 기술이다. *Virtual DOM*는 브라우저 API를 기반으로 Javascript 라이브러리로 구현된 개념이다.
 
-27. ### What is React Fiber?
+27. ### React Fiber란?
 
-    Fiber is the new *reconciliation* engine or reimplementation of core algorithm in React v16. The goal of React Fiber is to increase its suitability for areas like animation, layout, gestures, ability to pause, abort, or reuse work and assign priority to different types of updates; and new concurrency primitives.
+    Fiber는 React v16에서 새로운 *조정된* 엔진 또는 핵심 알고리즘의 재구현이다. React Fiber의 목표는 애니메이션, 레이아웃, 제스처, 작업 일시중지, 중단, 재사용 같은 영역에 대한 적합성을 높이고 다양한 유형의 업데이트에 우선순위를 정하는 것이다. 
 
 28. ### What is the main goal of React Fiber?
 
     The goal of *React Fiber* is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is **incremental rendering**: the ability to split rendering work into chunks and spread it out over multiple frames.
 
-29. ### What are controlled components?
+29. ### controlled components란?
 
-    A component that controls the input elements within the forms on subsequent user input is called **Controlled Component**, i.e, every state mutation will have an associated handler function.
+    사용자가 입력한 뒤 폼의 입력창을 제어하는 component를 **Controlled Component**라고 한다. 즉 모든 상태 변이에는 관련된 핸들러 함수가 있다.
 
-    For example, to write all the names in uppercase letters, we use handleChange as below,
+    예를 들어, 모든 이름을 대문자로 작성하기 위해서, 아래와 같은 handleChange를 사용한다.
 
     ```javascript
     handleChange(event) {
@@ -822,11 +822,11 @@
     }
     ```
 
-30. ### What are uncontrolled components?
+30. ### uncontrolled components란?
 
-    The **Uncontrolled Components** are the ones that store their own state internally, and you query the DOM using a ref to find its current value when you need it. This is a bit more like traditional HTML.
+    The **Uncontrolled Components**는 내부적으로 자신의 상태를 저장하는 것으로, 현재의 값을 찾기 위해 필요하다면 ref를 사용하여 DOM에서 찾아온다. 이것은 전통적인 HTML과 더 비슷하다.
 
-    In the below UserProfile component, the `name` input is accessed using ref.
+    아래의 UserProfile component에서, `이름` 입력은 ref를 사용해서 액세스한다.
 
     ```jsx harmony
     class UserProfile extends React.Component {
@@ -855,11 +855,11 @@
     }
     ```
 
-    In most cases, it's recommend to use controlled components to implement forms.
+    대부분의 경우 양식을 구현하는 데 controlled components를 사용하는 것을 추천한다.
 
-31. ### What is the difference between createElement and cloneElement?
+31. ### createElement와 cloneElement의 차이점은?
 
-    JSX elements will be transpiled to `React.createElement()` functions to create React elements which are going to be used for the object representation of UI. Whereas `cloneElement` is used to clone an element and pass it new props.
+    JSX elements는 `React.createElement()` 함수로 옮겨져서 UI의 객체 표현에 사용되는 React elements를 만든다. 반면에 `cloneElement`은 element를 복사하고 새로운 props로 전달하는 데 사용된다.
 
 32. ### React에서 Lifting State Up란?
 

@@ -52,7 +52,7 @@
 |31 | [createElement와 cloneElement의 차이점은?](#createElement와-cloneElement의-차이점은?) |
 |32 | [What is Lifting State Up in React?](#what-is-lifting-state-up-in-react) |
 |33 | [컴포넌트 라이프 사이클의 다른 단계들은?](#컴포넌트-라이프-사이클의-다른-단계들은?) |
-|34 | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react) |
+|34 | [React의 라이프 사이클 메서드에는 무엇이 있나?](#React의-라이프-사이클-메서드에는-무엇이-있나?) |
 |35 | [What are Higher-Order components?](#what-are-higher-order-components) |
 |36 | [How to create props proxy for HOC component?](#how-to-create-props-proxy-for-hoc-component) |
 |37 | [What is context?](#what-is-context) |
@@ -892,26 +892,26 @@
     ![phases 16.2](images/phases.png)
 
 
-34. ### What are the lifecycle methods of React?
+34. ### React의 라이프 사이클 메서드에는 무엇이 있나?
 
     React 16.3+
 
-    - **getDerivedStateFromProps:** Invoked right before calling `render()` and is invoked on *every* render. This exists for rare use cases where you need derived state. Worth reading [if you need derived state](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html).
-    - **componentDidMount:** Executed after first rendering and here all AJAX requests, DOM or state updates, and set up event listeners should occur.
-    - **shouldComponentUpdate:** Determines if the component will be updated or not. By default it returns `true`. If you are sure that the component doesn't need to render after state or props are updated, you can return false value. It is a great place to improve performance as it allows you to prevent a re-render if component receives new prop.
-    - **getSnapshotBeforeUpdate:** Executed right before rendered output is committed to the DOM. Any value returned by this will be passed into `componentDidUpdate()`. This is useful to capture information from the DOM i.e. scroll position.
-    - **componentDidUpdate:** Mostly it is used to update the DOM in response to prop or state changes. This will not fire if `shouldComponentUpdate()` returns `false`.
-    - **componentWillUnmount** It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component.
+    - **getDerivedStateFromProps:** `render()`가 호출되기 바로 전에 호출되며 *모든* 렌더링에서 호출된다. 이전 state가 필요한 드문 경우에 사용이 된다. [이전 state가 필요하면](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html) 읽을만한 가치가 있다.
+    - **componentDidMount:** 첫 번째 렌더링 이후에 실행되고, 여기서 모든 AJAX 요청, DOM 또는 state 업데이트 및 이벤트 리스너가 설정된다.
+    - **shouldComponentUpdate:** 컴포넌트를 업데이트 해야 할지 여부를 결정한다. 기본적으로 `true`를 반환한다. state나 props가 업데이트된 후에 컴포넌트를 렌더링할 필요 없다고 확신하는 경우 false를 반환할 수 있다. 컴포넌트가 새로운 props를 받으면 리렌더링하는 것을 방지할 수 있어 성능을 향상하는데 매우 좋다.
+    - **getSnapshotBeforeUpdate:** 렌더링 된 출력이 DOM에 커밋되기 바로 직전에 실행된다. 이로 인해 모든 값은 `componentDidUpdate()`에 전달이 된다. DOM에서 스크롤 위치 같은 정보를 가져오는 데 유용하다.
+    - **componentDidUpdate:** 주로 props나 state의 변경에 대한 응답으로 DOM을 업데이트하는데 사용된다. `shouldComponentUpdate()`가 `false`를 반환하면 실행되지 않는다.
+    - **componentWillUnmount** 나가는 네트워크 요청을 취소하거나 컴포넌트와 관련된 모든 이벤트 리스너를 제거하는 데 사용된다.
 
     Before 16.3
 
-    - **componentWillMount:** Executed before rendering and is used for App level configuration in your root component.
-    - **componentDidMount:** Executed after first rendering and here all AJAX requests, DOM or state updates, and set up event listeners should occur.
-    - **componentWillReceiveProps:** Executed when particular prop updates to trigger state transitions.
-    - **shouldComponentUpdate:** Determines if the component will be updated or not. By default it returns `true`. If you are sure that the component doesn't need to render after state or props are updated, you can return false value. It is a great place to improve performance as it allows you to prevent a re-render if component receives new prop.
-    - **componentWillUpdate:** Executed before re-rendering the component when there are props & state changes confirmed by `shouldComponentUpdate()` which returns true.
-    - **componentDidUpdate:** Mostly it is used to update the DOM in response to prop or state changes.
-    - **componentWillUnmount:** It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component.
+    - **componentWillMount:** 렌더링 전에 실행되며 root 컴포넌트의 App 수준 구성을 하는 데 사용된다.
+    - **componentDidMount:** 첫 번째 렌더링 이후에 실행되고, 여기서 모든 AJAX 요청, DOM 또는 state 업데이트 및 이벤트 리스너가 설정된다.
+    - **componentWillReceiveProps:** 특정 props 업데이트가 state 전환을 일으킬 때 실행된다.
+    - **shouldComponentUpdate:** 컴포넌트를 업데이트 해야 할지 여부를 결정한다. 기본적으로 `true`를 반환한다. state나 props가 업데이트된 후에 컴포넌트를 렌더링할 필요 없다고 확신하는 경우 false를 반환할 수 있다. 컴포넌트가 새로운 props를 받으면 리렌더링하는 것을 방지할 수 있어 성능을 향상하는데 매우 좋다.
+    - **componentWillUpdate:** true를 반환하는 `shouldComponentUpdate()`에 의해 확인된 props 및 state 변경이 있을 때 컴포넌트를 리렌더링하기 전에 실행된다.
+    - **componentDidUpdate:** 주로 props나 state 변경에 대한 응답으로 DOM을 업데이트하는 데 사용된다.
+    - **componentWillUnmount:** 나가는 네트워크 요청을 취소하거나 컴포넌트와 관련된 모든 이벤트 리스너를 제거하는 데 사용된다.
 
 35. ### What are Higher-Order Components?
 

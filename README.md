@@ -38,7 +38,7 @@
 |17 | [인라인 조건 표현식이란?](#인라인-조건-표현식이란) |
 |18 | ["key" props는 무엇이며 elements의 배열에서 사용하면 이점이 무엇인가?](#key-props는-무엇이며-elements의-배열에서-사용하면-이점이-무엇인가) |
 |19 | [What is the use of refs?](#what-is-the-use-of-refs) |
-|20 | [How to create refs?](#how-to-create-refs)
+|20 | [refs는 어떻게 생성하는가?](#refs는-어떻게-생성하는가)
 |21 | [What are forward refs?](#what-are-forward-refs) |
 |22 | [callback refs 및 findDOMNode()에서 선호되는 옵션은?](#callback-refs-및-findDOMNode()에서-선호되는-옵션은) |
 |23 | [String Refs가 왜 legacy인가?](#String-Refs가-왜-legacy인가) |
@@ -667,10 +667,10 @@
 
     The *ref* is used to return a reference to the element. They *should be avoided* in most cases, however, they can be useful when you need a direct access to the DOM element or an instance of a component.
 
-20. ### How to create refs?
+20. ### refs는 어떻게 생성하는가?
 
-    There are two approaches
-    1. This is a recently added approach. *Refs* are created using `React.createRef()` method and attached to React elements via the `ref` attribute. In order to use *refs* throughout the component, just assign the *ref* to the instance property within constructor.
+    refs를 생성하는 방법에는 2가지 방법이 있다.
+    1. 다음은 최근에 추가된 방법이다. *Refs*는 `React.createRef()`메서드를 통해 생성되며 `ref` 속성을 통해 React 엘리먼트에 적용된다. 엘리먼트 전체에서 *refs*를 사용하려면 *ref*를 생성자 내의 인스턴스 속성에 할당하면 된다.
 
     ```jsx harmony
     class MyComponent extends React.Component {
@@ -683,7 +683,7 @@
       }
     }
     ```
-    1. You can also use ref callbacks approach regardless of React version. For example, the search bar component's input element accessed as follows,
+    1. React 버전에 관계 없이 ref 콜백 접근법을 사용할 수도 있다. 예를 들어, 검색창 컴포넌트의 입력 엘리먼트에서는 다음과 같이 접근된다.
     ```jsx harmony
     class SearchBar extends Component {
        constructor(props) {
@@ -708,8 +708,9 @@
     }
     ```
 
-    You can also use *refs* in function components using **closures**.
-    **Note**: You can also use inline ref callbacks even though it is not a recommended approach
+    **클로저(closures)** 를 사용하여 함수형 컴포넌트에서 *refs*를 사용할 수도 있다.
+    **참고**: 권장하진 않지만 인라인 ref 콜백을 이용할 수도 있다.
+    
 21. ### What are forward refs?
 
     *Ref forwarding* is a feature that lets some components take a *ref* they receive, and pass it further down to a child.

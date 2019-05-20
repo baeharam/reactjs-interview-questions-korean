@@ -711,7 +711,7 @@
     You can also use *refs* in function components using **closures**.
     **Note**: You can also use inline ref callbacks even though it is not a recommended approach
 
-21. ### refs 전달은 무엇인가?
+21. ### forward refs는 무엇인가?
 
     *Ref 전달(Ref forwarding)* 특정 컴포넌트에서 *ref*를 받아 자식에게 전달하는 기능이다.
 

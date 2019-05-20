@@ -670,7 +670,7 @@
 20. ### refs는 어떻게 생성하는가?
 
     refs를 생성하는 방법에는 2가지 방법이 있다.
-    1. 다음은 최근에 추가된 방법이다. *Refs*는 `React.createRef()`메서드를 통해 생성되며 `ref` 속성을 통해 React 엘리먼트에 적용된다. 엘리먼트 전체에서 *refs*를 사용하려면 *ref*를 생성자 내의 인스턴스 속성에 할당하면 된다.
+    1. 다음은 최근에 추가된 방법이다. *Refs*는 `React.createRef()`메서드를 통해 생성되며 `ref` 속성을 통해 React 엘리먼트에 적용된다. 엘리먼트 전체에서 *refs*를 사용하려면 생성자 내의 인스턴스 속성에 *ref*를 할당하면 된다.
 
     ```jsx harmony
     class MyComponent extends React.Component {
@@ -683,7 +683,7 @@
       }
     }
     ```
-    1. React 버전에 관계없이 ref 콜백 접근법을 사용할 수도 있다. 예를 들어, 검색창 컴포넌트의 입력 엘리먼트에서는 다음과 같이 접근된다.
+    1. React 버전에 관계없이 ref 콜백 접근법을 사용할 수도 있다. 예를 들어, 검색창 컴포넌트의 입력 엘리먼트에서는 다음과 같이 접근한다.
     ```jsx harmony
     class SearchBar extends Component {
        constructor(props) {

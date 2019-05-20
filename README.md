@@ -60,7 +60,7 @@
 |39 | [How to write comments in React?](#how-to-write-comments-in-react) |
 |40 | [What is the purpose of using super constructor with props argument?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
 |41 | [What is reconciliation?](#what-is-reconciliation) |
-|42 | [How to set state with a dynamic key name?](#how-to-set-state-with-a-dynamic-key-name) |
+|42 | [동적인 키 이름으로 state를 설정하는 방법은?](#동적인-키-이름으로-state를-설정하는-방법은?) |
 |43 | [What would be the common mistake of function being called every time the component renders?](#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders) |
 |44 | [Why is it necessary to capitalize component names?](#why-is-it-necessary-to-capitalize-component-names) |
 |45 | [Why React uses className over class attribute?](#why-react-uses-classname-over-class-attribute) |
@@ -1047,9 +1047,9 @@
 
     When a component's props or state change, React decides whether an actual DOM update is necessary by comparing the newly returned element with the previously rendered one. When they are not equal, React will update the DOM. This process is called *reconciliation*.
 
-42. ### How to set state with a dynamic key name?
+42. ### 동적인 키 이름으로 state를 설정하는 방법은?
 
-    If you are using ES6 or the Babel transpiler to transform your JSX code then you can accomplish this with *computed property names*.
+    ES6나 Babel transpiler를 사용하여 JSX코드를 변환하는 경우 *계산된 속성 이름*으로 설정할 수 있다.
 
     ```javascript
     handleInputChange(event) {

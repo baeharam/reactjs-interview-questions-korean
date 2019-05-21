@@ -59,7 +59,7 @@
 |38 | [What is children prop?](#what-is-children-prop) |
 |39 | [How to write comments in React?](#how-to-write-comments-in-react) |
 |40 | [What is the purpose of using super constructor with props argument?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
-|41 | [What is reconciliation?](#what-is-reconciliation) |
+|41 | [조정(reconciliation)이란?](#조정(reconciliation)이란) |
 |42 | [How to set state with a dynamic key name?](#how-to-set-state-with-a-dynamic-key-name) |
 |43 | [What would be the common mistake of function being called every time the component renders?](#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders) |
 |44 | [Why is it necessary to capitalize component names?](#why-is-it-necessary-to-capitalize-component-names) |
@@ -1044,9 +1044,9 @@
 
     The above code snippets reveals that `this.props` is different only within the constructor. It would be the same outside the constructor.
 
-41. ### What is reconciliation?
+41. ### 조정(reconciliation)이란?
 
-    When a component's props or state change, React decides whether an actual DOM update is necessary by comparing the newly returned element with the previously rendered one. When they are not equal, React will update the DOM. This process is called *reconciliation*.
+    컴포넌트의 props나 state가 변경되었을 때, React는 새로 반환된 엘리먼트와 이전에 렌더링된 것을 비교해서 실제 DOM이 업데이트가 필요한지를 결정한다. 동등하지 않을 때, React가 DOM을 업데이트할 것이다. 이 프로세스를 *조정(reconciliation)*이라고 한다.
 
 42. ### How to set state with a dynamic key name?
 

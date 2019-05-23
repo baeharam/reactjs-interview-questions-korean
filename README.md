@@ -66,7 +66,7 @@
 |45 | [Why React uses className over class attribute?](#why-react-uses-classname-over-class-attribute) |
 |46 | [What are fragments?](#what-are-fragments) |
 |47 | [Why fragments are better than container divs?](#why-fragments-are-better-than-container-divs) |
-|48 | [What are portals in React?](#what-are-portals-in-react) |
+|48 | [React의 portals이란?](#React의-portals이란) |
 |49 | [What are stateless components?](#what-are-stateless-components) |
 |50 | [What are stateful components?](#what-are-stateful-components) |
 |51 | [How to apply validation on props in React?](#how-to-apply-validation-on-props-in-react) |
@@ -1127,15 +1127,15 @@
     2. Some CSS mechanisms like *Flexbox* and *CSS Grid* have a special parent-child relationships, and adding divs in the middle makes it hard to keep the desired layout.
     3. The DOM Inspector is less cluttered.
 
-48. ### What are portals in React?
+48. ### React의 portals이란?
 
-    *Portal* is a recommended way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
+    *Portal*은 상위 컴포넌트의 DOM 계층 구조 외부에 있는 DOM 노드에 자식을 렌더링하는데 권장되는 방법이다.
 
     ```javascript
     ReactDOM.createPortal(child, container)
     ```
 
-    The first argument is any render-able React child, such as an element, string, or fragment. The second argument is a DOM element.
+    첫 번째 인수는 렌더링 가능한 React 엘리먼트, 문자열, fragmentr 같은 하위요소이다. 두 번째 인수는 DOM 엘리먼트이다.
 
 49. ### What are stateless components?
 

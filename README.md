@@ -63,7 +63,7 @@
 |42 | [How to set state with a dynamic key name?](#how-to-set-state-with-a-dynamic-key-name) |
 |43 | [What would be the common mistake of function being called every time the component renders?](#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders) |
 |44 | [Why is it necessary to capitalize component names?](#why-is-it-necessary-to-capitalize-component-names) |
-|45 | [Why React uses className over class attribute?](#why-react-uses-classname-over-class-attribute) |
+|45 | [React는 왜 class가 아닌 className 속성을 사용하나?](#React는-왜-class가-아닌-className-속성을-사용하나?) |
 |46 | [What are fragments?](#what-are-fragments) |
 |47 | [Why fragments are better than container divs?](#why-fragments-are-better-than-container-divs) |
 |48 | [What are portals in React?](#what-are-portals-in-react) |
@@ -1081,9 +1081,9 @@
 
     It is necessary because components are not DOM elements, they are constructors. Also, in JSX lowercase tag names are referring to HTML elements, not components.
 
-45. ### Why React uses `className` over `class` attribute?
+45. ### React는 왜 `class`가 아닌 `className` 속성을 사용하나?
 
-    `class` is a keyword in JavaScript, and JSX is an extension of JavaScript. That's the principal reason why React uses `className` instead of `class`. Pass a string as the `className` prop.
+    `class`는 JavasScript의 키워드이며, JSX는 JavaScript의 확장이다. 이것이 React가 `class` 대신 `className`을 사용하는 주된 이유이다. `className` prop으로 문자열을 넘겨야 한다.
 
     ```jsx harmony
     render() {

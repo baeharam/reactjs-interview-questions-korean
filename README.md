@@ -1079,7 +1079,7 @@
 
 44. ### 왜 컴포넌트 이름은 대문자로 해야 하나?
 
-    컴포넌트는 DOM element가 아니기 때문에 대문자로 표기해야 한다. 또한, JSX 소문자 태그 이름은 HTML element를 나타내며 컴포넌트는 참조하지 않는다.
+    컴포넌트는 DOM 엘리먼트가 아니기 때문에 대문자로 표기해야 한다. 또한, JSX 소문자 태그 이름은 HTML 엘리먼트를 나타내며 컴포넌트는 참조하지 않는다.
 
 45. ### Why React uses `className` over `class` attribute?
 

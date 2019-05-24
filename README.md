@@ -62,7 +62,7 @@
 |41 | [조정(reconciliation)이란?](#조정(reconciliation)이란) |
 |42 | [state의 키 이름을 동적으로 설정하는 방법은?](#state의-키-이름을-동적으로-설정하는-방법은?) |
 |43 | [What would be the common mistake of function being called every time the component renders?](#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders) |
-|44 | [Why is it necessary to capitalize component names?](#why-is-it-necessary-to-capitalize-component-names) |
+|44 | [왜 컴포넌트 이름은 대문자로 해야 하나?](#왜-컴포넌트-이름은-대문자로-해야-하나) |
 |45 | [Why React uses className over class attribute?](#why-react-uses-classname-over-class-attribute) |
 |46 | [What are fragments?](#what-are-fragments) |
 |47 | [Why fragments are better than container divs?](#why-fragments-are-better-than-container-divs) |
@@ -1078,9 +1078,9 @@
     }
     ```
 
-44. ### Why is it necessary to capitalize component names?
+44. ### 왜 컴포넌트 이름은 대문자로 해야 하나?
 
-    It is necessary because components are not DOM elements, they are constructors. Also, in JSX lowercase tag names are referring to HTML elements, not components.
+    컴포넌트는 DOM 엘리먼트가 아니기 때문에 대문자로 표기해야 한다. 또한, JSX 소문자 태그 이름은 HTML 엘리먼트를 나타내며 컴포넌트는 참조하지 않는다.
 
 45. ### Why React uses `className` over `class` attribute?
 

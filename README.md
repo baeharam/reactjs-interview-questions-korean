@@ -37,9 +37,9 @@
 |16 | [React에 SyntheticEvent란 무엇인가?](#React에-SyntheticEvent란-무엇인가) |
 |17 | [인라인 조건 표현식이란?](#인라인-조건-표현식이란) |
 |18 | ["key" props는 무엇이며 elements의 배열에서 사용하면 이점이 무엇인가?](#key-props는-무엇이며-elements의-배열에서-사용하면-이점이-무엇인가) |
-|19 | [What is the use of refs?](#what-is-the-use-of-refs) |
-|20 | [How to create refs?](#how-to-create-refs)
-|21 | [What are forward refs?](#what-are-forward-refs) |
+|19 | [refs는 어떻게 사용되는가?](#refs는-어떻게-사용되는가) |
+|20 | [refs는 어떻게 생성하는가?](#refs는-어떻게-생성하는가)
+|21 | [forward refs는 무엇인가?](#forward-refs는-무엇인가) |
 |22 | [callback refs 및 findDOMNode()에서 선호되는 옵션은?](#callback-refs-및-findDOMNode()에서-선호되는-옵션은) |
 |23 | [String Refs가 왜 legacy인가?](#String-Refs가-왜-legacy인가) |
 |24 | [Virtual DOM이란?](#Virtual-DOM이란) 
@@ -59,12 +59,12 @@
 |38 | [What is children prop?](#what-is-children-prop) |
 |39 | [How to write comments in React?](#how-to-write-comments-in-react) |
 |40 | [What is the purpose of using super constructor with props argument?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
-|41 | [What is reconciliation?](#what-is-reconciliation) |
-|42 | [How to set state with a dynamic key name?](#how-to-set-state-with-a-dynamic-key-name) |
+|41 | [조정(reconciliation)이란?](#조정(reconciliation)이란) |
+|42 | [state의 키 이름을 동적으로 설정하는 방법은?](#state의-키-이름을-동적으로-설정하는-방법은?) |
 |43 | [What would be the common mistake of function being called every time the component renders?](#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders) |
-|44 | [Why is it necessary to capitalize component names?](#why-is-it-necessary-to-capitalize-component-names) |
-|45 | [Why React uses className over class attribute?](#why-react-uses-classname-over-class-attribute) |
-|46 | [What are fragments?](#what-are-fragments) |
+|44 | [왜 컴포넌트 이름은 대문자로 해야 하나?](#왜-컴포넌트-이름은-대문자로-해야-하나) |
+|45 | [React는 왜 class가 아닌 className 속성을 사용하나?](#React는-왜-class가-아닌-className-속성을-사용하나?) |
+|46 | [fragments란?](#fragments란) |
 |47 | [div보다 fragments가 더 우수한 이유는?](#div보다-fragments가-더-우수한-이유는) |
 |48 | [What are portals in React?](#what-are-portals-in-react) |
 |49 | [What are stateless components?](#what-are-stateless-components) |
@@ -663,14 +663,14 @@
     2. 리스트 항목을 별도의 컴포넌트로 추출하는 경우 `li` 태그 대신에 리스트 컴포넌트에 *keys*를 적용해라.
     3. 리스트 항목에 `key` prop가 없으면 console에 경고 메시지가 표시될 것이다.
 
-19. ### What is the use of refs?
+19. ### refs는 어떻게 사용되는가?
 
-    The *ref* is used to return a reference to the element. They *should be avoided* in most cases, however, they can be useful when you need a direct access to the DOM element or an instance of a component.
+    *ref*는 엘리먼트에 대한 참조를 반환하는 데 사용된다. 대부분의 경우에서 *피하는 것이 좋지만*, DOM 엘리먼트나 컴포넌트의 인스턴스에 직접 접근하는 경우 유용할 수 있다.
 
-20. ### How to create refs?
+20. ### refs는 어떻게 생성하는가?
 
-    There are two approaches
-    1. This is a recently added approach. *Refs* are created using `React.createRef()` method and attached to React elements via the `ref` attribute. In order to use *refs* throughout the component, just assign the *ref* to the instance property within constructor.
+    refs를 생성하는 방법에는 2가지 방법이 있다.
+    1. 다음은 최근에 추가된 방법이다. *Refs*는 `React.createRef()`메서드를 통해 생성되며 `ref` 속성을 통해 React 엘리먼트에 적용된다. 엘리먼트 전체에서 *refs*를 사용하려면 생성자 내의 인스턴스 속성에 *ref*를 할당하면 된다.
 
     ```jsx harmony
     class MyComponent extends React.Component {
@@ -683,7 +683,7 @@
       }
     }
     ```
-    1. You can also use ref callbacks approach regardless of React version. For example, the search bar component's input element accessed as follows,
+    1. React 버전에 관계없이 ref 콜백 접근법을 사용할 수도 있다. 예를 들어, 검색창 컴포넌트의 입력 엘리먼트에서는 다음과 같이 접근한다.
     ```jsx harmony
     class SearchBar extends Component {
        constructor(props) {
@@ -708,11 +708,12 @@
     }
     ```
 
-    You can also use *refs* in function components using **closures**.
-    **Note**: You can also use inline ref callbacks even though it is not a recommended approach
-21. ### What are forward refs?
+    **클로저(closures)** 를 사용하여 함수형 컴포넌트에서 *refs*를 사용할 수도 있다.
+    **참고**: 권장하진 않지만, 인라인 ref 콜백을 이용할 수도 있다.
 
-    *Ref forwarding* is a feature that lets some components take a *ref* they receive, and pass it further down to a child.
+21. ### forward refs는 무엇인가?
+
+    *Ref 전달(Ref forwarding)* 특정 컴포넌트에서 *ref*를 받아 자식에게 전달하는 기능이다.
 
     ```jsx harmony
     const ButtonElement = React.forwardRef((props, ref) => (
@@ -1043,13 +1044,13 @@
 
     The above code snippets reveals that `this.props` is different only within the constructor. It would be the same outside the constructor.
 
-41. ### What is reconciliation?
+41. ### 조정(reconciliation)이란?
 
-    When a component's props or state change, React decides whether an actual DOM update is necessary by comparing the newly returned element with the previously rendered one. When they are not equal, React will update the DOM. This process is called *reconciliation*.
+    컴포넌트의 props나 state가 변경되었을 때, React는 새로 반환된 엘리먼트와 이전에 렌더링된 것을 비교해서 실제 DOM이 업데이트가 필요한지를 결정한다. 동등하지 않을 때, React가 DOM을 업데이트할 것이다. 이 프로세스를 *조정(reconciliation)*이라고 한다.
 
-42. ### How to set state with a dynamic key name?
+42. ### state의 키 이름을 동적으로 설정하는 방법은?
 
-    If you are using ES6 or the Babel transpiler to transform your JSX code then you can accomplish this with *computed property names*.
+    ES6나 Babel transpiler를 사용하여 JSX코드를 변환하는 경우 *원하는 속성(property)명*으로 설정할 수 있다.
 
     ```javascript
     handleInputChange(event) {
@@ -1077,13 +1078,13 @@
     }
     ```
 
-44. ### Why is it necessary to capitalize component names?
+44. ### 왜 컴포넌트 이름은 대문자로 해야 하나?
 
-    It is necessary because components are not DOM elements, they are constructors. Also, in JSX lowercase tag names are referring to HTML elements, not components.
+    컴포넌트는 DOM 엘리먼트가 아니기 때문에 대문자로 표기해야 한다. 또한, JSX 소문자 태그 이름은 HTML 엘리먼트를 나타내며 컴포넌트는 참조하지 않는다.
 
-45. ### Why React uses `className` over `class` attribute?
+45. ### React는 왜 `class`가 아닌 `className` 속성을 사용하나?
 
-    `class` is a keyword in JavaScript, and JSX is an extension of JavaScript. That's the principal reason why React uses `className` instead of `class`. Pass a string as the `className` prop.
+    `class`는 JavasScript의 키워드이며, JSX는 JavaScript의 확장이다. 이것이 React가 `class` 대신 `className`을 사용하는 주된 이유이다. `className` prop으로 문자열을 넘겨야 한다.
 
     ```jsx harmony
     render() {
@@ -1091,9 +1092,9 @@
     }
     ```
 
-46. ### What are fragments?
+46. ### fragments란?
 
-    It's common pattern in React which is used for a component to return multiple elements. *Fragments* let you group a list of children without adding extra nodes to the DOM.
+    컴포넌트가 여러 엘리먼트를 반환하는 데 사용하는 React의 일반적인 패턴이다. *Fragments*를 사용하면 DOM에 노드를 추가하지 않고 자식 목록을 그룹화할 수 있다.
 
     ```jsx harmony
     render() {
@@ -1107,7 +1108,7 @@
     }
     ```
 
-    There is also a *shorter syntax*, but it's not supported in many tools:
+    *더욱더 짧은 구문*도 있지만, 많은 도구에서 지원하지 않는다.
 
     ```jsx harmony
     render() {

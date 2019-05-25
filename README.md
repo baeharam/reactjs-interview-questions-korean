@@ -64,7 +64,7 @@
 |43 | [What would be the common mistake of function being called every time the component renders?](#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders) |
 |44 | [왜 컴포넌트 이름은 대문자로 해야 하나?](#왜-컴포넌트-이름은-대문자로-해야-하나) |
 |45 | [React는 왜 class가 아닌 className 속성을 사용하나?](#React는-왜-class가-아닌-className-속성을-사용하나?) |
-|46 | [What are fragments?](#what-are-fragments) |
+|46 | [fragments란?](#fragments란) |
 |47 | [Why fragments are better than container divs?](#why-fragments-are-better-than-container-divs) |
 |48 | [What are portals in React?](#what-are-portals-in-react) |
 |49 | [What are stateless components?](#what-are-stateless-components) |
@@ -1092,9 +1092,9 @@
     }
     ```
 
-46. ### What are fragments?
+46. ### fragments란?
 
-    It's common pattern in React which is used for a component to return multiple elements. *Fragments* let you group a list of children without adding extra nodes to the DOM.
+    컴포넌트가 여러 엘리먼트를 반환하는 데 사용하는 React의 일반적인 패턴이다. *Fragments*를 사용하면 DOM에 노드를 추가하지 않고 자식 목록을 그룹화할 수 있다.
 
     ```jsx harmony
     render() {
@@ -1108,7 +1108,7 @@
     }
     ```
 
-    There is also a *shorter syntax*, but it's not supported in many tools:
+    *더욱더 짧은 구문*도 있지만, 많은 도구에서 지원하지 않는다.
 
     ```jsx harmony
     render() {

@@ -65,7 +65,7 @@
 |44 | [왜 컴포넌트 이름은 대문자로 해야 하나?](#왜-컴포넌트-이름은-대문자로-해야-하나) |
 |45 | [React는 왜 class가 아닌 className 속성을 사용하나?](#React는-왜-class가-아닌-className-속성을-사용하나?) |
 |46 | [fragments란?](#fragments란) |
-|47 | [Why fragments are better than container divs?](#why-fragments-are-better-than-container-divs) |
+|47 | [div보다 fragments가 더 우수한 이유는?](#div보다-fragments가-더-우수한-이유는) |
 |48 | [What are portals in React?](#what-are-portals-in-react) |
 |49 | [What are stateless components?](#what-are-stateless-components) |
 |50 | [What are stateful components?](#what-are-stateful-components) |
@@ -1122,11 +1122,11 @@
     }
     ```
 
-47. ### Why fragments are better than container divs?
+47. ### div보다 fragments가 더 우수한 이유는?
 
-    1. Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.
-    2. Some CSS mechanisms like *Flexbox* and *CSS Grid* have a special parent-child relationships, and adding divs in the middle makes it hard to keep the desired layout.
-    3. The DOM Inspector is less cluttered.
+    1. Fragments는 조금 더 빠르며 여분의 DOM 노드를 만들지 않아서 메모리를 덜 사용한다. 이것은 매우 크고 깊은 트리(tree)에서 실질적인 이득을 가져다준다.
+    2. *Flexbox*와 *CSS Grid* 같은 일부 CSS 메커니즘에는 특수한 부모-자식 관계를 가지고 있어서, 중간에 div를 추가하면 원하는 레이아웃을 유지하기가 어렵다.
+    3. DOM Inspector가 덜 복잡해진다.
 
 48. ### What are portals in React?
 

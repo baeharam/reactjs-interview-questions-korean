@@ -1135,7 +1135,7 @@
     ReactDOM.createPortal(child, container)
     ```
 
-    첫 번째 인수는 렌더링 가능한 React 엘리먼트, 문자열, fragmentr 같은 하위요소이다. 두 번째 인수는 DOM 엘리먼트이다.
+    첫 번째 인수는 렌더링 가능한 React 엘리먼트, 문자열, fragment 같은 하위요소이다. 두 번째 인수는 DOM 엘리먼트이다.
 
 49. ### What are stateless components?
 

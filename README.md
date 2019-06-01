@@ -61,7 +61,7 @@
 |40 | [What is the purpose of using super constructor with props argument?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
 |41 | [조정(reconciliation)이란?](#조정(reconciliation)이란) |
 |42 | [state의 키 이름을 동적으로 설정하는 방법은?](#state의-키-이름을-동적으로-설정하는-방법은?) |
-|43 | [What would be the common mistake of function being called every time the component renders?](#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders) |
+|43 | [컴포넌트가 렌더링 될 때마다 호출되는 함수에 대한 실수는 무엇일까?](#컴포넌트가-렌더링-될-때마다-호출되는-함수에-대한-실수는-무엇일까) |
 |44 | [왜 컴포넌트 이름은 대문자로 해야 하나?](#왜-컴포넌트-이름은-대문자로-해야-하나) |
 |45 | [React는 왜 class가 아닌 className 속성을 사용하나?](#React는-왜-class가-아닌-className-속성을-사용하나?) |
 |46 | [fragments란?](#fragments란) |
@@ -1058,9 +1058,9 @@
     }
     ```
 
-43. ### What would be the common mistake of function being called every time the component renders?
+43. ### 컴포넌트가 렌더링 될 때마다 호출되는 함수에 대한 실수는 무엇일까?
 
-    You need to make sure that function is not being called while passing the function as a parameter.
+    함수를 매개변수로 전달하는 동안 함수가 호출되지 않도록 확인해야 한다.
 
     ```jsx harmony
     render() {
@@ -1069,7 +1069,7 @@
     }
     ```
 
-    Instead, pass the function itself without parenthesis:
+    대신에, 괄호 없이 함수 자체를 전달해야 한다.
 
     ```jsx harmony
     render() {

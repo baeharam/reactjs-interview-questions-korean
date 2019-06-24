@@ -69,7 +69,7 @@
 |48 | [React의 portals이란?](#React의-portals이란) |
 |49 | [What are stateless components?](#what-are-stateless-components) |
 |50 | [What are stateful components?](#what-are-stateful-components) |
-|51 | [How to apply validation on props in React?](#how-to-apply-validation-on-props-in-react) |
+|51 | [React에서 props 유효성 검사를 적용하는 방법은?](#React에서-props-유효성-검사를-적용하는-방법은) |
 |52 | [What are the advantages of React?](#what-are-the-advantages-of-react) |
 |53 | [What are the limitations of React?](#what-are-the-limitations-of-react) |
 |54 | [What are error boundaries in React v16](#what-are-error-boundaries-in-react-v16) |
@@ -1159,11 +1159,11 @@
     }
     ```
 
-51. ### How to apply validation on props in React?
+51. ### React에서 props 유효성 검사를 적용하는 방법은?
 
-    When the application is running in *development mode*, React will automatically check all props that we set on components to make sure they have *correct type*. If the type is incorrect, React will generate warning messages in the console. It's disabled in *production mode* due performance impact. The mandatory props are defined with `isRequired`.
+    응용 프로그램이 *development 모드*에서 실행될 때, React는 자동으로 컴포넌트에 설정한 모든 props를 확인하여 *올바른 타입*인지 확인한다. 타입이 맞지 않는다면, React는 콘솔에 경고 메시지를 띄운다. *production 모드*에서는 성능에 영향을 미치므로 사용할 수 없다. 주요한 props는 `isRequired`로 정의된다.
 
-    The set of predefined prop types:
+    사전 정의된 props 타입이다.
 
     1. `PropTypes.number`
     2. `PropTypes.string`
@@ -1176,7 +1176,7 @@
     9. `PropTypes.symbol`
     10. `PropTypes.any`
 
-    We can define `propTypes` for `User` component as below:
+    다음과 같이 `User` 컴포넌트에 대한 `propTypes`을 정의할 수 있다.
 
     ```jsx harmony
     import React from 'react'
@@ -1199,7 +1199,7 @@
     }
     ```
 
-    **Note:** In React v15.5 *PropTypes* were moved from `React.PropTypes` to `prop-types` library.
+    **Note:** React v15.5버전에서 *PropTypes*는 `React.PropTypes`에서 `prop-types` 라이브러리로 이동되었다.
 
 52. ### What are the advantages of React?
 

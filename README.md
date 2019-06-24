@@ -67,7 +67,7 @@
 |46 | [fragments란?](#fragments란) |
 |47 | [div보다 fragments가 더 우수한 이유는?](#div보다-fragments가-더-우수한-이유는) |
 |48 | [React의 portals이란?](#React의-portals이란) |
-|49 | [What are stateless components?](#what-are-stateless-components) |
+|49 | [stateless 컴포넌트란?](#stateless-컴포넌트란) |
 |50 | [What are stateful components?](#what-are-stateful-components) |
 |51 | [How to apply validation on props in React?](#how-to-apply-validation-on-props-in-react) |
 |52 | [What are the advantages of React?](#what-are-the-advantages-of-react) |
@@ -1138,9 +1138,9 @@
 
     첫 번째 인수는 렌더링 가능한 React 엘리먼트, 문자열, fragment 같은 하위요소이다. 두 번째 인수는 DOM 엘리먼트이다.
 
-49. ### What are stateless components?
+49. ### stateless 컴포넌트란?
 
-    If the behaviour is independent of its state then it can be a stateless component. You can use either a function or a class for creating stateless components. But unless you need to use a lifecycle hook in your components, you should go for function components. There are a lot of benefits if you decide to use function components here; they are easy to write, understand, and test, a little faster, and you can avoid the `this` keyword altogether.
+    동작이 state와 관련이 없는 경우 stateless 컴포넌트가 될 수 있다. function이나 class를 사용해서 stateless 컴포넌트를 만들 수 있다. 컴포넌트에서 라이프 사이클 훅을 사용해야 하는 경우가 아니라면 function 컴포넌트를 사용하는게 좋다. function 컴포넌트를 사용하면 여러 이점이 있는데; 쓰기, 이해 및 테스트하기가 쉽고 더 빠르며, `this` 키워드를 피할 수 있다.
 
 50. ### What are stateful components?
 

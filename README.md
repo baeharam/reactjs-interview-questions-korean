@@ -68,7 +68,7 @@
 |47 | [div보다 fragments가 더 우수한 이유는?](#div보다-fragments가-더-우수한-이유는) |
 |48 | [React의 portals이란?](#React의-portals이란) |
 |49 | [What are stateless components?](#what-are-stateless-components) |
-|50 | [What are stateful components?](#what-are-stateful-components) |
+|50 | [stateful 컴포넌트란?](#stateful-컴포넌트란) |
 |51 | [React에서 props 유효성 검사를 적용하는 방법은?](#React에서-props-유효성-검사를-적용하는-방법은) |
 |52 | [What are the advantages of React?](#what-are-the-advantages-of-react) |
 |53 | [What are the limitations of React?](#what-are-the-limitations-of-react) |
@@ -1142,9 +1142,9 @@
 
     If the behaviour is independent of its state then it can be a stateless component. You can use either a function or a class for creating stateless components. But unless you need to use a lifecycle hook in your components, you should go for function components. There are a lot of benefits if you decide to use function components here; they are easy to write, understand, and test, a little faster, and you can avoid the `this` keyword altogether.
 
-50. ### What are stateful components?
+50. ### stateful 컴포넌트란?
 
-    If the behaviour of a component is dependent on the *state* of the component then it can be termed as stateful component. These *stateful components* are always *class components* and have a state that gets initialized in the `constructor`.
+    컴포넌트의 동작이 컴포넌트의 *state*에 따라 달라진다면 stateful 컴포넌트라고 할 수 있다. *stateful 컴포넌트*는 항상 *class 컴포넌트* 이며 `constructor`에서 초기화가 되어 state를 가지게 된다.
 
     ```javascript
     class App extends Component {

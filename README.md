@@ -68,8 +68,8 @@
 |47 | [div보다 fragments가 더 우수한 이유는?](#div보다-fragments가-더-우수한-이유는) |
 |48 | [React의 portals이란?](#React의-portals이란) |
 |49 | [stateless 컴포넌트란?](#stateless-컴포넌트란) |
-|50 | [What are stateful components?](#what-are-stateful-components) |
-|51 | [How to apply validation on props in React?](#how-to-apply-validation-on-props-in-react) |
+|50 | [stateful 컴포넌트란?](#stateful-컴포넌트란) |
+|51 | [React에서 props 유효성 검사를 적용하는 방법은?](#React에서-props-유효성-검사를-적용하는-방법은) |
 |52 | [What are the advantages of React?](#what-are-the-advantages-of-react) |
 |53 | [What are the limitations of React?](#what-are-the-limitations-of-react) |
 |54 | [What are error boundaries in React v16](#what-are-error-boundaries-in-react-v16) |
@@ -1142,9 +1142,9 @@
 
     동작이 state와 관련이 없는 경우 stateless 컴포넌트가 될 수 있다. function이나 class를 사용해서 stateless 컴포넌트를 만들 수 있다. 컴포넌트에서 라이프 사이클 훅을 사용해야 하는 경우가 아니라면 function 컴포넌트를 사용하는게 좋다. function 컴포넌트를 사용하면 여러 이점이 있는데, 쓰기, 이해 및 테스트하기가 쉽고 더 빠르며, `this` 키워드를 피할 수 있다.
 
-50. ### What are stateful components?
+50. ### stateful 컴포넌트란?
 
-    If the behaviour of a component is dependent on the *state* of the component then it can be termed as stateful component. These *stateful components* are always *class components* and have a state that gets initialized in the `constructor`.
+    컴포넌트의 동작이 컴포넌트의 *state*에 따라 달라진다면 stateful 컴포넌트라고 할 수 있다. *stateful 컴포넌트*는 항상 *class 컴포넌트* 이며 `constructor`에서 초기화가 되어 state를 가지게 된다.
 
     ```javascript
     class App extends Component {
@@ -1159,11 +1159,11 @@
     }
     ```
 
-51. ### How to apply validation on props in React?
+51. ### React에서 props 유효성 검사를 적용하는 방법은?
 
-    When the application is running in *development mode*, React will automatically check all props that we set on components to make sure they have *correct type*. If the type is incorrect, React will generate warning messages in the console. It's disabled in *production mode* due performance impact. The mandatory props are defined with `isRequired`.
+    응용 프로그램이 *development 모드*에서 실행될 때, React는 자동으로 컴포넌트에 설정한 모든 props를 확인하여 *올바른 타입*인지 확인한다. 타입이 맞지 않는다면, React는 콘솔에 경고 메시지를 띄운다. *production 모드*에서는 성능에 영향을 미치므로 사용할 수 없다. 주요한 props는 `isRequired`로 정의된다.
 
-    The set of predefined prop types:
+    사전 정의된 props 타입이다.
 
     1. `PropTypes.number`
     2. `PropTypes.string`
@@ -1176,7 +1176,7 @@
     9. `PropTypes.symbol`
     10. `PropTypes.any`
 
-    We can define `propTypes` for `User` component as below:
+    다음과 같이 `User` 컴포넌트에 대한 `propTypes`을 정의할 수 있다.
 
     ```jsx harmony
     import React from 'react'
@@ -1199,7 +1199,7 @@
     }
     ```
 
-    **Note:** In React v15.5 *PropTypes* were moved from `React.PropTypes` to `prop-types` library.
+    **Note:** React v15.5버전에서 *PropTypes*는 `React.PropTypes`에서 `prop-types` 라이브러리로 이동되었다.
 
 52. ### What are the advantages of React?
 

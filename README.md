@@ -71,7 +71,7 @@
 |50 | [stateful 컴포넌트란?](#stateful-컴포넌트란) |
 |51 | [React에서 props 유효성 검사를 적용하는 방법은?](#React에서-props-유효성-검사를-적용하는-방법은) |
 |52 | [What are the advantages of React?](#what-are-the-advantages-of-react) |
-|53 | [What are the limitations of React?](#what-are-the-limitations-of-react) |
+|53 | [React의 한계는?](#React의-한계는) |
 |54 | [What are error boundaries in React v16](#what-are-error-boundaries-in-react-v16) |
 |55 | [How error boundaries handled in React v15?](#how-error-boundaries-handled-in-react-v15) |
 |56 | [What are the recommended ways for static type checking?](#what-are-the-recommended-ways-for-static-type-checking) |
@@ -1209,13 +1209,13 @@
     4. Easy to integrate with frameworks (Angular, Backbone) since it is only a view library.
     5. Easy to write unit and integration tests with tools such as Jest.
 
-53. ### What are the limitations of React?
+53. ### React의 한계는?
 
-    1. React is just a view library, not a full framework.
-    2. There is a learning curve for beginners who are new to web development.
-    3. Integrating React into a traditional MVC framework requires some additional configuration.
-    4. The code complexity increases with inline templating and JSX.
-    5. Too many smaller components leading to over engineering or boilerplate.
+    1. React는 프레임워크가 아닌, view 라이브러리이다.
+    2. 웹 개발을 처음 접하는 초보자에게 러닝 커브가 존재한다.
+    3. 기존 MVC 프레임워크에 React를 통합하려면 몇 가지 추가 구성이 필요하다.
+    4. 인라인 템플릿과 JSX로 인해 코드 복잡성이 증가한다.
+    5. 너무 많은 작은 컴포넌트는 엔지니어링 또는 보일러 플레이트로 이어진다.
 
 54. ### What are error boundaries in React v16?
 

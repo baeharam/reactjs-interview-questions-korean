@@ -70,7 +70,7 @@
 |49 | [What are stateless components?](#what-are-stateless-components) |
 |50 | [stateful 컴포넌트란?](#stateful-컴포넌트란) |
 |51 | [React에서 props 유효성 검사를 적용하는 방법은?](#React에서-props-유효성-검사를-적용하는-방법은) |
-|52 | [What are the advantages of React?](#what-are-the-advantages-of-react) |
+|52 | [React의 장점은?](#React의-장점은) |
 |53 | [What are the limitations of React?](#what-are-the-limitations-of-react) |
 |54 | [What are error boundaries in React v16](#what-are-error-boundaries-in-react-v16) |
 |55 | [How error boundaries handled in React v15?](#how-error-boundaries-handled-in-react-v15) |
@@ -1201,13 +1201,13 @@
 
     **Note:** React v15.5버전에서 *PropTypes*는 `React.PropTypes`에서 `prop-types` 라이브러리로 이동되었다.
 
-52. ### What are the advantages of React?
+52. ### React의 장점은?
 
-    1. Increases the application's performance with *Virtual DOM*.
-    2. JSX makes code easy to read and write.
-    3. It renders both on client and server side (*SSR*).
-    4. Easy to integrate with frameworks (Angular, Backbone) since it is only a view library.
-    5. Easy to write unit and integration tests with tools such as Jest.
+    1. *Virtual DOM*으로 애플리케이션의 성능이 향상된다.
+    2. JSX는 코드를 읽고 쓰기 쉽게 해준다.
+    3. 클라이언트와 서버사이드(*SSR*) 렌더링이 둘 다 가능하다.
+    4. 오직 view 라이브러리이기 때문에, 프레임워크(Angular, Backbone)에 쉽게 통합이 가능하다.
+    5. Jest와 같은 툴을 사용하여 단위 및 통합 테스트를 쉽게 작성할 수 있다.
 
 53. ### What are the limitations of React?
 

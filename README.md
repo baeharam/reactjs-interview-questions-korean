@@ -72,7 +72,7 @@
 |51 | [React에서 props 유효성 검사를 적용하는 방법은?](#React에서-props-유효성-검사를-적용하는-방법은) |
 |52 | [What are the advantages of React?](#what-are-the-advantages-of-react) |
 |53 | [What are the limitations of React?](#what-are-the-limitations-of-react) |
-|54 | [What are error boundaries in React v16](#what-are-error-boundaries-in-react-v16) |
+|54 | [React v16에서 error boundaries란 무엇인가?](#React-v16에서-error-boundaries란-무엇인가) |
 |55 | [How error boundaries handled in React v15?](#how-error-boundaries-handled-in-react-v15) |
 |56 | [What are the recommended ways for static type checking?](#what-are-the-recommended-ways-for-static-type-checking) |
 |57 | [What is the use of react-dom package?](#what-is-the-use-of-react-dom-package) |
@@ -1217,11 +1217,11 @@
     4. The code complexity increases with inline templating and JSX.
     5. Too many smaller components leading to over engineering or boilerplate.
 
-54. ### What are error boundaries in React v16?
+54. ### React v16에서 error boundaries란 무엇인가?
 
-    *Error boundaries* are components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.
+    *Error boundaries*는 하위 컴포넌트의 모든 위치에서 JavaScript 오류를 catch하고, 오류를 기록하며, 오류가 발생한 컴포넌트 트리 대신 폴백(fallback) UI를 표시하는 컴포넌트이다.
 
-    A class component becomes an error boundary if it defines a new lifecycle method called `componentDidCatch(error, info)` or `static getDerivedStateFromError() `:
+    클래스 컴포넌트는 `componentDidCatch(error, info)` 또는 `static getDerivedStateFromError()`라는 새로운 라이프 사이클 메서드를 정의하면 error boundary가 된다.
 
     ```jsx harmony
     class ErrorBoundary extends React.Component {
@@ -1250,7 +1250,7 @@
     }
     ```
 
-    After that use it as a regular component:
+    그런 다음 일반 컴포넌트를 사용하면 된다.
 
     ```jsx harmony
     <ErrorBoundary>

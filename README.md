@@ -75,7 +75,7 @@
 |54 | [What are error boundaries in React v16](#what-are-error-boundaries-in-react-v16) |
 |55 | [How error boundaries handled in React v15?](#how-error-boundaries-handled-in-react-v15) |
 |56 | [What are the recommended ways for static type checking?](#what-are-the-recommended-ways-for-static-type-checking) |
-|57 | [What is the use of react-dom package?](#what-is-the-use-of-react-dom-package) |
+|57 | [react-dom 패키지 사용법은?](#react-dom-패키지-사용법은) |
 |58 | [What is the purpose of render method of react-dom?](#what-is-the-purpose-of-render-method-of-react-dom) |
 |59 | [What is ReactDOMServer?](#what-is-reactdomserver) |
 |60 | [How to use InnerHtml in React?](#how-to-use-innerhtml-in-react) |
@@ -1266,9 +1266,9 @@
 
     Normally we use *PropTypes library* (`React.PropTypes` moved to a `prop-types` package since React v15.5) for *type checking* in the React applications. For large code bases, it is recommended to use *static type checkers* such as Flow or TypeScript, that perform type checking at compile time and provide auto-completion features.
 
-57. ### What is the use of `react-dom` package?
+57. ### `react-dom` 패키지 사용법은?
 
-    The `react-dom` package provides *DOM-specific methods* that can be used at the top level of your app. Most of the components are not required to use this module. Some of the methods of this package are:
+    `react-dom` 패키지는 앱의 최상위 레벨에서 사용할 수 있는 *DOM-관련 메서드*를 제공한다. 대부분의 컴포넌트는 이 모듈을 사용할 필요가 없다. 이 패키지의 일부 메서드는 아래와 같다.
 
     1. `render()`
     2. `hydrate()`

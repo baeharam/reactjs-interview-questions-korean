@@ -81,7 +81,7 @@
 |60 | [How to use InnerHtml in React?](#how-to-use-innerhtml-in-react) |
 |61 | [How to use styles in React?](#how-to-use-styles-in-react) |
 |62 | [How events are different in React?](#how-events-are-different-in-react) |
-|63 | [What will happen if you use setState in constructor?](#what-will-happen-if-you-use-setstate-in-constructor) |
+|63 | [생성자에서 setState()를 사용하면 어떻게 되나?](#생성자에서-setState()를-사용하면-어떻게-되나) |
 |64 | [What is the impact of indexes as keys?](#what-is-the-impact-of-indexes-as-keys) |
 |65 | [Is it good to use setState() in componentWillMount() method?](#is-it-good-to-use-setstate-in-componentwillmount-method) |
 |66 | [What will happen if you use props in initial state?](#what-will-happen-if-you-use-props-in-initial-state) |
@@ -1349,9 +1349,9 @@
     1. React event handlers are named using camelCase, rather than lowercase.
     2. With JSX you pass a function as the event handler, rather than a string.
 
-63. ### What will happen if you use `setState()` in constructor?
+63. ### 생성자에서 `setState()`를 사용하면 어떻게 되나?
 
-    When you use `setState()`, then apart from assigning to the object state React also re-renders the component and all its children. You would get error like this: *Can only update a mounted or mounting component.* So we need to use `this.state` to initialize variables inside constructor.
+    `setState()`를 사용하면, React에 객체 state를 할당하는 것과 별개로 컴포넌트와 모든 자식을 리렌더링한다. 다음과 같은 오류가 발생한다. *Can only update a mounted or mounting component.* 그래서 `this.state`를 사용하여 생성자 내부의 변수를 초기화해야 한다.
 
 64. ### What is the impact of indexes as keys?
 

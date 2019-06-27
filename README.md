@@ -76,7 +76,7 @@
 |55 | [How error boundaries handled in React v15?](#how-error-boundaries-handled-in-react-v15) |
 |56 | [What are the recommended ways for static type checking?](#what-are-the-recommended-ways-for-static-type-checking) |
 |57 | [What is the use of react-dom package?](#what-is-the-use-of-react-dom-package) |
-|58 | [What is the purpose of render method of react-dom?](#what-is-the-purpose-of-render-method-of-react-dom) |
+|58 | [react-dom의 render 메서드란?](#react-dom의-render-메서드란) |
 |59 | [What is ReactDOMServer?](#what-is-reactdomserver) |
 |60 | [How to use InnerHtml in React?](#how-to-use-innerhtml-in-react) |
 |61 | [How to use styles in React?](#how-to-use-styles-in-react) |
@@ -1276,15 +1276,15 @@
     4. `findDOMNode()`
     5. `createPortal()`
 
-58. ### What is the purpose of render method of `react-dom`?
+58. ### `react-dom`의 render 메서드란?
 
-    This method is used to render a React element into the DOM in the supplied container and return a reference to the component. If the React element was previously rendered into container, it will perform an update on it and only mutate the DOM as necessary to reflect the latest changes.
+    이 메서드는 React 엘리먼트를 제공된 컨테이너의 DOM에 렌더링하고 컴포넌트에 대한 참조를 반환하는 데 사용된다. React 엘리먼트가 이전에 컨테이너로 렌더링 된 경우, 해당 엘리먼트에 대한 업데이트를 수행하고 필요에 따라 최신 변경 사항을 반영하기 위해 DOM을 변경한다.
 
     ```
     ReactDOM.render(element, container[, callback])
     ```
 
-    If the optional callback is provided, it will be executed after the component is rendered or updated.
+    선택적 콜백이 제공되면, 컴포넌트가 렌더링 되거나 업데이트 됐을 때 실행된다.
 
 59. ### What is ReactDOMServer?
 

@@ -77,7 +77,7 @@
 |56 | [What are the recommended ways for static type checking?](#what-are-the-recommended-ways-for-static-type-checking) |
 |57 | [What is the use of react-dom package?](#what-is-the-use-of-react-dom-package) |
 |58 | [What is the purpose of render method of react-dom?](#what-is-the-purpose-of-render-method-of-react-dom) |
-|59 | [What is ReactDOMServer?](#what-is-reactdomserver) |
+|59 | [ReactDOMServer란?](#ReactDOMServer란) |
 |60 | [How to use InnerHtml in React?](#how-to-use-innerhtml-in-react) |
 |61 | [How to use styles in React?](#how-to-use-styles-in-react) |
 |62 | [How events are different in React?](#how-events-are-different-in-react) |
@@ -1286,14 +1286,14 @@
 
     If the optional callback is provided, it will be executed after the component is rendered or updated.
 
-59. ### What is ReactDOMServer?
+59. ### ReactDOMServer란?
 
-    The `ReactDOMServer` object enables you to render components to static markup (typically used on node server). This object is mainly used for *server-side rendering* (SSR). The following methods can be used in both the server and browser environments:
+    `ReactDOMServer` 객체를 사용하면 컴포넌트를 정적 마크업(일반적으로 노드 서버에서 사용한다.)으로 렌더링할 수 있다. 이 객체는 주로 *서버 사이드 렌더링*(SSR) 에 사용된다. 아래의 메서드들은 서버와 브라우저 환경에서 모두 사용할 수 있다.
 
     1. `renderToString()`
     2. `renderToStaticMarkup()`
 
-    For example, you generally run a Node-based web server like Express, Hapi, or Koa, and you call `renderToString` to render your root component to a string, which you then send as response.
+    예를 들어, 일반적으로 Express, Hapi, 또는 Koa와 같은 노드 기반 웹 서버를 실행하고 `renderToString`를 호출하여 루트 컴포넌트를 문자열로 렌더링한 다음 응답으로 보낸다. 
 
     ```javascript
     // using Express

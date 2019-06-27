@@ -74,7 +74,7 @@
 |53 | [What are the limitations of React?](#what-are-the-limitations-of-react) |
 |54 | [What are error boundaries in React v16](#what-are-error-boundaries-in-react-v16) |
 |55 | [How error boundaries handled in React v15?](#how-error-boundaries-handled-in-react-v15) |
-|56 | [What are the recommended ways for static type checking?](#what-are-the-recommended-ways-for-static-type-checking) |
+|56 | [정적 타입 검사에 권장되는 방법은?](#정적-타입-검사에-권장되는-방법은) |
 |57 | [What is the use of react-dom package?](#what-is-the-use-of-react-dom-package) |
 |58 | [What is the purpose of render method of react-dom?](#what-is-the-purpose-of-render-method-of-react-dom) |
 |59 | [What is ReactDOMServer?](#what-is-reactdomserver) |
@@ -1262,9 +1262,9 @@
 
     React v15 provided very basic support for *error boundaries* using `unstable_handleError` method. It has been renamed to `componentDidCatch` in React v16.
 
-56. ### What are the recommended ways for static type checking?
+56. ### 정적 타입 검사에 권장되는 방법은?
 
-    Normally we use *PropTypes library* (`React.PropTypes` moved to a `prop-types` package since React v15.5) for *type checking* in the React applications. For large code bases, it is recommended to use *static type checkers* such as Flow or TypeScript, that perform type checking at compile time and provide auto-completion features.
+    일반적으로 우리는 React 애플리케이션에서 *타입 검사*를 위해 *PropTypes 라이브러리*를 사용한다. (React v15.5 이후 `React.PropTypes`는 `prop-types` 패키지로 옮겨짐.) 큰 코드 기반의 경우, 컴파일 타임에 타입검사를 하고 자동 완성 기능을 제공하는 Flow나 TypeScript 같은 *정적 타입 검사기*를 사용하는 것이 좋다.
 
 57. ### What is the use of `react-dom` package?
 

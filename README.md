@@ -82,7 +82,7 @@
 |61 | [How to use styles in React?](#how-to-use-styles-in-react) |
 |62 | [How events are different in React?](#how-events-are-different-in-react) |
 |63 | [What will happen if you use setState in constructor?](#what-will-happen-if-you-use-setstate-in-constructor) |
-|64 | [What is the impact of indexes as keys?](#what-is-the-impact-of-indexes-as-keys) |
+|64 | [키로 인덱스를 사용하면?](#키로-인덱스를-사용하면) |
 |65 | [Is it good to use setState() in componentWillMount() method?](#is-it-good-to-use-setstate-in-componentwillmount-method) |
 |66 | [What will happen if you use props in initial state?](#what-will-happen-if-you-use-props-in-initial-state) |
 |67 | [How do you conditionally render components?](#how-do-you-conditionally-render-components)
@@ -1353,11 +1353,11 @@
 
     When you use `setState()`, then apart from assigning to the object state React also re-renders the component and all its children. You would get error like this: *Can only update a mounted or mounting component.* So we need to use `this.state` to initialize variables inside constructor.
 
-64. ### What is the impact of indexes as keys?
+64. ### 키로 인덱스를 사용하면?
 
-    Keys should be stable, predictable, and unique so that React can keep track of elements.
+    React가 엘리먼트를 추적할 수 있도록 키는 안정적이고 예측 가능하며 고유해야 한다.
 
-    In the below code snippet each element's key will be based on ordering, rather than tied to the data that is being represented. This limits the optimizations that React can do.
+    아래의 코드 조각에서 각 엘리먼트의 키는 표현되는 데이터에 묶이지 않고 순서를 기반으로 한다. 이것은 React가 할 수 있는 최적화를 제한한다.
 
     ```jsx harmony
     {todos.map((todo, index) =>
@@ -1368,7 +1368,7 @@
     )}
     ```
 
-    If you use element data for unique key, assuming todo.id is unique to this list and stable, React would be able to reorder elements without needing to reevaluate them as much.
+    유니크한 키에 엘리먼트 데이터를 사용하는 경우, todo.id가 이 목록에서 유일하고 안정적이라고 가정하면, React는 요소를 재평가 할 필요없이 엘리먼트를 재정렬 할 수 있다.
 
     ```jsx harmony
     {todos.map((todo) =>

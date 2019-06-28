@@ -67,10 +67,10 @@
 |46 | [fragments란?](#fragments란) |
 |47 | [div보다 fragments가 더 우수한 이유는?](#div보다-fragments가-더-우수한-이유는) |
 |48 | [React의 portals이란?](#React의-portals이란) |
-|49 | [What are stateless components?](#what-are-stateless-components) |
+|49 | [stateless 컴포넌트란?](#stateless-컴포넌트란) |
 |50 | [stateful 컴포넌트란?](#stateful-컴포넌트란) |
 |51 | [React에서 props 유효성 검사를 적용하는 방법은?](#React에서-props-유효성-검사를-적용하는-방법은) |
-|52 | [What are the advantages of React?](#what-are-the-advantages-of-react) |
+|52 | [React의 장점은?](#React의-장점은) |
 |53 | [React의 한계는?](#React의-한계는) |
 |54 | [What are error boundaries in React v16](#what-are-error-boundaries-in-react-v16) |
 |55 | [How error boundaries handled in React v15?](#how-error-boundaries-handled-in-react-v15) |
@@ -1138,9 +1138,9 @@
 
     첫 번째 인수는 렌더링 가능한 React 엘리먼트, 문자열, fragment 같은 하위요소이다. 두 번째 인수는 DOM 엘리먼트이다.
 
-49. ### What are stateless components?
+49. ### stateless 컴포넌트란?
 
-    If the behaviour is independent of its state then it can be a stateless component. You can use either a function or a class for creating stateless components. But unless you need to use a lifecycle hook in your components, you should go for function components. There are a lot of benefits if you decide to use function components here; they are easy to write, understand, and test, a little faster, and you can avoid the `this` keyword altogether.
+    동작이 state와 관련이 없는 경우 stateless 컴포넌트가 될 수 있다. function이나 class를 사용해서 stateless 컴포넌트를 만들 수 있다. 컴포넌트에서 라이프 사이클 훅을 사용해야 하는 경우가 아니라면 function 컴포넌트를 사용하는게 좋다. function 컴포넌트를 사용하면 여러 이점이 있는데, 쓰기, 이해 및 테스트하기가 쉽고 더 빠르며, `this` 키워드를 피할 수 있다.
 
 50. ### stateful 컴포넌트란?
 
@@ -1201,13 +1201,13 @@
 
     **Note:** React v15.5버전에서 *PropTypes*는 `React.PropTypes`에서 `prop-types` 라이브러리로 이동되었다.
 
-52. ### What are the advantages of React?
+52. ### React의 장점은?
 
-    1. Increases the application's performance with *Virtual DOM*.
-    2. JSX makes code easy to read and write.
-    3. It renders both on client and server side (*SSR*).
-    4. Easy to integrate with frameworks (Angular, Backbone) since it is only a view library.
-    5. Easy to write unit and integration tests with tools such as Jest.
+    1. *Virtual DOM*으로 애플리케이션의 성능이 향상된다.
+    2. JSX는 코드를 읽고 쓰기 쉽게 해준다.
+    3. 클라이언트와 서버사이드(*SSR*) 렌더링이 둘 다 가능하다.
+    4. 오직 view 라이브러리이기 때문에, 프레임워크(Angular, Backbone)에 쉽게 통합이 가능하다.
+    5. Jest와 같은 툴을 사용하여 단위 및 통합 테스트를 쉽게 작성할 수 있다.
 
 53. ### React의 한계는?
 

@@ -72,8 +72,8 @@
 |51 | [React에서 props 유효성 검사를 적용하는 방법은?](#React에서-props-유효성-검사를-적용하는-방법은) |
 |52 | [React의 장점은?](#React의-장점은) |
 |53 | [React의 한계는?](#React의-한계는) |
-|54 | [React v16에서 error boundaries란 무엇인가?](#React-v16에서-error-boundaries란-무엇인가) |
-|55 | [How error boundaries handled in React v15?](#how-error-boundaries-handled-in-react-v15) |
+|54 | [React v16에서 error boundaries란 무엇인가?](#React-v16에서-error-boundaries란-무엇인가) 
+|55 | [React v15에서는 어떻게 error boundaries 조작하나?](#React-v15에서는-어떻게-error-boundaries-조작하나) |
 |56 | [What are the recommended ways for static type checking?](#what-are-the-recommended-ways-for-static-type-checking) |
 |57 | [What is the use of react-dom package?](#what-is-the-use-of-react-dom-package) |
 |58 | [What is the purpose of render method of react-dom?](#what-is-the-purpose-of-render-method-of-react-dom) |
@@ -1258,9 +1258,9 @@
     </ErrorBoundary>
     ```
 
-55. ### How error boundaries handled in React v15?
+55. ### React v15에서는 어떻게 error boundaries 조작하나?
 
-    React v15 provided very basic support for *error boundaries* using `unstable_handleError` method. It has been renamed to `componentDidCatch` in React v16.
+    React v15에서는 `unstable_handleError` 메서드를 사용하여 *error boundaries* 에 대한 매우 기본적인 지원을 제공한다. React v16에서 `componentDidCatch`로 이름이 변경되었다.
 
 56. ### What are the recommended ways for static type checking?
 

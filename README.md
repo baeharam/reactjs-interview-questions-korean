@@ -80,7 +80,7 @@
 |59 | [ReactDOMServer란?](#ReactDOMServer란) |
 |60 | [How to use InnerHtml in React?](#how-to-use-innerhtml-in-react) |
 |61 | [React에서 스타일을 사용하는 방법?](#React에서-스타일을-사용하는-방법) |
-|62 | [How events are different in React?](#how-events-are-different-in-react) |
+|62 | [React에서 이벤트가 어떻게 다른가?](#React에서-이벤트가-어떻게-다른가) |
 |63 | [What will happen if you use setState in constructor?](#what-will-happen-if-you-use-setstate-in-constructor) |
 |64 | [What is the impact of indexes as keys?](#what-is-the-impact-of-indexes-as-keys) |
 |65 | [Is it good to use setState() in componentWillMount() method?](#is-it-good-to-use-setstate-in-componentwillmount-method) |
@@ -1342,12 +1342,12 @@
 
     스타일 키는 JavaScript에서 DOM 노드의 속성(e.g. `node.style.backgroundImage`)에 액세스하는 것과 일관성을 유지하기 위해서 camelCased로 작성한다.
 
-62. ### How events are different in React?
+62. ### React에서 이벤트가 어떻게 다른가?
 
-    Handling events in React elements has some syntactic differences:
+    React 엘리먼트의 이벤트 처리에는 다음과 같은 문법적 차이가 있다.
 
-    1. React event handlers are named using camelCase, rather than lowercase.
-    2. With JSX you pass a function as the event handler, rather than a string.
+    1. React 이벤트 핸들러는 소문자가 아닌 camelCase를 사용하여 명명된다.
+    2. JSX에서는 문자열이 아닌 이벤트 핸들러로 함수를 전달한다.
 
 63. ### What will happen if you use `setState()` in constructor?
 

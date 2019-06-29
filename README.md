@@ -70,16 +70,16 @@
 |49 | [stateless 컴포넌트란?](#stateless-컴포넌트란) |
 |50 | [stateful 컴포넌트란?](#stateful-컴포넌트란) |
 |51 | [React에서 props 유효성 검사를 적용하는 방법은?](#React에서-props-유효성-검사를-적용하는-방법은) |
-|52 | [What are the advantages of React?](#what-are-the-advantages-of-react) |
-|53 | [What are the limitations of React?](#what-are-the-limitations-of-react) |
-|54 | [What are error boundaries in React v16](#what-are-error-boundaries-in-react-v16) |
-|55 | [How error boundaries handled in React v15?](#how-error-boundaries-handled-in-react-v15) |
-|56 | [What are the recommended ways for static type checking?](#what-are-the-recommended-ways-for-static-type-checking) |
-|57 | [What is the use of react-dom package?](#what-is-the-use-of-react-dom-package) |
-|58 | [What is the purpose of render method of react-dom?](#what-is-the-purpose-of-render-method-of-react-dom) |
-|59 | [What is ReactDOMServer?](#what-is-reactdomserver) |
+|52 | [React의 장점은?](#React의-장점은) |
+|53 | [React의 한계는?](#React의-한계는) |
+|54 | [React v16에서 error boundaries란 무엇인가?](#React-v16에서-error-boundaries란-무엇인가) 
+|55 | [React v15에서는 어떻게 error boundaries 조작하나?](#React-v15에서는-어떻게-error-boundaries-조작하나) |
+|56 | [정적 타입 검사에 권장되는 방법은?](#정적-타입-검사에-권장되는-방법은) |
+|57 | [react-dom 패키지 사용법은?](#react-dom-패키지-사용법은) |
+|58 | [react-dom의 render 메서드란?](#react-dom의-render-메서드란) |
+|59 | [ReactDOMServer란?](#ReactDOMServer란) |
 |60 | [How to use InnerHtml in React?](#how-to-use-innerhtml-in-react) |
-|61 | [How to use styles in React?](#how-to-use-styles-in-react) |
+|61 | [React에서 스타일을 사용하는 방법?](#React에서-스타일을-사용하는-방법) |
 |62 | [React에서 이벤트가 어떻게 다른가?](#React에서-이벤트가-어떻게-다른가) |
 |63 | [What will happen if you use setState in constructor?](#what-will-happen-if-you-use-setstate-in-constructor) |
 |64 | [What is the impact of indexes as keys?](#what-is-the-impact-of-indexes-as-keys) |
@@ -1201,27 +1201,27 @@
 
     **Note:** React v15.5버전에서 *PropTypes*는 `React.PropTypes`에서 `prop-types` 라이브러리로 이동되었다.
 
-52. ### What are the advantages of React?
+52. ### React의 장점은?
 
-    1. Increases the application's performance with *Virtual DOM*.
-    2. JSX makes code easy to read and write.
-    3. It renders both on client and server side (*SSR*).
-    4. Easy to integrate with frameworks (Angular, Backbone) since it is only a view library.
-    5. Easy to write unit and integration tests with tools such as Jest.
+    1. *Virtual DOM*으로 애플리케이션의 성능이 향상된다.
+    2. JSX는 코드를 읽고 쓰기 쉽게 해준다.
+    3. 클라이언트와 서버사이드(*SSR*) 렌더링이 둘 다 가능하다.
+    4. 오직 view 라이브러리이기 때문에, 프레임워크(Angular, Backbone)에 쉽게 통합이 가능하다.
+    5. Jest와 같은 툴을 사용하여 단위 및 통합 테스트를 쉽게 작성할 수 있다.
 
-53. ### What are the limitations of React?
+53. ### React의 한계는?
 
-    1. React is just a view library, not a full framework.
-    2. There is a learning curve for beginners who are new to web development.
-    3. Integrating React into a traditional MVC framework requires some additional configuration.
-    4. The code complexity increases with inline templating and JSX.
-    5. Too many smaller components leading to over engineering or boilerplate.
+    1. React는 프레임워크가 아닌, view 라이브러리이다.
+    2. 웹 개발을 처음 접하는 초보자에게 러닝 커브가 존재한다.
+    3. 기존 MVC 프레임워크에 React를 통합하려면 몇 가지 추가 구성이 필요하다.
+    4. 인라인 템플릿과 JSX로 인해 코드 복잡성이 증가한다.
+    5. 너무 많은 작은 컴포넌트는 엔지니어링 또는 보일러 플레이트로 이어진다.
 
-54. ### What are error boundaries in React v16?
+54. ### React v16에서 error boundaries란 무엇인가?
 
-    *Error boundaries* are components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.
+    *Error boundaries*는 하위 컴포넌트의 모든 위치에서 JavaScript 오류를 catch하고, 오류를 기록하며, 오류가 발생한 컴포넌트 트리 대신 폴백(fallback) UI를 표시하는 컴포넌트이다.
 
-    A class component becomes an error boundary if it defines a new lifecycle method called `componentDidCatch(error, info)` or `static getDerivedStateFromError() `:
+    클래스 컴포넌트는 `componentDidCatch(error, info)` 또는 `static getDerivedStateFromError()`라는 새로운 라이프 사이클 메서드를 정의하면 error boundary가 된다.
 
     ```jsx harmony
     class ErrorBoundary extends React.Component {
@@ -1250,7 +1250,7 @@
     }
     ```
 
-    After that use it as a regular component:
+    그런 다음 일반 컴포넌트를 사용하면 된다.
 
     ```jsx harmony
     <ErrorBoundary>
@@ -1258,17 +1258,17 @@
     </ErrorBoundary>
     ```
 
-55. ### How error boundaries handled in React v15?
+55. ### React v15에서는 어떻게 error boundaries 조작하나?
 
-    React v15 provided very basic support for *error boundaries* using `unstable_handleError` method. It has been renamed to `componentDidCatch` in React v16.
+    React v15에서는 `unstable_handleError` 메서드를 사용하여 *error boundaries* 에 대한 매우 기본적인 지원을 제공한다. React v16에서 `componentDidCatch`로 이름이 변경되었다.
 
-56. ### What are the recommended ways for static type checking?
+56. ### 정적 타입 검사에 권장되는 방법은?
 
-    Normally we use *PropTypes library* (`React.PropTypes` moved to a `prop-types` package since React v15.5) for *type checking* in the React applications. For large code bases, it is recommended to use *static type checkers* such as Flow or TypeScript, that perform type checking at compile time and provide auto-completion features.
+    일반적으로 우리는 React 애플리케이션에서 *타입 검사*를 위해 *PropTypes 라이브러리*를 사용한다. (React v15.5 이후 `React.PropTypes`는 `prop-types` 패키지로 옮겨짐.) 큰 코드 기반의 경우, 컴파일 타임에 타입검사를 하고 자동 완성 기능을 제공하는 Flow나 TypeScript 같은 *정적 타입 검사기*를 사용하는 것이 좋다.
 
-57. ### What is the use of `react-dom` package?
+57. ### `react-dom` 패키지 사용법은?
 
-    The `react-dom` package provides *DOM-specific methods* that can be used at the top level of your app. Most of the components are not required to use this module. Some of the methods of this package are:
+    `react-dom` 패키지는 앱의 최상위 레벨에서 사용할 수 있는 *DOM-관련 메서드*를 제공한다. 대부분의 컴포넌트는 이 모듈을 사용할 필요가 없다. 이 패키지의 일부 메서드는 아래와 같다.
 
     1. `render()`
     2. `hydrate()`
@@ -1276,24 +1276,24 @@
     4. `findDOMNode()`
     5. `createPortal()`
 
-58. ### What is the purpose of render method of `react-dom`?
+58. ### `react-dom`의 render 메서드란?
 
-    This method is used to render a React element into the DOM in the supplied container and return a reference to the component. If the React element was previously rendered into container, it will perform an update on it and only mutate the DOM as necessary to reflect the latest changes.
+    이 메서드는 React 엘리먼트를 제공된 컨테이너의 DOM에 렌더링하고 컴포넌트에 대한 참조를 반환하는 데 사용된다. React 엘리먼트가 이전에 컨테이너로 렌더링 된 경우, 해당 엘리먼트에 대한 업데이트를 수행하고 필요에 따라 최신 변경 사항을 반영하기 위해 DOM을 변경한다.
 
     ```
     ReactDOM.render(element, container[, callback])
     ```
 
-    If the optional callback is provided, it will be executed after the component is rendered or updated.
+    선택적 콜백이 제공되면, 컴포넌트가 렌더링 되거나 업데이트 됐을 때 실행된다.
 
-59. ### What is ReactDOMServer?
+59. ### ReactDOMServer란?
 
-    The `ReactDOMServer` object enables you to render components to static markup (typically used on node server). This object is mainly used for *server-side rendering* (SSR). The following methods can be used in both the server and browser environments:
+    `ReactDOMServer` 객체를 사용하면 컴포넌트를 정적 마크업(일반적으로 노드 서버에서 사용한다.)으로 렌더링할 수 있다. 이 객체는 주로 *서버 사이드 렌더링*(SSR) 에 사용된다. 아래의 메서드들은 서버와 브라우저 환경에서 모두 사용할 수 있다.
 
     1. `renderToString()`
     2. `renderToStaticMarkup()`
 
-    For example, you generally run a Node-based web server like Express, Hapi, or Koa, and you call `renderToString` to render your root component to a string, which you then send as response.
+    예를 들어, 일반적으로 Express, Hapi, 또는 Koa와 같은 노드 기반 웹 서버를 실행하고 `renderToString`를 호출하여 루트 컴포넌트를 문자열로 렌더링한 다음 응답으로 보낸다. 
 
     ```javascript
     // using Express
@@ -1325,9 +1325,9 @@
     }
     ```
 
-61. ### How to use styles in React?
+61. ### React에서 스타일을 사용하는 방법?
 
-    The `style` attribute accepts a JavaScript object with camelCased properties rather than a CSS string. This is consistent with the DOM style JavaScript property, is more efficient, and prevents XSS security holes.
+    `style` 속성은 CSS 문자열 대신에 camelCased 속성이 있는 JavaScript 객체를 사용한다. 이것은 DOM 스타일 JavaScript 속성과 일치하며, 보다 효율적이고, XSS 보안 취약점을 방지한다.
 
     ```jsx harmony
     const divStyle = {
@@ -1340,7 +1340,7 @@
     }
     ```
 
-    Style keys are camelCased in order to be consistent with accessing the properties on DOM nodes in JavaScript (e.g. `node.style.backgroundImage`).
+    스타일 키는 JavaScript에서 DOM 노드의 속성(e.g. `node.style.backgroundImage`)에 액세스하는 것과 일관성을 유지하기 위해서 camelCased로 작성한다.
 
 62. ### React에서 이벤트가 어떻게 다른가?
 

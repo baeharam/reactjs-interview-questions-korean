@@ -87,7 +87,7 @@
 |66 | [초기 state에 props를 사용하면 어떻게 되나?](#초기-state에-props를-사용하면-어떻게-되나) |
 |67 | [컴포넌트를 조건부로 렌더링하는 방법?](#컴포넌트를-조건부로-렌더링하는-방법)
 |68 | [Why we need to be careful when spreading props on DOM elements??](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements) |
-|69 | [How you use decorators in React?](#how-you-use-decorators-in-react) |
+|69 | [React에서 데코레이터를 사용하는 방법?](#React에서-데코레이터를-사용하는-방법) |
 |70 | [How do you memoize a component?](#how-do-you-memoize-a-component) |
 |71 | [How you implement Server-Side Rendering or SSR?](#how-you-implement-server-side-rendering-or-ssr) |
 |72 | [How to enable production mode in React?](#how-to-enable-production-mode-in-react) |
@@ -1474,9 +1474,9 @@
       <div {...domProps}>{'ComponentB'}</div>
     ```
 
-69. ### How you use decorators in React?
+69. ### React에서 데코레이터를 사용하는 방법?
 
-    You can *decorate* your *class* components, which is the same as passing the component into a function. **Decorators** are flexible and readable way of modifying component functionality.
+    컴포넌트를 함수로 전달하는 것과 동일하게, *class* 컴포넌트를 *꾸밀 수* 있다. **데코레이터**는 컴포넌트 기능을 수정하는 유연하고 읽기 쉬운 방법이다.
 
     ```jsx harmony
     @setTitle('Profile')
@@ -1485,9 +1485,8 @@
     }
 
     /*
-      title is a string that will be set as a document title
-      WrappedComponent is what our decorator will receive when
-      put directly above a component class as seen in the example above
+      title은 문서 제목으로 설정될 문자열이다.
+      WrappedComponent는 우리의 데코레이터가 위의 예제에서 볼 수 있듯이 컴포넌트 클래스 바로 위에 놓는다.
     */
     const setTitle = (title) => (WrappedComponent) => {
       return class extends React.Component {
@@ -1502,7 +1501,7 @@
     }
     ```
 
-    **Note:** Decorators are a feature that didn't make it into ES7, but are currently a *stage 2 proposal*.
+    **Note:** 데코레이터는 ES7에 포함되지 않았지만, 현재 *stage 2 proposal*이다.
 
 70. ### How do you memoize a component?
 

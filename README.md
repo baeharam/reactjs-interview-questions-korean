@@ -79,10 +79,10 @@
 |58 | [react-dom의 render 메서드란?](#react-dom의-render-메서드란) |
 |59 | [ReactDOMServer란?](#ReactDOMServer란) |
 |60 | [React에서 innerHTML를 사용하는 방법?](#React에서-innerHTML를-사용하는-방법) |
-|61 | [How to use styles in React?](#how-to-use-styles-in-react) |
-|62 | [How events are different in React?](#how-events-are-different-in-react) |
-|63 | [What will happen if you use setState in constructor?](#what-will-happen-if-you-use-setstate-in-constructor) |
-|64 | [What is the impact of indexes as keys?](#what-is-the-impact-of-indexes-as-keys) |
+|61 | [React에서 스타일을 사용하는 방법?](#React에서-스타일을-사용하는-방법) |
+|62 | [React에서 이벤트가 어떻게 다른가?](#React에서-이벤트가-어떻게-다른가) |
+|63 | [생성자에서 setState()를 사용하면 어떻게 되나?](#생성자에서-setState()를-사용하면-어떻게-되나) |
+|64 | [키로 인덱스를 사용하면?](#키로-인덱스를-사용하면) |
 |65 | [Is it good to use setState() in componentWillMount() method?](#is-it-good-to-use-setstate-in-componentwillmount-method) |
 |66 | [What will happen if you use props in initial state?](#what-will-happen-if-you-use-props-in-initial-state) |
 |67 | [How do you conditionally render components?](#how-do-you-conditionally-render-components)
@@ -1325,9 +1325,9 @@
     }
     ```
 
-61. ### How to use styles in React?
+61. ### React에서 스타일을 사용하는 방법?
 
-    The `style` attribute accepts a JavaScript object with camelCased properties rather than a CSS string. This is consistent with the DOM style JavaScript property, is more efficient, and prevents XSS security holes.
+    `style` 속성은 CSS 문자열 대신에 camelCased 속성이 있는 JavaScript 객체를 사용한다. 이것은 DOM 스타일 JavaScript 속성과 일치하며, 보다 효율적이고, XSS 보안 취약점을 방지한다.
 
     ```jsx harmony
     const divStyle = {
@@ -1340,24 +1340,24 @@
     }
     ```
 
-    Style keys are camelCased in order to be consistent with accessing the properties on DOM nodes in JavaScript (e.g. `node.style.backgroundImage`).
+    스타일 키는 JavaScript에서 DOM 노드의 속성(e.g. `node.style.backgroundImage`)에 액세스하는 것과 일관성을 유지하기 위해서 camelCased로 작성한다.
 
-62. ### How events are different in React?
+62. ### React에서 이벤트가 어떻게 다른가?
 
-    Handling events in React elements has some syntactic differences:
+    React 엘리먼트의 이벤트 처리에는 다음과 같은 문법적 차이가 있다.
 
-    1. React event handlers are named using camelCase, rather than lowercase.
-    2. With JSX you pass a function as the event handler, rather than a string.
+    1. React 이벤트 핸들러는 소문자가 아닌 camelCase를 사용하여 명명된다.
+    2. JSX에서는 문자열이 아닌 이벤트 핸들러로 함수를 전달한다.
 
-63. ### What will happen if you use `setState()` in constructor?
+63. ### 생성자에서 `setState()`를 사용하면 어떻게 되나?
 
-    When you use `setState()`, then apart from assigning to the object state React also re-renders the component and all its children. You would get error like this: *Can only update a mounted or mounting component.* So we need to use `this.state` to initialize variables inside constructor.
+    `setState()`를 사용하면, React에 객체 state를 할당하는 것과 별개로 컴포넌트와 모든 자식을 리렌더링한다. 다음과 같은 오류가 발생한다. *Can only update a mounted or mounting component.* 그래서 `this.state`를 사용하여 생성자 내부의 변수를 초기화해야 한다.
 
-64. ### What is the impact of indexes as keys?
+64. ### 키로 인덱스를 사용하면?
 
-    Keys should be stable, predictable, and unique so that React can keep track of elements.
+    React가 엘리먼트를 추적할 수 있도록 키는 안정적이고 예측 가능하며 고유해야 한다.
 
-    In the below code snippet each element's key will be based on ordering, rather than tied to the data that is being represented. This limits the optimizations that React can do.
+    아래의 코드 조각에서 각 엘리먼트의 키는 표현되는 데이터에 묶이지 않고 순서를 기반으로 한다. 이것은 React가 할 수 있는 최적화를 제한한다.
 
     ```jsx harmony
     {todos.map((todo, index) =>
@@ -1368,7 +1368,7 @@
     )}
     ```
 
-    If you use element data for unique key, assuming todo.id is unique to this list and stable, React would be able to reorder elements without needing to reevaluate them as much.
+    유니크한 키에 엘리먼트 데이터를 사용하는 경우, todo.id가 이 목록에서 유일하고 안정적이라고 가정하면, React는 요소를 재평가 할 필요없이 엘리먼트를 재정렬 할 수 있다.
 
     ```jsx harmony
     {todos.map((todo) =>

@@ -83,7 +83,7 @@
 |62 | [React에서 이벤트가 어떻게 다른가?](#React에서-이벤트가-어떻게-다른가) |
 |63 | [생성자에서 setState()를 사용하면 어떻게 되나?](#생성자에서-setState()를-사용하면-어떻게-되나) |
 |64 | [키로 인덱스를 사용하면?](#키로-인덱스를-사용하면) |
-|65 | [Is it good to use setState() in componentWillMount() method?](#is-it-good-to-use-setstate-in-componentwillmount-method) |
+|65 | [componentWillMount() 메서드에서 setState()를 사용하는 것은 좋은가?](#componentWillMount()-메서드에서-setState()를-사용하는-것은-좋은가) |
 |66 | [초기 state에 props를 사용하면 어떻게 되나?](#초기-state에-props를-사용하면-어떻게-되나) |
 |67 | [How do you conditionally render components?](#how-do-you-conditionally-render-components)
 |68 | [Why we need to be careful when spreading props on DOM elements??](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements) |
@@ -1377,10 +1377,10 @@
     )}
     ```
 
-65. ### Is it good to use `setState()` in `componentWillMount()` method?
+65. ### `componentWillMount()` 메서드에서 `setState()`를 사용하는 것은 좋은가?
 
-    It is recommended to avoid async initialization in `componentWillMount()` lifecycle method. `componentWillMount()` is invoked immediately before mounting occurs. It is called before `render()`, therefore setting state in this method will not trigger a re-render. Avoid introducing any side-effects or subscriptions in this method. We need to make sure async calls for component initialization happened in `componentDidMount()` instead of `componentWillMount()`.
-
+    `componentWillMount()` 라이프 사이클 메서드에서 비동기 초기화를 하지 않는게 좋다. `componentWillMount()`는 마운트가 발생하기 직전에 호출된다. `render()` 전에 호출되기 때문에 메서드에서 state를 설정하면 리렌더링 되지 않는다. 다음과 같은 메서드로 사이드 이펙트나 구독을 피하면된다. `componentWillMount()` 대신에 `componentDidMount()`에서 컴포넌트 초기화에 대한 비동기 호출을 한다.
+ 
     ```jsx harmony
     componentDidMount() {
       axios.get(`api/todos`)

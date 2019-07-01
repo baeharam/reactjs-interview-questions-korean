@@ -89,7 +89,7 @@
 |68 | [Why we need to be careful when spreading props on DOM elements??](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements) |
 |69 | [React에서 데코레이터를 사용하는 방법?](#React에서-데코레이터를-사용하는-방법) |
 |70 | [컴포넌트를 어떻게 메모하나?](#컴포넌트를-어떻게-메모하나) |
-|71 | [How you implement Server-Side Rendering or SSR?](#how-you-implement-server-side-rendering-or-ssr) |
+|71 | [Server Side Rendering 또는 SSR 구현방법?](#Server-Side-Rendering-또는-SSR-구현방법) |
 |72 | [How to enable production mode in React?](#how-to-enable-production-mode-in-react) |
 |73 | [What is CRA and its benefits?](#what-is-cra-and-its-benefits) |
 |74 | [What is the lifecycle methods order in mounting?](#what-is-the-lifecycle-methods-order-in-mounting) |
@@ -1521,9 +1521,9 @@
     }
     ```
 
-71. ### How you implement Server Side Rendering or SSR?
+71. ### Server Side Rendering 또는 SSR 구현방법?
 
-    React is already equipped to handle rendering on Node servers. A special version of the DOM renderer is available, which follows the same pattern as on the client side.
+    React는 이미 노드 서버에서 렌더링을 처리할 수 있도록 준비되어 있다. DOM 렌더러의 특수 버전을 사용할 수 있으며 클라이언트 측과 동일한 패턴을 따른다.
 
     ```jsx harmony
     import ReactDOMServer from 'react-dom/server'
@@ -1532,7 +1532,7 @@
     ReactDOMServer.renderToString(<App />)
     ```
 
-    This method will output the regular HTML as a string, which can be then placed inside a page body as part of the server response. On the client side, React detects the pre-rendered content and seamlessly picks up where it left off.
+    이 메서드는 일반 HTML을 문자열로 출력하며, 서버 응답의 일부로 페이지 본문 내에 배치할 수 있다. 클라이언트 측에서 React는 사전 렌더링된 컨텐츠를 탐지하고 중단된 부분을 완벽하게 파악한다.
 
 72. ### How to enable production mode in React?
 

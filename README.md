@@ -88,7 +88,7 @@
 |67 | [How do you conditionally render components?](#how-do-you-conditionally-render-components)
 |68 | [Why we need to be careful when spreading props on DOM elements??](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements) |
 |69 | [How you use decorators in React?](#how-you-use-decorators-in-react) |
-|70 | [How do you memoize a component?](#how-do-you-memoize-a-component) |
+|70 | [컴포넌트를 어떻게 메모하나?](#컴포넌트를-어떻게-메모하나) |
 |71 | [How you implement Server-Side Rendering or SSR?](#how-you-implement-server-side-rendering-or-ssr) |
 |72 | [How to enable production mode in React?](#how-to-enable-production-mode-in-react) |
 |73 | [What is CRA and its benefits?](#what-is-cra-and-its-benefits) |
@@ -1504,9 +1504,9 @@
 
     **Note:** Decorators are a feature that didn't make it into ES7, but are currently a *stage 2 proposal*.
 
-70. ### How do you memoize a component?
+70. ### 컴포넌트를 어떻게 메모하나?
 
-    There are memoize libraries available which can be used on function components. For example `moize` library can memoize the component in another component.
+    함수형 컴포넌트에 사용할 수 있는 메모 라이브러리가 있다. 예를 들어 `moize` 라이브러리는 다른 컴포넌트에 컴포넌트를 메모할 수 있다.
 
     ```jsx harmony
     import moize from 'moize'

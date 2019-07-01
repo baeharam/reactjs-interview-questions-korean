@@ -85,7 +85,7 @@
 |64 | [키로 인덱스를 사용하면?](#키로-인덱스를-사용하면) |
 |65 | [Is it good to use setState() in componentWillMount() method?](#is-it-good-to-use-setstate-in-componentwillmount-method) |
 |66 | [What will happen if you use props in initial state?](#what-will-happen-if-you-use-props-in-initial-state) |
-|67 | [How do you conditionally render components?](#how-do-you-conditionally-render-components)
+|67 | [컴포넌트를 조건부로 렌더링하는 방법?](#컴포넌트를-조건부로-렌더링하는-방법)
 |68 | [Why we need to be careful when spreading props on DOM elements??](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements) |
 |69 | [How you use decorators in React?](#how-you-use-decorators-in-react) |
 |70 | [How do you memoize a component?](#how-do-you-memoize-a-component) |
@@ -1433,9 +1433,9 @@
     }
     ```
 
-67. ### How do you conditionally render components?
+67. ### 컴포넌트를 조건부로 렌더링하는 방법?
 
-    In some cases you want to render different components depending on some state. JSX does not render `false` or `undefined`, so you can use conditional *short-circuiting* to render a given part of your component only if a certain condition is true.
+    경우에 따라 일부 state에 따라 다른 컴포넌트를 렌더링하려고 한다. JSX는 `false` 또는 `undefined`를 렌더링하지 않아 조건부 *단락*을 사용하여 특정 조건이 true인 경우에만 컴포넌트의 주어진 부분을 렌더링할 수 있다.
 
     ```jsx harmony
     const MyComponent = ({ name, address }) => (
@@ -1448,7 +1448,7 @@
     )
     ```
 
-    If you need an `if-else` condition then use *ternary operator*.
+    `if-else` 조건이 필요하면 *삼항 연산자*를 사용하면 된다.
 
     ```jsx harmony
     const MyComponent = ({ name, address }) => (

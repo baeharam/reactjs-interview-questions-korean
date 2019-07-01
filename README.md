@@ -78,7 +78,7 @@
 |57 | [react-dom 패키지 사용법은?](#react-dom-패키지-사용법은) |
 |58 | [react-dom의 render 메서드란?](#react-dom의-render-메서드란) |
 |59 | [ReactDOMServer란?](#ReactDOMServer란) |
-|60 | [How to use InnerHtml in React?](#how-to-use-innerhtml-in-react) |
+|60 | [React에서 innerHTML를 사용하는 방법?](#React에서-innerHTML를-사용하는-방법) |
 |61 | [React에서 스타일을 사용하는 방법?](#React에서-스타일을-사용하는-방법) |
 |62 | [React에서 이벤트가 어떻게 다른가?](#React에서-이벤트가-어떻게-다른가) |
 |63 | [생성자에서 setState()를 사용하면 어떻게 되나?](#생성자에서-setState()를-사용하면-어떻게-되나) |
@@ -1309,11 +1309,11 @@
     })
     ```
 
-60. ### How to use innerHTML in React?
+60. ### React에서 innerHTML를 사용하는 방법?
 
-    The `dangerouslySetInnerHTML` attribute is React's replacement for using `innerHTML` in the browser DOM. Just like `innerHTML`, it is risky to use this attribute considering cross-site scripting (XSS) attacks. You just need to pass a `__html` object as key and HTML text as value.
+    `dangerouslySetInnerHTML`는 브라우저 DOM에서 `innerHTML`를 사용하기 위한 React의 대체 속성이다. `innerHTML`과 같이, 크로스-사이트 스크립팅(XSS) 공격을 고려하여 이 속성을 사용하는 것은 위험하다. `__html` 객체를 키로 전달하고 HTML 텍스트를 값으로 전달하면 된다.
 
-    In this example MyComponent uses `dangerouslySetInnerHTML` attribute for setting HTML markup:
+    이 예제에서 MyComponent는 HTML 마크업 설정을 위해 `dangerouslySetInnerHTML` 속성을 사용한다.
 
     ```jsx harmony
     function createMarkup() {

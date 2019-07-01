@@ -84,7 +84,7 @@
 |63 | [생성자에서 setState()를 사용하면 어떻게 되나?](#생성자에서-setState()를-사용하면-어떻게-되나) |
 |64 | [키로 인덱스를 사용하면?](#키로-인덱스를-사용하면) |
 |65 | [Is it good to use setState() in componentWillMount() method?](#is-it-good-to-use-setstate-in-componentwillmount-method) |
-|66 | [What will happen if you use props in initial state?](#what-will-happen-if-you-use-props-in-initial-state) |
+|66 | [초기 state에 props를 사용하면 어떻게 되나?](#초기-state에-props를-사용하면-어떻게-되나) |
 |67 | [How do you conditionally render components?](#how-do-you-conditionally-render-components)
 |68 | [Why we need to be careful when spreading props on DOM elements??](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements) |
 |69 | [How you use decorators in React?](#how-you-use-decorators-in-react) |
@@ -1392,11 +1392,11 @@
     }
     ```
 
-66. ### What will happen if you use props in initial state?
+66. ### 초기 state에 props를 사용하면 어떻게 되나?
 
-    If the props on the component are changed without the component being refreshed, the new prop value will never be displayed because the constructor function will never update the current state of the component. The initialization of state from props only runs when the component is first created.
+    컴포넌트를 새로 고침 없이 컴포넌트의 props를 변경하면, 생성자 함수가 절대로 컴포넌트의 현재 state를 업데이트하지 않으므로 새로운 props 값이 표시되지 않는다. props로 state 초기화하는 것은 컴포넌트가 처음 만들어질 때만 실행된다. 
 
-    The below component won't display the updated input value:
+    아래의 컴포넌트는 업데이트된 입력값을 표시하지 않는다.
 
     ```jsx harmony
     class MyComponent extends React.Component {
@@ -1415,7 +1415,7 @@
     }
     ```
 
-    Using props inside render method will update the value:
+    render 메서드 안에서 props를 사용하면 값이 업데이트된다.
 
     ```jsx harmony
     class MyComponent extends React.Component {

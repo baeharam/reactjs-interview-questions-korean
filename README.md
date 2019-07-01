@@ -1311,7 +1311,7 @@
 
 60. ### React에서 innerHTML를 사용하는 방법?
 
-    `dangerouslySetInnerHTML`는 브라우저 DOM에서 `innerHTML`를 사용하기 위한 React의 대체 속성이다. 마치 `innerHTML`처럼, 크로스-사이트 스크립팅(XSS) 공격을 고려하여 이 속성을 사용하는 것은 위험하다. `__html` 객체를 키로 전달하고 HTML 텍스트를 값으로 전달하면 된다.
+    `dangerouslySetInnerHTML`는 브라우저 DOM에서 `innerHTML`를 사용하기 위한 React의 대체 속성이다. `innerHTML`과 같이, 크로스-사이트 스크립팅(XSS) 공격을 고려하여 이 속성을 사용하는 것은 위험하다. `__html` 객체를 키로 전달하고 HTML 텍스트를 값으로 전달하면 된다.
 
     이 예제에서 MyComponent는 HTML 마크업 설정을 위해 `dangerouslySetInnerHTML` 속성을 사용한다.
 

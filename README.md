@@ -78,13 +78,13 @@
 |57 | [react-dom 패키지 사용법은?](#react-dom-패키지-사용법은) |
 |58 | [react-dom의 render 메서드란?](#react-dom의-render-메서드란) |
 |59 | [ReactDOMServer란?](#ReactDOMServer란) |
-|60 | [How to use InnerHtml in React?](#how-to-use-innerhtml-in-react) |
+|60 | [React에서 innerHTML를 사용하는 방법?](#React에서-innerHTML를-사용하는-방법) |
 |61 | [React에서 스타일을 사용하는 방법?](#React에서-스타일을-사용하는-방법) |
 |62 | [React에서 이벤트가 어떻게 다른가?](#React에서-이벤트가-어떻게-다른가) |
 |63 | [생성자에서 setState()를 사용하면 어떻게 되나?](#생성자에서-setState()를-사용하면-어떻게-되나) |
 |64 | [키로 인덱스를 사용하면?](#키로-인덱스를-사용하면) |
-|65 | [Is it good to use setState() in componentWillMount() method?](#is-it-good-to-use-setstate-in-componentwillmount-method) |
-|66 | [What will happen if you use props in initial state?](#what-will-happen-if-you-use-props-in-initial-state) |
+|65 | [componentWillMount() 메서드에서 setState()를 사용하는 것은 좋은가?](#componentWillMount()-메서드에서-setState()를-사용하는-것은-좋은가) |
+|66 | [초기 state에 props를 사용하면 어떻게 되나?](#초기-state에-props를-사용하면-어떻게-되나) |
 |67 | [컴포넌트를 조건부로 렌더링하는 방법?](#컴포넌트를-조건부로-렌더링하는-방법)
 |68 | [Why we need to be careful when spreading props on DOM elements??](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements) |
 |69 | [How you use decorators in React?](#how-you-use-decorators-in-react) |
@@ -1309,11 +1309,11 @@
     })
     ```
 
-60. ### How to use innerHTML in React?
+60. ### React에서 innerHTML를 사용하는 방법?
 
-    The `dangerouslySetInnerHTML` attribute is React's replacement for using `innerHTML` in the browser DOM. Just like `innerHTML`, it is risky to use this attribute considering cross-site scripting (XSS) attacks. You just need to pass a `__html` object as key and HTML text as value.
+    `dangerouslySetInnerHTML`는 브라우저 DOM에서 `innerHTML`를 사용하기 위한 React의 대체 속성이다. `innerHTML`과 같이, 크로스-사이트 스크립팅(XSS) 공격을 고려하여 이 속성을 사용하는 것은 위험하다. `__html` 객체를 키로 전달하고 HTML 텍스트를 값으로 전달하면 된다.
 
-    In this example MyComponent uses `dangerouslySetInnerHTML` attribute for setting HTML markup:
+    이 예제에서 MyComponent는 HTML 마크업 설정을 위해 `dangerouslySetInnerHTML` 속성을 사용한다.
 
     ```jsx harmony
     function createMarkup() {
@@ -1377,10 +1377,10 @@
     )}
     ```
 
-65. ### Is it good to use `setState()` in `componentWillMount()` method?
+65. ### `componentWillMount()` 메서드에서 `setState()`를 사용하는 것은 좋은가?
 
-    It is recommended to avoid async initialization in `componentWillMount()` lifecycle method. `componentWillMount()` is invoked immediately before mounting occurs. It is called before `render()`, therefore setting state in this method will not trigger a re-render. Avoid introducing any side-effects or subscriptions in this method. We need to make sure async calls for component initialization happened in `componentDidMount()` instead of `componentWillMount()`.
-
+    `componentWillMount()` 라이프 사이클 메서드에서 비동기 초기화를 하지 않는게 좋다. `componentWillMount()`는 마운트가 발생하기 직전에 호출된다. `render()` 전에 호출되기 때문에 메서드에서 state를 설정하면 리렌더링 되지 않는다. 다음과 같은 메서드로 사이드 이펙트나 구독을 피하면된다. `componentWillMount()` 대신에 `componentDidMount()`에서 컴포넌트 초기화에 대한 비동기 호출을 한다.
+ 
     ```jsx harmony
     componentDidMount() {
       axios.get(`api/todos`)
@@ -1392,11 +1392,11 @@
     }
     ```
 
-66. ### What will happen if you use props in initial state?
+66. ### 초기 state에 props를 사용하면 어떻게 되나?
 
-    If the props on the component are changed without the component being refreshed, the new prop value will never be displayed because the constructor function will never update the current state of the component. The initialization of state from props only runs when the component is first created.
+    컴포넌트를 새로 고침 없이 컴포넌트의 props를 변경하면, 생성자 함수가 절대로 컴포넌트의 현재 state를 업데이트하지 않으므로 새로운 props 값이 표시되지 않는다. props로 state 초기화하는 것은 컴포넌트가 처음 만들어질 때만 실행된다. 
 
-    The below component won't display the updated input value:
+    아래의 컴포넌트는 업데이트된 입력값을 표시하지 않는다.
 
     ```jsx harmony
     class MyComponent extends React.Component {
@@ -1415,7 +1415,7 @@
     }
     ```
 
-    Using props inside render method will update the value:
+    render 메서드 안에서 props를 사용하면 값이 업데이트된다.
 
     ```jsx harmony
     class MyComponent extends React.Component {

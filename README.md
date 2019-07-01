@@ -86,7 +86,7 @@
 |65 | [Is it good to use setState() in componentWillMount() method?](#is-it-good-to-use-setstate-in-componentwillmount-method) |
 |66 | [What will happen if you use props in initial state?](#what-will-happen-if-you-use-props-in-initial-state) |
 |67 | [How do you conditionally render components?](#how-do-you-conditionally-render-components)
-|68 | [Why we need to be careful when spreading props on DOM elements??](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements) |
+|68 | [DOM 엘리먼트에서 spread props를 조심해야하는 이유는?](#DOM-엘리먼트에서-spread-props를-조심해야하는-이유는) |
 |69 | [How you use decorators in React?](#how-you-use-decorators-in-react) |
 |70 | [How do you memoize a component?](#how-do-you-memoize-a-component) |
 |71 | [How you implement Server-Side Rendering or SSR?](#how-you-implement-server-side-rendering-or-ssr) |
@@ -1462,9 +1462,9 @@
     )
     ```
 
-68. ### Why we need to be careful when spreading props on DOM elements?
+68. ### DOM 엘리먼트에서 spread props를 조심해야하는 이유는?
 
-    When we *spread props* we run into the risk of adding unknown HTML attributes, which is a bad practice. Instead we can use prop destructuring with `...rest` operator, so it will add only required props. For example,
+    *spread props* 를 사용할 때 알려지지 않는 HTML 속성을 추가할 위험이 있다. 이는 나쁜 습관이다. 대신 우리는 `...rest` 연산자로 props destructuring을 사용할 수 있으므로, 필요한 props만 추가할 수 있다. 예를 들어,
 
     ```jsx harmony
     const ComponentA = () =>

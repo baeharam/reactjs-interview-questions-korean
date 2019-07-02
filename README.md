@@ -97,7 +97,7 @@
 |76 | [What is the purpose of getDerivedStateFromProps() lifecycle method?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method) |
 |77 | [What is the purpose of getSnapshotBeforeUpdate() lifecycle method?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method) |
 |78 | [Do Hooks replace render props and higher order components?](#do-hooks-replace-render-props-and-higher-order-components) |
-|79 | [What is the recommended way for naming components?](#what-is-the-recommended-way-for-naming-components) |
+|79 | [컴포넌트를 명명하는데 권장되는 방법은?](#컴포넌트를-명명하는데-권장되는-방법은) |
 |80 | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class) |
 |81 | [What is a switching component?](#what-is-a-switching-component) |
 |82 | [Why we need to pass a function to setState()?](#why-we-need-to-pass-a-function-to-setstate) |
@@ -1632,11 +1632,11 @@
 
     Both render props and higher-order components render only a single child but in most of the cases Hooks are a simpler way to serve this by reducing nesting in your tree.
 
-79. ### What is the recommended way for naming components?
+79. ### 컴포넌트를 명명하는데 권장되는 방법은?
 
-    It is recommended to name the component by reference instead of using `displayName`.
+    `displayName`을 사용하는 대신 참조로 컴포넌트의 이름을 지정하는 것이 좋다.
 
-    Using `displayName` for naming component:
+    컴포넌트 명명에 `displayName`를 사용하는 경우.
 
     ```javascript
     export default React.createClass({
@@ -1645,7 +1645,7 @@
     })
     ```
 
-    The **recommended** approach:
+    **권장되는** 접근 방법:
 
     ```javascript
     export default class TodoApp extends React.Component {
@@ -3019,13 +3019,8 @@
 
 8.   ### What are the drawbacks of MVW pattern?
 
-<<<<<<< HEAD
      1. The DOM manipulation is very expensive which causes applications behaves slowly and inefficient.
      2. Due to circular dependencies, a complicated model was created around models and views.
-=======
-     1. DOM manipulation is very expensive which causes applications to behave slow and inefficient.
-     3. Due to circular dependencies, a complicated model was created around models and views.
->>>>>>> b18964f7d7dc98a83fb51250c5f9a0039a6a9b2a
      3. Lot of data changes happens for collaborative applications(like Google Docs).
      4. No way to do undo (travel back in time) easily without adding so much extra code.
 

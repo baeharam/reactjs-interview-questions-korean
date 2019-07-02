@@ -86,7 +86,7 @@
 |65 | [componentWillMount() 메서드에서 setState()를 사용하는 것은 좋은가?](#componentWillMount()-메서드에서-setState()를-사용하는-것은-좋은가) |
 |66 | [초기 state에 props를 사용하면 어떻게 되나?](#초기-state에-props를-사용하면-어떻게-되나) |
 |67 | [컴포넌트를 조건부로 렌더링하는 방법?](#컴포넌트를-조건부로-렌더링하는-방법)
-|68 | [Why we need to be careful when spreading props on DOM elements??](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements) |
+|68 | [DOM 엘리먼트에서 spread props를 조심해야하는 이유는?](#DOM-엘리먼트에서-spread-props를-조심해야하는-이유는) 
 |69 | [React에서 데코레이터를 사용하는 방법?](#React에서-데코레이터를-사용하는-방법) |
 |70 | [컴포넌트를 어떻게 메모하나?](#컴포넌트를-어떻게-메모하나) |
 |71 | [Server Side Rendering 또는 SSR 구현방법?](#Server-Side-Rendering-또는-SSR-구현방법) |
@@ -96,7 +96,7 @@
 |75 | [What are the lifecycle methods going to be deprecated in React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16) |
 |76 | [What is the purpose of getDerivedStateFromProps() lifecycle method?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method) |
 |77 | [What is the purpose of getSnapshotBeforeUpdate() lifecycle method?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method) |
-|78 | [What is the difference between createElement() and cloneElement() methods?](#what-is-the-difference-between-createelement-and-cloneelement-methods) |
+|78 | [Do Hooks replace render props and higher order components?](#do-hooks-replace-render-props-and-higher-order-components) |
 |79 | [What is the recommended way for naming components?](#what-is-the-recommended-way-for-naming-components) |
 |80 | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class) |
 |81 | [What is a switching component?](#what-is-a-switching-component) |
@@ -113,7 +113,7 @@
 |92 | [How to loop inside JSX?](#how-to-loop-inside-jsx) |
 |93 | [How do you access props in attribute quotes?](#how-do-you-access-props-in-attribute-quotes) |
 |94 | [What is React PropType array with shape?](#what-is-react-proptype-array-with-shape) |
-|95 | [How conditionally apply class attributes?](#how-conditionally-apply-class-attributes) |
+|95 | [How to conditionally apply class attributes?](#how-to-conditionally-apply-class-attributes) |
 |96 | [What is the difference between React and ReactDOM?](#what-is-the-difference-between-react-and-reactdom) |
 |97 | [Why ReactDOM is separated from React?](#why-reactdom-is-separated-from-react) |
 |98 | [How to use React label element?](#how-to-use-react-label-element) |
@@ -258,7 +258,7 @@
 |230| [What are the benefits of React Router V4?](#what-are-the-benefits-of-react-router-v4)|
 |231| [Can you describe about componentDidCatch lifecycle method signature?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)|
 |232| [In which scenarios error boundaries do not catch errors?](#in-which-scenarios-error-boundaries-do-not-catch-errors)|
-|233| [Why do not you need error boundaries for event handlers?](#why-do-not-you-need-error-boundaries-for-event0-handlers)|
+|233| [Why do not you need error boundaries for event handlers?](#why-do-not-you-need-error-boundaries-for-event-handlers)|
 |234| [What is the difference between try cath block and error boundaries?](#what-is-the-difference-between-try-catch-block-and-error-boundaries)|
 |235| [What is the behavior of uncaught errors in react 16?](#what-is-the-behavior-of-uncaught-errors-in-react-16)|
 |236| [What is the proper placement for error boundaries?](#what-is-the-proper-placement-for-error-boundaries)|
@@ -274,7 +274,7 @@
 |246| [What are the methods invoked during error handling?](#what-are-the-methods-invoked-during-error-handling)|
 |247| [What is the purpose of displayName class property?](#what-is-the-purpose-of-displayname-class-property)|
 |248| [What is the browser support for react applications?](#what-is-the-browser-support-for-react-applications)|
-|249| [What is the purpose of unmountComponentAtNode method?](#what-is-the-purpose-of-unmountcomponentatNode-method)|
+|249| [What is the purpose of unmountComponentAtNode method?](#what-is-the-purpose-of-unmountcomponentatnode-method)|
 |250| [What is code-splitting?](#what-is-code-splitting)|
 |251| [What is the benefit of strict mode?](#what-is-the-benefit-of-strict-mode)|
 |252| [What are Keyed Fragments?](#what-are-keyed-fragments)|
@@ -292,7 +292,7 @@
 |264| [How do you say that state updates are merged?](#how-do-you-say-that-state-updates-are-merged)|
 |265| [How do you pass arguments to an event handler?](#how-do-you-pass-arguments-to-an-event-handler)|
 |266| [How to prevent component from rendering?](#how-to-prevent-component-from-rendering)|
-|267| [What are the conditions to safely use the index as a key?](#What-are-the-conditions-to-safely-use-the-index-as-a-key)|
+|267| [What are the conditions to safely use the index as a key?](#what-are-the-conditions-to-safely-use-the-index-as-a-key)|
 |268| [Is it keys should be globally unique?](#is-it-keys-should-be-globally-unique)|
 |269| [What is the popular choice for form handling?](#what-is-the-popular-choice-for-form-handling)|
 |270| [What are the advantages of formik over redux form library?](#what-are-the-advantages-of-formik-over-redux-form-library)|
@@ -330,6 +330,14 @@
 |302| [Do I need to rewrite all my class components with hooks?](#do-i-need-to-rewrite-all-my-class-components-with-hooks)|
 |303| [How to fetch data with React Hooks?](#how-to-fetch-data-with-react-hooks)|
 |304| [Is Hooks cover all use cases for classes?](#is-hooks-cover-all-use-cases-for-classes)|
+|305| [What is the stable release for hooks support?](#what-is-the-stable-release-for-hooks-support)|
+|306| [Why do we use square brackets in useState?](#why-do-we-use-square-brackets-in-usestate)|
+|307| [What are the sources used for introducing hooks?](#what-are-the-sources-used-for-introducing-hooks)|
+|308| [How do you access imperative API of web components?](#how-do-you-access-imperative-api-of-web-components)|
+|309| [What is formik?](#what-is-formik)|
+|310| [What are typical middleware choices for handling asynchronous calls in Redux?](#what-are-typical-middleware-choices-for-handling-asynchronous-calls-in-redux)|
+|311| [Is browsers understand JSX code?](#is-browsers-understand-jsx-code)|
+|312| [Describe about data flow in react?](#describe-about-data-flow-in-react)|
 
 ## Core React
 
@@ -609,6 +617,13 @@
 
     ```jsx harmony
     <button onClick={this.handleClick.bind(this, id)} />
+    ```
+    Apart from these two approaches, you can also pass arguments to a function which is defined as array function
+    ```jsx harmony
+    <button onClick={this.handleClick(id)} />
+    handleClick = (id) => () => {
+        console.log("Hello, your ticket number is", id)
+    };
     ```
 
 16. ### React에 SyntheticEvent란 무엇인가?
@@ -1462,9 +1477,9 @@
     )
     ```
 
-68. ### Why we need to be careful when spreading props on DOM elements?
+68. ### DOM 엘리먼트에서 spread props를 조심해야하는 이유는?
 
-    When we *spread props* we run into the risk of adding unknown HTML attributes, which is a bad practice. Instead we can use prop destructuring with `...rest` operator, so it will add only required props. For example,
+    *spread props* 를 사용할 때 알 수 없는 HTML 속성을 추가할 위험이 있다. 이는 나쁜 습관이다. 대신 우리는 `...rest` 연산자로 props destructuring을 사용할 수 있으므로, 필요한 props만 추가할 수 있다. 예를 들어,
 
     ```jsx harmony
     const ComponentA = () =>
@@ -1613,9 +1628,9 @@
 
     This lifecycle method along with `componentDidUpdate()` covers all the use cases of `componentWillUpdate()`.
 
-78. ### What is the difference between createElement() and cloneElement() methods?
+78. ### Do Hooks replace render props and higher order components?
 
-    In JSX the React element is transpiled to `React.createElement()` which represents an UI element. Whereas `React.cloneElement()` is used in order to clone an element and pass it new props.
+    Both render props and higher-order components render only a single child but in most of the cases Hooks are a simpler way to serve this by reducing nesting in your tree.
 
 79. ### What is the recommended way for naming components?
 
@@ -1738,7 +1753,7 @@
 
 84. ### What are React Mixins?
 
-    *Mixins* are a way to totally separate components to have a common functionality. Mixins are **should not be used** and can be replaced with *higher-order components* or *decorators*.
+    *Mixins* are a way to totally separate components to have a common functionality. Mixins **should not be used** and can be replaced with *higher-order components* or *decorators*.
 
     One of the most commonly used mixins is `PureRenderMixin`. You might be using it in some components to prevent unnecessary re-renders when the props and state are shallowly equal to the previous props and state:
 
@@ -1768,7 +1783,7 @@
 
 86. ### What are the Pointer Events supported in React?
 
-    *Pointer Events* provide a unified way of handling all input events. In the olden days we have a mouse and respective event listeners to handle them but nowadays we have many devices which don't correlate to having a mouse, like phones with touch surface or pens. We need to remember that these events will only work in browsers that support the *Pointer Events* specification.
+    *Pointer Events* provide a unified way of handling all input events. In the old days we had a mouse and respective event listeners to handle them but nowadays we have many devices which don't correlate to having a mouse, like phones with touch surface or pens. We need to remember that these events will only work in browsers that support the *Pointer Events* specification.
 
     The following event types are now available in *React DOM*:
 
@@ -1947,7 +1962,7 @@
     }
     ```
 
-95. ### How conditionally apply class attributes?
+95. ### How to conditionally apply class attributes?
 
     You shouldn't use curly braces inside quotes because it is going to be evaluated as a string.
 
@@ -3004,8 +3019,13 @@
 
 8.   ### What are the drawbacks of MVW pattern?
 
+<<<<<<< HEAD
      1. The DOM manipulation is very expensive which causes applications behaves slowly and inefficient.
      2. Due to circular dependencies, a complicated model was created around models and views.
+=======
+     1. DOM manipulation is very expensive which causes applications to behave slow and inefficient.
+     3. Due to circular dependencies, a complicated model was created around models and views.
+>>>>>>> b18964f7d7dc98a83fb51250c5f9a0039a6a9b2a
      3. Lot of data changes happens for collaborative applications(like Google Docs).
      4. No way to do undo (travel back in time) easily without adding so much extra code.
 
@@ -3731,7 +3751,7 @@
      })
      ```
 
-     But you can write statics inside ES6+ classes like this:
+     But you can write statics inside ES6+ classes or writing them outside class as below,
 
      ```javascript
      class Component extends React.Component {
@@ -3743,6 +3763,14 @@
          // ...
        }
      }
+     ```
+     ```javascript
+     class Component extends React.Component {
+        ....
+     }
+
+     Component.propTypes = {...}
+     Component.someMethod = function(){....}
      ```
 
 210. ### Can Redux only be used with React?
@@ -3889,7 +3917,7 @@
         React.render(<User age={30} department={"IT"} />, document.getElementById('container'));
      ```
 219. ### Do I need to keep all my state into Redux? Should I ever use react internal state?
-     It is up to developer decision. i.e, It is developer job to determine what kinds of state make up your application, and where each piece of state should liveSome users prefer to keep every single piece of data in Redux, to maintain a fully serializable and controlled version of their application at all times. Others prefer to keep non-critical or UI state, such as “is this dropdown currently open”, inside a component's internal state.
+     It is up to developer decision. i.e, It is developer job to determine what kinds of state make up your application, and where each piece of state should live. Some users prefer to keep every single piece of data in Redux, to maintain a fully serializable and controlled version of their application at all times. Others prefer to keep non-critical or UI state, such as “is this dropdown currently open”, inside a component's internal state.
 
      Below are the thumb rules to determine what kind of data should be put into Redux
      1. Do other parts of the application care about this data?
@@ -4013,7 +4041,7 @@
      }
      ```
 226. ### What are hooks?
-     Hooks are a new feature proposal that lets you use state and other React features without writing a class. Let's see an example of useState hook example,
+     Hooks is a new feature that lets you use state and other React features without writing a class. Let's see an example of useState hook example,
      ```jsx
      import { useState } from 'react';
 
@@ -4158,8 +4186,8 @@
 240. ### What is the main purpose of constructor?
      The constructor is mainly used for two purposes,
      1. To initialize local state by assigning object to this.state
-     2. For binding event handler methods to the instatnce
-     For example, the below code covers both the above casess,
+     2. For binding event handler methods to the instance
+     For example, the below code covers both the above cases,
      ```javascript
      constructor(props) {
        super(props);
@@ -4884,11 +4912,11 @@
      1. Two elements of different types will produce different trees.
      2. The developer can hint at which child elements may be stable across different renders with a key prop.
 288. ### What are the rules covered by diffing algorithm?
-     When diffing two trees, React first compares the two root elements. The behavior is different depending on the types of the root elements. It covers the below rules during reconsilation algorithm,
+     When diffing two trees, React first compares the two root elements. The behavior is different depending on the types of the root elements. It covers the below rules during reconciliation algorithm,
      1. **Elements Of Different Types:**
         Whenever the root elements have different types, React will tear down the old tree and build the new tree from scratch. For example,  elements <a> to <img>, or from <Article> to <Comment> of different types lead a full rebuild.
      2. **DOM Elements Of The Same Type:**
-        When comparing two React DOM elements of the same type, React looks at the attributes of both, keeps the same underlying DOM node, and only updates the changed attributes. Lets take an example with same DOM eleemnts except className attribute,
+        When comparing two React DOM elements of the same type, React looks at the attributes of both, keeps the same underlying DOM node, and only updates the changed attributes. Lets take an example with same DOM elements except className attribute,
         ```javascript
         <div className="show" title="ReactJS" />
 
@@ -5077,4 +5105,37 @@
      Remember we provided an empty array as second argument to the effect hook to avoid activating it on component updates but only for the mounting of the component. i.e, It fetches only for component mount.
 304. ### Is Hooks cover all use cases for classes?
      Hooks doesn't cover all use cases of classes but there is a plan to add them soon. Currently there are no Hook equivalents to the uncommon **getSnapshotBeforeUpdate** and **componentDidCatch** lifecycles yet.
+305. ### What is the stable release for hooks support?
+     React includes a stable implementation of React Hooks in 16.8 release for below packages
+     1. React DOM
+     2. React DOM Server
+     3. React Test Renderer
+     4. React Shallow Renderer
+306. ### Why do we use square brackets in useState?
+     When we declare a state variable with useState, it returns a pair — an array with two items. The first item is the current value, and the second is a function that lets us update it. Using [0] and [1] to access them is a bit confusing because they have a specific meaning. This is why we use array destructuring instead.
+     For example, you can declare state variables for count
+     ```javascript
+      const [count, setCount] = useState(0);
+     ```
+     You can name anything for your own state variables.
+307. ### What are the sources used for introducing hooks?
+     Hooks got the ideas from several different sources. Below are some of them,
+     1. Previous experiments with functional APIs in the react-future repository
+     2. Community experiments with render prop APIs such as Reactions Component
+     3. State variables and state cells in DisplayScript.
+     4. Subscriptions in Rx.
+     5. Reducer components in ReasonReact.
+308. ### How do you access imperative API of web components?
+     Web Components often expose an imperative API to implement its functions. You will need to use a **ref** to interact with the DOM node directly if you want to access imperative API of a web component. But if you are using third-party Web Components, the best solution is to write a React component that behaves as a **wrapper** for your Web Component.
+309. ### What is formik?
+     Formik is a small react form library that helps you with the three major problems,
+     1. Getting values in and out of form state
+     2. Validation and error messages
+     3. Handling form submission
 
+310. ### What are typical middleware choices for handling asynchronous calls in Redux?
+     Some of the popular middleware choices for handling asynchronous calls in Redux eco system are `Redux Thunk, Redux Promise, Redux Saga`.
+311. ### Is browsers understand JSX code?
+     No, browsers can't understand JSX code. You need a transpiler to convert your JSX to regular Javascript that browsers can understand. The most widely used transpiler right now is Babel.
+312. ### Describe about data flow in react?
+     React implements one-way reactive data flow using props which reduce boilerplate and is easier to understand than traditional two-way data binding.

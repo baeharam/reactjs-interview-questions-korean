@@ -95,7 +95,7 @@
 |74 | [What is the lifecycle methods order in mounting?](#what-is-the-lifecycle-methods-order-in-mounting) |
 |75 | [What are the lifecycle methods going to be deprecated in React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16) |
 |76 | [What is the purpose of getDerivedStateFromProps() lifecycle method?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method) |
-|77 | [What is the purpose of getSnapshotBeforeUpdate() lifecycle method?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method) |
+|77 | [getSnapshotBeforeUpdate() 라이프 사이클 메서드의 사용 목적은?](#getSnapshotBeforeUpdate()-라이프-사이클-메서드의-사용-목적은) |
 |78 | [Do Hooks replace render props and higher order components?](#do-hooks-replace-render-props-and-higher-order-components) |
 |79 | [What is the recommended way for naming components?](#what-is-the-recommended-way-for-naming-components) |
 |80 | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class) |
@@ -1614,9 +1614,9 @@
 
     This lifecycle method along with `componentDidUpdate()` covers all the use cases of `componentWillReceiveProps()`.
 
-77. ### What is the purpose of `getSnapshotBeforeUpdate()` lifecycle method?
+77. ### `getSnapshotBeforeUpdate()` 라이프 사이클 메서드의 사용 목적은??
 
-    The new `getSnapshotBeforeUpdate()` lifecycle method is called right before DOM updates. The return value from this method will be passed as the third parameter to `componentDidUpdate()`.
+    새로운 `getSnapshotBeforeUpdate()` 라이프 사이클 메서드는 DOM 업데이트 직전에 호출된다. 이 메서드의 반환 값은 세 번째 매개 변수로 `componentDidUpdate()`에 전달된다.
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1626,7 +1626,7 @@
     }
     ```
 
-    This lifecycle method along with `componentDidUpdate()` covers all the use cases of `componentWillUpdate()`.
+    이 라이프 사이클 메서드는 `componentDidUpdate()`와 `componentWillUpdate()`의 모든 사용 사례를 커버한다.
 
 78. ### Do Hooks replace render props and higher order components?
 
@@ -3019,13 +3019,8 @@
 
 8.   ### What are the drawbacks of MVW pattern?
 
-<<<<<<< HEAD
      1. The DOM manipulation is very expensive which causes applications behaves slowly and inefficient.
      2. Due to circular dependencies, a complicated model was created around models and views.
-=======
-     1. DOM manipulation is very expensive which causes applications to behave slow and inefficient.
-     3. Due to circular dependencies, a complicated model was created around models and views.
->>>>>>> b18964f7d7dc98a83fb51250c5f9a0039a6a9b2a
      3. Lot of data changes happens for collaborative applications(like Google Docs).
      4. No way to do undo (travel back in time) easily without adding so much extra code.
 

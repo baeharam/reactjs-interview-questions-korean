@@ -1464,7 +1464,7 @@
 
 68. ### DOM 엘리먼트에서 spread props를 조심해야하는 이유는?
 
-    *spread props* 를 사용할 때 알려지지 않는 HTML 속성을 추가할 위험이 있다. 이는 나쁜 습관이다. 대신 우리는 `...rest` 연산자로 props destructuring을 사용할 수 있으므로, 필요한 props만 추가할 수 있다. 예를 들어,
+    *spread props* 를 사용할 때 알 수 없는 HTML 속성을 추가할 위험이 있다. 이는 나쁜 습관이다. 대신 우리는 `...rest` 연산자로 props destructuring을 사용할 수 있으므로, 필요한 props만 추가할 수 있다. 예를 들어,
 
     ```jsx harmony
     const ComponentA = () =>

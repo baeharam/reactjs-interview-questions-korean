@@ -94,7 +94,7 @@
 |73 | [What is CRA and its benefits?](#what-is-cra-and-its-benefits) |
 |74 | [What is the lifecycle methods order in mounting?](#what-is-the-lifecycle-methods-order-in-mounting) |
 |75 | [What are the lifecycle methods going to be deprecated in React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16) |
-|76 | [What is the purpose of getDerivedStateFromProps() lifecycle method?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method) |
+|76 | [`getDerivedStateFromProps()` 라이프 사이클 메서드의 사용 목적은?](#getDerivedStateFromProps()-라이프-사이클-메서드의-사용-목적은) |
 |77 | [What is the purpose of getSnapshotBeforeUpdate() lifecycle method?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method) |
 |78 | [Do Hooks replace render props and higher order components?](#do-hooks-replace-render-props-and-higher-order-components) |
 |79 | [What is the recommended way for naming components?](#what-is-the-recommended-way-for-naming-components) |
@@ -1600,9 +1600,9 @@
 
     Starting with React v16.3 these methods are aliased with `UNSAFE_` prefix, and the unprefixed version will be removed in React v17.
 
-76. ### What is the purpose of `getDerivedStateFromProps()` lifecycle method?
+76. ### `getDerivedStateFromProps()` 라이프 사이클 메서드의 사용 목적은?
 
-    The new static `getDerivedStateFromProps()` lifecycle method is invoked after a component is instantiated as well as before it is re-rendered. It can return an object to update state, or `null` to indicate that the new props do not require any state updates.
+    새로운 정적 `getDerivedStateFromProps()` 라이프 사이클 메서드는 컴포넌트가 인스턴스화된 후뿐만 아니라 리렌더링 되기 전에 호출된다. update state를 object로 돌려줄 수도 있고, 새로운 props가 state 업데이트를 하지 않아도 되는 것을 나타내기 위해 `null`을 리턴할 수 있다.
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1612,7 +1612,7 @@
     }
     ```
 
-    This lifecycle method along with `componentDidUpdate()` covers all the use cases of `componentWillReceiveProps()`.
+    이 라이프 사이클 메서드는 `componentDidUpdate()`와 `componentWillReceiveProps()`의 모든 사용 사례를 커버한다.
 
 77. ### What is the purpose of `getSnapshotBeforeUpdate()` lifecycle method?
 

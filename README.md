@@ -96,7 +96,7 @@
 |75 | [What are the lifecycle methods going to be deprecated in React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16) |
 |76 | [What is the purpose of getDerivedStateFromProps() lifecycle method?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method) |
 |77 | [What is the purpose of getSnapshotBeforeUpdate() lifecycle method?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method) |
-|78 | [Do Hooks replace render props and higher order components?](#do-hooks-replace-render-props-and-higher-order-components) |
+|78 | [Hooks는 렌더링 props와 고차원 컴포넌트를 대체한다?](#Hooks는-렌더링-props와-고차원-컴포넌트를-대체한다) |
 |79 | [What is the recommended way for naming components?](#what-is-the-recommended-way-for-naming-components) |
 |80 | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class) |
 |81 | [What is a switching component?](#what-is-a-switching-component) |
@@ -1628,9 +1628,9 @@
 
     This lifecycle method along with `componentDidUpdate()` covers all the use cases of `componentWillUpdate()`.
 
-78. ### Do Hooks replace render props and higher order components?
+78. ### Hooks는 렌더링 props와 고차원 컴포넌트를 대체한다?
 
-    Both render props and higher-order components render only a single child but in most of the cases Hooks are a simpler way to serve this by reducing nesting in your tree.
+    렌더링 props와 고차원 컴포넌트 모두 하나의 자식만 렌더링하지만, 대부분의 경우 Hooks는 트리에서 중첩을 줄임으로써 제거하는 더 간단한 방법이다.
 
 79. ### What is the recommended way for naming components?
 

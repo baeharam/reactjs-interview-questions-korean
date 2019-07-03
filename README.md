@@ -99,7 +99,7 @@
 |78 | [Hooks는 렌더링 props와 고차원 컴포넌트를 대체한다?](#Hooks는-렌더링-props와-고차원-컴포넌트를-대체한다) |
 |79 | [컴포넌트를 명명하는데 권장되는 방법은?](#컴포넌트를-명명하는데-권장되는-방법은) |
 |80 | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class) |
-|81 | [What is a switching component?](#what-is-a-switching-component) |
+|81 | [스위칭 컴포넌트란?](#스위칭-컴포넌트란) |
 |82 | [Why we need to pass a function to setState()?](#why-we-need-to-pass-a-function-to-setstate) |
 |83 | [What is strict mode in React?](#what-is-strict-mode-in-react) |
 |84 | [What are React Mixins?](#what-are-react-mixins) |
@@ -1672,11 +1672,11 @@
     13. optional render methods like `renderNavigation()` or `renderProfilePicture()`
     14. `render()`
 
-81. ### What is a switching component?
+81. ### 스위칭 컴포넌트란?
 
-    A *switching component* is a component that renders one of many components. We need to use object to map prop values to components.
+    *스위칭 컴포넌트란*는 많은 컴포넌트 중 하나를 렌더링하는 컴포넌트이다. prop 값을 컴포넌트에 매핑하려면 object를 사용해야 한다.
 
-    For example, a switching component to display different pages based on `page` prop:
+    예를 들어, `page` prop을 기반으로 한 다른 페이지를 표시하는 스위칭 컴포넌트.
 
     ```jsx harmony
     import HomePage from './HomePage'
@@ -1697,7 +1697,7 @@
       return <Handler {...props} />
     }
 
-    // The keys of the PAGES object can be used in the prop types to catch dev-time errors.
+    // PAGES 객체의 키는 prop 타입에서 사용되어 dev-time errors를 잡아낼 수 있다.
     Page.propTypes = {
       page: PropTypes.oneOf(Object.keys(PAGES)).isRequired
     }

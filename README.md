@@ -91,20 +91,20 @@
 |70 | [컴포넌트를 어떻게 메모하나?](#컴포넌트를-어떻게-메모하나) |
 |71 | [Server Side Rendering 또는 SSR 구현방법?](#Server-Side-Rendering-또는-SSR-구현방법) |
 |72 | [How to enable production mode in React?](#how-to-enable-production-mode-in-react) |
-|73 | [What is CRA and its benefits?](#what-is-cra-and-its-benefits) |
-|74 | [What is the lifecycle methods order in mounting?](#what-is-the-lifecycle-methods-order-in-mounting) |
+|73 | [CRA란 무엇이며 장점은?](#CRA란-무엇이며-장점은) |
+|74 | [마운팅의 라이프 사이클 메서드 순서는?](#마운팅의-라이프-사이클-메서드-순서는) |
 |75 | [What are the lifecycle methods going to be deprecated in React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16) |
-|76 | [What is the purpose of getDerivedStateFromProps() lifecycle method?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method) |
-|77 | [What is the purpose of getSnapshotBeforeUpdate() lifecycle method?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method) |
-|78 | [Do Hooks replace render props and higher order components?](#do-hooks-replace-render-props-and-higher-order-components) |
-|79 | [What is the recommended way for naming components?](#what-is-the-recommended-way-for-naming-components) |
+|76 | [getDerivedStateFromProps() 라이프 사이클 메서드의 사용 목적은?](#getDerivedStateFromProps()-라이프-사이클-메서드의-사용-목적은) |
+|77 | [getSnapshotBeforeUpdate() 라이프 사이클 메서드의 사용 목적은?](#getSnapshotBeforeUpdate()-라이프-사이클-메서드의-사용-목적은) |
+|78 | [Hooks는 렌더링 props와 고차원 컴포넌트를 대체한다?](#Hooks는-렌더링-props와-고차원-컴포넌트를-대체한다) |
+|79 | [컴포넌트를 명명하는데 권장되는 방법은?](#컴포넌트를-명명하는데-권장되는-방법은) |
 |80 | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class) |
-|81 | [What is a switching component?](#what-is-a-switching-component) |
-|82 | [Why we need to pass a function to setState()?](#why-we-need-to-pass-a-function-to-setstate) |
+|81 | [스위칭 컴포넌트란?](#스위칭-컴포넌트란) |
+|82 | [왜 setState()에 함수를 전달해야 하나?](#왜-setState()에-함수를-전달해야-하나) |
 |83 | [What is strict mode in React?](#what-is-strict-mode-in-react) |
-|84 | [What are React Mixins?](#what-are-react-mixins) |
-|85 | [Why is isMounted() an anti-pattern and what is the proper solution?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution) |
-|86 | [What are the Pointer Events supported in React?](#what-are-the-pointer-events-supported-in-react) |
+|84 | [React Mixins이란?](#React-Mixins이란) |
+|85 | [왜 isMounted()가 안티 패턴이며 적절한 해결책은?](#왜-isMounted()가-안티-패턴이며-적절한-해결책은) |
+|86 | [React에서 지원되는 Pointer Events는?](#React에서-지원되는-Pointer-Events는) |
 |87 | [왜 컴포넌트의 이름은 대문자로 시작하나?](#왜-컴포넌트의-이름은-대문자로-시작하나) |
 |88 | [Are custom DOM attributes supported in React v16?](#are-custom-dom-attributes-supported-in-react-v16) |
 |89 | [What is the difference between constructor and getInitialState?](#what-is-the-difference-between-constructor-and-getinitialstate) |
@@ -1553,11 +1553,11 @@
 
     You should use Webpack's `DefinePlugin` method to set `NODE_ENV` to `production`, by which it strip out things like propType validation and extra warnings. Apart from this, if you minify the code, for example, Uglify's dead-code elimination to strip out development only code and comments, it will drastically reduce the size of your bundle.
 
-73. ### What is CRA and its benefits?
+73. ### CRA란 무엇이며 장점은?
 
-    The `create-react-app` CLI tool allows you to quickly create & run React applications with no configuration step.
+    `create-react-app` CLI 툴은 별도의 구성단계 없이 빠르게 React 애플리케이션을 만들고 실행할 수 있다.
 
-    Let's create Todo App using *CRA*:
+    *CRA*로 Todo 앱을 만들어보자
 
     ```console
     # Installation
@@ -1572,37 +1572,37 @@
     $ npm run test
     $ npm start
     ```
-    It includes everything we need to build a React app:
+    React 앱을 제작하는 데 필요한 모든 것이 포함되어 있다.
 
-    1. React, JSX, ES6, and Flow syntax support.
-    2. Language extras beyond ES6 like the object spread operator.
-    3. Autoprefixed CSS, so you don’t need -webkit- or other prefixes.
-    4. A fast interactive unit test runner with built-in support for coverage reporting.
-    5. A live development server that warns about common mistakes.
-    6. A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps.
+    1. React, JSX, ES6, 및 Flow 문법 지원.
+    2. object spread operator와 같은 ES6를 넘어선 언어 확장 기능.
+    3. 자동 접두어가 붙은 CSS로, -webkit- 이나 다른 접두사는 필요 없다.
+    4. coverage를 지원하는 내장된 빠른 대화형 단위 테스트 러너.
+    5. 일반적인 실수에 대해서 경고하는 라이브 개발 서버.
+    6. hashes와 sourcemaps을 사용하여 production 용 JS, CSS 및 images를 묶는 빌드 스크립트
 
-74. ### What is the lifecycle methods order in mounting?
+74. ### 마운팅의 라이프 사이클 메서드 순서는?
 
-    The lifecycle methods are called in the following order when an instance of a component is being created and inserted into the DOM.
+    라이프 사이클 메서드는 컴포넌트 인스턴스가 생성되어 DOM에 삽입될 때 다음과 같은 순서로 호출된다.
 
     1. `constructor()`
     2. `static getDerivedStateFromProps()`
     3. `render()`
     4. `componentDidMount()`
 
-75. ### What are the lifecycle methods going to be deprecated in React v16?
+75. ### React v16에서 더 이상 사용되지 않는 라이프 사이클 메서드는?
 
-    The following lifecycle methods going to be unsafe coding practices and will be more problematic with async rendering.
+    다음 라이프 사이클 메소드는 안전하지 않은 코딩 방법이며 비동기 렌더링에서는 더욱 문제 될 것이다.
 
     1. `componentWillMount()`
     2. `componentWillReceiveProps()`
     3. `componentWillUpdate()`
 
-    Starting with React v16.3 these methods are aliased with `UNSAFE_` prefix, and the unprefixed version will be removed in React v17.
+    React v16.3에서 위의 메서드들은 `UNSAFE_` 접두어가 별칭으로 붙어주기 시작했으며, React v17에서 접두어가 없는 버전은 제거된다.
 
-76. ### What is the purpose of `getDerivedStateFromProps()` lifecycle method?
+76. ### `getDerivedStateFromProps()` 라이프 사이클 메서드의 사용 목적은?
 
-    The new static `getDerivedStateFromProps()` lifecycle method is invoked after a component is instantiated as well as before it is re-rendered. It can return an object to update state, or `null` to indicate that the new props do not require any state updates.
+    새로운 정적 `getDerivedStateFromProps()` 라이프 사이클 메서드는 컴포넌트가 인스턴스화된 후뿐만 아니라 리렌더링 되기 전에 호출된다. update state를 object로 돌려줄 수도 있고, 새로운 props가 state 업데이트를 하지 않아도 되는 것을 나타내기 위해 `null`을 리턴할 수 있다.
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1612,11 +1612,11 @@
     }
     ```
 
-    This lifecycle method along with `componentDidUpdate()` covers all the use cases of `componentWillReceiveProps()`.
+    이 라이프 사이클 메서드는 `componentDidUpdate()`와 `componentWillReceiveProps()`의 모든 사용 사례를 커버한다.
 
-77. ### What is the purpose of `getSnapshotBeforeUpdate()` lifecycle method?
+77. ### `getSnapshotBeforeUpdate()` 라이프 사이클 메서드의 사용 목적은??
 
-    The new `getSnapshotBeforeUpdate()` lifecycle method is called right before DOM updates. The return value from this method will be passed as the third parameter to `componentDidUpdate()`.
+    새로운 `getSnapshotBeforeUpdate()` 라이프 사이클 메서드는 DOM 업데이트 직전에 호출된다. 이 메서드의 반환 값은 세 번째 매개 변수로 `componentDidUpdate()`에 전달된다.
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1626,17 +1626,17 @@
     }
     ```
 
-    This lifecycle method along with `componentDidUpdate()` covers all the use cases of `componentWillUpdate()`.
+    이 라이프 사이클 메서드는 `componentDidUpdate()`와 `componentWillUpdate()`의 모든 사용 사례를 커버한다.
 
-78. ### Do Hooks replace render props and higher order components?
+78. ### Hooks는 렌더링 props와 고차원 컴포넌트를 대체한다?
 
-    Both render props and higher-order components render only a single child but in most of the cases Hooks are a simpler way to serve this by reducing nesting in your tree.
+    렌더링 props와 고차원 컴포넌트 모두 하나의 자식만 렌더링하지만, 대부분의 경우 Hooks는 트리에서 중첩을 줄임으로써 제거하는 더 간단한 방법이다.
 
-79. ### What is the recommended way for naming components?
+79. ### 컴포넌트를 명명하는데 권장되는 방법은?
 
-    It is recommended to name the component by reference instead of using `displayName`.
+    `displayName`을 사용하는 대신 참조로 컴포넌트의 이름을 지정하는 것이 좋다.
 
-    Using `displayName` for naming component:
+    컴포넌트 명명에 `displayName`를 사용하는 경우.
 
     ```javascript
     export default React.createClass({
@@ -1645,7 +1645,7 @@
     })
     ```
 
-    The **recommended** approach:
+    **권장되는** 접근 방법:
 
     ```javascript
     export default class TodoApp extends React.Component {
@@ -1672,11 +1672,11 @@
     13. optional render methods like `renderNavigation()` or `renderProfilePicture()`
     14. `render()`
 
-81. ### What is a switching component?
+81. ### 스위칭 컴포넌트란?
 
-    A *switching component* is a component that renders one of many components. We need to use object to map prop values to components.
+    *스위칭 컴포넌트란*는 많은 컴포넌트 중 하나를 렌더링하는 컴포넌트이다. prop 값을 컴포넌트에 매핑하려면 object를 사용해야 한다.
 
-    For example, a switching component to display different pages based on `page` prop:
+    예를 들어, `page` prop을 기반으로 한 다른 페이지를 표시하는 스위칭 컴포넌트.
 
     ```jsx harmony
     import HomePage from './HomePage'
@@ -1697,17 +1697,17 @@
       return <Handler {...props} />
     }
 
-    // The keys of the PAGES object can be used in the prop types to catch dev-time errors.
+    // PAGES 객체의 키는 prop 타입에서 사용되어 dev-time errors를 잡아낼 수 있다.
     Page.propTypes = {
       page: PropTypes.oneOf(Object.keys(PAGES)).isRequired
     }
     ```
 
-82. ### Why we need to pass a function to setState()?
+82. ### 왜 setState()에 함수를 전달해야 하나?
 
-    The reason behind for this is that `setState()` is an asynchronous operation. React batches state changes for performance reasons, so the state may not change immediately after `setState()` is called. That means you should not rely on the current state when calling `setState()` since you can't be sure what that state will be. The solution is to pass a function to `setState()`, with the previous state as an argument. By doing this you can avoid issues with the user getting the old state value on access due to the asynchronous nature of `setState()`.
+    `setState()`가 비동기 연산이기 때문이다. 성능상 이유로 React는 state를 일괄적으로 변경한다. 그래서 `setState()`가 호출되고 state가 즉시 변경되지 않는다. 즉 `setState()` 를 호출할 때 현재 상태에 의존해서는 안 되며 그 상태가 무엇인지 확신할 수 없게 된다. 해결방법은 이전 상태를 인수로 사용하기 위해 `setState()`에 함수를 전달하는 것이다. 이렇게 하면 `setState()`의 비동기 특성으로 인해 사용자가 액세스할 때 이전 상태 값을 가져오는 문제를 피할 수 있다.
 
-    Let's say the initial count value is zero. After three consecutive increment operations, the value is going to be incremented only by one.
+    초기 count 값은 0이라고 가정해보자. 세 번의 연속 증가 연산을 하면, 값은 1만 증가한다.
 
     ```javascript
     // assuming this.state.count === 0
@@ -1717,7 +1717,7 @@
     // this.state.count === 1, not 3
     ```
 
-    If we pass a function to `setState()`, the count gets incremented correctly.
+    `setState()`에 함수를 전달하면, count는 올바르게 증가한다.
 
     ```javascript
     this.setState((prevState, props) => ({
@@ -1751,11 +1751,11 @@
 
     In the example above, the *strict mode* checks apply to `<ComponentOne>` and `<ComponentTwo>` components only.
 
-84. ### What are React Mixins?
+84. ### React Mixins이란?
 
-    *Mixins* are a way to totally separate components to have a common functionality. Mixins **should not be used** and can be replaced with *higher-order components* or *decorators*.
+    *Mixins*은 공통 기능을 갖도록 컴포넌트를 완전히 분리하는 방법이다. Mixins은 **사용하지 않아야 하며** *고차원 컴포넌트*나 *데코레이터*로 대체할 수 있다.
 
-    One of the most commonly used mixins is `PureRenderMixin`. You might be using it in some components to prevent unnecessary re-renders when the props and state are shallowly equal to the previous props and state:
+    가장 일반적으로 사용되는 mixins은 `PureRenderMixin`이다. props와 state가 이전 props, state와 얕게 동등할 때 불필요한 리렌더링을 방지하기 위해 일부 컴포넌트에서 사용할 수도 있다.
 
     ```javascript
     const PureRenderMixin = require('react-addons-pure-render-mixin')
@@ -1765,11 +1765,11 @@
       // ...
     })
     ````
-    <!-- TODO: mixins are deprecated -->
+    <!-- TODO: mixins은 더이상 사용되지 않는다. -->
 
-85. ### Why is `isMounted()` an anti-pattern and what is the proper solution?
+85. ### 왜 `isMounted()`가 안티 패턴이며 적절한 해결책은?
 
-    The primary use case for `isMounted()` is to avoid calling `setState()` after a component has been unmounted, because it will emit a warning.
+    `isMounted()`의 주요 사용 사례는 컴포넌트가 마운트 해제된 후에 `setState()`를 호출하지 않도록 경고하는 것이다.
 
     ```javascript
     if (this.isMounted()) {
@@ -1777,15 +1777,15 @@
     }
     ```
 
-    Checking `isMounted()` before calling `setState()` does eliminate the warning, but it also defeats the purpose of the warning. Using `isMounted()` is a code smell because the only reason you would check is because you think you might be holding a reference after the component has unmounted.
+    `setState()`를 호출하기 전에 `isMounted()`를 검사하면 경고가 제거되지만, 경고의 목적도 상실된다. 컴포넌트가 마운트 해제된 후에 참조를 보유하고 있다고 생각하기 때문에 `isMounted()`를 사용하는 것은 코드 스멜이다.
 
-    An optimal solution would be to find places where `setState()` might be called after a component has unmounted, and fix them. Such situations most commonly occur due to callbacks, when a component is waiting for some data and gets unmounted before the data arrives. Ideally, any callbacks should be canceled in `componentWillUnmount()`, prior to unmounting.
+    최적의 해결책은 컴포넌트가 마운트 해제된 후에 `setState()`가 호출될 수 있는 위치를 찾아 수정하는 것이다. 이러한 상황은 컴포넌트가 일부 데이터를 기다리며, 데이터가 도착하기 전에 마운트 해제될 때 콜백으로 인해 가장 일반적으로 발생한다. 이상적으로, 콜백은 마운트 해제 전에 `componentWillUnmount()`에서 취소해야 한다.
 
-86. ### What are the Pointer Events supported in React?
+86. ### React에서 지원되는 Pointer Events는?
 
-    *Pointer Events* provide a unified way of handling all input events. In the old days we had a mouse and respective event listeners to handle them but nowadays we have many devices which don't correlate to having a mouse, like phones with touch surface or pens. We need to remember that these events will only work in browsers that support the *Pointer Events* specification.
+    *Pointer Events*는 모든 입력 이벤트를 처리하는 통일된 방법을 제공한다. 예전에는 마우스와 각각의 이벤트 리스너가 있었지만, 요즘에는 터치스크린이나 펜이 달린 휴대전화와 같이 마우스와 관련 없는 장치가 많다. 이러한 이벤트는 *Pointer Events* 사양을 지원하는 브라우저에서만 작동한다는 것을 기억해야 한다.
 
-    The following event types are now available in *React DOM*:
+    *React DOM*에서 다음 이벤트 유형을 사용할 수 있다.
 
     1. `onPointerDown`
     2. `onPointerMove`

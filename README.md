@@ -91,7 +91,7 @@
 |70 | [컴포넌트를 어떻게 메모하나?](#컴포넌트를-어떻게-메모하나) |
 |71 | [Server Side Rendering 또는 SSR 구현방법?](#Server-Side-Rendering-또는-SSR-구현방법) |
 |72 | [How to enable production mode in React?](#how-to-enable-production-mode-in-react) |
-|73 | [What is CRA and its benefits?](#what-is-cra-and-its-benefits) |
+|73 | [CRA란 무엇이며 장점은?](#CRA란-무엇이며-장점은) |
 |74 | [What is the lifecycle methods order in mounting?](#what-is-the-lifecycle-methods-order-in-mounting) |
 |75 | [What are the lifecycle methods going to be deprecated in React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16) |
 |76 | [What is the purpose of getDerivedStateFromProps() lifecycle method?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method) |
@@ -1553,11 +1553,11 @@
 
     You should use Webpack's `DefinePlugin` method to set `NODE_ENV` to `production`, by which it strip out things like propType validation and extra warnings. Apart from this, if you minify the code, for example, Uglify's dead-code elimination to strip out development only code and comments, it will drastically reduce the size of your bundle.
 
-73. ### What is CRA and its benefits?
+73. ### CRA란 무엇이며 장점은?
 
-    The `create-react-app` CLI tool allows you to quickly create & run React applications with no configuration step.
+    `create-react-app` CLI 툴은 별도의 구성단계 없이 빠르게 React 애플리케이션을 만들고 실행할 수 있다.
 
-    Let's create Todo App using *CRA*:
+    *CRA*로 Todo 앱을 만들어보자
 
     ```console
     # Installation
@@ -1572,14 +1572,14 @@
     $ npm run test
     $ npm start
     ```
-    It includes everything we need to build a React app:
+    React 앱을 제작하는 데 필요한 모든 것이 포함되어 있다.
 
-    1. React, JSX, ES6, and Flow syntax support.
-    2. Language extras beyond ES6 like the object spread operator.
-    3. Autoprefixed CSS, so you don’t need -webkit- or other prefixes.
-    4. A fast interactive unit test runner with built-in support for coverage reporting.
-    5. A live development server that warns about common mistakes.
-    6. A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps.
+    1. React, JSX, ES6, 및 Flow 문법 지원.
+    2. object spread operator와 같은 ES6를 넘어선 언어 확장 기능.
+    3. 자동 접두어가 붙은 CSS로, -webkit- 이나 다른 접두사는 필요 없다.
+    4. coverage를 지원하는 내장된 빠른 대화형 단위 테스트 러너.
+    5. 일반적인 실수에 대해서 경고하는 라이브 개발 서버.
+    6. hashes와 sourcemaps을 사용하여 production 용 JS, CSS 및 images를 묶는 빌드 스크립트
 
 74. ### What is the lifecycle methods order in mounting?
 

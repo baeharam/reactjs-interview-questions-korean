@@ -108,7 +108,7 @@
 |87 | [Why should component names start with capital letter?](#why-should-component-names-start-with-capital-letter) |
 |88 | [Are custom DOM attributes supported in React v16?](#are-custom-dom-attributes-supported-in-react-v16) |
 |89 | [What is the difference between constructor and getInitialState?](#what-is-the-difference-between-constructor-and-getinitialstate) |
-|90 | [Can you force a component to re-render without calling setState?](#can-you-force-a-component-to-re-render-without-calling-setstate) |
+|90 | [setState를 호출하지 않고도 컴포넌트 리렌더링이 가능한가?](#setState를-호출하지-않고도-컴포넌트-리렌더링이-가능한가) |
 |91 | [What is the difference between super() and super(props) in React using ES6 classes?](#what-is-the-difference-between-super-and-superprops-in-react-using-es6-classes) |
 |92 | [How to loop inside JSX?](#how-to-loop-inside-jsx) |
 |93 | [How do you access props in attribute quotes?](#how-do-you-access-props-in-attribute-quotes) |
@@ -1869,15 +1869,15 @@
 
     **Note:** `React.createClass()` is deprecated and removed in React v16. Use plain JavaScript classes instead.
 
-90. ### Can you force a component to re-render without calling setState?
+90. ### setState를 호출하지 않고도 컴포넌트 리렌더링이 가능한가?
 
-    By default, when your component's state or props change, your component will re-render. If your `render()` method depends on some other data, you can tell React that the component needs re-rendering by calling `forceUpdate()`.
+    기본적으로, 컴포넌트의 state 또는 props가 변경되면 컴포넌트가 리렌더링이 된다. `render()` 메서드가 다른 데이터에 의존하는 경우, `forceUpdate()`를 호출하여 컴포넌트의 렌더링을 다시 해야 한다는 것을 React에게 알릴 수 있다.
 
     ```javascript
     component.forceUpdate(callback)
     ```
 
-    It is recommended to avoid all uses of `forceUpdate()` and only read from `this.props` and `this.state` in `render()`.
+    `forceUpdate()`의 사용은 피하고 `render()`의 `this.props`과 `this.state`에서 읽기만 하는 것이 좋다.
 
 91. ### What is the difference between `super()` and `super(props)` in React using ES6 classes?
 

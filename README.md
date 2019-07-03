@@ -102,7 +102,7 @@
 |81 | [스위칭 컴포넌트란?](#스위칭-컴포넌트란) |
 |82 | [왜 setState()에 함수를 전달해야 하나?](#왜-setState()에-함수를-전달해야-하나) |
 |83 | [What is strict mode in React?](#what-is-strict-mode-in-react) |
-|84 | [What are React Mixins?](#what-are-react-mixins) |
+|84 | [React Mixins이란?](#React-Mixins이란) |
 |85 | [Why is isMounted() an anti-pattern and what is the proper solution?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution) |
 |86 | [What are the Pointer Events supported in React?](#what-are-the-pointer-events-supported-in-react) |
 |87 | [Why should component names start with capital letter?](#why-should-component-names-start-with-capital-letter) |
@@ -1751,11 +1751,11 @@
 
     In the example above, the *strict mode* checks apply to `<ComponentOne>` and `<ComponentTwo>` components only.
 
-84. ### What are React Mixins?
+84. ### React Mixins이란?
 
-    *Mixins* are a way to totally separate components to have a common functionality. Mixins **should not be used** and can be replaced with *higher-order components* or *decorators*.
+    *Mixins*은 공통 기능을 갖도록 컴포넌트를 완전히 분리하는 방법이다. Mixins은 **사용하지 않아야 하며** *고차원 컴포넌트*나 *데코레이터*로 대체할 수 있다.
 
-    One of the most commonly used mixins is `PureRenderMixin`. You might be using it in some components to prevent unnecessary re-renders when the props and state are shallowly equal to the previous props and state:
+    가장 일반적으로 사용되는 mixins은 `PureRenderMixin`이다. props와 state가 이전 props, state와 얕게 동등할 때 불필요한 리렌더링을 방지하기 위해 일부 컴포넌트에서 사용할 수도 있다.
 
     ```javascript
     const PureRenderMixin = require('react-addons-pure-render-mixin')
@@ -1765,7 +1765,7 @@
       // ...
     })
     ````
-    <!-- TODO: mixins are deprecated -->
+    <!-- TODO: mixins은 더이상 사용되지 않는다. -->
 
 85. ### Why is `isMounted()` an anti-pattern and what is the proper solution?
 

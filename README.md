@@ -107,7 +107,7 @@
 |86 | [What are the Pointer Events supported in React?](#what-are-the-pointer-events-supported-in-react) |
 |87 | [Why should component names start with capital letter?](#why-should-component-names-start-with-capital-letter) |
 |88 | [Are custom DOM attributes supported in React v16?](#are-custom-dom-attributes-supported-in-react-v16) |
-|89 | [What is the difference between constructor and getInitialState?](#what-is-the-difference-between-constructor-and-getinitialstate) |
+|89 | [constructor과 getInitialState의 차이점은?](#constructor과-getInitialState의-차이점은) |
 |90 | [Can you force a component to re-render without calling setState?](#can-you-force-a-component-to-re-render-without-calling-setstate) |
 |91 | [What is the difference between super() and super(props) in React using ES6 classes?](#what-is-the-difference-between-super-and-superprops-in-react-using-es6-classes) |
 |92 | [How to loop inside JSX?](#how-to-loop-inside-jsx) |
@@ -1842,11 +1842,11 @@
 
     This is useful for supplying browser-specific non-standard attributes, trying new DOM APIs, and integrating with opinionated third-party libraries.
 
-89. ### What is the difference between constructor and getInitialState?
+89. ### constructor과 getInitialState의 차이점은?
 
-    You should initialize state in the constructor when using ES6 classes, and `getInitialState()` method when using `React.createClass()`.
+    ES6의 클래스를 사용할 때는 생성자에서 상태를 초기화하고 `React.createClass()`를 사용할 때는  `getInitialState()` 메서드를 초기화해야 한다.
 
-    Using ES6 classes:
+    ES6 클래스 사용 시
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1857,7 +1857,7 @@
     }
     ```
 
-    Using `React.createClass()`:
+    `React.createClass()` 사용 시
 
     ```javascript
     const MyComponent = React.createClass({
@@ -1867,7 +1867,7 @@
     })
     ```
 
-    **Note:** `React.createClass()` is deprecated and removed in React v16. Use plain JavaScript classes instead.
+    **Note:** `React.createClass()`는 더 이상 사용되지 않으며 React v16에서 제거되었다. 대신에 자바스크립트 클래스를 사용해야 한다.
 
 90. ### Can you force a component to re-render without calling setState?
 

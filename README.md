@@ -97,7 +97,7 @@
 |76 | [getDerivedStateFromProps() 라이프 사이클 메서드의 사용 목적은?](#getDerivedStateFromProps()-라이프-사이클-메서드의-사용-목적은) |
 |77 | [getSnapshotBeforeUpdate() 라이프 사이클 메서드의 사용 목적은?](#getSnapshotBeforeUpdate()-라이프-사이클-메서드의-사용-목적은) |
 |78 | [Hooks는 렌더링 props와 고차원 컴포넌트를 대체한다?](#Hooks는-렌더링-props와-고차원-컴포넌트를-대체한다) |
-|79 | [What is the recommended way for naming components?](#what-is-the-recommended-way-for-naming-components) |
+|79 | [컴포넌트를 명명하는데 권장되는 방법은?](#컴포넌트를-명명하는데-권장되는-방법은) |
 |80 | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class) |
 |81 | [What is a switching component?](#what-is-a-switching-component) |
 |82 | [Why we need to pass a function to setState()?](#why-we-need-to-pass-a-function-to-setstate) |
@@ -1632,11 +1632,11 @@
 
     렌더링 props와 고차원 컴포넌트 모두 하나의 자식만 렌더링하지만, 대부분의 경우 Hooks는 트리에서 중첩을 줄임으로써 제거하는 더 간단한 방법이다.
 
-79. ### What is the recommended way for naming components?
+79. ### 컴포넌트를 명명하는데 권장되는 방법은?
 
-    It is recommended to name the component by reference instead of using `displayName`.
+    `displayName`을 사용하는 대신 참조로 컴포넌트의 이름을 지정하는 것이 좋다.
 
-    Using `displayName` for naming component:
+    컴포넌트 명명에 `displayName`를 사용하는 경우.
 
     ```javascript
     export default React.createClass({
@@ -1645,7 +1645,7 @@
     })
     ```
 
-    The **recommended** approach:
+    **권장되는** 접근 방법:
 
     ```javascript
     export default class TodoApp extends React.Component {

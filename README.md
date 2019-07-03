@@ -109,7 +109,7 @@
 |88 | [Are custom DOM attributes supported in React v16?](#are-custom-dom-attributes-supported-in-react-v16) |
 |89 | [What is the difference between constructor and getInitialState?](#what-is-the-difference-between-constructor-and-getinitialstate) |
 |90 | [Can you force a component to re-render without calling setState?](#can-you-force-a-component-to-re-render-without-calling-setstate) |
-|91 | [What is the difference between super() and super(props) in React using ES6 classes?](#what-is-the-difference-between-super-and-superprops-in-react-using-es6-classes) |
+|91 | [ES6 클래스를 사용하는 React에서 super()와 super(props)의 차이점은?](#ES6-클래스를-사용하는-React에서-super()와-super(props)의-차이점은) |
 |92 | [How to loop inside JSX?](#how-to-loop-inside-jsx) |
 |93 | [How do you access props in attribute quotes?](#how-do-you-access-props-in-attribute-quotes) |
 |94 | [What is React PropType array with shape?](#what-is-react-proptype-array-with-shape) |
@@ -1879,11 +1879,11 @@
 
     It is recommended to avoid all uses of `forceUpdate()` and only read from `this.props` and `this.state` in `render()`.
 
-91. ### What is the difference between `super()` and `super(props)` in React using ES6 classes?
+91. ### ES6 클래스를 사용하는 React에서 `super()`와 `super(props)`의 차이점은?
 
-    When you want to access `this.props` in `constructor()` then you should pass props to `super()` method.
+    `constructor()`에서 `this.props`에 접근하려면 props를 `super()` 메서드에 전달해야 한다.
 
-    Using `super(props)`:
+    `super(props)` 사용 시:
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1894,7 +1894,7 @@
     }
     ```
 
-    Using `super()`:
+    `super()` 사용 시:
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1905,7 +1905,7 @@
     }
     ```
 
-    Outside `constructor()` both will display same value for `this.props`.
+    `constructor()` 외부에서는 `this.props`에 대해서 같은 값을 표시한다.
 
 92. ### How to loop inside JSX?
 

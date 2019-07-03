@@ -105,7 +105,7 @@
 |84 | [What are React Mixins?](#what-are-react-mixins) |
 |85 | [Why is isMounted() an anti-pattern and what is the proper solution?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution) |
 |86 | [What are the Pointer Events supported in React?](#what-are-the-pointer-events-supported-in-react) |
-|87 | [Why should component names start with capital letter?](#why-should-component-names-start-with-capital-letter) |
+|87 | [왜 컴포넌트의 이름은 대문자로 시작하나?](#왜-컴포넌트의-이름은-대문자로-시작하나) |
 |88 | [Are custom DOM attributes supported in React v16?](#are-custom-dom-attributes-supported-in-react-v16) |
 |89 | [What is the difference between constructor and getInitialState?](#what-is-the-difference-between-constructor-and-getinitialstate) |
 |90 | [Can you force a component to re-render without calling setState?](#can-you-force-a-component-to-re-render-without-calling-setstate) |
@@ -1798,11 +1798,11 @@
     9. `onPointerOver`
     10. `onPointerOut`
 
-87. ### Why should component names start with capital letter?
+87. ### 왜 컴포넌트의 이름은 대문자로 시작하나?
 
-    If you are rendering your component using JSX, the name of that component has to begin with a capital letter otherwise React will throw an error as unrecognized tag. This convention is because only HTML elements and SVG tags can begin with a lowercase letter.
+    JSX를 사용하여 컴포넌트를 렌더링하는 경우, 해당 컴포넌트의 이름은 대문자로 시작해야 한다. 그렇지 않으면 React가 인식할 수 없는 태그로 오류를 발생시킨다. 이 규칙은 HTML 요소와 SVG 태그만 소문자로 시작할 수 있기 때문에 사용된다.
 
-    You can define component class which name starts with lowercase letter, but when it's imported it should have capital letter. Here lowercase is fine:
+    이름이 소문자로 시작하는 컴포넌트 클래스를 정의할 수 있지만 가져올 때 대문자여야 한다. 아래와 같은 소문자는 괜찮다.
 
     ```jsx harmony
     class myComponent extends Component {
@@ -1814,7 +1814,7 @@
     export default myComponent
     ```
 
-    While when imported in another file it should start with capital letter:
+    다른 파일을 가져올 때 대문자로 시작해야 한다.
 
     ```jsx harmony
     import MyComponent from './MyComponent'

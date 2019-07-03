@@ -91,11 +91,11 @@
 |70 | [컴포넌트를 어떻게 메모하나?](#컴포넌트를-어떻게-메모하나) |
 |71 | [Server Side Rendering 또는 SSR 구현방법?](#Server-Side-Rendering-또는-SSR-구현방법) |
 |72 | [How to enable production mode in React?](#how-to-enable-production-mode-in-react) |
-|73 | [What is CRA and its benefits?](#what-is-cra-and-its-benefits) |
-|74 | [What is the lifecycle methods order in mounting?](#what-is-the-lifecycle-methods-order-in-mounting) |
+|73 | [CRA란 무엇이며 장점은?](#CRA란-무엇이며-장점은) |
+|74 | [마운팅의 라이프 사이클 메서드 순서는?](#마운팅의-라이프-사이클-메서드-순서는) |
 |75 | [What are the lifecycle methods going to be deprecated in React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16) |
-|76 | [What is the purpose of getDerivedStateFromProps() lifecycle method?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method) |
-|77 | [What is the purpose of getSnapshotBeforeUpdate() lifecycle method?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method) |
+|76 | [getDerivedStateFromProps() 라이프 사이클 메서드의 사용 목적은?](#getDerivedStateFromProps()-라이프-사이클-메서드의-사용-목적은) |
+|77 | [getSnapshotBeforeUpdate() 라이프 사이클 메서드의 사용 목적은?](#getSnapshotBeforeUpdate()-라이프-사이클-메서드의-사용-목적은) |
 |78 | [Hooks는 렌더링 props와 고차원 컴포넌트를 대체한다?](#Hooks는-렌더링-props와-고차원-컴포넌트를-대체한다) |
 |79 | [What is the recommended way for naming components?](#what-is-the-recommended-way-for-naming-components) |
 |80 | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class) |
@@ -1553,11 +1553,11 @@
 
     You should use Webpack's `DefinePlugin` method to set `NODE_ENV` to `production`, by which it strip out things like propType validation and extra warnings. Apart from this, if you minify the code, for example, Uglify's dead-code elimination to strip out development only code and comments, it will drastically reduce the size of your bundle.
 
-73. ### What is CRA and its benefits?
+73. ### CRA란 무엇이며 장점은?
 
-    The `create-react-app` CLI tool allows you to quickly create & run React applications with no configuration step.
+    `create-react-app` CLI 툴은 별도의 구성단계 없이 빠르게 React 애플리케이션을 만들고 실행할 수 있다.
 
-    Let's create Todo App using *CRA*:
+    *CRA*로 Todo 앱을 만들어보자
 
     ```console
     # Installation
@@ -1572,37 +1572,37 @@
     $ npm run test
     $ npm start
     ```
-    It includes everything we need to build a React app:
+    React 앱을 제작하는 데 필요한 모든 것이 포함되어 있다.
 
-    1. React, JSX, ES6, and Flow syntax support.
-    2. Language extras beyond ES6 like the object spread operator.
-    3. Autoprefixed CSS, so you don’t need -webkit- or other prefixes.
-    4. A fast interactive unit test runner with built-in support for coverage reporting.
-    5. A live development server that warns about common mistakes.
-    6. A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps.
+    1. React, JSX, ES6, 및 Flow 문법 지원.
+    2. object spread operator와 같은 ES6를 넘어선 언어 확장 기능.
+    3. 자동 접두어가 붙은 CSS로, -webkit- 이나 다른 접두사는 필요 없다.
+    4. coverage를 지원하는 내장된 빠른 대화형 단위 테스트 러너.
+    5. 일반적인 실수에 대해서 경고하는 라이브 개발 서버.
+    6. hashes와 sourcemaps을 사용하여 production 용 JS, CSS 및 images를 묶는 빌드 스크립트
 
-74. ### What is the lifecycle methods order in mounting?
+74. ### 마운팅의 라이프 사이클 메서드 순서는?
 
-    The lifecycle methods are called in the following order when an instance of a component is being created and inserted into the DOM.
+    라이프 사이클 메서드는 컴포넌트 인스턴스가 생성되어 DOM에 삽입될 때 다음과 같은 순서로 호출된다.
 
     1. `constructor()`
     2. `static getDerivedStateFromProps()`
     3. `render()`
     4. `componentDidMount()`
 
-75. ### What are the lifecycle methods going to be deprecated in React v16?
+75. ### React v16에서 더 이상 사용되지 않는 라이프 사이클 메서드는?
 
-    The following lifecycle methods going to be unsafe coding practices and will be more problematic with async rendering.
+    다음 라이프 사이클 메소드는 안전하지 않은 코딩 방법이며 비동기 렌더링에서는 더욱 문제 될 것이다.
 
     1. `componentWillMount()`
     2. `componentWillReceiveProps()`
     3. `componentWillUpdate()`
 
-    Starting with React v16.3 these methods are aliased with `UNSAFE_` prefix, and the unprefixed version will be removed in React v17.
+    React v16.3에서 위의 메서드들은 `UNSAFE_` 접두어가 별칭으로 붙어주기 시작했으며, React v17에서 접두어가 없는 버전은 제거된다.
 
-76. ### What is the purpose of `getDerivedStateFromProps()` lifecycle method?
+76. ### `getDerivedStateFromProps()` 라이프 사이클 메서드의 사용 목적은?
 
-    The new static `getDerivedStateFromProps()` lifecycle method is invoked after a component is instantiated as well as before it is re-rendered. It can return an object to update state, or `null` to indicate that the new props do not require any state updates.
+    새로운 정적 `getDerivedStateFromProps()` 라이프 사이클 메서드는 컴포넌트가 인스턴스화된 후뿐만 아니라 리렌더링 되기 전에 호출된다. update state를 object로 돌려줄 수도 있고, 새로운 props가 state 업데이트를 하지 않아도 되는 것을 나타내기 위해 `null`을 리턴할 수 있다.
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1612,11 +1612,11 @@
     }
     ```
 
-    This lifecycle method along with `componentDidUpdate()` covers all the use cases of `componentWillReceiveProps()`.
+    이 라이프 사이클 메서드는 `componentDidUpdate()`와 `componentWillReceiveProps()`의 모든 사용 사례를 커버한다.
 
-77. ### What is the purpose of `getSnapshotBeforeUpdate()` lifecycle method?
+77. ### `getSnapshotBeforeUpdate()` 라이프 사이클 메서드의 사용 목적은??
 
-    The new `getSnapshotBeforeUpdate()` lifecycle method is called right before DOM updates. The return value from this method will be passed as the third parameter to `componentDidUpdate()`.
+    새로운 `getSnapshotBeforeUpdate()` 라이프 사이클 메서드는 DOM 업데이트 직전에 호출된다. 이 메서드의 반환 값은 세 번째 매개 변수로 `componentDidUpdate()`에 전달된다.
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1626,7 +1626,7 @@
     }
     ```
 
-    This lifecycle method along with `componentDidUpdate()` covers all the use cases of `componentWillUpdate()`.
+    이 라이프 사이클 메서드는 `componentDidUpdate()`와 `componentWillUpdate()`의 모든 사용 사례를 커버한다.
 
 78. ### Hooks는 렌더링 props와 고차원 컴포넌트를 대체한다?
 
@@ -3019,13 +3019,8 @@
 
 8.   ### What are the drawbacks of MVW pattern?
 
-<<<<<<< HEAD
      1. The DOM manipulation is very expensive which causes applications behaves slowly and inefficient.
      2. Due to circular dependencies, a complicated model was created around models and views.
-=======
-     1. DOM manipulation is very expensive which causes applications to behave slow and inefficient.
-     3. Due to circular dependencies, a complicated model was created around models and views.
->>>>>>> b18964f7d7dc98a83fb51250c5f9a0039a6a9b2a
      3. Lot of data changes happens for collaborative applications(like Google Docs).
      4. No way to do undo (travel back in time) easily without adding so much extra code.
 

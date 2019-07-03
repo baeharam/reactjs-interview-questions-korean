@@ -1600,7 +1600,7 @@
 
     React v16.3에서 위의 메서드들은 `UNSAFE_` 접두어가 별칭으로 붙어주기 시작했으며, React v17에서 접두어가 없는 버전은 제거된다.
 
-76. ### `getDerivedStateFromProps()` 라이프 사이클 메서드의 사용 목적은?
+76. ### getDerivedStateFromProps() 라이프 사이클 메서드의 사용 목적은?
 
     새로운 정적 `getDerivedStateFromProps()` 라이프 사이클 메서드는 컴포넌트가 인스턴스화된 후뿐만 아니라 리렌더링 되기 전에 호출된다. update state를 object로 돌려줄 수도 있고, 새로운 props가 state 업데이트를 하지 않아도 되는 것을 나타내기 위해 `null`을 리턴할 수 있다.
 
@@ -1614,7 +1614,7 @@
 
     이 라이프 사이클 메서드는 `componentDidUpdate()`와 `componentWillReceiveProps()`의 모든 사용 사례를 커버한다.
 
-77. ### `getSnapshotBeforeUpdate()` 라이프 사이클 메서드의 사용 목적은??
+77. ### getSnapshotBeforeUpdate() 라이프 사이클 메서드의 사용 목적은??
 
     새로운 `getSnapshotBeforeUpdate()` 라이프 사이클 메서드는 DOM 업데이트 직전에 호출된다. 이 메서드의 반환 값은 세 번째 매개 변수로 `componentDidUpdate()`에 전달된다.
 
@@ -1767,7 +1767,7 @@
     ````
     <!-- TODO: mixins은 더이상 사용되지 않는다. -->
 
-85. ### 왜 `isMounted()`가 안티 패턴이며 적절한 해결책은?
+85. ### 왜 isMounted()가 안티 패턴이며 적절한 해결책은?
 
     `isMounted()`의 주요 사용 사례는 컴포넌트가 마운트 해제된 후에 `setState()`를 호출하지 않도록 경고하는 것이다.
 
@@ -1879,7 +1879,7 @@
 
     `forceUpdate()`의 사용은 피하고 `render()`의 `this.props`과 `this.state`에서 읽기만 하는 것이 좋다.
 
-91. ### ES6 클래스를 사용하는 React에서 `super()`와 `super(props)`의 차이점은?
+91. ### ES6 클래스를 사용하는 React에서 super()와 super(props)의 차이점은?
 
     `constructor()`에서 `this.props`에 접근하려면 props를 `super()` 메서드에 전달해야 한다.
 

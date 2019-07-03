@@ -104,7 +104,7 @@
 |83 | [What is strict mode in React?](#what-is-strict-mode-in-react) |
 |84 | [What are React Mixins?](#what-are-react-mixins) |
 |85 | [Why is isMounted() an anti-pattern and what is the proper solution?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution) |
-|86 | [What are the Pointer Events supported in React?](#what-are-the-pointer-events-supported-in-react) |
+|86 | [React에서 지원되는 Pointer Events는?](#React에서-지원되는-Pointer-Events는) |
 |87 | [Why should component names start with capital letter?](#why-should-component-names-start-with-capital-letter) |
 |88 | [Are custom DOM attributes supported in React v16?](#are-custom-dom-attributes-supported-in-react-v16) |
 |89 | [What is the difference between constructor and getInitialState?](#what-is-the-difference-between-constructor-and-getinitialstate) |
@@ -1781,11 +1781,11 @@
 
     An optimal solution would be to find places where `setState()` might be called after a component has unmounted, and fix them. Such situations most commonly occur due to callbacks, when a component is waiting for some data and gets unmounted before the data arrives. Ideally, any callbacks should be canceled in `componentWillUnmount()`, prior to unmounting.
 
-86. ### What are the Pointer Events supported in React?
+86. ### React에서 지원되는 Pointer Events는?
 
-    *Pointer Events* provide a unified way of handling all input events. In the old days we had a mouse and respective event listeners to handle them but nowadays we have many devices which don't correlate to having a mouse, like phones with touch surface or pens. We need to remember that these events will only work in browsers that support the *Pointer Events* specification.
+    *Pointer Events*는 모든 입력 이벤트를 처리하는 통일된 방법을 제공한다. 예전에는 마우스와 각각의 이벤트 리스너가 있었지만, 요즘에는 터치스크린이나 펜이 달린 휴대전화와 같이 마우스와 관련 없는 장치가 많다. 이러한 이벤트는 *Pointer Events* 사양을 지원하는 브라우저에서만 작동한다는 것을 기억해야 한다.
 
-    The following event types are now available in *React DOM*:
+    *React DOM*에서 다음 이벤트 유형을 사용할 수 있다.
 
     1. `onPointerDown`
     2. `onPointerMove`

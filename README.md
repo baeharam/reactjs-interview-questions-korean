@@ -92,7 +92,7 @@
 |71 | [Server Side Rendering 또는 SSR 구현방법?](#Server-Side-Rendering-또는-SSR-구현방법) |
 |72 | [How to enable production mode in React?](#how-to-enable-production-mode-in-react) |
 |73 | [CRA란 무엇이며 장점은?](#CRA란-무엇이며-장점은) |
-|74 | [What is the lifecycle methods order in mounting?](#what-is-the-lifecycle-methods-order-in-mounting) |
+|74 | [마운팅의 라이프 사이클 메서드 순서는?](#마운팅의-라이프-사이클-메서드-순서는) |
 |75 | [What are the lifecycle methods going to be deprecated in React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16) |
 |76 | [What is the purpose of getDerivedStateFromProps() lifecycle method?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method) |
 |77 | [What is the purpose of getSnapshotBeforeUpdate() lifecycle method?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method) |
@@ -1581,9 +1581,9 @@
     5. 일반적인 실수에 대해서 경고하는 라이브 개발 서버.
     6. hashes와 sourcemaps을 사용하여 production 용 JS, CSS 및 images를 묶는 빌드 스크립트
 
-74. ### What is the lifecycle methods order in mounting?
+74. ### 마운팅의 라이프 사이클 메서드 순서는?
 
-    The lifecycle methods are called in the following order when an instance of a component is being created and inserted into the DOM.
+    라이프 사이클 메서드는 컴포넌트 인스턴스가 생성되어 DOM에 삽입될 때 다음과 같은 순서로 호출된다.
 
     1. `constructor()`
     2. `static getDerivedStateFromProps()`

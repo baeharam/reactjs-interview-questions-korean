@@ -94,8 +94,8 @@
 |73 | [CRA란 무엇이며 장점은?](#CRA란-무엇이며-장점은) |
 |74 | [마운팅의 라이프 사이클 메서드 순서는?](#마운팅의-라이프-사이클-메서드-순서는) |
 |75 | [What are the lifecycle methods going to be deprecated in React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16) |
-|76 | [`getDerivedStateFromProps()` 라이프 사이클 메서드의 사용 목적은?](#getDerivedStateFromProps()-라이프-사이클-메서드의-사용-목적은) |
-|77 | [What is the purpose of getSnapshotBeforeUpdate() lifecycle method?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method) |
+|76 | [getDerivedStateFromProps() 라이프 사이클 메서드의 사용 목적은?](#getDerivedStateFromProps()-라이프-사이클-메서드의-사용-목적은) |
+|77 | [getSnapshotBeforeUpdate() 라이프 사이클 메서드의 사용 목적은?](#getSnapshotBeforeUpdate()-라이프-사이클-메서드의-사용-목적은) |
 |78 | [Do Hooks replace render props and higher order components?](#do-hooks-replace-render-props-and-higher-order-components) |
 |79 | [What is the recommended way for naming components?](#what-is-the-recommended-way-for-naming-components) |
 |80 | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class) |
@@ -1614,9 +1614,9 @@
 
     이 라이프 사이클 메서드는 `componentDidUpdate()`와 `componentWillReceiveProps()`의 모든 사용 사례를 커버한다.
 
-77. ### What is the purpose of `getSnapshotBeforeUpdate()` lifecycle method?
+77. ### `getSnapshotBeforeUpdate()` 라이프 사이클 메서드의 사용 목적은??
 
-    The new `getSnapshotBeforeUpdate()` lifecycle method is called right before DOM updates. The return value from this method will be passed as the third parameter to `componentDidUpdate()`.
+    새로운 `getSnapshotBeforeUpdate()` 라이프 사이클 메서드는 DOM 업데이트 직전에 호출된다. 이 메서드의 반환 값은 세 번째 매개 변수로 `componentDidUpdate()`에 전달된다.
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1626,7 +1626,7 @@
     }
     ```
 
-    This lifecycle method along with `componentDidUpdate()` covers all the use cases of `componentWillUpdate()`.
+    이 라이프 사이클 메서드는 `componentDidUpdate()`와 `componentWillUpdate()`의 모든 사용 사례를 커버한다.
 
 78. ### Do Hooks replace render props and higher order components?
 

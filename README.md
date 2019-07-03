@@ -103,7 +103,7 @@
 |82 | [Why we need to pass a function to setState()?](#why-we-need-to-pass-a-function-to-setstate) |
 |83 | [What is strict mode in React?](#what-is-strict-mode-in-react) |
 |84 | [What are React Mixins?](#what-are-react-mixins) |
-|85 | [Why is isMounted() an anti-pattern and what is the proper solution?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution) |
+|85 | [왜 isMounted()가 안티 패턴이며 적절한 해결책은?](#왜-isMounted()가-안티-패턴이며-적절한-해결책은) |
 |86 | [What are the Pointer Events supported in React?](#what-are-the-pointer-events-supported-in-react) |
 |87 | [Why should component names start with capital letter?](#why-should-component-names-start-with-capital-letter) |
 |88 | [Are custom DOM attributes supported in React v16?](#are-custom-dom-attributes-supported-in-react-v16) |
@@ -1767,9 +1767,9 @@
     ````
     <!-- TODO: mixins are deprecated -->
 
-85. ### Why is `isMounted()` an anti-pattern and what is the proper solution?
+85. ### 왜 `isMounted()`가 안티 패턴이며 적절한 해결책은?
 
-    The primary use case for `isMounted()` is to avoid calling `setState()` after a component has been unmounted, because it will emit a warning.
+    `isMounted()`의 주요 사용 사례는 컴포넌트가 마운트 해제된 후에 `setState()`를 호출하지 않도록 경고하는 것이다.
 
     ```javascript
     if (this.isMounted()) {
@@ -1777,9 +1777,9 @@
     }
     ```
 
-    Checking `isMounted()` before calling `setState()` does eliminate the warning, but it also defeats the purpose of the warning. Using `isMounted()` is a code smell because the only reason you would check is because you think you might be holding a reference after the component has unmounted.
+    `setState()`를 호출하기 전에 `isMounted()`를 검사하면 경고가 제거되지만, 경고의 목적도 상실된다. 컴포넌트가 마운트 해제된 후에 참조를 보유하고 있다고 생각하기 때문에 `isMounted()`를 사용하는 것은 코드 스멜이다.
 
-    An optimal solution would be to find places where `setState()` might be called after a component has unmounted, and fix them. Such situations most commonly occur due to callbacks, when a component is waiting for some data and gets unmounted before the data arrives. Ideally, any callbacks should be canceled in `componentWillUnmount()`, prior to unmounting.
+    최적의 해결책은 컴포넌트가 마운트 해제된 후에 `setState()`가 호출될 수 있는 위치를 찾아 수정하는 것이다. 이러한 상황은 컴포넌트가 일부 데이터를 기다리며, 데이터가 도착하기 전에 마운트 해제될 때 콜백으로 인해 가장 일반적으로 발생한다. 이상적으로, 콜백은 마운트 해제 전에 `componentWillUnmount()`에서 취소해야 한다.
 
 86. ### What are the Pointer Events supported in React?
 

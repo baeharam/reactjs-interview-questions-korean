@@ -1590,15 +1590,15 @@
     3. `render()`
     4. `componentDidMount()`
 
-75. ### What are the lifecycle methods going to be deprecated in React v16?
+75. ### React v16에서 더 이상 사용되지 않는 라이프 사이클 메서드는?
 
-    The following lifecycle methods going to be unsafe coding practices and will be more problematic with async rendering.
+    다음 라이프 사이클 메소드는 안전하지 않은 코딩 방법이며 비동기 렌더링에서는 더욱 문제 될 것이다.
 
     1. `componentWillMount()`
     2. `componentWillReceiveProps()`
     3. `componentWillUpdate()`
 
-    Starting with React v16.3 these methods are aliased with `UNSAFE_` prefix, and the unprefixed version will be removed in React v17.
+    React v16.3에서 위의 메서드들은 `UNSAFE_` 접두어가 별칭으로 붙어주기 시작했으며, React v17에서 접두어가 없는 버전은 제거된다.
 
 76. ### What is the purpose of `getDerivedStateFromProps()` lifecycle method?
 

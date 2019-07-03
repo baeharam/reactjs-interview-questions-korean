@@ -100,7 +100,7 @@
 |79 | [What is the recommended way for naming components?](#what-is-the-recommended-way-for-naming-components) |
 |80 | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class) |
 |81 | [What is a switching component?](#what-is-a-switching-component) |
-|82 | [Why we need to pass a function to setState()?](#why-we-need-to-pass-a-function-to-setstate) |
+|82 | [왜 setState()에 함수를 전달해야 하나?](#왜-setState()에-함수를-전달해야-하나) |
 |83 | [What is strict mode in React?](#what-is-strict-mode-in-react) |
 |84 | [What are React Mixins?](#what-are-react-mixins) |
 |85 | [Why is isMounted() an anti-pattern and what is the proper solution?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution) |
@@ -1703,11 +1703,11 @@
     }
     ```
 
-82. ### Why we need to pass a function to setState()?
+82. ### 왜 setState()에 함수를 전달해야 하나?
 
-    The reason behind for this is that `setState()` is an asynchronous operation. React batches state changes for performance reasons, so the state may not change immediately after `setState()` is called. That means you should not rely on the current state when calling `setState()` since you can't be sure what that state will be. The solution is to pass a function to `setState()`, with the previous state as an argument. By doing this you can avoid issues with the user getting the old state value on access due to the asynchronous nature of `setState()`.
+    `setState()`가 비동기 연산이기 때문이다. 성능상 이유로 React는 state를 일괄적으로 변경한다. 그래서 `setState()`가 호출되고 state가 즉시 변경되지 않는다. 즉 `setState()` 를 호출할 때 현재 상태에 의존해서는 안 되며 그 상태가 무엇인지 확신할 수 없게 된다. 해결방법은 이전 상태를 인수로 사용하기 위해 `setState()`에 함수를 전달하는 것이다. 이렇게 하면 `setState()`의 비동기 특성으로 인해 사용자가 액세스할 때 이전 상태 값을 가져오는 문제를 피할 수 있다.
 
-    Let's say the initial count value is zero. After three consecutive increment operations, the value is going to be incremented only by one.
+    초기 count 값은 0이라고 가정해보자. 세 번의 연속 증가 연산을 하면, 값은 1만 증가한다.
 
     ```javascript
     // assuming this.state.count === 0
@@ -1717,7 +1717,7 @@
     // this.state.count === 1, not 3
     ```
 
-    If we pass a function to `setState()`, the count gets incremented correctly.
+    `setState()`에 함수를 전달하면, count는 올바르게 증가한다.
 
     ```javascript
     this.setState((prevState, props) => ({

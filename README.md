@@ -1822,7 +1822,7 @@
 
 88. ### React v16에서 사용자 정의 DOM 속성을 지원하나?
 
-    예. 과거에 React는 알 수 없는 DOM 속성을 무시하고 했다. React가 인식하지 못하는 속성을 가진 JSX를 작성했다면 React는 그냥 건너뛸 것이다. 예를 들면, 다음과 같다.
+    그렇다. 과거에 React는 알 수 없는 DOM 속성을 무시하곤 했다. React가 인식하지 못하는 속성을 가진 JSX를 작성했다면 React는 그냥 건너뛸 것이다. 예를 들면, 다음과 같다.
 
     ```jsx harmony
     <div mycustomattribute={'something'} />

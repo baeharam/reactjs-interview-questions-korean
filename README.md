@@ -115,7 +115,7 @@
 |94 | [What is React PropType array with shape?](#what-is-react-proptype-array-with-shape) |
 |95 | [How to conditionally apply class attributes?](#how-to-conditionally-apply-class-attributes) |
 |96 | [What is the difference between React and ReactDOM?](#what-is-the-difference-between-react-and-reactdom) |
-|97 | [Why ReactDOM is separated from React?](#why-reactdom-is-separated-from-react) |
+|97 | [왜 ReactDOM는 React과 분리되어 있나?](#왜-ReactDOM는-React과-분리되어-있나) |
 |98 | [How to use React label element?](#how-to-use-react-label-element) |
 |99 | [How to combine multiple inline style objects?](#how-to-combine-multiple-inline-style-objects) |
 |100| [How to re-render the view when the browser is resized?](#how-to-re-render-the-view-when-the-browser-is-resized)
@@ -1986,9 +1986,9 @@
 
     The `react` package contains `React.createElement()`, `React.Component`, `React.Children`, and other helpers related to elements and component classes. You can think of these as the isomorphic or universal helpers that you need to build components. The `react-dom` package contains `ReactDOM.render()`, and in `react-dom/server` we have *server-side rendering* support with `ReactDOMServer.renderToString()` and `ReactDOMServer.renderToStaticMarkup()`.
 
-97. ### Why ReactDOM is separated from React?
+97. ### 왜 ReactDOM는 React과 분리되어 있나?
 
-    The React team worked on extracting all DOM-related features into a separate library called *ReactDOM*. React v0.14 is the first release in which the libraries are split. By looking at some of the packages, `react-native`, `react-art`, `react-canvas`, and `react-three`, it has become clear that the beauty and essence of React has nothing to do with browsers or the DOM. To build more environments that React can render to, React team planned to split the main React package into two: `react` and `react-dom`. This paves the way to writing components that can be shared between the web version of React and React Native.
+    React 팀은 모든 DOM 관련 기능을 *ReactDOM*이라는 별도의 라이브러리로 분리했다. React v0.14는 라이브러리가 분리된 첫 번째 릴리즈이다. `react-native`, `react-art`, `react-canvas`, `react-three` 같은 일부 패키지를 살펴보면, React의 아름다움과 본질은 브라우저나 DOM과는 관련이 없다는 것을 분명히 한다. React가 렌더링할 수 있는 더 많은 환경을 구축하기 위해, React 팀은 주 React 패키지를 `react`와 `react-dom` 두 개로 나눌 계획을 세웠다. 이는 React과 React Native의 웹 버전 간에 공유할 수 있는 컴포넌트를 작성하는 길을 열어주었다.
 
 98. ### How to use React label element?
 

@@ -1667,7 +1667,7 @@
     8. `componentWillUpdate()`
     9. `componentDidUpdate()`
     10. `componentWillUnmount()`
-    11. `onClickSubmit()` 또는 `onChangeDescription()`과 같은 핸들러 또는 이벤트 핸들러를 클릭해라. 
+    11. `onClickSubmit()` 또는 `onChangeDescription()`과 같은 핸들러 또는 이벤트 핸들러를 클릭. 
     12. `getSelectReason()` 또는 `getFooterContent()`와 같은 렌더링을 위한 getter 메서드
     13. `renderNavigation()` 또는 `renderProfilePicture()`와 같은 선택적 렌더링 메서드
     14. `render()`
@@ -3019,13 +3019,8 @@
 
 8.   ### What are the drawbacks of MVW pattern?
 
-<<<<<<< HEAD
      1. The DOM manipulation is very expensive which causes applications behaves slowly and inefficient.
      2. Due to circular dependencies, a complicated model was created around models and views.
-=======
-     1. DOM manipulation is very expensive which causes applications to behave slow and inefficient.
-     3. Due to circular dependencies, a complicated model was created around models and views.
->>>>>>> b18964f7d7dc98a83fb51250c5f9a0039a6a9b2a
      3. Lot of data changes happens for collaborative applications(like Google Docs).
      4. No way to do undo (travel back in time) easily without adding so much extra code.
 

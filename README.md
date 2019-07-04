@@ -113,7 +113,7 @@
 |92 | [How to loop inside JSX?](#how-to-loop-inside-jsx) |
 |93 | [How do you access props in attribute quotes?](#how-do-you-access-props-in-attribute-quotes) |
 |94 | [What is React PropType array with shape?](#what-is-react-proptype-array-with-shape) |
-|95 | [How to conditionally apply class attributes?](#how-to-conditionally-apply-class-attributes) |
+|95 | [클래스 속성을 조건부로 적용하는 방법은?](#클래스-속성을-조건부로-적용하는-방법은) |
 |96 | [What is the difference between React and ReactDOM?](#what-is-the-difference-between-react-and-reactdom) |
 |97 | [Why ReactDOM is separated from React?](#why-reactdom-is-separated-from-react) |
 |98 | [How to use React label element?](#how-to-use-react-label-element) |
@@ -1962,21 +1962,21 @@
     }
     ```
 
-95. ### How to conditionally apply class attributes?
+95. ### 클래스 속성을 조건부로 적용하는 방법은?
 
-    You shouldn't use curly braces inside quotes because it is going to be evaluated as a string.
+    따옴표 안에서 중괄호를 사용하면 문자열로 평가되기 때문에 중괄호를 사용하면 안 된다.
 
     ```jsx harmony
     <div className="btn-panel {this.props.visible ? 'show' : 'hidden'}">
     ```
 
-    Instead you need to move curly braces outside (don't forget to include spaces between class names):
+    대신 중괄호를 바깥으로 옮겨야 한다. (클래스 이름들 사이에 공백을 넣는 것을 잊지 말아야 한다.)
 
     ```jsx harmony
     <div className={'btn-panel ' + (this.props.visible ? 'show' : 'hidden')}>
     ```
 
-    *Template strings* will also work:
+    *템플릿 문자열*도 작동한다.
 
     ```jsx harmony
     <div className={`btn-panel ${this.props.visible ? 'show' : 'hidden'}`}>

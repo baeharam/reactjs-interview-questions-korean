@@ -114,7 +114,7 @@
 |93 | [How do you access props in attribute quotes?](#how-do-you-access-props-in-attribute-quotes) |
 |94 | [What is React PropType array with shape?](#what-is-react-proptype-array-with-shape) |
 |95 | [How to conditionally apply class attributes?](#how-to-conditionally-apply-class-attributes) |
-|96 | [What is the difference between React and ReactDOM?](#what-is-the-difference-between-react-and-reactdom) |
+|96 | [ReactDOM과 ReactDOM의 차이점은?](#ReactDOM과-ReactDOM의-차이점은) |
 |97 | [Why ReactDOM is separated from React?](#why-reactdom-is-separated-from-react) |
 |98 | [How to use React label element?](#how-to-use-react-label-element) |
 |99 | [How to combine multiple inline style objects?](#how-to-combine-multiple-inline-style-objects) |
@@ -1982,9 +1982,9 @@
     <div className={`btn-panel ${this.props.visible ? 'show' : 'hidden'}`}>
     ```
 
-96. ### What is the difference between React and ReactDOM?
+96. ### ReactDOM과 ReactDOM의 차이점은?
 
-    The `react` package contains `React.createElement()`, `React.Component`, `React.Children`, and other helpers related to elements and component classes. You can think of these as the isomorphic or universal helpers that you need to build components. The `react-dom` package contains `ReactDOM.render()`, and in `react-dom/server` we have *server-side rendering* support with `ReactDOMServer.renderToString()` and `ReactDOMServer.renderToStaticMarkup()`.
+    `react` 패키지는 `React.createElement()`, `React.Component`, `React.Children`, 엘리먼트 컴포넌트 및 클래스와 관련된 기타 도우미가 포함되어 있다. 컴포넌트를 만들 때 필요한 동형 또는 보편적인 도우미라고 생각할 수 있다. `react-dom` 패키지에는 `ReactDOM.render()`가 포함되어 있고, `react-dom/server`에는 `ReactDOMServer.renderToString()`과 `ReactDOMServer.renderToStaticMarkup()`을 사용하여 *서버 사이드 렌더링*을 지원한다.
 
 97. ### Why ReactDOM is separated from React?
 

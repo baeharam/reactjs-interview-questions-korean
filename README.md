@@ -1749,7 +1749,7 @@
     }
     ```
 
-    위의 예제에서, *엄격 모드* 검사는 `<ComponentOne>`와 `<ComponentTwo>` 컴포넌트에만 적용된다.
+    위의 예제에서, *strict mode* 검사는 `<ComponentOne>`와 `<ComponentTwo>` 컴포넌트에만 적용된다.
 
 84. ### What are React Mixins?
 

@@ -1551,7 +1551,7 @@
 
 72. ### React에서 production 모드를 사용하는 방법?
 
-    Webpack의 `DefinePlugin` 메서드를 사용해서 `NODE_ENV`를 `production` 환경으로 설정해야 propType 유효성 검사 및 추가 경고와 같은 사항을 제거할 수 있다. 이와는 별개로, Uglify의 개발 코드와 주석을 제거하는 데드 코드 제거 기능을 사용하여 번들 크기를 크게 줄일 수 있다.
+    Webpack의 `DefinePlugin` 메서드를 사용해서 `NODE_ENV`를 `production` 환경으로 설정해야 propType 유효성 검사 및 추가 경고와 같은 사항을 제거할 수 있다. 이와는 별개로, Uglify의 개발 코드와 주석을 제거하는 데드 코드(dead-code) 제거 기능을 사용하여 번들 크기를 크게 줄일 수 있다.
 
 73. ### What is CRA and its benefits?
 

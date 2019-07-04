@@ -118,7 +118,7 @@
 |97 | [Why ReactDOM is separated from React?](#why-reactdom-is-separated-from-react) |
 |98 | [How to use React label element?](#how-to-use-react-label-element) |
 |99 | [How to combine multiple inline style objects?](#how-to-combine-multiple-inline-style-objects) |
-|100| [How to re-render the view when the browser is resized?](#how-to-re-render-the-view-when-the-browser-is-resized)
+|100| [브라우저 크기를 조정할 때 뷰를 리렌더링하는 방법은?](#브라우저-크기를-조정할-때-뷰를-리렌더링하는-방법은)
 |101| [What is the difference between setState and replaceState methods?](#what-is-the-difference-between-setstate-and-replacestate-methods) |
 |102| [How to listen to state changes?](#how-to-listen-to-state-changes) |
 |103| [What is the recommended approach of removing an array element in react state?](#what-is-the-recommended-approach-of-removing-an-array-element-in-react-state) |
@@ -2020,9 +2020,9 @@
     <button style={[styles.panel.button, styles.panel.submitButton]}>{'Submit'}</button>
     ```
 
-100. ### How to re-render the view when the browser is resized?
+100. ### 브라우저 크기를 조정할 때 뷰를 리렌더링하는 방법은?
 
-     You can listen to the `resize` event in `componentDidMount()` and then update the dimensions (`width` and `height`). You should remove the listener in `componentWillUnmount()` method.
+     `componentDidMount()`에서 `resize` 이벤트를 수신하면, 크기(`너비` 및 `높이`)를 업데이트 할 수 있다. `componentWillUnmount()` 메서드에서 리스너를 제거해야 한다.
 
      ```javascript
      class WindowDimensions extends React.Component {

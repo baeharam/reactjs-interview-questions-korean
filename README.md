@@ -101,7 +101,7 @@
 |80 | [컴포넌트 클래스에서 권장되는 메서드 순서는?](#컴포넌트-클래스에서-권장되는-메서드-순서는) |
 |81 | [스위칭 컴포넌트란?](#스위칭-컴포넌트란) |
 |82 | [왜 setState()에 함수를 전달해야 하나?](#왜-setState()에-함수를-전달해야-하나) |
-|83 | [What is strict mode in React?](#what-is-strict-mode-in-react) |
+|83 | [React의 strict mode란?](#React의-strict-mode란) |
 |84 | [React Mixins이란?](#React-Mixins이란) |
 |85 | [왜 isMounted()가 안티 패턴이며 적절한 해결책은?](#왜-isMounted()가-안티-패턴이며-적절한-해결책은) |
 |86 | [React에서 지원되는 Pointer Events는?](#React에서-지원되는-Pointer-Events는) |
@@ -1726,9 +1726,9 @@
     // this.state.count === 3 as expected
     ```
 
-83. ### What is strict mode in React?
+83. ### React의 strict mode란?
 
-    `React.StrictMode` is an useful component for highlighting potential problems in an application. Just like `<Fragment>`, `<StrictMode>` does not render any extra DOM elements. It activates additional checks and warnings for its descendants. These checks apply for *development mode* only.
+    `React.StrictMode`는 애플리케이션의 잠재적인 문제점을 강조 표시하는데 유용한 컴포넌트이다. `<Fragment>`와 마찬가지로, `<StrictMode>`는 특정 DOM 엘리먼트에 렌더링하지 않는다. 자손에 대한 추가 점검과 경고를 활성화한다. 이러한 점검은 *개발 모드*에만 적용이 된다.
 
     ```jsx harmony
     import React from 'react'
@@ -1749,7 +1749,7 @@
     }
     ```
 
-    In the example above, the *strict mode* checks apply to `<ComponentOne>` and `<ComponentTwo>` components only.
+    위의 예제에서, *strict mode* 검사는 `<ComponentOne>`와 `<ComponentTwo>` 컴포넌트에만 적용된다.
 
 84. ### React Mixins이란?
 

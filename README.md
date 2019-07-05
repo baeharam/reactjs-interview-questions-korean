@@ -106,7 +106,7 @@
 |85 | [왜 isMounted()가 안티 패턴이며 적절한 해결책은?](#왜-isMounted()가-안티-패턴이며-적절한-해결책은) |
 |86 | [React에서 지원되는 Pointer Events는?](#React에서-지원되는-Pointer-Events는) |
 |87 | [왜 컴포넌트의 이름은 대문자로 시작하나?](#왜-컴포넌트의-이름은-대문자로-시작하나) |
-|88 | [Are custom DOM attributes supported in React v16?](#are-custom-dom-attributes-supported-in-react-v16) |
+|88 | [React v16에서 사용자 정의 DOM 속성을 지원하나?](#React-v16에서-사용자-정의-DOM-속성을-지원하나) |
 |89 | [constructor과 getInitialState의 차이점은?](#constructor과-getInitialState의-차이점은) |
 |90 | [setState를 호출하지 않고도 컴포넌트 리렌더링이 가능한가?](#setState를-호출하지-않고도-컴포넌트-리렌더링이-가능한가) |
 |91 | [ES6 클래스를 사용하는 React에서 super()와 super(props)의 차이점은?](#ES6-클래스를-사용하는-React에서-super()와-super(props)의-차이점은) |
@@ -1820,27 +1820,27 @@
     import MyComponent from './MyComponent'
     ```
 
-88. ### Are custom DOM attributes supported in React v16?
+88. ### React v16에서 사용자 정의 DOM 속성을 지원하나?
 
-    Yes. In the past, React used to ignore unknown DOM attributes. If you wrote JSX with an attribute that React doesn't recognize, React would just skip it. For example, this:
+    그렇다. 과거에 React는 알 수 없는 DOM 속성을 무시하곤 했다. React가 인식하지 못하는 속성을 가진 JSX를 작성했다면 React는 그냥 건너뛸 것이다. 예를 들면, 다음과 같다.
 
     ```jsx harmony
     <div mycustomattribute={'something'} />
     ```
 
-    Would render an empty div to the DOM with React v15:
+    React v15로 빈 div를 DOM에 렌더링한다.
 
     ```html
     <div />
     ```
 
-    In React v16 any unknown attributes will end up in the DOM:
+    React v16에서는 알 수 없는 속성이 DOM에 저장된다.
 
     ```html
     <div mycustomattribute='something' />
     ```
 
-    This is useful for supplying browser-specific non-standard attributes, trying new DOM APIs, and integrating with opinionated third-party libraries.
+    이것은 특정 브라우저 비표준 속성을 제공하고, 새로운 DOM API를 사용하고, 라이브러리와 통합할 때 유용하다.
 
 89. ### constructor과 getInitialState의 차이점은?
 

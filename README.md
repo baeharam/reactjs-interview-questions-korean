@@ -120,7 +120,7 @@
 |99 | [How to combine multiple inline style objects?](#how-to-combine-multiple-inline-style-objects) |
 |100| [How to re-render the view when the browser is resized?](#how-to-re-render-the-view-when-the-browser-is-resized)
 |101| [What is the difference between setState and replaceState methods?](#what-is-the-difference-between-setstate-and-replacestate-methods) |
-|102| [How to listen to state changes?](#how-to-listen-to-state-changes) |
+|102| [state 변경을 인지하는 방법?](#state-변경을-인지하는-방법) |
 |103| [What is the recommended approach of removing an array element in react state?](#what-is-the-recommended-approach-of-removing-an-array-element-in-react-state) |
 |104| [Is it possible to use React without rendering HTML?](#is-it-possible-to-use-react-without-rendering-html) |
 |105| [How to pretty print JSON with React?](#how-to-pretty-print-json-with-react) |
@@ -2052,9 +2052,9 @@
 
      When you use `setState()` the current and previous states are merged. `replaceState()` throws out the current state, and replaces it with only what you provide. Usually `setState()` is used unless you really need to remove all previous keys for some reason. You can also set state to `false`/`null` in `setState()` instead of using `replaceState()`.
 
-102. ### How to listen to state changes?
+102. ### state 변경을 인지하는 방법?
 
-     The following lifecycle methods will be called when state changes. You can compare provided state and props values with current state and props to determine if something meaningful changed.
+     state가 변경되면 다음의 라이프 사이클 메서드가 호출된다. 제공된 state와 props 값을 현재 state, props와 비교하여 의미 있는 것이 변경되었는지 확인할 수 있다.
 
      ```
      componentWillUpdate(object nextProps, object nextState)

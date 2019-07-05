@@ -122,7 +122,7 @@
 |101| [What is the difference between setState and replaceState methods?](#what-is-the-difference-between-setstate-and-replacestate-methods) |
 |102| [How to listen to state changes?](#how-to-listen-to-state-changes) |
 |103| [What is the recommended approach of removing an array element in react state?](#what-is-the-recommended-approach-of-removing-an-array-element-in-react-state) |
-|104| [Is it possible to use React without rendering HTML?](#is-it-possible-to-use-react-without-rendering-html) |
+|104| [HTML 렌더링없이 React를 사용할 수 있나?](#HTML-렌더링없이-React를-사용할-수-있나) |
 |105| [How to pretty print JSON with React?](#how-to-pretty-print-json-with-react) |
 |106| [Why you can't update props in React?](#why-you-cant-update-props-in-react) |
 |107| [How to focus an input element on page load?](#how-to-focus-an-input-element-on-page-load) |
@@ -2075,9 +2075,9 @@
      }
      ```
 
-104. ### Is it possible to use React without rendering HTML?
+104. ### HTML 렌더링없이 React를 사용할 수 있나?
 
-     It is possible with latest version (>=16.2). Below are the possible options:
+     최신버전 (>=16.2)에서 가능하다. 가능한 옵션은 아래와 같다.
 
      ```jsx harmony
      render() {
@@ -2109,7 +2109,7 @@
      }
      ```
 
-     Returning `undefined` won't work.
+     `undefined` 반환은 작동하지 않는다
 
 105. ### How to pretty print JSON with React?
 

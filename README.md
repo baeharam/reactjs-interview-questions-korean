@@ -129,7 +129,7 @@
 |108| [What are the possible ways of updating objects in state?](#what-are-the-possible-ways-of-updating-objects-in-state) |
 |109| [Why function is preferred over object for setState?](#why-function-is-preferred-over-object-for-setstate) |
 |110| [How can we find the version of React at runtime in the browser?](#how-can-we-find-the-version-of-react-at-runtime-in-the-browser) |
-|111| [What are the approaches to include polyfills in your create-react-app?](#what-are-the-approaches-to-include-polyfills-in-your-create-react-app) |
+|111| [create-react-app에 polyfill을 포함시키는 방법은?](#create-react-app에-polyfill을-포함시키는-방법은) |
 |112| [How to use https instead of http in create-react-app?](#how-to-use-https-instead-of-http-in-create-react-app) |
 |113| [How to avoid using relative path imports in create-react-app?](#how-to-avoid-using-relative-path-imports-in-create-react-app) |
 |114| [How to add Google Analytics for react-router?](#how-to-add-google-analytics-for-react-router) |
@@ -2227,11 +2227,11 @@
      )
      ```
 
-111. ### What are the approaches to include polyfills in your `create-react-app`?
+111. ### `create-react-app`에 polyfill을 포함시키는 방법은?
 
-     1. **Manual import from `core-js`:**
+     1. **`core-js`에서 수동으로 가져오기**
 
-         Create a file called (something like) `polyfills.js` and import it into root `index.js` file. Run `npm install core-js` or `yarn add core-js` and import your specific required features.
+         `polyfills.js`와 같은 파일을 만들고 root `index.js` 파일에서 import한다. `npm install core-js` 또는 `yarn add core-js`를 실행하고 특정 필수 기능을 import한다.
 
          ```javascript
          import 'core-js/fn/array/find'
@@ -2239,15 +2239,15 @@
          import 'core-js/fn/number/is-nan'
          ```
 
-     2. **Using Polyfill service:**
+     2. **Polyfill 서비스를 사용하기:**
 
-         Use the polyfill.io CDN to retrieve custom, browser-specific polyfills by adding this line to `index.html`:
+         이 줄을 `index.html`에 추가, polyfill.io CDN을 사용하여 사용자 지정 브라우저 전용 polyfill을 검색한다.
 
          ```html
          <script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes'></script>
          ```
 
-         In the above script we had to explicitly request the `Array.prototype.includes` feature as it is not included in the default feature set.
+         위의 스크립트에서 `Array.prototype.includes` 기능은 기본 기능 집합에 포함되어 있지 않음으로 명시적으로 요청해야 한다.
 
 112. ### How to use https instead of http in create-react-app?
 

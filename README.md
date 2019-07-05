@@ -2214,9 +2214,9 @@
      }))
      ```
 
-110. ### How can we find the version of React at runtime in the browser?
+110. ### 브라우저 런타임에 React 버번을 어떻게 알 수 있나?
 
-     You can use `React.version` to get the version.
+     `React.version`을 사용해서 버전을 얻을 수 있다.
 
      ```jsx harmony
      const REACT_VERSION = React.version

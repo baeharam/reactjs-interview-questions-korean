@@ -124,7 +124,7 @@
 |103| [What is the recommended approach of removing an array element in react state?](#what-is-the-recommended-approach-of-removing-an-array-element-in-react-state) |
 |104| [Is it possible to use React without rendering HTML?](#is-it-possible-to-use-react-without-rendering-html) |
 |105| [How to pretty print JSON with React?](#how-to-pretty-print-json-with-react) |
-|106| [Why you can't update props in React?](#why-you-cant-update-props-in-react) |
+|106| [React에서 props를 업데이트할 수 없는 이유는?](#React에서-props를-업데이트할-수-없는-이유는) |
 |107| [How to focus an input element on page load?](#how-to-focus-an-input-element-on-page-load) |
 |108| [What are the possible ways of updating objects in state?](#what-are-the-possible-ways-of-updating-objects-in-state) |
 |109| [Why function is preferred over object for setState?](#why-function-is-preferred-over-object-for-setstate) |
@@ -2131,9 +2131,9 @@
      React.render(<User />, document.getElementById('container'))
      ```
 
-106. ### Why you can't update props in React?
+106. ### React에서 props를 업데이트할 수 없는 이유는?
 
-     The React philosophy is that props should be *immutable* and *top-down*. This means that a parent can send any prop values to a child, but the child can't modify received props.
+     React 철학은 props가 *불변*이고 *하향식*이어야 한다는 것이다. 즉, 부모는 모든 props 값을 자식에게 보낼 수 있지만, 자식은 받은 props를 수정할 수 없다.
 
 107. ### How to focus an input element on page load?
 

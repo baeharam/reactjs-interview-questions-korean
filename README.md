@@ -123,7 +123,7 @@
 |102| [How to listen to state changes?](#how-to-listen-to-state-changes) |
 |103| [What is the recommended approach of removing an array element in react state?](#what-is-the-recommended-approach-of-removing-an-array-element-in-react-state) |
 |104| [Is it possible to use React without rendering HTML?](#is-it-possible-to-use-react-without-rendering-html) |
-|105| [How to pretty print JSON with React?](#how-to-pretty-print-json-with-react) |
+|105| [React에서 JSON을 이쁘게 출력하는 방법?](#React에서-JSON을-이쁘게-출력하는-방법) |
 |106| [Why you can't update props in React?](#why-you-cant-update-props-in-react) |
 |107| [How to focus an input element on page load?](#how-to-focus-an-input-element-on-page-load) |
 |108| [What are the possible ways of updating objects in state?](#what-are-the-possible-ways-of-updating-objects-in-state) |
@@ -2111,9 +2111,9 @@
 
      Returning `undefined` won't work.
 
-105. ### How to pretty print JSON with React?
+105. ### React에서 JSON을 이쁘게 출력하는 방법?
 
-     We can use `<pre>` tag so that the formatting of the `JSON.stringify()` is retained:
+     `<pre>` 태그를 사용하여 `JSON.stringify()`의 서식이 유지되도록 할 수 있다.
 
      ```jsx harmony
      const data = { name: 'John', age: 42 }

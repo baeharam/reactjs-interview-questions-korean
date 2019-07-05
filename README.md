@@ -90,7 +90,7 @@
 |69 | [React에서 데코레이터를 사용하는 방법?](#React에서-데코레이터를-사용하는-방법) |
 |70 | [컴포넌트를 어떻게 메모하나?](#컴포넌트를-어떻게-메모하나) |
 |71 | [Server Side Rendering 또는 SSR 구현방법?](#Server-Side-Rendering-또는-SSR-구현방법) |
-|72 | [How to enable production mode in React?](#how-to-enable-production-mode-in-react) |
+|72 | [React에서 production 모드를 사용하는 방법?](#React에서-production-모드를-사용하는-방법) |
 |73 | [CRA란 무엇이며 장점은?](#CRA란-무엇이며-장점은) |
 |74 | [마운팅의 라이프 사이클 메서드 순서는?](#마운팅의-라이프-사이클-메서드-순서는) |
 |75 | [What are the lifecycle methods going to be deprecated in React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16) |
@@ -1549,9 +1549,9 @@
 
     이 메서드는 일반 HTML을 문자열로 출력하며, 서버 응답의 일부로 페이지 본문 내에 배치할 수 있다. 클라이언트 측에서 React는 사전 렌더링된 컨텐츠를 탐지하고 중단된 부분을 완벽하게 파악한다.
 
-72. ### How to enable production mode in React?
+72. ### React에서 production 모드를 사용하는 방법?
 
-    You should use Webpack's `DefinePlugin` method to set `NODE_ENV` to `production`, by which it strip out things like propType validation and extra warnings. Apart from this, if you minify the code, for example, Uglify's dead-code elimination to strip out development only code and comments, it will drastically reduce the size of your bundle.
+    Webpack의 `DefinePlugin` 메서드를 사용해서 `NODE_ENV`를 `production` 환경으로 설정해야 propType 유효성 검사 및 추가 경고와 같은 사항을 제거할 수 있다. 이와는 별개로, Uglify의 개발 코드와 주석을 제거하는 데드 코드(dead-code) 제거 기능을 사용하여 번들 크기를 크게 줄일 수 있다.
 
 73. ### CRA란 무엇이며 장점은?
 

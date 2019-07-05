@@ -98,7 +98,7 @@
 |77 | [getSnapshotBeforeUpdate() 라이프 사이클 메서드의 사용 목적은?](#getSnapshotBeforeUpdate()-라이프-사이클-메서드의-사용-목적은) |
 |78 | [Hooks는 렌더링 props와 고차원 컴포넌트를 대체한다?](#Hooks는-렌더링-props와-고차원-컴포넌트를-대체한다) |
 |79 | [컴포넌트를 명명하는데 권장되는 방법은?](#컴포넌트를-명명하는데-권장되는-방법은) |
-|80 | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class) |
+|80 | [컴포넌트 클래스에서 권장되는 메서드 순서는?](#컴포넌트-클래스에서-권장되는-메서드-순서는) |
 |81 | [스위칭 컴포넌트란?](#스위칭-컴포넌트란) |
 |82 | [왜 setState()에 함수를 전달해야 하나?](#왜-setState()에-함수를-전달해야-하나) |
 |83 | [What is strict mode in React?](#what-is-strict-mode-in-react) |
@@ -1653,11 +1653,11 @@
     }
     ```
 
-80. ### What is the recommended ordering of methods in component class?
+80. ### 컴포넌트 클래스에서 권장되는 메서드 순서는?
 
-    *Recommended* ordering of methods from *mounting* to *render stage*:
+     *마운팅*에서 *렌더링 단계*까지 *권장되는* 메서드 순서는 아래와 같다. 
 
-    1. `static` methods
+    1. `static` 메서드
     2. `constructor()`
     3. `getChildContext()`
     4. `componentWillMount()`
@@ -1667,9 +1667,9 @@
     8. `componentWillUpdate()`
     9. `componentDidUpdate()`
     10. `componentWillUnmount()`
-    11. click handlers or event handlers like `onClickSubmit()` or `onChangeDescription()`
-    12. getter methods for render like `getSelectReason()` or `getFooterContent()`
-    13. optional render methods like `renderNavigation()` or `renderProfilePicture()`
+    11. `onClickSubmit()` 또는 `onChangeDescription()`과 같은 핸들러 또는 이벤트 핸들러를 클릭. 
+    12. `getSelectReason()` 또는 `getFooterContent()`와 같은 렌더링을 위한 getter 메서드
+    13. `renderNavigation()` 또는 `renderProfilePicture()`와 같은 선택적 렌더링 메서드
     14. `render()`
 
 81. ### 스위칭 컴포넌트란?

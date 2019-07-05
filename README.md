@@ -2163,25 +2163,25 @@
      ReactDOM.render(<App />, document.getElementById('app'))
      ```
 
-108. ### What are the possible ways of updating objects in state?
+108. ### state에서 객체를 업데이트 할 수 있는 방법은?
 
-     1. **Calling `setState()` with an object to merge with state:**
+     1. **state와 병합 할 객체가 있는 `setState()`를 호출한다.**
 
-         * Using `Object.assign()` to create a copy of the object:
+         * `Object.assign()`를 사용하여 객체의 복사본을 만든다:
 
              ```javascript
              const user = Object.assign({}, this.state.user, { age: 42 })
              this.setState({ user })
              ```
 
-         * Using *spread operator*:
+         * *spread 연산자*를 사용한다.
 
              ```javascript
              const user = { ...this.state.user, age: 42 }
              this.setState({ user })
              ```
 
-     2. **Calling `setState()` with a function:**
+     2. **`setState()`를 함수와 같이 사용한다.**
 
          ```javascript
          this.setState(prevState => ({

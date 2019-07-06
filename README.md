@@ -90,7 +90,7 @@
 |69 | [React에서 데코레이터를 사용하는 방법?](#React에서-데코레이터를-사용하는-방법) |
 |70 | [컴포넌트를 어떻게 메모하나?](#컴포넌트를-어떻게-메모하나) |
 |71 | [Server Side Rendering 또는 SSR 구현방법?](#Server-Side-Rendering-또는-SSR-구현방법) |
-|72 | [How to enable production mode in React?](#how-to-enable-production-mode-in-react) |
+|72 | [React에서 production 모드를 사용하는 방법?](#React에서-production-모드를-사용하는-방법) |
 |73 | [CRA란 무엇이며 장점은?](#CRA란-무엇이며-장점은) |
 |74 | [마운팅의 라이프 사이클 메서드 순서는?](#마운팅의-라이프-사이클-메서드-순서는) |
 |75 | [What are the lifecycle methods going to be deprecated in React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16) |
@@ -98,19 +98,19 @@
 |77 | [getSnapshotBeforeUpdate() 라이프 사이클 메서드의 사용 목적은?](#getSnapshotBeforeUpdate()-라이프-사이클-메서드의-사용-목적은) |
 |78 | [Hooks는 렌더링 props와 고차원 컴포넌트를 대체한다?](#Hooks는-렌더링-props와-고차원-컴포넌트를-대체한다) |
 |79 | [컴포넌트를 명명하는데 권장되는 방법은?](#컴포넌트를-명명하는데-권장되는-방법은) |
-|80 | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class) |
+|80 | [컴포넌트 클래스에서 권장되는 메서드 순서는?](#컴포넌트-클래스에서-권장되는-메서드-순서는) |
 |81 | [스위칭 컴포넌트란?](#스위칭-컴포넌트란) |
 |82 | [왜 setState()에 함수를 전달해야 하나?](#왜-setState()에-함수를-전달해야-하나) |
-|83 | [What is strict mode in React?](#what-is-strict-mode-in-react) |
+|83 | [React의 strict mode란?](#React의-strict-mode란) |
 |84 | [React Mixins이란?](#React-Mixins이란) |
 |85 | [왜 isMounted()가 안티 패턴이며 적절한 해결책은?](#왜-isMounted()가-안티-패턴이며-적절한-해결책은) |
 |86 | [React에서 지원되는 Pointer Events는?](#React에서-지원되는-Pointer-Events는) |
 |87 | [왜 컴포넌트의 이름은 대문자로 시작하나?](#왜-컴포넌트의-이름은-대문자로-시작하나) |
-|88 | [Are custom DOM attributes supported in React v16?](#are-custom-dom-attributes-supported-in-react-v16) |
+|88 | [React v16에서 사용자 정의 DOM 속성을 지원하나?](#React-v16에서-사용자-정의-DOM-속성을-지원하나) |
 |89 | [constructor과 getInitialState의 차이점은?](#constructor과-getInitialState의-차이점은) |
 |90 | [setState를 호출하지 않고도 컴포넌트 리렌더링이 가능한가?](#setState를-호출하지-않고도-컴포넌트-리렌더링이-가능한가) |
 |91 | [ES6 클래스를 사용하는 React에서 super()와 super(props)의 차이점은?](#ES6-클래스를-사용하는-React에서-super()와-super(props)의-차이점은) |
-|92 | [How to loop inside JSX?](#how-to-loop-inside-jsx) |
+|92 | [JSX 내부에서 반복하는 방법?](#JSX-내부에서-반복하는-방법) |
 |93 | [속성 인용문에 props를 어떻게 넣나?](#속성-인용문에-props를-어떻게-넣나) |
 |94 | [What is React PropType array with shape?](#what-is-react-proptype-array-with-shape) |
 |95 | [How to conditionally apply class attributes?](#how-to-conditionally-apply-class-attributes) |
@@ -1549,9 +1549,9 @@
 
     이 메서드는 일반 HTML을 문자열로 출력하며, 서버 응답의 일부로 페이지 본문 내에 배치할 수 있다. 클라이언트 측에서 React는 사전 렌더링된 컨텐츠를 탐지하고 중단된 부분을 완벽하게 파악한다.
 
-72. ### How to enable production mode in React?
+72. ### React에서 production 모드를 사용하는 방법?
 
-    You should use Webpack's `DefinePlugin` method to set `NODE_ENV` to `production`, by which it strip out things like propType validation and extra warnings. Apart from this, if you minify the code, for example, Uglify's dead-code elimination to strip out development only code and comments, it will drastically reduce the size of your bundle.
+    Webpack의 `DefinePlugin` 메서드를 사용해서 `NODE_ENV`를 `production` 환경으로 설정해야 propType 유효성 검사 및 추가 경고와 같은 사항을 제거할 수 있다. 이와는 별개로, Uglify의 개발 코드와 주석을 제거하는 데드 코드(dead-code) 제거 기능을 사용하여 번들 크기를 크게 줄일 수 있다.
 
 73. ### CRA란 무엇이며 장점은?
 
@@ -1653,11 +1653,11 @@
     }
     ```
 
-80. ### What is the recommended ordering of methods in component class?
+80. ### 컴포넌트 클래스에서 권장되는 메서드 순서는?
 
-    *Recommended* ordering of methods from *mounting* to *render stage*:
+     *마운팅*에서 *렌더링 단계*까지 *권장되는* 메서드 순서는 아래와 같다. 
 
-    1. `static` methods
+    1. `static` 메서드
     2. `constructor()`
     3. `getChildContext()`
     4. `componentWillMount()`
@@ -1667,9 +1667,9 @@
     8. `componentWillUpdate()`
     9. `componentDidUpdate()`
     10. `componentWillUnmount()`
-    11. click handlers or event handlers like `onClickSubmit()` or `onChangeDescription()`
-    12. getter methods for render like `getSelectReason()` or `getFooterContent()`
-    13. optional render methods like `renderNavigation()` or `renderProfilePicture()`
+    11. `onClickSubmit()` 또는 `onChangeDescription()`과 같은 핸들러 또는 이벤트 핸들러를 클릭. 
+    12. `getSelectReason()` 또는 `getFooterContent()`와 같은 렌더링을 위한 getter 메서드
+    13. `renderNavigation()` 또는 `renderProfilePicture()`와 같은 선택적 렌더링 메서드
     14. `render()`
 
 81. ### 스위칭 컴포넌트란?
@@ -1726,9 +1726,9 @@
     // this.state.count === 3 as expected
     ```
 
-83. ### What is strict mode in React?
+83. ### React의 strict mode란?
 
-    `React.StrictMode` is an useful component for highlighting potential problems in an application. Just like `<Fragment>`, `<StrictMode>` does not render any extra DOM elements. It activates additional checks and warnings for its descendants. These checks apply for *development mode* only.
+    `React.StrictMode`는 애플리케이션의 잠재적인 문제점을 강조 표시하는데 유용한 컴포넌트이다. `<Fragment>`와 마찬가지로, `<StrictMode>`는 특정 DOM 엘리먼트에 렌더링하지 않는다. 자손에 대한 추가 점검과 경고를 활성화한다. 이러한 점검은 *개발 모드*에만 적용이 된다.
 
     ```jsx harmony
     import React from 'react'
@@ -1749,7 +1749,7 @@
     }
     ```
 
-    In the example above, the *strict mode* checks apply to `<ComponentOne>` and `<ComponentTwo>` components only.
+    위의 예제에서, *strict mode* 검사는 `<ComponentOne>`와 `<ComponentTwo>` 컴포넌트에만 적용된다.
 
 84. ### React Mixins이란?
 
@@ -1820,27 +1820,27 @@
     import MyComponent from './MyComponent'
     ```
 
-88. ### Are custom DOM attributes supported in React v16?
+88. ### React v16에서 사용자 정의 DOM 속성을 지원하나?
 
-    Yes. In the past, React used to ignore unknown DOM attributes. If you wrote JSX with an attribute that React doesn't recognize, React would just skip it. For example, this:
+    그렇다. 과거에 React는 알 수 없는 DOM 속성을 무시하곤 했다. React가 인식하지 못하는 속성을 가진 JSX를 작성했다면 React는 그냥 건너뛸 것이다. 예를 들면, 다음과 같다.
 
     ```jsx harmony
     <div mycustomattribute={'something'} />
     ```
 
-    Would render an empty div to the DOM with React v15:
+    React v15로 빈 div를 DOM에 렌더링한다.
 
     ```html
     <div />
     ```
 
-    In React v16 any unknown attributes will end up in the DOM:
+    React v16에서는 알 수 없는 속성이 DOM에 저장된다.
 
     ```html
     <div mycustomattribute='something' />
     ```
 
-    This is useful for supplying browser-specific non-standard attributes, trying new DOM APIs, and integrating with opinionated third-party libraries.
+    이것은 특정 브라우저 비표준 속성을 제공하고, 새로운 DOM API를 사용하고, 라이브러리와 통합할 때 유용하다.
 
 89. ### constructor과 getInitialState의 차이점은?
 
@@ -1907,9 +1907,9 @@
 
     `constructor()` 외부에서는 `this.props`에 대해서 같은 값을 표시한다.
 
-92. ### How to loop inside JSX?
+92. ### JSX 내부에서 반복하는 방법?
 
-    You can simply use `Array.prototype.map` with ES6 *arrow function* syntax. For example, the `items` array of objects is mapped into an array of components:
+    ES6 *화살표 함수* 구문과 함께 `Array.prototype.map`을 간단히 사용할 수 있다. 예를 들어, 객체의 `items` 배열은 다음과 같은 컴포넌트의 배열과 매핑된다.
 
     ```jsx harmony
     <tbody>
@@ -1917,7 +1917,7 @@
     </tbody>
     ```
 
-    You can't iterate using `for` loop:
+    `for` 반복문을 사용하여 반복할 수 없다.
 
     ```jsx harmony
     <tbody>
@@ -1927,7 +1927,7 @@
     </tbody>
     ```
 
-    This is because JSX tags are transpiled into *function calls*, and you can't use statements inside expressions. This may change thanks to `do` expressions which are *stage 1 proposal*.
+    JSX 태그가 *함수 호출*로 변환되어 표현식안에 명령문을 사용할 수 없기 때문이다. 이것은 *stage 1 proposal*에 `올라가 있기` 때문에 바뀔수 있다.
 
 93. ### 속성 인용문에 props를 어떻게 넣나?
 

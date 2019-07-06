@@ -110,7 +110,7 @@
 |89 | [constructor과 getInitialState의 차이점은?](#constructor과-getInitialState의-차이점은) |
 |90 | [setState를 호출하지 않고도 컴포넌트 리렌더링이 가능한가?](#setState를-호출하지-않고도-컴포넌트-리렌더링이-가능한가) |
 |91 | [ES6 클래스를 사용하는 React에서 super()와 super(props)의 차이점은?](#ES6-클래스를-사용하는-React에서-super()와-super(props)의-차이점은) |
-|92 | [How to loop inside JSX?](#how-to-loop-inside-jsx) |
+|92 | [JSX 내부에서 반복하는 방법?](#JSX-내부에서-반복하는-방법) |
 |93 | [How do you access props in attribute quotes?](#how-do-you-access-props-in-attribute-quotes) |
 |94 | [What is React PropType array with shape?](#what-is-react-proptype-array-with-shape) |
 |95 | [How to conditionally apply class attributes?](#how-to-conditionally-apply-class-attributes) |
@@ -1907,9 +1907,9 @@
 
     `constructor()` 외부에서는 `this.props`에 대해서 같은 값을 표시한다.
 
-92. ### How to loop inside JSX?
+92. ### JSX 내부에서 반복하는 방법?
 
-    You can simply use `Array.prototype.map` with ES6 *arrow function* syntax. For example, the `items` array of objects is mapped into an array of components:
+    ES6 *화살표 함수* 구문과 함께 `Array.prototype.map`을 간단히 사용할 수 있다. 예를 들어, 객체의 `items` 배열은 다음과 같은 컴포넌트의 배열과 매핑된다.
 
     ```jsx harmony
     <tbody>
@@ -1917,7 +1917,7 @@
     </tbody>
     ```
 
-    You can't iterate using `for` loop:
+    `for` 반복문을 사용하여 반복할 수 없다.
 
     ```jsx harmony
     <tbody>
@@ -1927,7 +1927,7 @@
     </tbody>
     ```
 
-    This is because JSX tags are transpiled into *function calls*, and you can't use statements inside expressions. This may change thanks to `do` expressions which are *stage 1 proposal*.
+    JSX 태그가 *함수 호출*로 변환되어 표현식안에 명령문을 사용할 수 없기 때문이다. 이것은 *stage 1 proposal*에 `올라가 있기` 때문에 바뀔수 있다.
 
 93. ### How do you access props in attribute quotes?
 

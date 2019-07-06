@@ -116,7 +116,7 @@
 |95 | [클래스 속성을 조건부로 적용하는 방법은?](#클래스-속성을-조건부로-적용하는-방법은) |
 |96 | [What is the difference between React and ReactDOM?](#what-is-the-difference-between-react-and-reactdom) |
 |97 | [Why ReactDOM is separated from React?](#why-reactdom-is-separated-from-react) |
-|98 | [How to use React label element?](#how-to-use-react-label-element) |
+|98 | [React 라벨 엘리먼트를 사용하는 방법은?](#React-라벨-엘리먼트를-사용하는-방법은) |
 |99 | [How to combine multiple inline style objects?](#how-to-combine-multiple-inline-style-objects) |
 |100| [How to re-render the view when the browser is resized?](#how-to-re-render-the-view-when-the-browser-is-resized)
 |101| [What is the difference between setState and replaceState methods?](#what-is-the-difference-between-setstate-and-replacestate-methods) |
@@ -1990,16 +1990,16 @@
 
     The React team worked on extracting all DOM-related features into a separate library called *ReactDOM*. React v0.14 is the first release in which the libraries are split. By looking at some of the packages, `react-native`, `react-art`, `react-canvas`, and `react-three`, it has become clear that the beauty and essence of React has nothing to do with browsers or the DOM. To build more environments that React can render to, React team planned to split the main React package into two: `react` and `react-dom`. This paves the way to writing components that can be shared between the web version of React and React Native.
 
-98. ### How to use React label element?
+98. ### React 라벨 엘리먼트를 사용하는 방법은?
 
-    If you try to render a `<label>` element bound to a text input using the standard `for` attribute, then it produces HTML missing that attribute and prints a warning to the console.
+    표준 `for` 속성을 사용하여 텍스트 입력에 바인드된 `<label>` 엘리먼트를 렌더링하려고 하면, 해당 속성이 없는 HTML이 생성되고 콘솔에 경고가 인쇄된다.
 
     ```jsx harmony
     <label for={'user'}>{'User'}</label>
     <input type={'text'} id={'user'} />
     ```
 
-    Since `for` is a reserved keyword in JavaScript, use `htmlFor` instead.
+    `for`는 JavaScript에서 예약된 키워드이므로, 대신 `htmlFor`을 사용해야 한다.
 
     ```jsx harmony
     <label htmlFor={'user'}>{'User'}</label>

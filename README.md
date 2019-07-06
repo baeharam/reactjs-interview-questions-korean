@@ -117,7 +117,7 @@
 |96 | [What is the difference between React and ReactDOM?](#what-is-the-difference-between-react-and-reactdom) |
 |97 | [Why ReactDOM is separated from React?](#why-reactdom-is-separated-from-react) |
 |98 | [How to use React label element?](#how-to-use-react-label-element) |
-|99 | [여러 개의 인라인 스타일 개체를 결합하는 방법은?](#여러-개의-인라인-스타일-개체를-결합하는-방법은) |
+|99 | [여러 개의 인라인 스타일 객체를 결합하는 방법은?](#여러-개의-인라인-스타일-객체를-결합하는-방법은) |
 |100| [How to re-render the view when the browser is resized?](#how-to-re-render-the-view-when-the-browser-is-resized)
 |101| [What is the difference between setState and replaceState methods?](#what-is-the-difference-between-setstate-and-replacestate-methods) |
 |102| [How to listen to state changes?](#how-to-listen-to-state-changes) |
@@ -2006,7 +2006,7 @@
     <input type={'text'} id={'user'} />
     ```
 
-99. ### 여러 개의 인라인 스타일 개체를 결합하는 방법은?
+99. ### 여러 개의 인라인 스타일 객체를 결합하는 방법은?
 
     일반적인 React에서 사용하는 *spread 연산자*.
 

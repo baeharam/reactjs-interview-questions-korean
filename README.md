@@ -125,7 +125,7 @@
 |104| [HTML 렌더링없이 React를 사용할 수 있나?](#HTML-렌더링없이-React를-사용할-수-있나) |
 |105| [React에서 JSON을 이쁘게 출력하는 방법?](#React에서-JSON을-이쁘게-출력하는-방법) |
 |106| [React에서 props를 업데이트할 수 없는 이유는?](#React에서-props를-업데이트할-수-없는-이유는) |
-|107| [How to focus an input element on page load?](#how-to-focus-an-input-element-on-page-load) |
+|107| [페이지 로드 시 input 엘리먼트에 포커스를 주는 방법은?](#페이지-로드-시-input-엘리먼트에-포커스를-주는-방법은) |
 |108| [What are the possible ways of updating objects in state?](#what-are-the-possible-ways-of-updating-objects-in-state) |
 |109| [Why function is preferred over object for setState?](#why-function-is-preferred-over-object-for-setstate) |
 |110| [How can we find the version of React at runtime in the browser?](#how-can-we-find-the-version-of-react-at-runtime-in-the-browser) |
@@ -2135,9 +2135,9 @@
 
      React 철학은 props가 *불변*이고 *하향식*이어야 한다는 것이다. 즉, 부모는 모든 props 값을 자식에게 보낼 수 있지만, 자식은 받은 props를 수정할 수 없다.
 
-107. ### How to focus an input element on page load?
+107. ### 페이지 로드 시 input 엘리먼트에 포커스를 주는 방법은?
 
-     You can do it by creating *ref* for `input` element and using it in `componentDidMount()`:
+     `input` 엘리먼트에 대한 *ref*를 생성하고 `componentDidMount()`에서 이를 사용한다.
 
      ```jsx harmony
      class App extends React.Component{

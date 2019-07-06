@@ -119,7 +119,7 @@
 |98 | [React 라벨 엘리먼트를 사용하는 방법은?](#React-라벨-엘리먼트를-사용하는-방법은) |
 |99 | [How to combine multiple inline style objects?](#how-to-combine-multiple-inline-style-objects) |
 |100| [브라우저 크기를 조정할 때 뷰를 리렌더링하는 방법은?](#브라우저-크기를-조정할-때-뷰를-리렌더링하는-방법은)
-|101| [What is the difference between setState and replaceState methods?](#what-is-the-difference-between-setstate-and-replacestate-methods) |
+|101| [setState()와 replaceState() 메서드의 차이점은?](#setState()와-replaceState()-메서드의-차이점은) |
 |102| [How to listen to state changes?](#how-to-listen-to-state-changes) |
 |103| [What is the recommended approach of removing an array element in react state?](#what-is-the-recommended-approach-of-removing-an-array-element-in-react-state) |
 |104| [Is it possible to use React without rendering HTML?](#is-it-possible-to-use-react-without-rendering-html) |
@@ -2048,9 +2048,9 @@
      }
      ```
 
-101. ### What is the difference between `setState()` and `replaceState()` methods?
+101. ### `setState()`와 `replaceState()` 메서드의 차이점은?
 
-     When you use `setState()` the current and previous states are merged. `replaceState()` throws out the current state, and replaces it with only what you provide. Usually `setState()` is used unless you really need to remove all previous keys for some reason. You can also set state to `false`/`null` in `setState()` instead of using `replaceState()`.
+     `setState()`를 사용하면 현재 state와 이전 state가 병합된다. `replaceState()`는 현재 state를 버리고 사용자가 넣은 state로 바꾼다. Usually 어떤 이유로 이전의 모든 키를 제거해야 하는 경우가 아니면 `setState()`를 사용한다. `replaceState()`를 사용하는 대신 `setState()`에서 state를 `false`/`null`로 설정할 수도 있다.
 
 102. ### How to listen to state changes?
 

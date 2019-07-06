@@ -128,7 +128,7 @@
 |107| [How to focus an input element on page load?](#how-to-focus-an-input-element-on-page-load) |
 |108| [What are the possible ways of updating objects in state?](#what-are-the-possible-ways-of-updating-objects-in-state) |
 |109| [Why function is preferred over object for setState?](#why-function-is-preferred-over-object-for-setstate) |
-|110| [How can we find the version of React at runtime in the browser?](#how-can-we-find-the-version-of-react-at-runtime-in-the-browser) |
+|110| [브라우저 런타임에 React 버전을 어떻게 알 수 있나?](#브라우저-런타임에-React-버전을-어떻게-알-수-있나) |
 |111| [What are the approaches to include polyfills in your create-react-app?](#what-are-the-approaches-to-include-polyfills-in-your-create-react-app) |
 |112| [How to use https instead of http in create-react-app?](#how-to-use-https-instead-of-http-in-create-react-app) |
 |113| [How to avoid using relative path imports in create-react-app?](#how-to-avoid-using-relative-path-imports-in-create-react-app) |
@@ -2214,7 +2214,7 @@
      }))
      ```
 
-110. ### 브라우저 런타임에 React 버번을 어떻게 알 수 있나?
+110. ### 브라우저 런타임에 React 버전을 어떻게 알 수 있나?
 
      `React.version`을 사용해서 버전을 얻을 수 있다.
 

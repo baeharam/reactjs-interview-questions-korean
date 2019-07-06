@@ -121,7 +121,7 @@
 |100| [브라우저 크기를 조정할 때 뷰를 리렌더링하는 방법은?](#브라우저-크기를-조정할-때-뷰를-리렌더링하는-방법은)
 |101| [setState()와 replaceState() 메서드의 차이점은?](#setState()와-replaceState()-메서드의-차이점은) |
 |102| [state 변경을 인지하는 방법?](#state-변경을-인지하는-방법) |
-|103| [What is the recommended approach of removing an array element in react state?](#what-is-the-recommended-approach-of-removing-an-array-element-in-react-state) |
+|103| [React state에서 배열 엘리먼트를 제거하는 권장 방법은?](#React-state에서-배열-엘리먼트를-제거하는-권장-방법은) |
 |104| [Is it possible to use React without rendering HTML?](#is-it-possible-to-use-react-without-rendering-html) |
 |105| [How to pretty print JSON with React?](#how-to-pretty-print-json-with-react) |
 |106| [Why you can't update props in React?](#why-you-cant-update-props-in-react) |
@@ -2061,11 +2061,11 @@
      componentDidUpdate(object prevProps, object prevState)
      ```
 
-103. ### What is the recommended approach of removing an array element in React state?
+103. ### React state에서 배열 엘리먼트를 제거하는 권장 방법은?
 
-     The better approach is to use `Array.prototype.filter()` method.
+     더 나은 방법은 `Array.prototype.filter()` 메서드를 사용하는 것이다.
 
-     For example, let's create a `removeItem()` method for updating the state.
+     예를 들어, state를 업데이트하기 위한 `removeItem()` 메서드를 생성해보자
 
      ```javascript
      removeItem(index) {

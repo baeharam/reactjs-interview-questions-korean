@@ -112,7 +112,7 @@
 |91 | [ES6 클래스를 사용하는 React에서 super()와 super(props)의 차이점은?](#ES6-클래스를-사용하는-React에서-super()와-super(props)의-차이점은) |
 |92 | [JSX 내부에서 반복하는 방법?](#JSX-내부에서-반복하는-방법) |
 |93 | [속성 인용문에 props를 어떻게 넣나?](#속성-인용문에-props를-어떻게-넣나) |
-|94 | [What is React PropType array with shape?](#what-is-react-proptype-array-with-shape) |
+|94 | [모양이 있는 React proptype array란?](#모양이-있는-React-proptype-array란) |
 |95 | [How to conditionally apply class attributes?](#how-to-conditionally-apply-class-attributes) |
 |96 | [What is the difference between React and ReactDOM?](#what-is-the-difference-between-react-and-reactdom) |
 |97 | [Why ReactDOM is separated from React?](#why-reactdom-is-separated-from-react) |
@@ -1949,9 +1949,9 @@
     <img className='image' src={`images/${this.props.image}`} />
     ```
 
-94. ### What is React proptype array with shape?
+94. ### 모양이 있는 React proptype array란?
 
-    If you want to pass an array of objects to a component with a particular shape then use `React.PropTypes.shape()` as an argument to `React.PropTypes.arrayOf()`.
+    특정 모양의 컴포넌트에 객체 배열을 전달하려면 `React.PropTypes.arrayOf()`에 대한 인수로 `React.PropTypes.shape()`를 사용한다.
 
     ```javascript
     ReactComponent.propTypes = {

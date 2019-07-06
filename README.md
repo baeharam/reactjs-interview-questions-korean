@@ -111,7 +111,7 @@
 |90 | [setState를 호출하지 않고도 컴포넌트 리렌더링이 가능한가?](#setState를-호출하지-않고도-컴포넌트-리렌더링이-가능한가) |
 |91 | [ES6 클래스를 사용하는 React에서 super()와 super(props)의 차이점은?](#ES6-클래스를-사용하는-React에서-super()와-super(props)의-차이점은) |
 |92 | [JSX 내부에서 반복하는 방법?](#JSX-내부에서-반복하는-방법) |
-|93 | [How do you access props in attribute quotes?](#how-do-you-access-props-in-attribute-quotes) |
+|93 | [속성 인용문에 props를 어떻게 넣나?](#속성-인용문에-props를-어떻게-넣나) |
 |94 | [What is React PropType array with shape?](#what-is-react-proptype-array-with-shape) |
 |95 | [How to conditionally apply class attributes?](#how-to-conditionally-apply-class-attributes) |
 |96 | [What is the difference between React and ReactDOM?](#what-is-the-difference-between-react-and-reactdom) |
@@ -1929,21 +1929,21 @@
 
     JSX 태그가 *함수 호출*로 변환되어 표현식안에 명령문을 사용할 수 없기 때문이다. 이것은 *stage 1 proposal*에 `올라가 있기` 때문에 바뀔수 있다.
 
-93. ### How do you access props in attribute quotes?
+93. ### 속성 인용문에 props를 어떻게 넣나?
 
-    React (or JSX) doesn't support variable interpolation inside an attribute value. The below representation won't work:
+    React (또는 JSX)는 속성값 내부의 변수 보간을 지원하지 않는다. 아래의 표현은 작동하지 않는다.
 
     ```jsx harmony
     <img className='image' src='images/{this.props.image}' />
     ```
 
-    But you can put any JS expression inside curly braces as the entire attribute value. So the below expression works:
+    그러나 JS 표현식을 중괄호 안에 전체 속성값으로 넣을 수 있다. 따라서, 아래 표현식이 작동한다.
 
     ```jsx harmony
     <img className='image' src={'images/' + this.props.image} />
     ```
 
-    Using *template strings* will also work:
+    *템플릿 문자열*을 사용하면 다음과 같이 사용할 수 있다.
 
     ```jsx harmony
     <img className='image' src={`images/${this.props.image}`} />

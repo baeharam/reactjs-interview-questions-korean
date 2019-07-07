@@ -115,7 +115,7 @@
 |94 | [모양이 있는 React proptype array란?](#모양이-있는-React-proptype-array란) |
 |95 | [클래스 속성을 조건부로 적용하는 방법은?](#클래스-속성을-조건부로-적용하는-방법은) |
 |96 | [React와 ReactDOM의 차이점?](#React와-ReactDOM의-차이점) |
-|97 | [Why ReactDOM is separated from React?](#why-reactdom-is-separated-from-react) |
+|97 | [왜 ReactDOM은 React와 분리되었나?](#왜-ReactDOM은-React와-분리되었나) |
 |98 | [React 라벨 엘리먼트를 사용하는 방법은?](#React-라벨-엘리먼트를-사용하는-방법은) |
 |99 | [여러 개의 인라인 스타일 객체를 결합하는 방법은?](#여러-개의-인라인-스타일-객체를-결합하는-방법은) |
 |100| [브라우저 크기를 조정할 때 뷰를 리렌더링하는 방법은?](#브라우저-크기를-조정할-때-뷰를-리렌더링하는-방법은)
@@ -1986,9 +1986,9 @@
 
     `react` 패키지는 `React.createElement()`, `React.Component`, `React.Children`, 엘리먼트 컴포넌트 및 클래스와 관련된 기타 도우미가 포함되어 있다. 컴포넌트를 만들 때 필요한 동형 또는 보편적인 도우미라고 생각할 수 있다. `react-dom` 패키지에는 `ReactDOM.render()`가 포함되어 있고, `react-dom/server`에는 `ReactDOMServer.renderToString()`과 `ReactDOMServer.renderToStaticMarkup()`을 사용하여 *서버 사이드 렌더링*을 지원한다.
 
-97. ### Why ReactDOM is separated from React?
+97. ### 왜 ReactDOM은 React와 분리되었나?
 
-    The React team worked on extracting all DOM-related features into a separate library called *ReactDOM*. React v0.14 is the first release in which the libraries are split. By looking at some of the packages, `react-native`, `react-art`, `react-canvas`, and `react-three`, it has become clear that the beauty and essence of React has nothing to do with browsers or the DOM. To build more environments that React can render to, React team planned to split the main React package into two: `react` and `react-dom`. This paves the way to writing components that can be shared between the web version of React and React Native.
+    React 팀은 모든 DOM 관련 기능을 *ReactDOM*이라는 별도의 라이브러리로 분리했다. React v0.14는 라이브러리가 분리된 첫 번째 릴리즈이다. `react-native`, `react-art`, `react-canvas`, `react-three` 같은 일부 패키지를 살펴보면, React의 아름다움과 본질은 브라우저나 DOM과는 관련이 없다는 것을 분명히 한다. React가 렌더링할 수 있는 더 많은 환경을 구축하기 위해, React 팀은 주 React 패키지를 `react`와 `react-dom` 두 개로 나눌 계획을 세웠다. 이는 React과 React Native의 웹 버전 간에 공유할 수 있는 컴포넌트를 작성하는 길을 열어주었다.
 
 98. ### React 라벨 엘리먼트를 사용하는 방법은?
 

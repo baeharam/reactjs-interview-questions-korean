@@ -117,7 +117,7 @@
 |96 | [React와 ReactDOM의 차이점?](#React와-ReactDOM의-차이점) |
 |97 | [Why ReactDOM is separated from React?](#why-reactdom-is-separated-from-react) |
 |98 | [React 라벨 엘리먼트를 사용하는 방법은?](#React-라벨-엘리먼트를-사용하는-방법은) |
-|99 | [How to combine multiple inline style objects?](#how-to-combine-multiple-inline-style-objects) |
+|99 | [여러 개의 인라인 스타일 객체를 결합하는 방법은?](#여러-개의-인라인-스타일-객체를-결합하는-방법은) |
 |100| [브라우저 크기를 조정할 때 뷰를 리렌더링하는 방법은?](#브라우저-크기를-조정할-때-뷰를-리렌더링하는-방법은)
 |101| [setState()와 replaceState() 메서드의 차이점은?](#setState()와-replaceState()-메서드의-차이점은) |
 |102| [state 변경을 인지하는 방법?](#state-변경을-인지하는-방법) |
@@ -2006,15 +2006,15 @@
     <input type={'text'} id={'user'} />
     ```
 
-99. ### How to combine multiple inline style objects?
+99. ### 여러 개의 인라인 스타일 객체를 결합하는 방법은?
 
-    You can use *spread operator* in regular React:
+    일반적인 React에서 사용하는 *spread 연산자*.
 
     ```jsx harmony
      <button style={{...styles.panel.button, ...styles.panel.submitButton}}>{'Submit'}</button>
     ```
 
-    If you're using React Native then you can use the array notation:
+    React Native를 사용한다면 배열 표기법을 사용할 수 있다.
 
     ```jsx harmony
     <button style={[styles.panel.button, styles.panel.submitButton]}>{'Submit'}</button>

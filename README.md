@@ -132,7 +132,7 @@
 |111| [What are the approaches to include polyfills in your create-react-app?](#what-are-the-approaches-to-include-polyfills-in-your-create-react-app) |
 |112| [How to use https instead of http in create-react-app?](#how-to-use-https-instead-of-http-in-create-react-app) |
 |113| [How to avoid using relative path imports in create-react-app?](#how-to-avoid-using-relative-path-imports-in-create-react-app) |
-|114| [How to add Google Analytics for react-router?](#how-to-add-google-analytics-for-react-router) |
+|114| [React Router용 Google 웹 로그 분석을 추가하는 방법은?](#React-Router용-Google-웹-로그-분석을-추가하는-방법은) |
 |115| [How to update a component every second?](#how-to-update-a-component-every-second) |
 |116| [How do you apply vendor prefixes to inline styles in React?](#how-do-you-apply-vendor-prefixes-to-inline-styles-in-react) |
 |117| [How to import and export components using react and ES6?](#how-to-import-and-export-components-using-react-and-es6) |
@@ -2271,9 +2271,9 @@
 
      After that restart the development server. Now you should be able to import anything inside `src/app` without relative paths.
 
-114. ### How to add Google Analytics for React Router?
+114. ### React Router용 Google 웹 로그 분석을 추가하는 방법은?
 
-     Add a listener on the `history` object to record each page view:
+     `history` 객체에 리스너를 추가하여 각각의 페이지 view를 기록한다.
 
      ```javascript
      history.listen(function (location) {

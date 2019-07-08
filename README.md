@@ -138,7 +138,7 @@
 |117| [How to import and export components using react and ES6?](#how-to-import-and-export-components-using-react-and-es6) |
 |118| [Why React component names must begin with a capital letter?](#why-react-component-names-must-begin-with-a-capital-letter) |
 |119| [Why is a component constructor called only once?](#why-is-a-component-constructor-called-only-once) |
-|120| [How to define constants in React?](#how-to-define-constants-in-react) |
+|120| [React에서 상수를 정의하는 방법은?](#React에서-상수를-정의하는-방법은) |
 |121| [How to programmatically trigger click event in React?](#how-to-programmatically-trigger-click-event-in-react) |
 |122| [Is it possible to use async/await in plain React?](#is-it-possible-to-use-asyncawait-in-plain-react) |
 |123| [What are the common folder structures for React?](#what-are-the-common-folder-structures-for-react) |
@@ -2341,9 +2341,9 @@
 
      React's *reconciliation* algorithm assumes that without any information to the contrary, if a custom component appears in the same place on subsequent renders, it's the same component as before, so reuses the previous instance rather than creating a new one.
 
-120. ### How to define constants in React?
+120. ### React에서 상수를 정의하는 방법은?
 
-     You can use ES7 `static` field to define constant.
+     ES7 `static` 필드를 사용하여 상수를 정의할 수 있다.
 
      ```javascript
      class MyComponent extends React.Component {
@@ -2351,7 +2351,7 @@
      }
      ```
 
-     *Static fields* are part of the *Class Fields* stage 3 proposal.
+     *Static fields*는 *Class Fields* 스테이지 3 제안 일부이다.
 
 121. ### How to programmatically trigger click event in React?
 

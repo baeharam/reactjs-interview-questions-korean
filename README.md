@@ -2261,15 +2261,15 @@
 
      또는 `set HTTPS=true && npm start`를 실행하면 된다.
 
-113. ### How to avoid using relative path imports in create-react-app?
+113. ### create-react-app에서 상대 경로 가져오기 사용을 피하는 방법?
 
-     Create a file called `.env` in the project root and write the import path:
+     프로젝트 루트에 `.env`라는 파일을 만들고 경로를 import 하면 된다. 
 
      ```
      NODE_PATH=src/app
      ```
 
-     After that restart the development server. Now you should be able to import anything inside `src/app` without relative paths.
+     개발 서버를 다시 시작하면, 상대 경로 없이 `src/app` 내부의 내용을 import 할 수 있다.
 
 114. ### How to add Google Analytics for React Router?
 

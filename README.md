@@ -133,7 +133,7 @@
 |112| [How to use https instead of http in create-react-app?](#how-to-use-https-instead-of-http-in-create-react-app) |
 |113| [How to avoid using relative path imports in create-react-app?](#how-to-avoid-using-relative-path-imports-in-create-react-app) |
 |114| [How to add Google Analytics for react-router?](#how-to-add-google-analytics-for-react-router) |
-|115| [How to update a component every second?](#how-to-update-a-component-every-second) |
+|115| [매 초마다 컴포넌트를 업데이트 하는 방법은?](#매-초마다-컴포넌트를-업데이트-하는-방법은) |
 |116| [How do you apply vendor prefixes to inline styles in React?](#how-do-you-apply-vendor-prefixes-to-inline-styles-in-react) |
 |117| [How to import and export components using react and ES6?](#how-to-import-and-export-components-using-react-and-es6) |
 |118| [Why React component names must begin with a capital letter?](#why-react-component-names-must-begin-with-a-capital-letter) |
@@ -2282,9 +2282,9 @@
      })
      ```
 
-115. ### How to update a component every second?
+115. ### 매 초마다 컴포넌트를 업데이트 하는 방법은?
 
-     You need to use `setInterval()` to trigger the change, but you also need to clear the timer when the component unmounts to prevent errors and memory leaks.
+     변경을 감지하려면 `setInterval()`을 사용해야 하지만 오류 및 메모리 누수를 방지하려면 컴포넌트가 마운트 해제될 때 타이머를 지워야 한다.
 
      ```javascript
      componentDidMount() {

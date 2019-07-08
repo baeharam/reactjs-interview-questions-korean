@@ -130,7 +130,7 @@
 |109| [Why function is preferred over object for setState?](#why-function-is-preferred-over-object-for-setstate) |
 |110| [How can we find the version of React at runtime in the browser?](#how-can-we-find-the-version-of-react-at-runtime-in-the-browser) |
 |111| [What are the approaches to include polyfills in your create-react-app?](#what-are-the-approaches-to-include-polyfills-in-your-create-react-app) |
-|112| [How to use https instead of http in create-react-app?](#how-to-use-https-instead-of-http-in-create-react-app) |
+|112| [create-react-app에서 http 대신 https를 사용하는 방법?](#create-react-app에서-http-대신-https를-사용하는-방법) |
 |113| [How to avoid using relative path imports in create-react-app?](#how-to-avoid-using-relative-path-imports-in-create-react-app) |
 |114| [How to add Google Analytics for react-router?](#how-to-add-google-analytics-for-react-router) |
 |115| [How to update a component every second?](#how-to-update-a-component-every-second) |
@@ -2249,9 +2249,9 @@
 
          In the above script we had to explicitly request the `Array.prototype.includes` feature as it is not included in the default feature set.
 
-112. ### How to use https instead of http in create-react-app?
+112. ### create-react-app에서 http 대신 https를 사용하는 방법?
 
-     You just need to use `HTTPS=true` configuration. You can edit your `package.json` scripts section:
+     `HTTPS=true` 설정만 사용하면 된다. `package.json` 스크립트 섹션을 편집할 수 있다.
 
      ```json
      "scripts": {
@@ -2259,7 +2259,7 @@
      }
      ```
 
-     or just run `set HTTPS=true && npm start`
+     또는 `set HTTPS=true && npm start`를 실행하면 된다.
 
 113. ### How to avoid using relative path imports in create-react-app?
 

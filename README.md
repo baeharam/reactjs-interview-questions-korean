@@ -139,7 +139,7 @@
 |118| [React 컴포넌트 이름이 대문자로 시작해야 하는 이유는?](#React-컴포넌트-이름이-대문자로-시작해야-하는-이유는) |
 |119| [컴포넌트 생성자는 왜 한 번만 불리나?](#컴포넌트-생성자는-왜-한-번만-불리나) |
 |120| [How to define constants in React?](#how-to-define-constants-in-react) |
-|121| [How to programmatically trigger click event in React?](#how-to-programmatically-trigger-click-event-in-react) |
+|121| [React에서 프로그래밍 방식으로 클릭 이벤트를 발생시키는 방법은?](#React에서-프로그래밍-방식으로-클릭-이벤트를-발생시키는-방법은) |
 |122| [Is it possible to use async/await in plain React?](#is-it-possible-to-use-asyncawait-in-plain-react) |
 |123| [What are the common folder structures for React?](#what-are-the-common-folder-structures-for-react) |
 |124| [What are the popular packages for animation?](#what-are-the-popular-packages-for-animation) |
@@ -2353,17 +2353,17 @@
 
      *Static fields* are part of the *Class Fields* stage 3 proposal.
 
-121. ### How to programmatically trigger click event in React?
+121. ### React에서 프로그래밍 방식으로 클릭 이벤트를 발생시키는 방법은?
 
-     You could use the ref prop to acquire a reference to the underlying `HTMLInputElement` object through a callback, store the reference as a class property, then use that reference to later trigger a click from your event handlers using the `HTMLElement.click` method. This can be done in two steps:
+     ref prop를 사용하여 콜백을 통해 기본 `HTMLInputElement` 객체에 대한 참조를 가져와서, 참조를 클래스 속성으로 저장한 다음, 해당 참조의 `HTMLElement.click` 메서드를 사용하여 이벤트 핸들러에서 클릭을 트리거 할 수 있다.
 
-     1. Create ref in render method:
+     1. render 메서드 안에서 ref를 만든다.
 
          ```jsx harmony
          <input ref={input => this.inputElement = input} />
          ```
 
-     2. Apply click event in your event handler:
+     2. 이벤트 핸들러에 클릭 이벤트를 적용한다.
 
          ```javascript
          this.inputElement.click()

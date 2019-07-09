@@ -134,7 +134,7 @@
 |113| [How to avoid using relative path imports in create-react-app?](#how-to-avoid-using-relative-path-imports-in-create-react-app) |
 |114| [React Router용 Google 웹 로그 분석을 추가하는 방법은?](#React-Router용-Google-웹-로그-분석을-추가하는-방법은) |
 |115| [매 초마다 컴포넌트를 업데이트 하는 방법은?](#매-초마다-컴포넌트를-업데이트-하는-방법은) |
-|116| [How do you apply vendor prefixes to inline styles in React?](#how-do-you-apply-vendor-prefixes-to-inline-styles-in-react) |
+|116| [React에서 인라인 스타일에 벤더 접두사는 어떻게 적용하나?](#React에서-인라인-스타일에-벤더-접두사는-어떻게-적용하나) |
 |117| [How to import and export components using react and ES6?](#how-to-import-and-export-components-using-react-and-es6) |
 |118| [React 컴포넌트 이름이 대문자로 시작해야 하는 이유는?](#React-컴포넌트-이름이-대문자로-시작해야-하는-이유는) |
 |119| [Why is a component constructor called only once?](#why-is-a-component-constructor-called-only-once) |
@@ -2296,9 +2296,9 @@
      }
      ```
 
-116. ### How do you apply vendor prefixes to inline styles in React?
+116. ### React에서 인라인 스타일에 벤더 접두사는 어떻게 적용하나?
 
-     React *does not* apply *vendor prefixes* automatically. You need to add vendor prefixes manually.
+     React는 *벤더 접두사*를 자동으로 **적용하지 않는다**. 벤더 접두사를 수동으로 추가해야 한다.
 
      ```jsx harmony
      <div style={{

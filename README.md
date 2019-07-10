@@ -2351,7 +2351,7 @@
      }
      ```
 
-     *Static fields*는 *Class Fields* 스테이지 3 제안 일부이다.
+     *Static fields*는 *Class Fields* 스테이지 3 제안의 일부이다.
 
 121. ### How to programmatically trigger click event in React?
 

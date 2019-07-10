@@ -143,7 +143,7 @@
 |122| [Is it possible to use async/await in plain React?](#is-it-possible-to-use-asyncawait-in-plain-react) |
 |123| [What are the common folder structures for React?](#what-are-the-common-folder-structures-for-react) |
 |124| [What are the popular packages for animation?](#what-are-the-popular-packages-for-animation) |
-|125| [What is the benefit of styles modules?](#what-is-the-benefit-of-styles-modules) |
+|125| [스타일 모듈의 이점은?](#스타일-모듈의-이점은) |
 |126| [What are the popular React-specific linters?](#what-are-the-popular-react-specific-linters) |
 |127| [How to make AJAX call and In which component lifecycle methods should I make an AJAX call?](#how-to-make-ajax-call-and-in-which-component-lifecycle-methods-should-i-make-an-ajax-call) |
 |128| [What are render props?](#what-are-render-props) |
@@ -2428,11 +2428,11 @@
 
      *React Transition Group* and *React Motion* are popular animation packages in React ecosystem.
 
-125. ### What is the benefit of styles modules?
+125. ### 스타일 모듈의 이점은?
 
-     It is recommended to avoid hard coding style values in components. Any values that are likely to be used across different UI components should be extracted into their own modules.
+     컴포넌트에서 스타일 값을 하드 코딩 하는 것은 좋지 않다. 다른 UI 컴포넌트에서 사용될 가능성이 있는 값은 자체 모듈로 뽑아내야 한다.
 
-     For example, these styles could be extracted into a separate component:
+     예를 들어, 이러한 스타일은 별도의 컴포넌트로 뽑아낼 수 있다.
 
      ```javascript
      export const colors = {
@@ -2450,7 +2450,7 @@
      ]
      ```
 
-     And then imported individually in other components:
+     그런 다음 다른 컴포넌트에서 개별적으로 가져온다.
 
      ```javascript
      import { space, colors } from './styles'

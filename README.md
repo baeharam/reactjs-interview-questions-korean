@@ -141,7 +141,7 @@
 |120| [How to define constants in React?](#how-to-define-constants-in-react) |
 |121| [React에서 프로그래밍 방식으로 클릭 이벤트를 발생시키는 방법은?](#React에서-프로그래밍-방식으로-클릭-이벤트를-발생시키는-방법은) |
 |122| [Is it possible to use async/await in plain React?](#is-it-possible-to-use-asyncawait-in-plain-react) |
-|123| [What are the common folder structures for React?](#what-are-the-common-folder-structures-for-react) |
+|123| [React의 일반적인 폴더 구조는?](#React의-일반적인-폴더-구조는) |
 |124| [What are the popular packages for animation?](#what-are-the-popular-packages-for-animation) |
 |125| [What is the benefit of styles modules?](#what-is-the-benefit-of-styles-modules) |
 |126| [What are the popular React-specific linters?](#what-are-the-popular-react-specific-linters) |
@@ -2373,13 +2373,13 @@
 
      If you want to use `async`/`await` in React, you will need *Babel* and [transform-async-to-generator](https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) plugin. React Native ships with Babel and a set of transforms.
 
-123. ### What are the common folder structures for React?
+123. ### React의 일반적인 폴더 구조는?
 
-     There are two common practices for React project file structure.
+     React 프로젝트 파일 구조는 일반적으로 사용되는 2가지 방법이 있다.
 
-     1. **Grouping by features or routes:**
+     1. **기능 또는 경로별로 그룹화**
 
-         One common way to structure projects is locate CSS, JS, and tests together, grouped by feature or route.
+         프로젝트를 구조화하는 일반적인 방법의 하나는 기능이나 경로별로 그룹화된 CSS, JS, 및 테스트를 함께 배치하는 것이다.
 
          ```
          common/
@@ -2402,9 +2402,9 @@
          └─ ProfileAPI.js
          ```
 
-     2. **Grouping by file type:**
+     2. **파일 타입으로 그룹화**
 
-         Another popular way to structure projects is to group similar files together.
+         프로젝트를 구조화하는 다른 보편적인 방법은 유사한 파일끼리 그룹화하는 것이다.
 
          ```
          api/

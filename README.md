@@ -145,7 +145,7 @@
 |124| [What are the popular packages for animation?](#what-are-the-popular-packages-for-animation) |
 |125| [What is the benefit of styles modules?](#what-is-the-benefit-of-styles-modules) |
 |126| [What are the popular React-specific linters?](#what-are-the-popular-react-specific-linters) |
-|127| [How to make AJAX call and In which component lifecycle methods should I make an AJAX call?](#how-to-make-ajax-call-and-in-which-component-lifecycle-methods-should-i-make-an-ajax-call) |
+|127| [AJAX 호출하는 방법과 어느 컴포넌트 라이프 사이클 메서드에서 AJAX 호출을 해야하나?](#AJAX-호출하는-방법과-어느-컴포넌트-라이프-사이클-메서드에서-AJAX-호출을-해야하나?) |
 |128| [What are render props?](#what-are-render-props) |
 |   | **React Router** |
 |129| [What is React Router?](#what-is-react-router) |
@@ -2460,11 +2460,11 @@
 
      ESLint is a popular JavaScript linter. There are plugins available that analyse specific code styles. One of the most common for React is an npm package called `eslint-plugin-react`. By default, it will check a number of best practices, with rules checking things from keys in iterators to a complete set of prop types. Another popular plugin is `eslint-plugin-jsx-a11y`, which will help fix common issues with accessibility. As JSX offers slightly different syntax to regular HTML, issues with `alt` text and `tabindex`, for example, will not be picked up by regular plugins.
 
-127. ### How to make AJAX call and in which component lifecycle methods should I make an AJAX call?
+127. ### AJAX 호출하는 방법과 어느 컴포넌트 라이프 사이클 메서드에서 AJAX 호출을 해야하나?
 
-     You can use AJAX libraries such as Axios, jQuery AJAX, and the browser built-in `fetch`. You should fetch data in the `componentDidMount()` lifecycle method. This is so you can use `setState()` to update your component when the data is retrieved.
+     Axios, jQuery AJAX 및 브라우저 내장 `fetch`와 같은 AJAX libraries를 사용할 수 있다. `componentDidMount()` 라이프 사이클 메서드에서 데이터를 가져와야 한다. 데이터를 검색할 때 `setState()`를 사용하여 컴포넌트를 업데이트 할 수 있다.
 
-     For example, the employees list fetched from API and set local state:
+     예를 들어, 직원 목록은 API에서 가져와서 로컬 state에 설정한다.
 
      ```jsx harmony
      class MyComponent extends React.Component {

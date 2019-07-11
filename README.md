@@ -144,7 +144,7 @@
 |123| [React의 일반적인 폴더 구조는?](#React의-일반적인-폴더-구조는) |
 |124| [인기 애니메이션 패키지는?](#인기-애니메이션-패키지는) |
 |125| [스타일 모듈의 이점은?](#스타일-모듈의-이점은) |
-|126| [What are the popular React-specific linters?](#what-are-the-popular-react-specific-linters) |
+|126| [인기있는 React-관련 linters는?](#인기있는-React-관련-linters는) |
 |127| [How to make AJAX call and In which component lifecycle methods should I make an AJAX call?](#how-to-make-ajax-call-and-in-which-component-lifecycle-methods-should-i-make-an-ajax-call) |
 |128| [What are render props?](#what-are-render-props) |
 |   | **React Router** |
@@ -2456,9 +2456,9 @@
      import { space, colors } from './styles'
      ```
 
-126. ### What are the popular React-specific linters?
+126. ### 인기있는 React-관련 linters는?
 
-     ESLint is a popular JavaScript linter. There are plugins available that analyse specific code styles. One of the most common for React is an npm package called `eslint-plugin-react`. By default, it will check a number of best practices, with rules checking things from keys in iterators to a complete set of prop types. Another popular plugin is `eslint-plugin-jsx-a11y`, which will help fix common issues with accessibility. As JSX offers slightly different syntax to regular HTML, issues with `alt` text and `tabindex`, for example, will not be picked up by regular plugins.
+     ESLint는 인기 있는 JavaScript linter이다. 특정 코드 스타일을 분석할 수 있는 플러그인이 있다. React에서 가장 일반적으로 사용되는 패키지 중 하나는 `eslint-plugin-react` npm 패키지다. 기본적으로, 반복자에게 있는 키부터 전체 prop 타입까지 검사하는 규칙을 사용하여 가장 좋은 사례를 여러 번 확인할 것이다. 또 다른 인기 있는 플러그인은 `eslint-plugin-jsx-a11y`로, 접근성과 관련된 일반적인 문제를 해결하는 데 도움이 된다. JSX는 일반 HTML과 약간 다른 구문을 제공하기 때문에 `alt` 텍스트나 `tabindex`와 관련된 문제는 일반적인 플러그인으로 찾아낼 수 없다.
 
 127. ### How to make AJAX call and in which component lifecycle methods should I make an AJAX call?
 

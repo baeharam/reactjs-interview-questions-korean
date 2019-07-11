@@ -140,11 +140,9 @@
 |119| [컴포넌트 생성자는 왜 한 번만 불리나?](#컴포넌트-생성자는-왜-한-번만-불리나) |
 |120| [React에서 상수를 정의하는 방법은?](#React에서-상수를-정의하는-방법은) |
 |121| [React에서 프로그래밍 방식으로 클릭 이벤트를 발생시키는 방법은?](#React에서-프로그래밍-방식으로-클릭-이벤트를-발생시키는-방법은) |
-|122| [Is it possible to use async/await in plain React?](#is-it-possible-to-use-asyncawait-in-plain-react) |
-=======
 |122| [async/await를 평범한 React에서 사용할 수 있나?](#async/await를-평범한-React에서-사용할-수-있나) |
 |123| [React의 일반적인 폴더 구조는?](#React의-일반적인-폴더-구조는) |
-|124| [What are the popular packages for animation?](#what-are-the-popular-packages-for-animation) |
+|124| [인기 애니메이션 패키지는?](#인기-애니메이션-패키지는) |
 |125| [What is the benefit of styles modules?](#what-is-the-benefit-of-styles-modules) |
 |126| [What are the popular React-specific linters?](#what-are-the-popular-react-specific-linters) |
 |127| [How to make AJAX call and In which component lifecycle methods should I make an AJAX call?](#how-to-make-ajax-call-and-in-which-component-lifecycle-methods-should-i-make-an-ajax-call) |
@@ -2426,9 +2424,9 @@
          └─ ProfileHeader.css
          ```
 
-124. ### What are the popular packages for animation?
+124. ### 인기 애니메이션 패키지는?
 
-     *React Transition Group* and *React Motion* are popular animation packages in React ecosystem.
+     *React Transition Group*과 *React Motion*이 React 생태계에서 가장 인기 있는 애니메이션 패키지이다.
 
 125. ### What is the benefit of styles modules?
 

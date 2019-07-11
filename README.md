@@ -134,12 +134,12 @@
 |113| [How to avoid using relative path imports in create-react-app?](#how-to-avoid-using-relative-path-imports-in-create-react-app) |
 |114| [React Router용 Google 웹 로그 분석을 추가하는 방법은?](#React-Router용-Google-웹-로그-분석을-추가하는-방법은) |
 |115| [매 초마다 컴포넌트를 업데이트 하는 방법은?](#매-초마다-컴포넌트를-업데이트-하는-방법은) |
-|116| [How do you apply vendor prefixes to inline styles in React?](#how-do-you-apply-vendor-prefixes-to-inline-styles-in-react) |
-|117| [How to import and export components using react and ES6?](#how-to-import-and-export-components-using-react-and-es6) |
-|118| [Why React component names must begin with a capital letter?](#why-react-component-names-must-begin-with-a-capital-letter) |
-|119| [Why is a component constructor called only once?](#why-is-a-component-constructor-called-only-once) |
+|116| [React에서 인라인 스타일에 벤더 접두사는 어떻게 적용하나?](#React에서-인라인-스타일에-벤더-접두사는-어떻게-적용하나) |
+|117| [React와 ES6를 사용해서 컴포넌트를 가져오고 내보내는 방법은?](#React와-ES6를-사용해서-컴포넌트를-가져오고-내보내는-방법은) |
+|118| [React 컴포넌트 이름이 대문자로 시작해야 하는 이유는?](#React-컴포넌트-이름이-대문자로-시작해야-하는-이유는) |
+|119| [컴포넌트 생성자는 왜 한 번만 불리나?](#컴포넌트-생성자는-왜-한-번만-불리나) |
 |120| [React에서 상수를 정의하는 방법은?](#React에서-상수를-정의하는-방법은) |
-|121| [How to programmatically trigger click event in React?](#how-to-programmatically-trigger-click-event-in-react) |
+|121| [React에서 프로그래밍 방식으로 클릭 이벤트를 발생시키는 방법은?](#React에서-프로그래밍-방식으로-클릭-이벤트를-발생시키는-방법은) |
 |122| [Is it possible to use async/await in plain React?](#is-it-possible-to-use-asyncawait-in-plain-react) |
 |123| [What are the common folder structures for React?](#what-are-the-common-folder-structures-for-react) |
 |124| [What are the popular packages for animation?](#what-are-the-popular-packages-for-animation) |
@@ -2296,9 +2296,9 @@
      }
      ```
 
-116. ### How do you apply vendor prefixes to inline styles in React?
+116. ### React에서 인라인 스타일에 벤더 접두사는 어떻게 적용하나?
 
-     React *does not* apply *vendor prefixes* automatically. You need to add vendor prefixes manually.
+     React는 *벤더 접두사*를 자동으로 **적용하지 않는다**. 벤더 접두사를 수동으로 추가해야 한다.
 
      ```jsx harmony
      <div style={{
@@ -2308,9 +2308,9 @@
      }} />
      ```
 
-117. ### How to import and export components using React and ES6?
+117. ### React와 ES6를 사용해서 컴포넌트를 가져오고 내보내는 방법은?
 
-     You should use default for exporting the components
+     컴포넌트를 내보내려면 default를 사용하면 된다.
 
      ```jsx harmony
      import React from 'react'
@@ -2327,19 +2327,19 @@
      }
      ```
 
-     With the export specifier, the MyProfile is going to be the member and exported to this module and the same can be imported without mentioning the name in other components.
+      export 지정자를 사용하면 MyProfile이 멤버가 되어 이 모듈로 내보낼 수 있으며, 다른 컴포넌트에 이름을 언급하지 않고도 가져올 수 있다. 
 
-118. ### Why React component names must begin with a capital letter?
+118. ### React 컴포넌트 이름이 대문자로 시작해야 하는 이유는?
 
-     In JSX, lowercase tag names are considered to be HTML tags. However, capitalized and lowercase tag names with a dot (property accessors) aren't.
+     JSX에서 소문자 태그 이름은 HTML 태그로 간주한다. 그러나 점으로 표시된 대문자 및 소문자 태그 이름(속성 접근자)은 없다.
 
-     1. `<component />` compiles to `React.createElement('component')` (i.e, HTML tag)
-     2. `<obj.component />` compiles to `React.createElement(obj.component)`
-     3. `<Component />` compiles to `React.createElement(Component)`
+     1. `<component />`는 `React.createElement('component')`로 컴파일된다. (i.e, HTML tag)
+     2. `<obj.component />`는 `React.createElement(obj.component)`로 컴파일된다.
+     3. `<Component />`는 `React.createElement(Component)`로 컴파일된다.
 
-119. ### Why is a component constructor called only once?
+119. ### 컴포넌트 생성자는 왜 한 번만 불리나?
 
-     React's *reconciliation* algorithm assumes that without any information to the contrary, if a custom component appears in the same place on subsequent renders, it's the same component as before, so reuses the previous instance rather than creating a new one.
+     React의 *reconciliation* 알고리즘에서는 정반대 정보가 없다고 가정하는데, 사용자 지정 컴포넌트가 후속 렌더링의 같은 위치에 나타나면, 이전 컴포넌트와 동일 하므로 이전 인스턴스를 새로 작성하지 않고 다시 사용한다.
 
 120. ### React에서 상수를 정의하는 방법은?
 
@@ -2353,17 +2353,17 @@
 
      *Static fields*는 *Class Fields* 스테이지 3 제안의 일부이다.
 
-121. ### How to programmatically trigger click event in React?
+121. ### React에서 프로그래밍 방식으로 클릭 이벤트를 발생시키는 방법은?
 
-     You could use the ref prop to acquire a reference to the underlying `HTMLInputElement` object through a callback, store the reference as a class property, then use that reference to later trigger a click from your event handlers using the `HTMLElement.click` method. This can be done in two steps:
+     ref prop를 사용하여 콜백을 통해 기본 `HTMLInputElement` 객체에 대한 참조를 가져와서, 참조를 클래스 속성으로 저장한 다음, 해당 참조의 `HTMLElement.click` 메서드를 사용하여 이벤트 핸들러에서 클릭을 트리거 할 수 있다.
 
-     1. Create ref in render method:
+     1. render 메서드 안에서 ref를 만든다.
 
          ```jsx harmony
          <input ref={input => this.inputElement = input} />
          ```
 
-     2. Apply click event in your event handler:
+     2. 이벤트 핸들러에 클릭 이벤트를 적용한다.
 
          ```javascript
          this.inputElement.click()

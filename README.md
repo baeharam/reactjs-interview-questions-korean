@@ -135,12 +135,14 @@
 |114| [React Router용 Google 웹 로그 분석을 추가하는 방법은?](#React-Router용-Google-웹-로그-분석을-추가하는-방법은) |
 |115| [매 초마다 컴포넌트를 업데이트 하는 방법은?](#매-초마다-컴포넌트를-업데이트-하는-방법은) |
 |116| [React에서 인라인 스타일에 벤더 접두사는 어떻게 적용하나?](#React에서-인라인-스타일에-벤더-접두사는-어떻게-적용하나) |
-|117| [How to import and export components using react and ES6?](#how-to-import-and-export-components-using-react-and-es6) |
+|117| [React와 ES6를 사용해서 컴포넌트를 가져오고 내보내는 방법은?](#React와-ES6를-사용해서-컴포넌트를-가져오고-내보내는-방법은) |
 |118| [React 컴포넌트 이름이 대문자로 시작해야 하는 이유는?](#React-컴포넌트-이름이-대문자로-시작해야-하는-이유는) |
 |119| [컴포넌트 생성자는 왜 한 번만 불리나?](#컴포넌트-생성자는-왜-한-번만-불리나) |
-|120| [How to define constants in React?](#how-to-define-constants-in-react) |
+|120| [React에서 상수를 정의하는 방법은?](#React에서-상수를-정의하는-방법은) |
 |121| [React에서 프로그래밍 방식으로 클릭 이벤트를 발생시키는 방법은?](#React에서-프로그래밍-방식으로-클릭-이벤트를-발생시키는-방법은) |
 |122| [Is it possible to use async/await in plain React?](#is-it-possible-to-use-asyncawait-in-plain-react) |
+=======
+|122| [async/await를 평범한 React에서 사용할 수 있나?](#async/await를-평범한-React에서-사용할-수-있나) |
 |123| [React의 일반적인 폴더 구조는?](#React의-일반적인-폴더-구조는) |
 |124| [What are the popular packages for animation?](#what-are-the-popular-packages-for-animation) |
 |125| [What is the benefit of styles modules?](#what-is-the-benefit-of-styles-modules) |
@@ -2308,9 +2310,9 @@
      }} />
      ```
 
-117. ### How to import and export components using React and ES6?
+117. ### React와 ES6를 사용해서 컴포넌트를 가져오고 내보내는 방법은?
 
-     You should use default for exporting the components
+     컴포넌트를 내보내려면 default를 사용하면 된다.
 
      ```jsx harmony
      import React from 'react'
@@ -2327,7 +2329,7 @@
      }
      ```
 
-     With the export specifier, the MyProfile is going to be the member and exported to this module and the same can be imported without mentioning the name in other components.
+      export 지정자를 사용하면 MyProfile이 멤버가 되어 이 모듈로 내보낼 수 있으며, 다른 컴포넌트에 이름을 언급하지 않고도 가져올 수 있다. 
 
 118. ### React 컴포넌트 이름이 대문자로 시작해야 하는 이유는?
 
@@ -2341,9 +2343,9 @@
 
      React의 *reconciliation* 알고리즘에서는 정반대 정보가 없다고 가정하는데, 사용자 지정 컴포넌트가 후속 렌더링의 같은 위치에 나타나면, 이전 컴포넌트와 동일 하므로 이전 인스턴스를 새로 작성하지 않고 다시 사용한다.
 
-120. ### How to define constants in React?
+120. ### React에서 상수를 정의하는 방법은?
 
-     You can use ES7 `static` field to define constant.
+     ES7 `static` 필드를 사용하여 상수를 정의할 수 있다.
 
      ```javascript
      class MyComponent extends React.Component {
@@ -2351,7 +2353,7 @@
      }
      ```
 
-     *Static fields* are part of the *Class Fields* stage 3 proposal.
+     *Static fields*는 *Class Fields* 스테이지 3 제안의 일부이다.
 
 121. ### React에서 프로그래밍 방식으로 클릭 이벤트를 발생시키는 방법은?
 
@@ -2369,9 +2371,9 @@
          this.inputElement.click()
          ```
 
-122. ### Is it possible to use async/await in plain React?
+122. ### async/await를 평범한 React에서 사용할 수 있나?
 
-     If you want to use `async`/`await` in React, you will need *Babel* and [transform-async-to-generator](https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) plugin. React Native ships with Babel and a set of transforms.
+     React에서 `async`/`await`을 사용하려면, *Babel* 및 [transform-async-to-generator](https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) 플러그인이 필요하다. React Native는 Babel과 변경 세트를 구성해야 한다.
 
 123. ### React의 일반적인 폴더 구조는?
 

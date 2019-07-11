@@ -140,7 +140,7 @@
 |119| [컴포넌트 생성자는 왜 한 번만 불리나?](#컴포넌트-생성자는-왜-한-번만-불리나) |
 |120| [React에서 상수를 정의하는 방법은?](#React에서-상수를-정의하는-방법은) |
 |121| [React에서 프로그래밍 방식으로 클릭 이벤트를 발생시키는 방법은?](#React에서-프로그래밍-방식으로-클릭-이벤트를-발생시키는-방법은) |
-|122| [Is it possible to use async/await in plain React?](#is-it-possible-to-use-asyncawait-in-plain-react) |
+|122| [async/await를 평범한 React에서 사용할 수 있나?](#async/await를-평범한-React에서-사용할-수-있나) |
 |123| [What are the common folder structures for React?](#what-are-the-common-folder-structures-for-react) |
 |124| [What are the popular packages for animation?](#what-are-the-popular-packages-for-animation) |
 |125| [What is the benefit of styles modules?](#what-is-the-benefit-of-styles-modules) |
@@ -2369,9 +2369,9 @@
          this.inputElement.click()
          ```
 
-122. ### Is it possible to use async/await in plain React?
+122. ### async/await를 평범한 React에서 사용할 수 있나?
 
-     If you want to use `async`/`await` in React, you will need *Babel* and [transform-async-to-generator](https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) plugin. React Native ships with Babel and a set of transforms.
+     React에서 `async`/`await`을 사용하려면, *Babel* 및 [transform-async-to-generator](https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) 플러그인이 필요하다. React Native는 Babel과 변경 세트를 구성해야 한다.
 
 123. ### What are the common folder structures for React?
 

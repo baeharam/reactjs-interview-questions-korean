@@ -145,7 +145,7 @@
 |124| [인기 애니메이션 패키지는?](#인기-애니메이션-패키지는) |
 |125| [스타일 모듈의 이점은?](#스타일-모듈의-이점은) |
 |126| [인기있는 React-관련 linters는?](#인기있는-React-관련-linters는) |
-|127| [How to make AJAX call and In which component lifecycle methods should I make an AJAX call?](#how-to-make-ajax-call-and-in-which-component-lifecycle-methods-should-i-make-an-ajax-call) |
+|127| [AJAX 호출하는 방법과 어느 컴포넌트 라이프 사이클 메서드에서 AJAX 호출을 해야하나?](#AJAX-호출하는-방법과-어느-컴포넌트-라이프-사이클-메서드에서-AJAX-호출을-해야하나?) |
 |128| [What are render props?](#what-are-render-props) |
 |   | **React Router** |
 |129| [What is React Router?](#what-is-react-router) |
@@ -2460,11 +2460,11 @@
 
      ESLint는 인기 있는 JavaScript linter이다. 특정 코드 스타일을 분석할 수 있는 플러그인이 있다. React에서 가장 일반적으로 사용되는 패키지 중 하나는 `eslint-plugin-react` npm 패키지다. 기본적으로, 반복자에게 있는 키부터 전체 prop 타입까지 검사하는 규칙을 사용하여 가장 좋은 사례를 여러 번 확인할 것이다. 또 다른 인기 있는 플러그인은 `eslint-plugin-jsx-a11y`로, 접근성과 관련된 일반적인 문제를 해결하는 데 도움이 된다. JSX는 일반 HTML과 약간 다른 구문을 제공하기 때문에 `alt` 텍스트나 `tabindex`와 관련된 문제는 일반적인 플러그인으로 찾아낼 수 없다.
 
-127. ### How to make AJAX call and in which component lifecycle methods should I make an AJAX call?
+127. ### AJAX 호출하는 방법과 어느 컴포넌트 라이프 사이클 메서드에서 AJAX 호출을 해야하나?
 
-     You can use AJAX libraries such as Axios, jQuery AJAX, and the browser built-in `fetch`. You should fetch data in the `componentDidMount()` lifecycle method. This is so you can use `setState()` to update your component when the data is retrieved.
+     Axios, jQuery AJAX 및 브라우저 내장 `fetch`와 같은 AJAX libraries를 사용할 수 있다. `componentDidMount()` 라이프 사이클 메서드에서 데이터를 가져와야 한다. 데이터를 검색할 때 `setState()`를 사용하여 컴포넌트를 업데이트 할 수 있다.
 
-     For example, the employees list fetched from API and set local state:
+     예를 들어, 직원 목록은 API에서 가져와서 로컬 state에 설정한다.
 
      ```jsx harmony
      class MyComponent extends React.Component {

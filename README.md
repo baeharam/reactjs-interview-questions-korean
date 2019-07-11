@@ -146,7 +146,7 @@
 |125| [스타일 모듈의 이점은?](#스타일-모듈의-이점은) |
 |126| [인기있는 React-관련 linters는?](#인기있는-React-관련-linters는) |
 |127| [AJAX 호출하는 방법과 어느 컴포넌트 라이프 사이클 메서드에서 AJAX 호출을 해야하나?](#AJAX-호출하는-방법과-어느-컴포넌트-라이프-사이클-메서드에서-AJAX-호출을-해야하나?) |
-|128| [What are render props?](#what-are-render-props) |
+|128| [render props란?](#render-props란) |
 |   | **React Router** |
 |129| [What is React Router?](#what-is-react-router) |
 |130| [How React Router is different from history library?](#how-react-router-is-different-from-history-library) |
@@ -2510,9 +2510,9 @@
      }
      ```
 
-128. ### What are render props?
+128. ### render props란?
 
-     **Render Props** is a simple technique for sharing code between components using a prop whose value is a function. The below component uses render prop which returns a React element.
+     **Render Props**는 값이 함수인 prop을 사용하여 컴포넌트 간 코드를 공유하는 간단한 기술이다. 아래의 컴포넌트는 React 엘리먼트를 반환하는 render props를 사용한다.
 
      ```jsx harmony
      <DataProvider render={data => (
@@ -2520,7 +2520,7 @@
      )}/>
      ```
 
-     Libraries such as React Router and DownShift are using this pattern.
+     React Router와 DownShift 같은 라이브러리는 이 패턴을 사용한다.
 
 ## React Router
 

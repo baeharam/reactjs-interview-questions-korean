@@ -135,17 +135,17 @@
 |114| [React Router용 Google 웹 로그 분석을 추가하는 방법은?](#React-Router용-Google-웹-로그-분석을-추가하는-방법은) |
 |115| [매 초마다 컴포넌트를 업데이트 하는 방법은?](#매-초마다-컴포넌트를-업데이트-하는-방법은) |
 |116| [React에서 인라인 스타일에 벤더 접두사는 어떻게 적용하나?](#React에서-인라인-스타일에-벤더-접두사는-어떻게-적용하나) |
-|117| [How to import and export components using react and ES6?](#how-to-import-and-export-components-using-react-and-es6) |
+|117| [React와 ES6를 사용해서 컴포넌트를 가져오고 내보내는 방법은?](#React와-ES6를-사용해서-컴포넌트를-가져오고-내보내는-방법은) |
 |118| [React 컴포넌트 이름이 대문자로 시작해야 하는 이유는?](#React-컴포넌트-이름이-대문자로-시작해야-하는-이유는) |
 |119| [컴포넌트 생성자는 왜 한 번만 불리나?](#컴포넌트-생성자는-왜-한-번만-불리나) |
-|120| [How to define constants in React?](#how-to-define-constants-in-react) |
+|120| [React에서 상수를 정의하는 방법은?](#React에서-상수를-정의하는-방법은) |
 |121| [React에서 프로그래밍 방식으로 클릭 이벤트를 발생시키는 방법은?](#React에서-프로그래밍-방식으로-클릭-이벤트를-발생시키는-방법은) |
-|122| [Is it possible to use async/await in plain React?](#is-it-possible-to-use-asyncawait-in-plain-react) |
-|123| [What are the common folder structures for React?](#what-are-the-common-folder-structures-for-react) |
-|124| [What are the popular packages for animation?](#what-are-the-popular-packages-for-animation) |
-|125| [What is the benefit of styles modules?](#what-is-the-benefit-of-styles-modules) |
-|126| [What are the popular React-specific linters?](#what-are-the-popular-react-specific-linters) |
-|127| [How to make AJAX call and In which component lifecycle methods should I make an AJAX call?](#how-to-make-ajax-call-and-in-which-component-lifecycle-methods-should-i-make-an-ajax-call) |
+|122| [async/await를 평범한 React에서 사용할 수 있나?](#async/await를-평범한-React에서-사용할-수-있나) |
+|123| [React의 일반적인 폴더 구조는?](#React의-일반적인-폴더-구조는) |
+|124| [인기 애니메이션 패키지는?](#인기-애니메이션-패키지는) |
+|125| [스타일 모듈의 이점은?](#스타일-모듈의-이점은) |
+|126| [인기있는 React-관련 linters는?](#인기있는-React-관련-linters는) |
+|127| [AJAX 호출하는 방법과 어느 컴포넌트 라이프 사이클 메서드에서 AJAX 호출을 해야하나?](#AJAX-호출하는-방법과-어느-컴포넌트-라이프-사이클-메서드에서-AJAX-호출을-해야하나?) |
 |128| [render props란?](#render-props란) |
 |   | **React Router** |
 |129| [What is React Router?](#what-is-react-router) |
@@ -2308,9 +2308,9 @@
      }} />
      ```
 
-117. ### How to import and export components using React and ES6?
+117. ### React와 ES6를 사용해서 컴포넌트를 가져오고 내보내는 방법은?
 
-     You should use default for exporting the components
+     컴포넌트를 내보내려면 default를 사용하면 된다.
 
      ```jsx harmony
      import React from 'react'
@@ -2327,7 +2327,7 @@
      }
      ```
 
-     With the export specifier, the MyProfile is going to be the member and exported to this module and the same can be imported without mentioning the name in other components.
+      export 지정자를 사용하면 MyProfile이 멤버가 되어 이 모듈로 내보낼 수 있으며, 다른 컴포넌트에 이름을 언급하지 않고도 가져올 수 있다. 
 
 118. ### React 컴포넌트 이름이 대문자로 시작해야 하는 이유는?
 
@@ -2341,9 +2341,9 @@
 
      React의 *reconciliation* 알고리즘에서는 정반대 정보가 없다고 가정하는데, 사용자 지정 컴포넌트가 후속 렌더링의 같은 위치에 나타나면, 이전 컴포넌트와 동일 하므로 이전 인스턴스를 새로 작성하지 않고 다시 사용한다.
 
-120. ### How to define constants in React?
+120. ### React에서 상수를 정의하는 방법은?
 
-     You can use ES7 `static` field to define constant.
+     ES7 `static` 필드를 사용하여 상수를 정의할 수 있다.
 
      ```javascript
      class MyComponent extends React.Component {
@@ -2351,7 +2351,7 @@
      }
      ```
 
-     *Static fields* are part of the *Class Fields* stage 3 proposal.
+     *Static fields*는 *Class Fields* 스테이지 3 제안의 일부이다.
 
 121. ### React에서 프로그래밍 방식으로 클릭 이벤트를 발생시키는 방법은?
 
@@ -2369,17 +2369,17 @@
          this.inputElement.click()
          ```
 
-122. ### Is it possible to use async/await in plain React?
+122. ### async/await를 평범한 React에서 사용할 수 있나?
 
-     If you want to use `async`/`await` in React, you will need *Babel* and [transform-async-to-generator](https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) plugin. React Native ships with Babel and a set of transforms.
+     React에서 `async`/`await`을 사용하려면, *Babel* 및 [transform-async-to-generator](https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) 플러그인이 필요하다. React Native는 Babel과 변경 세트를 구성해야 한다.
 
-123. ### What are the common folder structures for React?
+123. ### React의 일반적인 폴더 구조는?
 
-     There are two common practices for React project file structure.
+     React 프로젝트 파일 구조는 일반적으로 사용되는 2가지 방법이 있다.
 
-     1. **Grouping by features or routes:**
+     1. **기능 또는 경로별로 그룹화**
 
-         One common way to structure projects is locate CSS, JS, and tests together, grouped by feature or route.
+         프로젝트를 구조화하는 일반적인 방법의 하나는 기능이나 경로별로 그룹화된 CSS, JS, 및 테스트를 함께 배치하는 것이다.
 
          ```
          common/
@@ -2402,9 +2402,9 @@
          └─ ProfileAPI.js
          ```
 
-     2. **Grouping by file type:**
+     2. **파일 타입으로 그룹화**
 
-         Another popular way to structure projects is to group similar files together.
+         프로젝트를 구조화하는 다른 보편적인 방법은 유사한 파일끼리 그룹화하는 것이다.
 
          ```
          api/
@@ -2424,15 +2424,15 @@
          └─ ProfileHeader.css
          ```
 
-124. ### What are the popular packages for animation?
+124. ### 인기 애니메이션 패키지는?
 
-     *React Transition Group* and *React Motion* are popular animation packages in React ecosystem.
+     *React Transition Group*과 *React Motion*이 React 생태계에서 가장 인기 있는 애니메이션 패키지이다.
 
-125. ### What is the benefit of styles modules?
+125. ### 스타일 모듈의 이점은?
 
-     It is recommended to avoid hard coding style values in components. Any values that are likely to be used across different UI components should be extracted into their own modules.
+     컴포넌트에서 스타일 값을 하드 코딩 하는 것은 좋지 않다. 다른 UI 컴포넌트에서 사용될 가능성이 있는 값은 자체 모듈로 뽑아내야 한다.
 
-     For example, these styles could be extracted into a separate component:
+     예를 들어, 이러한 스타일은 별도의 컴포넌트로 뽑아낼 수 있다.
 
      ```javascript
      export const colors = {
@@ -2450,21 +2450,21 @@
      ]
      ```
 
-     And then imported individually in other components:
+     그런 다음 다른 컴포넌트에서 개별적으로 가져온다.
 
      ```javascript
      import { space, colors } from './styles'
      ```
 
-126. ### What are the popular React-specific linters?
+126. ### 인기있는 React-관련 linters는?
 
-     ESLint is a popular JavaScript linter. There are plugins available that analyse specific code styles. One of the most common for React is an npm package called `eslint-plugin-react`. By default, it will check a number of best practices, with rules checking things from keys in iterators to a complete set of prop types. Another popular plugin is `eslint-plugin-jsx-a11y`, which will help fix common issues with accessibility. As JSX offers slightly different syntax to regular HTML, issues with `alt` text and `tabindex`, for example, will not be picked up by regular plugins.
+     ESLint는 인기 있는 JavaScript linter이다. 특정 코드 스타일을 분석할 수 있는 플러그인이 있다. React에서 가장 일반적으로 사용되는 패키지 중 하나는 `eslint-plugin-react` npm 패키지다. 기본적으로, 반복자에게 있는 키부터 전체 prop 타입까지 검사하는 규칙을 사용하여 가장 좋은 사례를 여러 번 확인할 것이다. 또 다른 인기 있는 플러그인은 `eslint-plugin-jsx-a11y`로, 접근성과 관련된 일반적인 문제를 해결하는 데 도움이 된다. JSX는 일반 HTML과 약간 다른 구문을 제공하기 때문에 `alt` 텍스트나 `tabindex`와 관련된 문제는 일반적인 플러그인으로 찾아낼 수 없다.
 
-127. ### How to make AJAX call and in which component lifecycle methods should I make an AJAX call?
+127. ### AJAX 호출하는 방법과 어느 컴포넌트 라이프 사이클 메서드에서 AJAX 호출을 해야하나?
 
-     You can use AJAX libraries such as Axios, jQuery AJAX, and the browser built-in `fetch`. You should fetch data in the `componentDidMount()` lifecycle method. This is so you can use `setState()` to update your component when the data is retrieved.
+     Axios, jQuery AJAX 및 브라우저 내장 `fetch`와 같은 AJAX libraries를 사용할 수 있다. `componentDidMount()` 라이프 사이클 메서드에서 데이터를 가져와야 한다. 데이터를 검색할 때 `setState()`를 사용하여 컴포넌트를 업데이트 할 수 있다.
 
-     For example, the employees list fetched from API and set local state:
+     예를 들어, 직원 목록은 API에서 가져와서 로컬 state에 설정한다.
 
      ```jsx harmony
      class MyComponent extends React.Component {

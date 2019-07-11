@@ -138,7 +138,7 @@
 |117| [React와 ES6를 사용해서 컴포넌트를 가져오고 내보내는 방법은?](#React와-ES6를-사용해서-컴포넌트를-가져오고-내보내는-방법은) |
 |118| [React 컴포넌트 이름이 대문자로 시작해야 하는 이유는?](#React-컴포넌트-이름이-대문자로-시작해야-하는-이유는) |
 |119| [컴포넌트 생성자는 왜 한 번만 불리나?](#컴포넌트-생성자는-왜-한-번만-불리나) |
-|120| [How to define constants in React?](#how-to-define-constants-in-react) |
+|120| [React에서 상수를 정의하는 방법은?](#React에서-상수를-정의하는-방법은) |
 |121| [React에서 프로그래밍 방식으로 클릭 이벤트를 발생시키는 방법은?](#React에서-프로그래밍-방식으로-클릭-이벤트를-발생시키는-방법은) |
 |122| [Is it possible to use async/await in plain React?](#is-it-possible-to-use-asyncawait-in-plain-react) |
 |123| [What are the common folder structures for React?](#what-are-the-common-folder-structures-for-react) |
@@ -2341,9 +2341,9 @@
 
      React의 *reconciliation* 알고리즘에서는 정반대 정보가 없다고 가정하는데, 사용자 지정 컴포넌트가 후속 렌더링의 같은 위치에 나타나면, 이전 컴포넌트와 동일 하므로 이전 인스턴스를 새로 작성하지 않고 다시 사용한다.
 
-120. ### How to define constants in React?
+120. ### React에서 상수를 정의하는 방법은?
 
-     You can use ES7 `static` field to define constant.
+     ES7 `static` 필드를 사용하여 상수를 정의할 수 있다.
 
      ```javascript
      class MyComponent extends React.Component {
@@ -2351,7 +2351,7 @@
      }
      ```
 
-     *Static fields* are part of the *Class Fields* stage 3 proposal.
+     *Static fields*는 *Class Fields* 스테이지 3 제안의 일부이다.
 
 121. ### React에서 프로그래밍 방식으로 클릭 이벤트를 발생시키는 방법은?
 

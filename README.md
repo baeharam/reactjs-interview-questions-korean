@@ -135,7 +135,7 @@
 |114| [React Router용 Google 웹 로그 분석을 추가하는 방법은?](#React-Router용-Google-웹-로그-분석을-추가하는-방법은) |
 |115| [매 초마다 컴포넌트를 업데이트 하는 방법은?](#매-초마다-컴포넌트를-업데이트-하는-방법은) |
 |116| [React에서 인라인 스타일에 벤더 접두사는 어떻게 적용하나?](#React에서-인라인-스타일에-벤더-접두사는-어떻게-적용하나) |
-|117| [How to import and export components using react and ES6?](#how-to-import-and-export-components-using-react-and-es6) |
+|117| [React와 ES6를 사용해서 컴포넌트를 가져오고 내보내는 방법은?](#React와-ES6를-사용해서-컴포넌트를-가져오고-내보내는-방법은) |
 |118| [React 컴포넌트 이름이 대문자로 시작해야 하는 이유는?](#React-컴포넌트-이름이-대문자로-시작해야-하는-이유는) |
 |119| [컴포넌트 생성자는 왜 한 번만 불리나?](#컴포넌트-생성자는-왜-한-번만-불리나) |
 |120| [How to define constants in React?](#how-to-define-constants-in-react) |
@@ -2308,9 +2308,9 @@
      }} />
      ```
 
-117. ### How to import and export components using React and ES6?
+117. ### React와 ES6를 사용해서 컴포넌트를 가져오고 내보내는 방법은?
 
-     You should use default for exporting the components
+     컴포넌트를 내보내려면 default를 사용하면 된다.
 
      ```jsx harmony
      import React from 'react'
@@ -2327,7 +2327,7 @@
      }
      ```
 
-     With the export specifier, the MyProfile is going to be the member and exported to this module and the same can be imported without mentioning the name in other components.
+      export 지정자를 사용하면 MyProfile이 멤버가 되어 이 모듈로 내보낼 수 있으며, 다른 컴포넌트에 이름을 언급하지 않고도 가져올 수 있다. 
 
 118. ### React 컴포넌트 이름이 대문자로 시작해야 하는 이유는?
 

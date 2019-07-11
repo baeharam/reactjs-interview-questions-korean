@@ -110,36 +110,36 @@
 |89 | [constructor과 getInitialState의 차이점은?](#constructor과-getInitialState의-차이점은) |
 |90 | [setState를 호출하지 않고도 컴포넌트 리렌더링이 가능한가?](#setState를-호출하지-않고도-컴포넌트-리렌더링이-가능한가) |
 |91 | [ES6 클래스를 사용하는 React에서 super()와 super(props)의 차이점은?](#ES6-클래스를-사용하는-React에서-super()와-super(props)의-차이점은) |
-|92 | [How to loop inside JSX?](#how-to-loop-inside-jsx) |
-|93 | [How do you access props in attribute quotes?](#how-do-you-access-props-in-attribute-quotes) |
-|94 | [What is React PropType array with shape?](#what-is-react-proptype-array-with-shape) |
-|95 | [How to conditionally apply class attributes?](#how-to-conditionally-apply-class-attributes) |
-|96 | [What is the difference between React and ReactDOM?](#what-is-the-difference-between-react-and-reactdom) |
-|97 | [Why ReactDOM is separated from React?](#why-reactdom-is-separated-from-react) |
-|98 | [How to use React label element?](#how-to-use-react-label-element) |
-|99 | [How to combine multiple inline style objects?](#how-to-combine-multiple-inline-style-objects) |
-|100| [How to re-render the view when the browser is resized?](#how-to-re-render-the-view-when-the-browser-is-resized)
-|101| [What is the difference between setState and replaceState methods?](#what-is-the-difference-between-setstate-and-replacestate-methods) |
-|102| [How to listen to state changes?](#how-to-listen-to-state-changes) |
-|103| [What is the recommended approach of removing an array element in react state?](#what-is-the-recommended-approach-of-removing-an-array-element-in-react-state) |
-|104| [Is it possible to use React without rendering HTML?](#is-it-possible-to-use-react-without-rendering-html) |
-|105| [How to pretty print JSON with React?](#how-to-pretty-print-json-with-react) |
-|106| [Why you can't update props in React?](#why-you-cant-update-props-in-react) |
-|107| [How to focus an input element on page load?](#how-to-focus-an-input-element-on-page-load) |
+|92 | [JSX 내부에서 반복하는 방법?](#JSX-내부에서-반복하는-방법) |
+|93 | [속성 인용문에 props를 어떻게 넣나?](#속성-인용문에-props를-어떻게-넣나) |
+|94 | [모양이 있는 React proptype array란?](#모양이-있는-React-proptype-array란) |
+|95 | [클래스 속성을 조건부로 적용하는 방법은?](#클래스-속성을-조건부로-적용하는-방법은) |
+|96 | [React와 ReactDOM의 차이점?](#React와-ReactDOM의-차이점) |
+|97 | [왜 ReactDOM은 React와 분리되었나?](#왜-ReactDOM은-React와-분리되었나) |
+|98 | [React 라벨 엘리먼트를 사용하는 방법은?](#React-라벨-엘리먼트를-사용하는-방법은) |
+|99 | [여러 개의 인라인 스타일 객체를 결합하는 방법은?](#여러-개의-인라인-스타일-객체를-결합하는-방법은) |
+|100| [브라우저 크기를 조정할 때 뷰를 리렌더링하는 방법은?](#브라우저-크기를-조정할-때-뷰를-리렌더링하는-방법은)
+|101| [setState()와 replaceState() 메서드의 차이점은?](#setState()와-replaceState()-메서드의-차이점은) |
+|102| [state 변경을 인지하는 방법?](#state-변경을-인지하는-방법) |
+|103| [React state에서 배열 엘리먼트를 제거하는 권장 방법은?](#React-state에서-배열-엘리먼트를-제거하는-권장-방법은) |
+|104| [HTML 렌더링없이 React를 사용할 수 있나?](#HTML-렌더링없이-React를-사용할-수-있나) |
+|105| [React에서 JSON을 이쁘게 출력하는 방법?](#React에서-JSON을-이쁘게-출력하는-방법) |
+|106| [React에서 props를 업데이트할 수 없는 이유는?](#React에서-props를-업데이트할-수-없는-이유는) |
+|107| [페이지 로드 시 input 엘리먼트에 포커스를 주는 방법은?](#페이지-로드-시-input-엘리먼트에-포커스를-주는-방법은) |
 |108| [What are the possible ways of updating objects in state?](#what-are-the-possible-ways-of-updating-objects-in-state) |
-|109| [Why function is preferred over object for setState?](#why-function-is-preferred-over-object-for-setstate) |
-|110| [How can we find the version of React at runtime in the browser?](#how-can-we-find-the-version-of-react-at-runtime-in-the-browser) |
-|111| [What are the approaches to include polyfills in your create-react-app?](#what-are-the-approaches-to-include-polyfills-in-your-create-react-app) |
-|112| [How to use https instead of http in create-react-app?](#how-to-use-https-instead-of-http-in-create-react-app) |
+|109| [왜 함수가 setState() 객체보다 선호되는가?](#왜-함수가-setState()-객체보다-선호되는가) |
+|110| [브라우저 런타임에 React 버전을 어떻게 알 수 있나?](#브라우저-런타임에-React-버전을-어떻게-알-수-있나) |
+|111| [create-react-app에 polyfill을 포함시키는 방법은?](#create-react-app에-polyfill을-포함시키는-방법은) |
+|112| [create-react-app에서 http 대신 https를 사용하는 방법?](#create-react-app에서-http-대신-https를-사용하는-방법) |
 |113| [How to avoid using relative path imports in create-react-app?](#how-to-avoid-using-relative-path-imports-in-create-react-app) |
-|114| [How to add Google Analytics for react-router?](#how-to-add-google-analytics-for-react-router) |
-|115| [How to update a component every second?](#how-to-update-a-component-every-second) |
-|116| [How do you apply vendor prefixes to inline styles in React?](#how-do-you-apply-vendor-prefixes-to-inline-styles-in-react) |
+|114| [React Router용 Google 웹 로그 분석을 추가하는 방법은?](#React-Router용-Google-웹-로그-분석을-추가하는-방법은) |
+|115| [매 초마다 컴포넌트를 업데이트 하는 방법은?](#매-초마다-컴포넌트를-업데이트-하는-방법은) |
+|116| [React에서 인라인 스타일에 벤더 접두사는 어떻게 적용하나?](#React에서-인라인-스타일에-벤더-접두사는-어떻게-적용하나) |
 |117| [React와 ES6를 사용해서 컴포넌트를 가져오고 내보내는 방법은?](#React와-ES6를-사용해서-컴포넌트를-가져오고-내보내는-방법은) |
-|118| [Why React component names must begin with a capital letter?](#why-react-component-names-must-begin-with-a-capital-letter) |
-|119| [Why is a component constructor called only once?](#why-is-a-component-constructor-called-only-once) |
+|118| [React 컴포넌트 이름이 대문자로 시작해야 하는 이유는?](#React-컴포넌트-이름이-대문자로-시작해야-하는-이유는) |
+|119| [컴포넌트 생성자는 왜 한 번만 불리나?](#컴포넌트-생성자는-왜-한-번만-불리나) |
 |120| [How to define constants in React?](#how-to-define-constants-in-react) |
-|121| [How to programmatically trigger click event in React?](#how-to-programmatically-trigger-click-event-in-react) |
+|121| [React에서 프로그래밍 방식으로 클릭 이벤트를 발생시키는 방법은?](#React에서-프로그래밍-방식으로-클릭-이벤트를-발생시키는-방법은) |
 |122| [Is it possible to use async/await in plain React?](#is-it-possible-to-use-asyncawait-in-plain-react) |
 |123| [What are the common folder structures for React?](#what-are-the-common-folder-structures-for-react) |
 |124| [What are the popular packages for animation?](#what-are-the-popular-packages-for-animation) |
@@ -1907,9 +1907,9 @@
 
     `constructor()` 외부에서는 `this.props`에 대해서 같은 값을 표시한다.
 
-92. ### How to loop inside JSX?
+92. ### JSX 내부에서 반복하는 방법?
 
-    You can simply use `Array.prototype.map` with ES6 *arrow function* syntax. For example, the `items` array of objects is mapped into an array of components:
+    ES6 *화살표 함수* 구문과 함께 `Array.prototype.map`을 간단히 사용할 수 있다. 예를 들어, 객체의 `items` 배열은 다음과 같은 컴포넌트의 배열과 매핑된다.
 
     ```jsx harmony
     <tbody>
@@ -1917,7 +1917,7 @@
     </tbody>
     ```
 
-    You can't iterate using `for` loop:
+    `for` 반복문을 사용하여 반복할 수 없다.
 
     ```jsx harmony
     <tbody>
@@ -1927,31 +1927,31 @@
     </tbody>
     ```
 
-    This is because JSX tags are transpiled into *function calls*, and you can't use statements inside expressions. This may change thanks to `do` expressions which are *stage 1 proposal*.
+    JSX 태그가 *함수 호출*로 변환되어 표현식안에 명령문을 사용할 수 없기 때문이다. 이것은 *stage 1 proposal*에 `올라가 있기` 때문에 바뀔수 있다.
 
-93. ### How do you access props in attribute quotes?
+93. ### 속성 인용문에 props를 어떻게 넣나?
 
-    React (or JSX) doesn't support variable interpolation inside an attribute value. The below representation won't work:
+    React (또는 JSX)는 속성값 내부의 변수 보간을 지원하지 않는다. 아래의 표현은 작동하지 않는다.
 
     ```jsx harmony
     <img className='image' src='images/{this.props.image}' />
     ```
 
-    But you can put any JS expression inside curly braces as the entire attribute value. So the below expression works:
+    그러나 JS 표현식을 중괄호 안에 전체 속성값으로 넣을 수 있다. 따라서, 아래 표현식이 작동한다.
 
     ```jsx harmony
     <img className='image' src={'images/' + this.props.image} />
     ```
 
-    Using *template strings* will also work:
+    *템플릿 문자열*을 사용하면 다음과 같이 사용할 수 있다.
 
     ```jsx harmony
     <img className='image' src={`images/${this.props.image}`} />
     ```
 
-94. ### What is React proptype array with shape?
+94. ### 모양이 있는 React proptype array란?
 
-    If you want to pass an array of objects to a component with a particular shape then use `React.PropTypes.shape()` as an argument to `React.PropTypes.arrayOf()`.
+    특정 모양의 컴포넌트에 객체 배열을 전달하려면 `React.PropTypes.arrayOf()`에 대한 인수로 `React.PropTypes.shape()`를 사용한다.
 
     ```javascript
     ReactComponent.propTypes = {
@@ -1962,67 +1962,67 @@
     }
     ```
 
-95. ### How to conditionally apply class attributes?
+95. ### 클래스 속성을 조건부로 적용하는 방법은?
 
-    You shouldn't use curly braces inside quotes because it is going to be evaluated as a string.
+    따옴표 안에서 중괄호를 사용하면 문자열로 평가되기 때문에 중괄호를 사용하면 안 된다.
 
     ```jsx harmony
     <div className="btn-panel {this.props.visible ? 'show' : 'hidden'}">
     ```
 
-    Instead you need to move curly braces outside (don't forget to include spaces between class names):
+    대신 중괄호를 바깥으로 옮겨야 한다. (클래스 이름들 사이에 공백을 넣는 것을 잊지 말아야 한다.)
 
     ```jsx harmony
     <div className={'btn-panel ' + (this.props.visible ? 'show' : 'hidden')}>
     ```
 
-    *Template strings* will also work:
+    *템플릿 문자열*도 작동한다.
 
     ```jsx harmony
     <div className={`btn-panel ${this.props.visible ? 'show' : 'hidden'}`}>
     ```
 
-96. ### What is the difference between React and ReactDOM?
+96. ### React와 ReactDOM의 차이점?
 
-    The `react` package contains `React.createElement()`, `React.Component`, `React.Children`, and other helpers related to elements and component classes. You can think of these as the isomorphic or universal helpers that you need to build components. The `react-dom` package contains `ReactDOM.render()`, and in `react-dom/server` we have *server-side rendering* support with `ReactDOMServer.renderToString()` and `ReactDOMServer.renderToStaticMarkup()`.
+    `react` 패키지는 `React.createElement()`, `React.Component`, `React.Children`, 엘리먼트 컴포넌트 및 클래스와 관련된 기타 도우미가 포함되어 있다. 컴포넌트를 만들 때 필요한 동형 또는 보편적인 도우미라고 생각할 수 있다. `react-dom` 패키지에는 `ReactDOM.render()`가 포함되어 있고, `react-dom/server`에는 `ReactDOMServer.renderToString()`과 `ReactDOMServer.renderToStaticMarkup()`을 사용하여 *서버 사이드 렌더링*을 지원한다.
 
-97. ### Why ReactDOM is separated from React?
+97. ### 왜 ReactDOM은 React와 분리되었나?
 
-    The React team worked on extracting all DOM-related features into a separate library called *ReactDOM*. React v0.14 is the first release in which the libraries are split. By looking at some of the packages, `react-native`, `react-art`, `react-canvas`, and `react-three`, it has become clear that the beauty and essence of React has nothing to do with browsers or the DOM. To build more environments that React can render to, React team planned to split the main React package into two: `react` and `react-dom`. This paves the way to writing components that can be shared between the web version of React and React Native.
+    React 팀은 모든 DOM 관련 기능을 *ReactDOM*이라는 별도의 라이브러리로 분리했다. React v0.14는 라이브러리가 분리된 첫 번째 릴리즈이다. `react-native`, `react-art`, `react-canvas`, `react-three` 같은 일부 패키지를 살펴보면, React의 아름다움과 본질은 브라우저나 DOM과는 관련이 없다는 것을 분명히 한다. React가 렌더링할 수 있는 더 많은 환경을 구축하기 위해, React 팀은 주 React 패키지를 `react`와 `react-dom` 두 개로 나눌 계획을 세웠다. 이는 React과 React Native의 웹 버전 간에 공유할 수 있는 컴포넌트를 작성하는 길을 열어주었다.
 
-98. ### How to use React label element?
+98. ### React 라벨 엘리먼트를 사용하는 방법은?
 
-    If you try to render a `<label>` element bound to a text input using the standard `for` attribute, then it produces HTML missing that attribute and prints a warning to the console.
+    표준 `for` 속성을 사용하여 텍스트 입력에 바인드된 `<label>` 엘리먼트를 렌더링하려고 하면, 해당 속성이 없는 HTML이 생성되고 콘솔에 경고가 인쇄된다.
 
     ```jsx harmony
     <label for={'user'}>{'User'}</label>
     <input type={'text'} id={'user'} />
     ```
 
-    Since `for` is a reserved keyword in JavaScript, use `htmlFor` instead.
+    `for`는 JavaScript에서 예약된 키워드이므로, 대신 `htmlFor`을 사용해야 한다.
 
     ```jsx harmony
     <label htmlFor={'user'}>{'User'}</label>
     <input type={'text'} id={'user'} />
     ```
 
-99. ### How to combine multiple inline style objects?
+99. ### 여러 개의 인라인 스타일 객체를 결합하는 방법은?
 
-    You can use *spread operator* in regular React:
+    일반적인 React에서 사용하는 *spread 연산자*.
 
     ```jsx harmony
      <button style={{...styles.panel.button, ...styles.panel.submitButton}}>{'Submit'}</button>
     ```
 
-    If you're using React Native then you can use the array notation:
+    React Native를 사용한다면 배열 표기법을 사용할 수 있다.
 
     ```jsx harmony
     <button style={[styles.panel.button, styles.panel.submitButton]}>{'Submit'}</button>
     ```
 
-100. ### How to re-render the view when the browser is resized?
+100. ### 브라우저 크기를 조정할 때 뷰를 리렌더링하는 방법은?
 
-     You can listen to the `resize` event in `componentDidMount()` and then update the dimensions (`width` and `height`). You should remove the listener in `componentWillUnmount()` method.
+     `componentDidMount()`에서 `resize` 이벤트를 수신하면, 크기(`너비` 및 `높이`)를 업데이트 할 수 있다. `componentWillUnmount()` 메서드에서 리스너를 제거해야 한다.
 
      ```javascript
      class WindowDimensions extends React.Component {
@@ -2048,24 +2048,24 @@
      }
      ```
 
-101. ### What is the difference between `setState()` and `replaceState()` methods?
+101. ### `setState()`와 `replaceState()` 메서드의 차이점은?
 
-     When you use `setState()` the current and previous states are merged. `replaceState()` throws out the current state, and replaces it with only what you provide. Usually `setState()` is used unless you really need to remove all previous keys for some reason. You can also set state to `false`/`null` in `setState()` instead of using `replaceState()`.
+     `setState()`를 사용하면 현재 state와 이전 state가 병합된다. `replaceState()`는 현재 state를 버리고 사용자가 넣은 state로 바꾼다. Usually 어떤 이유로 이전의 모든 키를 제거해야 하는 경우가 아니면 `setState()`를 사용한다. `replaceState()`를 사용하는 대신 `setState()`에서 state를 `false`/`null`로 설정할 수도 있다.
 
-102. ### How to listen to state changes?
+102. ### state 변경을 인지하는 방법?
 
-     The following lifecycle methods will be called when state changes. You can compare provided state and props values with current state and props to determine if something meaningful changed.
+     state가 변경되면 다음의 라이프 사이클 메서드가 호출된다. 제공된 state와 props 값을 현재 state, props와 비교하여 의미 있는 것이 변경되었는지 확인할 수 있다.
 
      ```
      componentWillUpdate(object nextProps, object nextState)
      componentDidUpdate(object prevProps, object prevState)
      ```
 
-103. ### What is the recommended approach of removing an array element in React state?
+103. ### React state에서 배열 엘리먼트를 제거하는 권장 방법은?
 
-     The better approach is to use `Array.prototype.filter()` method.
+     더 나은 방법은 `Array.prototype.filter()` 메서드를 사용하는 것이다.
 
-     For example, let's create a `removeItem()` method for updating the state.
+     예를 들어, state를 업데이트하기 위한 `removeItem()` 메서드를 생성해보자
 
      ```javascript
      removeItem(index) {
@@ -2075,9 +2075,9 @@
      }
      ```
 
-104. ### Is it possible to use React without rendering HTML?
+104. ### HTML 렌더링없이 React를 사용할 수 있나?
 
-     It is possible with latest version (>=16.2). Below are the possible options:
+     최신버전 (>=16.2)에서 가능하다. 가능한 옵션은 아래와 같다.
 
      ```jsx harmony
      render() {
@@ -2109,11 +2109,11 @@
      }
      ```
 
-     Returning `undefined` won't work.
+     `undefined` 반환은 작동하지 않는다
 
-105. ### How to pretty print JSON with React?
+105. ### React에서 JSON을 이쁘게 출력하는 방법?
 
-     We can use `<pre>` tag so that the formatting of the `JSON.stringify()` is retained:
+     `<pre>` 태그를 사용하여 `JSON.stringify()`의 서식이 유지되도록 할 수 있다.
 
      ```jsx harmony
      const data = { name: 'John', age: 42 }
@@ -2131,13 +2131,13 @@
      React.render(<User />, document.getElementById('container'))
      ```
 
-106. ### Why you can't update props in React?
+106. ### React에서 props를 업데이트할 수 없는 이유는?
 
-     The React philosophy is that props should be *immutable* and *top-down*. This means that a parent can send any prop values to a child, but the child can't modify received props.
+     React 철학은 props가 *불변*이고 *하향식*이어야 한다는 것이다. 즉, 부모는 모든 props 값을 자식에게 보낼 수 있지만, 자식은 받은 props를 수정할 수 없다.
 
-107. ### How to focus an input element on page load?
+107. ### 페이지 로드 시 input 엘리먼트에 포커스를 주는 방법은?
 
-     You can do it by creating *ref* for `input` element and using it in `componentDidMount()`:
+     `input` 엘리먼트에 대한 *ref*를 생성하고 `componentDidMount()`에서 이를 사용한다.
 
      ```jsx harmony
      class App extends React.Component{
@@ -2163,25 +2163,25 @@
      ReactDOM.render(<App />, document.getElementById('app'))
      ```
 
-108. ### What are the possible ways of updating objects in state?
+108. ### state에서 객체를 업데이트 할 수 있는 방법은?
 
-     1. **Calling `setState()` with an object to merge with state:**
+     1. **state와 병합 할 객체가 있는 `setState()`를 호출한다.**
 
-         * Using `Object.assign()` to create a copy of the object:
+         * `Object.assign()`를 사용하여 객체의 복사본을 만든다:
 
              ```javascript
              const user = Object.assign({}, this.state.user, { age: 42 })
              this.setState({ user })
              ```
 
-         * Using *spread operator*:
+         * *spread 연산자*를 사용한다.
 
              ```javascript
              const user = { ...this.state.user, age: 42 }
              this.setState({ user })
              ```
 
-     2. **Calling `setState()` with a function:**
+     2. **`setState()`를 함수와 같이 사용한다.**
 
          ```javascript
          this.setState(prevState => ({
@@ -2192,11 +2192,11 @@
          }))
          ```
 
-109. ### Why function is preferred over object for `setState()`?
+109. ### 왜 함수가 `setState()` 객체보다 선호되는가?
 
-     React may batch multiple `setState()` calls into a single update for performance. Because `this.props` and `this.state` may be updated asynchronously, you should not rely on their values for calculating the next state.
+     React는 여러 `setState()` 호출을 성능 향상을 위해 단일 업데이트로 일괄처리한다. `this.props`와 `this.state`가 비동기적으로 업데이트될 수 있음으로 다음 state를 계산할 때 해당 값을 신뢰해서는 안 된다.
 
-     This counter example will fail to update as expected:
+     counter 예제는 예상대로 업데이트되지 않는다.
 
      ```javascript
      // Wrong
@@ -2205,7 +2205,7 @@
      })
      ```
 
-     The preferred approach is to call `setState()` with function rather than object. That function will receive the previous state as the first argument, and the props at the time the update is applied as the second argument.
+     선호되는 접근법은 객체가 아닌 함수로 `setState()`를 호출하는 것이다. 이 함수는 첫 번째 인수로 이전 state를 받고 두 번째 인수로 업데이트가 적용된 props를 받는다.
 
      ```javascript
      // Correct
@@ -2214,9 +2214,9 @@
      }))
      ```
 
-110. ### How can we find the version of React at runtime in the browser?
+110. ### 브라우저 런타임에 React 버전을 어떻게 알 수 있나?
 
-     You can use `React.version` to get the version.
+     `React.version`을 사용해서 버전을 얻을 수 있다.
 
      ```jsx harmony
      const REACT_VERSION = React.version
@@ -2227,11 +2227,11 @@
      )
      ```
 
-111. ### What are the approaches to include polyfills in your `create-react-app`?
+111. ### `create-react-app`에 polyfill을 포함시키는 방법은?
 
-     1. **Manual import from `core-js`:**
+     1. **`core-js`에서 수동으로 가져오기**
 
-         Create a file called (something like) `polyfills.js` and import it into root `index.js` file. Run `npm install core-js` or `yarn add core-js` and import your specific required features.
+         `polyfills.js`와 같은 파일을 만들고 root `index.js` 파일에서 import한다. `npm install core-js` 또는 `yarn add core-js`를 실행하고 특정 필수 기능을 import한다.
 
          ```javascript
          import 'core-js/fn/array/find'
@@ -2239,19 +2239,19 @@
          import 'core-js/fn/number/is-nan'
          ```
 
-     2. **Using Polyfill service:**
+     2. **Polyfill 서비스를 사용하기:**
 
-         Use the polyfill.io CDN to retrieve custom, browser-specific polyfills by adding this line to `index.html`:
+         이 줄을 `index.html`에 추가, polyfill.io CDN을 사용하여 사용자 지정 브라우저 전용 polyfill을 검색한다.
 
          ```html
          <script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes'></script>
          ```
 
-         In the above script we had to explicitly request the `Array.prototype.includes` feature as it is not included in the default feature set.
+         위의 스크립트에서 `Array.prototype.includes` 기능은 기본 기능 집합에 포함되어 있지 않음으로 명시적으로 요청해야 한다.
 
-112. ### How to use https instead of http in create-react-app?
+112. ### create-react-app에서 http 대신 https를 사용하는 방법?
 
-     You just need to use `HTTPS=true` configuration. You can edit your `package.json` scripts section:
+     `HTTPS=true` 설정만 사용하면 된다. `package.json` 스크립트 섹션을 편집할 수 있다.
 
      ```json
      "scripts": {
@@ -2259,21 +2259,21 @@
      }
      ```
 
-     or just run `set HTTPS=true && npm start`
+     또는 `set HTTPS=true && npm start`를 실행하면 된다.
 
-113. ### How to avoid using relative path imports in create-react-app?
+113. ### create-react-app에서 상대 경로 가져오기 사용을 피하는 방법?
 
-     Create a file called `.env` in the project root and write the import path:
+     프로젝트 루트에 `.env`라는 파일을 만들고 경로를 import 하면 된다. 
 
      ```
      NODE_PATH=src/app
      ```
 
-     After that restart the development server. Now you should be able to import anything inside `src/app` without relative paths.
+     개발 서버를 다시 시작하면, 상대 경로 없이 `src/app` 내부의 내용을 import 할 수 있다.
 
-114. ### How to add Google Analytics for React Router?
+114. ### React Router용 Google 웹 로그 분석을 추가하는 방법은?
 
-     Add a listener on the `history` object to record each page view:
+     `history` 객체에 리스너를 추가하여 각각의 페이지 view를 기록한다.
 
      ```javascript
      history.listen(function (location) {
@@ -2282,9 +2282,9 @@
      })
      ```
 
-115. ### How to update a component every second?
+115. ### 매 초마다 컴포넌트를 업데이트 하는 방법은?
 
-     You need to use `setInterval()` to trigger the change, but you also need to clear the timer when the component unmounts to prevent errors and memory leaks.
+     변경을 감지하려면 `setInterval()`을 사용해야 하지만 오류 및 메모리 누수를 방지하려면 컴포넌트가 마운트 해제될 때 타이머를 지워야 한다.
 
      ```javascript
      componentDidMount() {
@@ -2296,9 +2296,9 @@
      }
      ```
 
-116. ### How do you apply vendor prefixes to inline styles in React?
+116. ### React에서 인라인 스타일에 벤더 접두사는 어떻게 적용하나?
 
-     React *does not* apply *vendor prefixes* automatically. You need to add vendor prefixes manually.
+     React는 *벤더 접두사*를 자동으로 **적용하지 않는다**. 벤더 접두사를 수동으로 추가해야 한다.
 
      ```jsx harmony
      <div style={{
@@ -2329,17 +2329,17 @@
 
       export 지정자를 사용하면 MyProfile이 멤버가 되어 이 모듈로 내보낼 수 있으며, 다른 컴포넌트에 이름을 언급하지 않고도 가져올 수 있다. 
 
-118. ### Why React component names must begin with a capital letter?
+118. ### React 컴포넌트 이름이 대문자로 시작해야 하는 이유는?
 
-     In JSX, lowercase tag names are considered to be HTML tags. However, capitalized and lowercase tag names with a dot (property accessors) aren't.
+     JSX에서 소문자 태그 이름은 HTML 태그로 간주한다. 그러나 점으로 표시된 대문자 및 소문자 태그 이름(속성 접근자)은 없다.
 
-     1. `<component />` compiles to `React.createElement('component')` (i.e, HTML tag)
-     2. `<obj.component />` compiles to `React.createElement(obj.component)`
-     3. `<Component />` compiles to `React.createElement(Component)`
+     1. `<component />`는 `React.createElement('component')`로 컴파일된다. (i.e, HTML tag)
+     2. `<obj.component />`는 `React.createElement(obj.component)`로 컴파일된다.
+     3. `<Component />`는 `React.createElement(Component)`로 컴파일된다.
 
-119. ### Why is a component constructor called only once?
+119. ### 컴포넌트 생성자는 왜 한 번만 불리나?
 
-     React's *reconciliation* algorithm assumes that without any information to the contrary, if a custom component appears in the same place on subsequent renders, it's the same component as before, so reuses the previous instance rather than creating a new one.
+     React의 *reconciliation* 알고리즘에서는 정반대 정보가 없다고 가정하는데, 사용자 지정 컴포넌트가 후속 렌더링의 같은 위치에 나타나면, 이전 컴포넌트와 동일 하므로 이전 인스턴스를 새로 작성하지 않고 다시 사용한다.
 
 120. ### How to define constants in React?
 
@@ -2353,17 +2353,17 @@
 
      *Static fields* are part of the *Class Fields* stage 3 proposal.
 
-121. ### How to programmatically trigger click event in React?
+121. ### React에서 프로그래밍 방식으로 클릭 이벤트를 발생시키는 방법은?
 
-     You could use the ref prop to acquire a reference to the underlying `HTMLInputElement` object through a callback, store the reference as a class property, then use that reference to later trigger a click from your event handlers using the `HTMLElement.click` method. This can be done in two steps:
+     ref prop를 사용하여 콜백을 통해 기본 `HTMLInputElement` 객체에 대한 참조를 가져와서, 참조를 클래스 속성으로 저장한 다음, 해당 참조의 `HTMLElement.click` 메서드를 사용하여 이벤트 핸들러에서 클릭을 트리거 할 수 있다.
 
-     1. Create ref in render method:
+     1. render 메서드 안에서 ref를 만든다.
 
          ```jsx harmony
          <input ref={input => this.inputElement = input} />
          ```
 
-     2. Apply click event in your event handler:
+     2. 이벤트 핸들러에 클릭 이벤트를 적용한다.
 
          ```javascript
          this.inputElement.click()

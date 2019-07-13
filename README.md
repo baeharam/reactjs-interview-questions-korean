@@ -56,7 +56,7 @@
 |35 | [고차(Higher-Order) 컴포넌트란?](#고차(Higher-Order)-컴포넌트란?) |
 |36 | [HOC 컴포넌트를 사용해서 props 프록시를 만드는 방법은?](#HOC-컴포넌트를-사용해서-props-프록시를-만드는-방법은) |
 |37 | [context란?](#context란) |
-|38 | [What is children prop?](#what-is-children-prop) |
+|38 | [children prop이란?](#children-prop이란) |
 |39 | [How to write comments in React?](#how-to-write-comments-in-react) |
 |40 | [What is the purpose of using super constructor with props argument?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
 |41 | [조정(reconciliation)이란?](#조정(reconciliation)이란) |
@@ -975,12 +975,12 @@
     const {Provider, Consumer} = React.createContext(defaultValue)
     ```
 
-38. ### What is children prop?
+38. ### children prop이란?
 
-    *Children* is a prop (`this.prop.children`) that allow you to pass components as data to other components, just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as `children` prop.
+    *Children*(`this.prop.children`)은 다른 prop과 마찬가지로 다른 컴포넌트에 데이터를 전달할 수있는 요소(`this.prop.children`)입니다. 컴포넌트의 여는 태그와 닫는 태그 사이에 놓인 컴포넌트 트리가 해당 컴포넌트에 `children` prop로 전달됩니다.
 
-    There are a number of methods available in the React API to work with this prop. These include `React.Children.map`, `React.Children.forEach`, `React.Children.count`, `React.Children.only`, `React.Children.toArray`.
-    A simple usage of children prop looks as below,
+    이 prop을 사용하기 위해 React API에서 사용할 수있는 여러 가지 방법이 있습니다. 여기에는`React.Children.map`,`React.Children.forEach`,`React.Children.count`,`React.Children.only`,`React.Children.toArray`가 포함됩니다.
+    children prop의 간단한 사용법은 다음과 같습니다.
 
     ```jsx harmony
     const MyDiv = React.createClass({

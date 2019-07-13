@@ -57,7 +57,7 @@
 |36 | [HOC 컴포넌트를 사용해서 props 프록시를 만드는 방법은?](#HOC-컴포넌트를-사용해서-props-프록시를-만드는-방법은) |
 |37 | [context란?](#context란) |
 |38 | [What is children prop?](#what-is-children-prop) |
-|39 | [How to write comments in React?](#how-to-write-comments-in-react) |
+|39 | [React에서 주석을 어떻게 다는가?](#React에서-주석을-어떻게-다는가) |
 |40 | [What is the purpose of using super constructor with props argument?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
 |41 | [조정(reconciliation)이란?](#조정(reconciliation)이란) |
 |42 | [state의 키 이름을 동적으로 설정하는 방법은?](#state의-키-이름을-동적으로-설정하는-방법은?) |
@@ -998,15 +998,15 @@
     )
     ```
 
-39. ### How to write comments in React?
+39. ### React에서 주석을 어떻게 다는가?
 
-    The comments in React/JSX are similar to JavaScript Multiline comments but are wrapped in curly braces.
+    React / JSX의 주석은 JavaScript Multiline 주석과 유사하지만 중괄호로 묶입니다.
 
     **Single-line comments:**
 
     ```jsx harmony
     <div>
-      {/* Single-line comments(In vanilla JavaScript, the single-line comments are represented by double slash(//)) */}
+      {/* 한 줄 주석 (바닐라 자바 스크립트에서는 한 줄 주석은 이중 슬래시 (//)로 표시됩니다) */}
       {`Welcome ${user}, let's play React`}
     </div>
     ```
@@ -1015,8 +1015,8 @@
 
     ```jsx harmony
     <div>
-      {/* Multi-line comments for more than
-       one line */}
+      {/* 한 줄이상의
+        여러 줄 주석 */}
       {`Welcome ${user}, let's play React`}
     </div>
     ```

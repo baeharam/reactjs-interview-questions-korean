@@ -1000,13 +1000,13 @@
 
 39. ### React에서 주석을 어떻게 다는가?
 
-    React / JSX의 주석은 JavaScript Multiline 주석과 유사하지만 중괄호로 묶입니다.
+    React / JSX의 주석은 JavaScript Multiline 주석과 유사하지만 중괄호로 묶인다.
 
     **Single-line comments:**
 
     ```jsx harmony
     <div>
-      {/* 한 줄 주석 (바닐라 자바 스크립트에서는 한 줄 주석은 이중 슬래시 (//)로 표시됩니다) */}
+      {/* 한 줄 주석 (바닐라 자바 스크립트에서는 한 줄 주석은 이중 슬래시 (//)로 표시된다) */}
       {`Welcome ${user}, let's play React`}
     </div>
     ```

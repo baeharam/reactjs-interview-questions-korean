@@ -977,9 +977,9 @@
 
 38. ### children prop이란?
 
-    *Children*(`this.prop.children`)은 다른 prop과 마찬가지로 다른 컴포넌트에 데이터를 전달할 수있는 요소(`this.prop.children`)다. 컴포넌트의 여는 태그와 닫는 태그 사이에 놓인 컴포넌트 트리가 해당 컴포넌트에 `children` prop로 전달된다.
+    *Children*(`this.prop.children`)는 다른 prop와 마찬가지로 다른 컴포넌트에 데이터를 전달할 수 있는 요소(`this.prop.children`)다. 컴포넌트의 여는 태그와 닫는 태그 사이에 놓인 컴포넌트 트리가 해당 컴포넌트의 `children` prop로 전달된다.
 
-    이 prop을 사용하기 위해 React API에서 사용할 수있는 여러 가지 방법이 있다. 여기에는`React.Children.map`,`React.Children.forEach`,`React.Children.count`,`React.Children.only`,`React.Children.toArray`가 포함된다.
+    이 prop을 사용하기 위해 React API에서 사용할 수 있는 여러 가지 방법이 있다. 여기에는`React.Children.map`,`React.Children.forEach`,`React.Children.count`,`React.Children.only`,`React.Children.toArray`가 포함된다.
     children prop의 간단한 사용법은 다음과 같다.
 
     ```jsx harmony

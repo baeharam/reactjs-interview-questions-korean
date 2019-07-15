@@ -56,8 +56,8 @@
 |35 | [고차(Higher-Order) 컴포넌트란?](#고차(Higher-Order)-컴포넌트란?) |
 |36 | [HOC 컴포넌트를 사용해서 props 프록시를 만드는 방법은?](#HOC-컴포넌트를-사용해서-props-프록시를-만드는-방법은) |
 |37 | [context란?](#context란) |
-|38 | [What is children prop?](#what-is-children-prop) |
-|39 | [How to write comments in React?](#how-to-write-comments-in-react) |
+|38 | [children prop이란?](#children-prop이란) |
+|39 | [React에서 주석을 어떻게 다는가?](#React에서-주석을-어떻게-다는가) |
 |40 | [props argument가 있는 생성자에서 super를 사용하는 목적은 무엇입니까?](#props-argument가-있는-생성자에서-super를-사용하는-목적은-무엇입니까) |
 |41 | [조정(reconciliation)이란?](#조정(reconciliation)이란) |
 |42 | [state의 키 이름을 동적으로 설정하는 방법은?](#state의-키-이름을-동적으로-설정하는-방법은?) |
@@ -975,12 +975,12 @@
     const {Provider, Consumer} = React.createContext(defaultValue)
     ```
 
-38. ### What is children prop?
+38. ### children prop이란?
 
-    *Children* is a prop (`this.prop.children`) that allow you to pass components as data to other components, just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as `children` prop.
+    *Children*(`this.prop.children`)는 다른 prop와 마찬가지로 다른 컴포넌트에 데이터를 전달할 수 있는 요소(`this.prop.children`)다. 컴포넌트의 여는 태그와 닫는 태그 사이에 놓인 컴포넌트 트리가 해당 컴포넌트의 `children` prop로 전달된다.
 
-    There are a number of methods available in the React API to work with this prop. These include `React.Children.map`, `React.Children.forEach`, `React.Children.count`, `React.Children.only`, `React.Children.toArray`.
-    A simple usage of children prop looks as below,
+    이 prop을 사용하기 위해 React API에서 사용할 수 있는 여러 가지 방법이 있다. 여기에는`React.Children.map`,`React.Children.forEach`,`React.Children.count`,`React.Children.only`,`React.Children.toArray`가 포함된다.
+    children prop의 간단한 사용법은 다음과 같다.
 
     ```jsx harmony
     const MyDiv = React.createClass({
@@ -998,15 +998,15 @@
     )
     ```
 
-39. ### How to write comments in React?
+39. ### React에서 주석을 어떻게 다는가?
 
-    The comments in React/JSX are similar to JavaScript Multiline comments but are wrapped in curly braces.
+    React / JSX의 주석은 JavaScript Multiline 주석과 유사하지만 중괄호로 묶인다.
 
     **Single-line comments:**
 
     ```jsx harmony
     <div>
-      {/* Single-line comments(In vanilla JavaScript, the single-line comments are represented by double slash(//)) */}
+      {/* 한 줄 주석 (바닐라 자바 스크립트에서는 한 줄 주석은 이중 슬래시 (//)로 표시된다) */}
       {`Welcome ${user}, let's play React`}
     </div>
     ```
@@ -1015,8 +1015,8 @@
 
     ```jsx harmony
     <div>
-      {/* Multi-line comments for more than
-       one line */}
+      {/* 한 줄이상의
+        여러 줄 주석 */}
       {`Welcome ${user}, let's play React`}
     </div>
     ```

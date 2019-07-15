@@ -2540,7 +2540,7 @@
      2. `<HashRouter>`
      3. `<MemoryRouter>`
 
-     위의 컴포넌트는 *browser*, *hash* 및 *memory* history 인스턴스를 생성한다. React Router v4는 `router` 객체의 컨텍스트를 통해서 사용가능한 라우터와 연결된 `history` 인스턴스의 속성과 메서드를 사용할 수 있도록 한다.
+     위의 컴포넌트는 *browser*, *hash* 및 *memory* history 인스턴스를 생성한다. React Router v4는 `router` 객체의 컨텍스트를 통해서 사용 가능한 라우터와 연결된 `history` 인스턴스의 속성과 메서드를 사용할 수 있도록 한다.
 
 4.   ### What is the purpose of `push()` and `replace()` methods of `history`?
 

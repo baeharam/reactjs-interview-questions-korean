@@ -58,7 +58,7 @@
 |37 | [context란?](#context란) |
 |38 | [children prop이란?](#children-prop이란) |
 |39 | [React에서 주석을 어떻게 다는가?](#React에서-주석을-어떻게-다는가) |
-|40 | [What is the purpose of using super constructor with props argument?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
+|40 | [props argument가 있는 생성자에서 super를 사용하는 목적은 무엇입니까?](#props-argument가-있는-생성자에서-super를-사용하는-목적은-무엇입니까) |
 |41 | [조정(reconciliation)이란?](#조정(reconciliation)이란) |
 |42 | [state의 키 이름을 동적으로 설정하는 방법은?](#state의-키-이름을-동적으로-설정하는-방법은?) |
 |43 | [컴포넌트가 렌더링 될 때마다 호출되는 함수에 대한 실수는 무엇일까?](#컴포넌트가-렌더링-될-때마다-호출되는-함수에-대한-실수는-무엇일까) |
@@ -1021,11 +1021,11 @@
     </div>
     ```
 
-40. ### What is the purpose of using super constructor with props argument?
+40. ### props argument가 있는 생성자에서 super를 사용하는 목적은 무엇입니까?
 
-    A child class constructor cannot make use of `this` reference until `super()` method has been called. The same applies for ES6 sub-classes as well. The main reason of passing props parameter to `super()` call is to access `this.props` in your child constructors.
+    자식 클래스 생성자는`super()`메서드가 호출 될 때까지 `this`를 참조할 수 없습니다. ES6 하위 클래스에도 동일하게 적용된다. super() 호출에 props 매개 변수를 전달하는 주요한 이유는 자식 생성자에서 `this.props`에 접근하기 위해서다.
 
-    **Passing props:**
+    **props 전달**
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1037,7 +1037,7 @@
     }
     ```
 
-    **Not passing props:**
+    **props 미전달**
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1057,7 +1057,7 @@
     }
     ```
 
-    The above code snippets reveals that `this.props` is different only within the constructor. It would be the same outside the constructor.
+    위 코드를 보면 `this.props`가 생성자 내에서만 다른 것을 볼 수 있다. 생성자 밖에서는 동일하다.
 
 41. ### 조정(reconciliation)이란?
 

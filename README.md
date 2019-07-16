@@ -148,10 +148,17 @@
 |127| [AJAX 호출하는 방법과 어느 컴포넌트 라이프 사이클 메서드에서 AJAX 호출을 해야하나?](#AJAX-호출하는-방법과-어느-컴포넌트-라이프-사이클-메서드에서-AJAX-호출을-해야하나?) |
 |128| [render props란?](#render-props란) |
 |   | **React Router** |
+<<<<<<< Updated upstream
 |129| [React Router란?](#React-Router란) |
 |130| [React Router가 history 라이브러리와 다른점은?](#React-Router가-history-라이브러리와-다른점은) |
 |131| [Router v4의 `<Router>` 컴포넌트는 무엇인가?](#what-are-the-router-components-of-react-router-v4) |
 |132| [What is the purpose of push and replace methods of history?](#what-is-the-purpose-of-push-and-replace-methods-of-history) |
+=======
+|129| [What is React Router?](#what-is-react-router) |
+|130| [How React Router is different from history library?](#how-react-router-is-different-from-history-library) |
+|131| [What are the \<Router> components of React Router v4?](#what-are-the-router-components-of-react-router-v4) |
+|132| [history의 push, place 메서드의 목적은?](#history의-push-place-메서드의-목적은) |
+>>>>>>> Stashed changes
 |133| [How do you programmatically navigate using React router v4?](#how-do-you-programmatically-navigate-using-react-router-v4) |
 |134| [How to get query parameters in React Router v4](#how-to-get-query-parameters-in-react-router-v4) |
 |135| [Why you get "Router may have only one child element" warning?](#why-you-get-router-may-have-only-one-child-element-warning) |
@@ -2542,14 +2549,14 @@
 
      위의 컴포넌트는 *browser*, *hash* 및 *memory* history 인스턴스를 생성한다. React Router v4는 `router` 객체의 컨텍스트를 통해서 사용 가능한 라우터와 연결된 `history` 인스턴스의 속성과 메서드를 사용할 수 있도록 한다.
 
-4.   ### What is the purpose of `push()` and `replace()` methods of `history`?
+4.   ### `history`의 `push()`, place()` 메서드의 목적은?
 
-     A history instance has two methods for navigation purpose.
+     history 인스턴스에는 탐색을 위한 두가지 메서드가 있다.
 
      1. `push()`
      2. `replace()`
 
-     If you think of the history as an array of visited locations, `push()` will add a new location to the array and `replace()` will replace the current location in the array with the new one.
+     history를 방문한 위치의 배열로 생각하면 `push()`는 배열에 새 위치를 추가하고, `replace()`는 배열의 현재 위치를 새로운 위치로 바꾼다.
 
 5.   ### How do you programmatically navigate using React Router v4?
 

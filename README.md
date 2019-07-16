@@ -2572,9 +2572,9 @@
          ))
          ```
 
-     2. **Using `<Route>` component and render props pattern:**
+     2. **`<Route>` 컴포넌트와 렌더링 props 패턴 사용**
 
-         The `<Route>` component passes the same props as `withRouter()`, so you will be able to access the history methods through the history prop.
+         The `<Route>` 컴포넌트는 `withRouter()`와 같은 prop을 전달하므로, history prop을 통해 history 메서드에 접근할 수 있다.
 
          ```jsx harmony
          import { Route } from 'react-router-dom'
@@ -2591,9 +2591,9 @@
          )
          ```
 
-     3. **Using context:**
+     3. **context 사용**
 
-         This option is not recommended and treated as unstable API.
+         이 옵션은 권장되지 않으며 불안정한 API로 처리된다.
 
          ```jsx harmony
          const Button = (props, context) => (

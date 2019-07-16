@@ -148,7 +148,7 @@
 |127| [AJAX 호출하는 방법과 어느 컴포넌트 라이프 사이클 메서드에서 AJAX 호출을 해야하나?](#AJAX-호출하는-방법과-어느-컴포넌트-라이프-사이클-메서드에서-AJAX-호출을-해야하나?) |
 |128| [render props란?](#render-props란) |
 |   | **React Router** |
-|129| [What is React Router?](#what-is-react-router) |
+|129| [React Router란?](#React-Router란) |
 |130| [React Router가 history 라이브러리와 다른점은?](#React-Router가-history-라이브러리와-다른점은) |
 |131| [What are the \<Router> components of React Router v4?](#what-are-the-router-components-of-react-router-v4) |
 |132| [What is the purpose of push and replace methods of history?](#what-is-the-purpose-of-push-and-replace-methods-of-history) |
@@ -2524,9 +2524,9 @@
 
 ## React Router
 
-1.   ### What is React Router?
+1.   ### React Router란?
 
-     React Router is a powerful routing library built on top of React that helps you add new screens and flows to your application incredibly quickly, all while keeping the URL in sync with what's being displayed on the page.
+     React Router는 React 위에 구축된 강력한 라우팅 라이브러리로 URL을 페이지에 표시된 내용과 동기화된 상태로 유지하면서 애플리케이션에 새로운 화면과 플로우를 추가할 수 있다.
 
 2.   ### React Router가 history 라이브러리와 다른점은?
 

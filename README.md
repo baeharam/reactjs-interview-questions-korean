@@ -148,8 +148,8 @@
 |127| [AJAX 호출하는 방법과 어느 컴포넌트 라이프 사이클 메서드에서 AJAX 호출을 해야하나?](#AJAX-호출하는-방법과-어느-컴포넌트-라이프-사이클-메서드에서-AJAX-호출을-해야하나?) |
 |128| [render props란?](#render-props란) |
 |   | **React Router** |
-|129| [What is React Router?](#what-is-react-router) |
-|130| [How React Router is different from history library?](#how-react-router-is-different-from-history-library) |
+|129| [React Router란?](#React-Router란) |
+|130| [React Router가 history 라이브러리와 다른점은?](#React-Router가-history-라이브러리와-다른점은) |
 |131| [Router v4의 `<Router>` 컴포넌트는 무엇인가?](#what-are-the-router-components-of-react-router-v4) |
 |132| [What is the purpose of push and replace methods of history?](#what-is-the-purpose-of-push-and-replace-methods-of-history) |
 |133| [How do you programmatically navigate using React router v4?](#how-do-you-programmatically-navigate-using-react-router-v4) |
@@ -2524,13 +2524,13 @@
 
 ## React Router
 
-1.   ### What is React Router?
+1.   ### React Router란?
 
-     React Router is a powerful routing library built on top of React that helps you add new screens and flows to your application incredibly quickly, all while keeping the URL in sync with what's being displayed on the page.
+     React Router는 React 위에 구축된 강력한 라우팅 라이브러리로 URL을 페이지에 표시된 내용과 동기화된 상태로 유지하면서 애플리케이션에 새로운 화면과 플로우를 추가할 수 있다.
 
-2.   ### How React Router is different from history library?
+2.   ### React Router가 history 라이브러리와 다른점은?
 
-     React Router is a wrapper around the `history` library which handles interaction with the browser's `window.history` with its browser and hash histories. It also provides memory history which is useful for environments that don't have global history, such as mobile app development (React Native) and unit testing with Node.
+     React Router는 브라우저의 `window.history`와 브라우저 해쉬 기록의 상호 작용을 처리하는 `history` 라이브러리를 감싸는 래퍼이다. 또한 모바일 히스토리를 제공하여 모바일 앱 개발(React Native) 및 Node 단위 테스트와 같이 글로벌 히스토리가 없는 환경에 유용하다.
 
 3.   ### Router v4의 `<Router>` 컴포넌트는 무엇인가?
 

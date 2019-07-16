@@ -153,7 +153,7 @@
 |131| [Router v4의 `<Router>` 컴포넌트는 무엇인가?](#what-are-the-router-components-of-react-router-v4) |
 |132| [What is the purpose of push and replace methods of history?](#what-is-the-purpose-of-push-and-replace-methods-of-history) |
 |133| [How do you programmatically navigate using React router v4?](#how-do-you-programmatically-navigate-using-react-router-v4) |
-|134| [How to get query parameters in React Router v4](#how-to-get-query-parameters-in-react-router-v4) |
+|134| [React Router v4에서 쿼리 매개 변수를 얻는 방법은?](#React-Router-v4에서-쿼리-매개-변수를-얻는-방법은) |
 |135| [Why you get "Router may have only one child element" warning?](#why-you-get-router-may-have-only-one-child-element-warning) |
 |136| [How to pass params to history.push method in React Router v4?](#how-to-pass-params-to-historypush-method-in-react-router-v4) |
 |137| [How to implement default or NotFound page?](#how-to-implement-default-or-notfound-page) |
@@ -2614,23 +2614,23 @@
          }
          ```
 
-6.   ### How to get query parameters in React Router v4?
+6.   ### React Router v4에서 쿼리 매개 변수를 얻는 방법은?
 
-     The ability to parse query strings was taken out of React Router v4 because there have been user requests over the years to support different implementation. So the decision has been given to users to choose the implementation they like. The recommended approach is to use query strings library.
+     다른 구현을 지원하기 위해 수년 동안 사용자 요청이 있었기 때문에 쿼리 문자열을 구문 분석하는 기능은 React Router v4에서 제거되었다. 그래서 사용자가 원하는 구현을 선택하도록 결정되었다. 권장되는 방법은 쿼리 문자열 라이브러리를 사용하는 것이다.
 
      ```javascript
      const queryString = require('query-string');
      const parsed = queryString.parse(props.location.search);
      ```
 
-     You can also use `URLSearchParams` if you want something native:
+     네이티브를 원한다면 `URLSearchParams`를 사용할 수도 있다.
 
      ```javascript
      const params = new URLSearchParams(props.location.search)
      const foo = params.get('name')
      ```
 
-     You should use a *polyfill* for IE11.
+     IE11에서는 *polyfill*를 사용해야한다.
 
 7.   ### Why you get "Router may have only one child element" warning?
 

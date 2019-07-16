@@ -150,7 +150,7 @@
 |   | **React Router** |
 |129| [React Router란?](#React-Router란) |
 |130| [React Router가 history 라이브러리와 다른점은?](#React-Router가-history-라이브러리와-다른점은) |
-|131| [What are the \<Router> components of React Router v4?](#what-are-the-router-components-of-react-router-v4) |
+|131| [Router v4의 `<Router>` 컴포넌트는 무엇인가?](#what-are-the-router-components-of-react-router-v4) |
 |132| [What is the purpose of push and replace methods of history?](#what-is-the-purpose-of-push-and-replace-methods-of-history) |
 |133| [How do you programmatically navigate using React router v4?](#how-do-you-programmatically-navigate-using-react-router-v4) |
 |134| [How to get query parameters in React Router v4](#how-to-get-query-parameters-in-react-router-v4) |
@@ -2532,15 +2532,15 @@
 
      React Router는 브라우저의 `window.history`와 브라우저 해쉬 기록의 상호 작용을 처리하는 `history` 라이브러리를 감싸는 래퍼이다. 또한 모바일 히스토리를 제공하여 모바일 앱 개발(React Native) 및 Node 단위 테스트와 같이 글로벌 히스토리가 없는 환경에 유용하다.
 
-3.   ### What are the `<Router>` components of React Router v4?
+3.   ### Router v4의 `<Router>` 컴포넌트는 무엇인가?
 
-     React Router v4 provides below 3 `<Router>` components:
+     React Router v4는 아래의 3개의 `<Router>` 컴포넌트를 제공한다.
 
      1. `<BrowserRouter>`
      2. `<HashRouter>`
      3. `<MemoryRouter>`
 
-     The above components will create *browser*, *hash*, and *memory* history instances. React Router v4 makes the properties and methods of the `history` instance associated with your router available through the context in the `router` object.
+     위의 컴포넌트는 *browser*, *hash* 및 *memory* history 인스턴스를 생성한다. React Router v4는 `router` 객체의 컨텍스트를 통해서 사용 가능한 라우터와 연결된 `history` 인스턴스의 속성과 메서드를 사용할 수 있도록 한다.
 
 4.   ### What is the purpose of `push()` and `replace()` methods of `history`?
 

@@ -152,7 +152,7 @@
 |130| [React Router가 history 라이브러리와 다른점은?](#React-Router가-history-라이브러리와-다른점은) |
 |131| [Router v4의 `<Router>` 컴포넌트는 무엇인가?](#what-are-the-router-components-of-react-router-v4) |
 |132| [What is the purpose of push and replace methods of history?](#what-is-the-purpose-of-push-and-replace-methods-of-history) |
-|133| [How do you programmatically navigate using React router v4?](#how-do-you-programmatically-navigate-using-react-router-v4) |
+|133| [React Router v4를 사용하여 프로그래밍 방식으로 어떻게 탐색하나?](#React-Router-v4를-사용하여-프로그래밍-방식으로-어떻게-탐색하나) |
 |134| [How to get query parameters in React Router v4](#how-to-get-query-parameters-in-react-router-v4) |
 |135| [Why you get "Router may have only one child element" warning?](#why-you-get-router-may-have-only-one-child-element-warning) |
 |136| [How to pass params to history.push method in React Router v4?](#how-to-pass-params-to-historypush-method-in-react-router-v4) |
@@ -2551,13 +2551,13 @@
 
      If you think of the history as an array of visited locations, `push()` will add a new location to the array and `replace()` will replace the current location in the array with the new one.
 
-5.   ### How do you programmatically navigate using React Router v4?
+5.   ### React Router v4를 사용하여 프로그래밍 방식으로 어떻게 탐색하나?
 
-     There are three different ways to achieve programmatic routing/navigation within components.
+     컴포넌트내에서 프로그래밍 방식의 라우팅 / 탐색을 수행하는 세 가지 방법이 있다.
 
-     1. **Using the `withRouter()` higher-order function:**
+     1. **`withRouter()` 고차 함수 사용**
 
-         The `withRouter()` higher-order function will inject the history object as a prop of the component. This object provides `push()` and `replace()` methods to avoid the usage of context.
+        `withRouter()` 고차 함수는 history 객체를 컴포넌트의 prop로 삽입된다. 이 객체는 `push()` 및 `replace()` 메서드를 제공한다.
 
          ```jsx harmony
          import { withRouter } from 'react-router-dom' // this also works with 'react-router-native'

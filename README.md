@@ -158,7 +158,7 @@
 |136| [React Router v4의 history.push 메서드에 매개 변수를 전달하는 방법은?](#React-Router-v4의-`history.push`-메서드에-매개-변수를-전달하는-방법은) |
 |137| [How to implement default or NotFound page?](#how-to-implement-default-or-notfound-page) |
 |138| [React Router v4에서 history를 얻는 방법은?](#React-Router-v4에서-history를-얻는-방법은) |
-|139| [How to perform automatic redirect after login?](#how-to-perform-automatic-redirect-after-login) |
+|139| [로그인 후 자동 리디렉션을 수행하는 방법은?](#로그인-후-자동-리디렉션을-수행하는-방법은) |
 |   | **React Internationalization** |
 |140| [What is React-Intl?](#what-is-react-intl) |
 |141| [What are the main features of React Intl?](#what-are-the-main-features-of-react-intl) |
@@ -2716,9 +2716,9 @@
          history.push('/go-here')
          ```
 
-11.  ### How to perform automatic redirect after login?
+11.  ### 로그인 후 자동 리디렉션을 수행하는 방법은?
 
-     The `react-router` package provides `<Redirect>` component in React Router. Rendering a `<Redirect>` will navigate to a new location. Like server-side redirects, the new location will override the current location in the history stack.
+     `react-router` 패키지는 React Router에서 `<Redirect>` 컴포넌트를 제공한다. `<Redirect>`을 렌더링하면 새로운 위치로 이동한다. 서버 사이드 리디렉션과 마찬가지로 새로운 위치는 history 스택의 현재 위치를 무시한다.
 
      ```javascript
      import React, { Component } from 'react'

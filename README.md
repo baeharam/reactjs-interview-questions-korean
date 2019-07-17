@@ -151,7 +151,7 @@
 |129| [React Router란?](#React-Router란) |
 |130| [React Router가 history 라이브러리와 다른점은?](#React-Router가-history-라이브러리와-다른점은) |
 |131| [Router v4의 `<Router>` 컴포넌트는 무엇인가?](#what-are-the-router-components-of-react-router-v4) |
-|132| [What is the purpose of push and replace methods of history?](#what-is-the-purpose-of-push-and-replace-methods-of-history) |
+|132| [history의 push, place 메서드의 목적은?](#history의-push-place-메서드의-목적은) |
 |133| [React Router v4를 사용하여 프로그래밍 방식으로 어떻게 탐색하나?](#React-Router-v4를-사용하여-프로그래밍-방식으로-어떻게-탐색하나) |
 |134| [React Router v4에서 쿼리 매개 변수를 얻는 방법은?](#React-Router-v4에서-쿼리-매개-변수를-얻는-방법은) |
 |135| [왜 Router may have only one child element라는 경고 메시지가 나오나?](#왜-Router-may-have-only-one-child-element라는-경고-메시지가-나오나) |
@@ -2542,14 +2542,14 @@
 
      위의 컴포넌트는 *browser*, *hash* 및 *memory* history 인스턴스를 생성한다. React Router v4는 `router` 객체의 컨텍스트를 통해서 사용 가능한 라우터와 연결된 `history` 인스턴스의 속성과 메서드를 사용할 수 있도록 한다.
 
-4.   ### What is the purpose of `push()` and `replace()` methods of `history`?
+4.   ### `history`의 `push()`, place()` 메서드의 목적은?
 
-     A history instance has two methods for navigation purpose.
+     history 인스턴스에는 탐색을 위한 두가지 메서드가 있다.
 
      1. `push()`
      2. `replace()`
 
-     If you think of the history as an array of visited locations, `push()` will add a new location to the array and `replace()` will replace the current location in the array with the new one.
+     history를 방문한 위치의 배열로 생각하면 `push()`는 배열에 새 위치를 추가하고, `replace()`는 배열의 현재 위치를 새로운 위치로 바꾼다.
 
 5.   ### React Router v4를 사용하여 프로그래밍 방식으로 어떻게 탐색하나?
 

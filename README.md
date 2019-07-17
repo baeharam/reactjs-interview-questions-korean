@@ -152,8 +152,8 @@
 |130| [React Router가 history 라이브러리와 다른점은?](#React-Router가-history-라이브러리와-다른점은) |
 |131| [Router v4의 `<Router>` 컴포넌트는 무엇인가?](#what-are-the-router-components-of-react-router-v4) |
 |132| [What is the purpose of push and replace methods of history?](#what-is-the-purpose-of-push-and-replace-methods-of-history) |
-|133| [How do you programmatically navigate using React router v4?](#how-do-you-programmatically-navigate-using-react-router-v4) |
-|134| [How to get query parameters in React Router v4](#how-to-get-query-parameters-in-react-router-v4) |
+|133| [React Router v4를 사용하여 프로그래밍 방식으로 어떻게 탐색하나?](#React-Router-v4를-사용하여-프로그래밍-방식으로-어떻게-탐색하나) |
+|134| [React Router v4에서 쿼리 매개 변수를 얻는 방법은?](#React-Router-v4에서-쿼리-매개-변수를-얻는-방법은) |
 |135| [왜 Router may have only one child element라는 경고 메시지가 나오나?](#왜-Router-may-have-only-one-child-element라는-경고-메시지가-나오나) |
 |136| [How to pass params to history.push method in React Router v4?](#how-to-pass-params-to-historypush-method-in-react-router-v4) |
 |137| [How to implement default or NotFound page?](#how-to-implement-default-or-notfound-page) |
@@ -2551,13 +2551,13 @@
 
      If you think of the history as an array of visited locations, `push()` will add a new location to the array and `replace()` will replace the current location in the array with the new one.
 
-5.   ### How do you programmatically navigate using React Router v4?
+5.   ### React Router v4를 사용하여 프로그래밍 방식으로 어떻게 탐색하나?
 
-     There are three different ways to achieve programmatic routing/navigation within components.
+     컴포넌트내에서 프로그래밍 방식의 라우팅 / 탐색을 수행하는 세 가지 방법이 있다.
 
-     1. **Using the `withRouter()` higher-order function:**
+     1. **`withRouter()` 고차 함수 사용**
 
-         The `withRouter()` higher-order function will inject the history object as a prop of the component. This object provides `push()` and `replace()` methods to avoid the usage of context.
+        `withRouter()` 고차 함수는 history 객체를 컴포넌트의 prop로 삽입된다. 이 객체는 `push()` 및 `replace()` 메서드를 제공한다.
 
          ```jsx harmony
          import { withRouter } from 'react-router-dom' // this also works with 'react-router-native'
@@ -2572,9 +2572,9 @@
          ))
          ```
 
-     2. **Using `<Route>` component and render props pattern:**
+     2. **`<Route>` 컴포넌트와 렌더링 props 패턴 사용**
 
-         The `<Route>` component passes the same props as `withRouter()`, so you will be able to access the history methods through the history prop.
+         The `<Route>` 컴포넌트는 `withRouter()`와 같은 prop을 전달하므로, history prop을 통해 history 메서드에 접근할 수 있다.
 
          ```jsx harmony
          import { Route } from 'react-router-dom'
@@ -2591,9 +2591,9 @@
          )
          ```
 
-     3. **Using context:**
+     3. **context 사용**
 
-         This option is not recommended and treated as unstable API.
+         이 옵션은 권장되지 않으며 불안정한 API로 처리된다.
 
          ```jsx harmony
          const Button = (props, context) => (
@@ -2614,23 +2614,23 @@
          }
          ```
 
-6.   ### How to get query parameters in React Router v4?
+6.   ### React Router v4에서 쿼리 매개 변수를 얻는 방법은?
 
-     The ability to parse query strings was taken out of React Router v4 because there have been user requests over the years to support different implementation. So the decision has been given to users to choose the implementation they like. The recommended approach is to use query strings library.
+     다른 구현을 지원하기 위해 수년 동안 사용자 요청이 있었기 때문에 쿼리 문자열을 구문 분석하는 기능은 React Router v4에서 제거되었다. 그래서 사용자가 원하는 구현을 선택하도록 결정되었다. 권장되는 방법은 쿼리 문자열 라이브러리를 사용하는 것이다.
 
      ```javascript
      const queryString = require('query-string');
      const parsed = queryString.parse(props.location.search);
      ```
 
-     You can also use `URLSearchParams` if you want something native:
+     네이티브를 원한다면 `URLSearchParams`를 사용할 수도 있다.
 
      ```javascript
      const params = new URLSearchParams(props.location.search)
      const foo = params.get('name')
      ```
 
-     You should use a *polyfill* for IE11.
+     IE11에서는 *polyfill*를 사용해야한다.
 
 7.   ### 왜 "Router may have only one child element"라는 경고 메시지가 나오나?
 

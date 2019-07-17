@@ -154,7 +154,7 @@
 |132| [What is the purpose of push and replace methods of history?](#what-is-the-purpose-of-push-and-replace-methods-of-history) |
 |133| [React Router v4를 사용하여 프로그래밍 방식으로 어떻게 탐색하나?](#React-Router-v4를-사용하여-프로그래밍-방식으로-어떻게-탐색하나) |
 |134| [React Router v4에서 쿼리 매개 변수를 얻는 방법은?](#React-Router-v4에서-쿼리-매개-변수를-얻는-방법은) |
-|135| [Why you get "Router may have only one child element" warning?](#why-you-get-router-may-have-only-one-child-element-warning) |
+|135| [왜 Router may have only one child element라는 경고 메시지가 나오나?](#왜-Router-may-have-only-one-child-element라는-경고-메시지가-나오나) |
 |136| [How to pass params to history.push method in React Router v4?](#how-to-pass-params-to-historypush-method-in-react-router-v4) |
 |137| [How to implement default or NotFound page?](#how-to-implement-default-or-notfound-page) |
 |138| [How to get history on React Router v4?](#how-to-get-history-on-react-router-v4) |
@@ -2632,17 +2632,17 @@
 
      IE11에서는 *polyfill*를 사용해야한다.
 
-7.   ### Why you get "Router may have only one child element" warning?
+7.   ### 왜 "Router may have only one child element"라는 경고 메시지가 나오나?
 
-     You have to wrap your Route's in a `<Switch>` block because `<Switch>` is unique in that it renders a route exclusively.
+     `<Switch>`는 라우터를 독점적으로 렌더링한다는 점에서 고유하므로 `<Switch>` 블록에 라우터를 감싸야 한다.
 
-     At first you need to add `Switch` to your imports:
+     먼저 `Switch`를 import 해준다.
 
      ```javascript
      import { Switch, Router, Route } from 'react-router'
      ```
 
-     Then define the routes within `<Switch>` block:
+     그런 다음 `<Switch>` 블록 내에서 경로를 정의한다.
 
      ```jsx harmony
      <Router>

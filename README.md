@@ -157,7 +157,7 @@
 |135| [Why you get "Router may have only one child element" warning?](#why-you-get-router-may-have-only-one-child-element-warning) |
 |136| [How to pass params to history.push method in React Router v4?](#how-to-pass-params-to-historypush-method-in-react-router-v4) |
 |137| [How to implement default or NotFound page?](#how-to-implement-default-or-notfound-page) |
-|138| [How to get history on React Router v4?](#how-to-get-history-on-react-router-v4) |
+|138| [React Router v4에서 history를 얻는 방법은?](#React-Router-v4에서-history를-얻는-방법은) |
 |139| [How to perform automatic redirect after login?](#how-to-perform-automatic-redirect-after-login) |
 |   | **React Internationalization** |
 |140| [What is React-Intl?](#what-is-react-intl) |
@@ -2679,11 +2679,11 @@
      </Switch>
      ```
 
-10.  ### How to get history on React Router v4?
+10.  ### React Router v4에서 history를 얻는 방법은
 
-     1. Create a module that exports a `history` object and import this module across the project.
+     1. `history` 객체를 export 한 후 프로젝트 전체를 import 하는 모듈을 작성하면 된다.
 
-         For example, create `history.js` file:
+         예를 들어, `history.js` 파일을 만든다.
 
          ```javascript
          import { createBrowserHistory } from 'history'
@@ -2693,7 +2693,7 @@
          })
          ```
 
-     2. You should use the `<Router>` component instead of built-in routers. Imported the above `history.js` inside `index.js` file:
+     2. 기본으로 제공되는 라우터 대신 `<Router>` 컴포넌트를 사용해야 한다. `index.js` 파일 내에서 `history.js`를 import 한다.
 
          ```jsx harmony
          import { Router } from 'react-router-dom'
@@ -2707,7 +2707,7 @@
          ), holder)
          ```
 
-     3. You can also use push method of `history` object similar to built-in history object:
+     3. 내장된 history 객체와 유사한 `history` 객체의 push 메서드를 사용할 수 있다.
 
          ```javascript
          // some-other-file.js

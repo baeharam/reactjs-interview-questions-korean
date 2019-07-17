@@ -155,7 +155,7 @@
 |133| [React Router v4를 사용하여 프로그래밍 방식으로 어떻게 탐색하나?](#React-Router-v4를-사용하여-프로그래밍-방식으로-어떻게-탐색하나) |
 |134| [React Router v4에서 쿼리 매개 변수를 얻는 방법은?](#React-Router-v4에서-쿼리-매개-변수를-얻는-방법은) |
 |135| [왜 Router may have only one child element라는 경고 메시지가 나오나?](#왜-Router-may-have-only-one-child-element라는-경고-메시지가-나오나) |
-|136| [How to pass params to history.push method in React Router v4?](#how-to-pass-params-to-historypush-method-in-react-router-v4) |
+|136| [React Router v4의 history.push 메서드에 매개 변수를 전달하는 방법은?](#React-Router-v4의-`history.push`-메서드에-매개-변수를-전달하는-방법은) |
 |137| [How to implement default or NotFound page?](#how-to-implement-default-or-notfound-page) |
 |138| [How to get history on React Router v4?](#how-to-get-history-on-react-router-v4) |
 |139| [How to perform automatic redirect after login?](#how-to-perform-automatic-redirect-after-login) |
@@ -2653,9 +2653,9 @@
      </Router>
      ```
 
-8.   ### How to pass params to `history.push` method in React Router v4?
+8.   ### React Router v4의 `history.push` 메서드에 매개 변수를 전달하는 방법은?
 
-     While navigating you can pass props to the `history` object:
+      네비게이션하는 동안 `history` 객체에 props를 전달할 수 있다.
 
      ```javascript
      this.props.history.push({
@@ -2665,7 +2665,7 @@
      })
      ```
 
-     The `search` property is used to pass query params in `push()` method.
+     `search` 속성은 `push()` 메서드에서 쿼리 매개변수를 전달하는데 사용된다.
 
 9.   ### How to implement *default* or *NotFound* page?
 

@@ -156,7 +156,7 @@
 |134| [React Router v4에서 쿼리 매개 변수를 얻는 방법은?](#React-Router-v4에서-쿼리-매개-변수를-얻는-방법은) |
 |135| [왜 Router may have only one child element라는 경고 메시지가 나오나?](#왜-Router-may-have-only-one-child-element라는-경고-메시지가-나오나) |
 |136| [React Router v4의 history.push 메서드에 매개 변수를 전달하는 방법은?](#React-Router-v4의-`history.push`-메서드에-매개-변수를-전달하는-방법은) |
-|137| [How to implement default or NotFound page?](#how-to-implement-default-or-notfound-page) |
+|137| [default 또는 NotFound 페이지 구현 방법?](#default-또는-NotFound-페이지-구현-방법) |
 |138| [React Router v4에서 history를 얻는 방법은?](#React-Router-v4에서-history를-얻는-방법은) |
 |139| [로그인 후 자동 리디렉션을 수행하는 방법은?](#로그인-후-자동-리디렉션을-수행하는-방법은) |
 |   | **React Internationalization** |
@@ -2667,9 +2667,9 @@
 
      `search` 속성은 `push()` 메서드에서 쿼리 매개변수를 전달하는데 사용된다.
 
-9.   ### How to implement *default* or *NotFound* page?
+9.   ### *default* 또는 *NotFound* 페이지 구현 방법?
 
-     A `<Switch>` renders the first child `<Route>` that matches. A `<Route>` with no path always matches. So you just need to simply drop path attribute as below
+     `<Switch>`는 일치하는 첫 번째 하위 `<Route>`를 렌더링한다. 경로가 없는 `<Route>`는 항상 일치한다. 따라서 아래와 같은 경로 속성을 삭제하면 된다.
 
      ```jsx harmony
      <Switch>

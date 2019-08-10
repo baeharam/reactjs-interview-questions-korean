@@ -177,7 +177,7 @@
 |152| [What is Flux?](#what-is-flux) |
 |153| [What is Redux?](#what-is-redux) |
 |154| [What are the core principles of Redux?](#what-are-the-core-principles-of-redux) |
-|155| [What are the downsides of Redux compared to Flux?](#what-are-the-downsides-of-redux-compared-to-flux) |
+|155| [Flux와 비교한 Redux의 단점은?](#flux와-비교한-redux의-단점은) |
 |156| [What is the difference between mapStateToProps() and mapDispatchToProps()?](#what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops) |
 |157| [Can I dispatch an action in reducer?](#can-i-dispatch-an-action-in-reducer) |
 |158| [How to access Redux store outside a component?](#how-to-access-redux-store-outside-a-component) |
@@ -2986,13 +2986,13 @@
      2. **State is read-only:** The only way to change the state is to emit an action, an object describing what happened. This ensures that neither the views nor the network callbacks will ever write directly to the state.
      3. **Changes are made with pure functions:** To specify how the state tree is transformed by actions, you write reducers. Reducers are just pure functions that take the previous state and an action as parameters, and return the next state.
 
-4.   ### What are the downsides of Redux compared to Flux?
+4.   ### Flux와 비교한 Redux의 단점은?
 
-     Instead of saying downsides we can say that there are few compromises of using Redux over Flux. Those are as follows:
+     단점 대신에 Flux를 통해 Redux을 사용하면 더럽히는 일이 거의 없다.
 
-     1. **You will need to learn to avoid mutations:** Flux is un-opinionated about mutating data, but Redux doesn't like mutations and many packages complementary to Redux assume you never mutate the state. You can enforce this with dev-only packages like `redux-immutable-state-invariant`, Immutable.js, or instructing your team to write non-mutating code.
-     2. **You're going to have to carefully pick your packages:** While Flux explicitly doesn't try to solve problems such as undo/redo, persistence, or forms, Redux has extension points such as middleware and store enhancers, and it has spawned a rich ecosystem.
-     3. **There is no nice Flow integration yet:** Flux currently lets you do very impressive static type checks which Redux doesn't support yet.
+     1. **Mutation을 피하는 방법을 배워야 한다.:** Flux는 데이터 변경에 대해 의견이 맞지 않지만, Redux는 mutation을 좋아하지 않으며 Redux를 보완하는 많은 패키지는 state를 절대로 변경하지 않는 것을 가정한다. `redux-immutable-state-invariant`, Immutable.js와 같은 개발 전용 패키지를 사용하거나 팀에게 변경하지 않는 코드를 작성하도록 지시하여 적용할 수 있다.
+     2. **packages를 신중하게 선택해야 한다.:** Flux는 실행 취소 / 다시 실행, 지속성 또는 양식과 같은 문제를 명시적으로 해결하려고 시도하지 않지만, Redux에는 미들웨어 및 저장소 향상기와 같은 익스텐션이 있으며 풍부한 에코 시스템을 생성했다.
+     3. **아직 좋은 흐름 통합은 없다.:** Flux는 현재 Redux가 지원하지 않는 매우 인상적인 정적 유형 검사를 수행 할 수 있다.
 
 5.   ### What is the difference between `mapStateToProps()` and `mapDispatchToProps()`?
 

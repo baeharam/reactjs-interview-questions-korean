@@ -175,7 +175,7 @@
 |151| [Give a simple example of Jest test case](#give-a-simple-example-of-jest-test-case) |
 |   | **React Redux** |
 |152| [What is Flux?](#what-is-flux) |
-|153| [What is Redux?](#what-is-redux) |
+|153| [Redux란?](#redux란) |
 |154| [What are the core principles of Redux?](#what-are-the-core-principles-of-redux) |
 |155| [What are the downsides of Redux compared to Flux?](#what-are-the-downsides-of-redux-compared-to-flux) |
 |156| [What is the difference between mapStateToProps() and mapDispatchToProps()?](#what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops) |
@@ -2974,9 +2974,9 @@
 
      ![flux](images/flux.png)
 
-2.   ### What is Redux?
+2.   ### Redux란?
 
-     *Redux* is a predictable state container for JavaScript apps based on the *Flux design pattern*. Redux can be used together with React, or with any other view library. It is tiny (about 2kB) and has no dependencies.
+     *Redux*는 *Flux 디자인 패턴*을 기반으로하는 JavaScript 앱을 위한 예측 가능한 상태 컨테이너이다. Redux는 React와 함께 또는 다른 뷰 라이브러리와 함께 사용할 수 있다. 크기가 작고(2kB 정도) 종속성이 없다.
 
 3.   ### What are the core principles of Redux?
 

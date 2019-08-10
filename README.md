@@ -176,7 +176,7 @@
 |   | **React Redux** |
 |152| [What is Flux?](#what-is-flux) |
 |153| [What is Redux?](#what-is-redux) |
-|154| [What are the core principles of Redux?](#what-are-the-core-principles-of-redux) |
+|154| [Redux의 핵심 원칙은?](#redux의-핵심-원칙은) |
 |155| [What are the downsides of Redux compared to Flux?](#what-are-the-downsides-of-redux-compared-to-flux) |
 |156| [What is the difference between mapStateToProps() and mapDispatchToProps()?](#what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops) |
 |157| [Can I dispatch an action in reducer?](#can-i-dispatch-an-action-in-reducer) |
@@ -2963,13 +2963,13 @@
 
      *Redux* is a predictable state container for JavaScript apps based on the *Flux design pattern*. Redux can be used together with React, or with any other view library. It is tiny (about 2kB) and has no dependencies.
 
-3.   ### What are the core principles of Redux?
+3.   ### Redux의 핵심 원칙은?
 
-     Redux follows three fundamental principles:
+     Redux는 세 가지 기본원칙을 따른다.
 
-     1. **Single source of truth:** The state of your whole application is stored in an object tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.
-     2. **State is read-only:** The only way to change the state is to emit an action, an object describing what happened. This ensures that neither the views nor the network callbacks will ever write directly to the state.
-     3. **Changes are made with pure functions:** To specify how the state tree is transformed by actions, you write reducers. Reducers are just pure functions that take the previous state and an action as parameters, and return the next state.
+     1. **진실의 단일 소스:** 전체 애플리케이션의 state는 단일 저장소 내 Object Tree에 저장된다. 단일 state 트리를 사용하면 시간이 지남에 따른 변경사항을 추적하고 응용 프로그램을 디버그 또는 검사하기에 쉽다.
+     2. **State는 읽기 전용:** state를 변경하는 유일한 방법은 무슨 일이 있었는지 설명한 객체인 action을 내보내는 것이다. 뷰나 네트워크 콜백이 state에 직접 쓰지 않는다.
+     3. **Changes are made with pure functions:** 작업에 의해 state 트리가 변환되는 action을 지정하려면 reducer를 작성해야 한다. Reducers는 이전의 state와 action을 파라미터로 사용하고, 다음의 state를 return 하는 순수함수이다.
 
 4.   ### What are the downsides of Redux compared to Flux?
 

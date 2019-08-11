@@ -174,7 +174,7 @@
 |150| [What are the advantages of Jest over Jasmine?](#what-are-the-advantages-of-jest-over-jasmine) |
 |151| [Give a simple example of Jest test case](#give-a-simple-example-of-jest-test-case) |
 |   | **React Redux** |
-|152| [What is Flux?](#what-is-flux) |
+|152| [flux란?](#flux란) |
 |153| [Redux란?](#redux란) |
 |154| [What are the core principles of Redux?](#what-are-the-core-principles-of-redux) |
 |155| [What are the downsides of Redux compared to Flux?](#what-are-the-downsides-of-redux-compared-to-flux) |
@@ -2966,11 +2966,11 @@
 
 ## React Redux
 
-1.   ### What is flux?
+1.   ### flux란?
 
-     *Flux* is an *application design paradigm* used as a replacement for the more traditional MVC pattern. It is not a framework or a library but a new kind of architecture that complements React and the concept of Unidirectional Data Flow. Facebook uses this pattern internally when working with React.
+     *Flux*는 전통적인 MVC 패턴의 대체품으로 사용되는 *애플리케이션 디자인 패러다임*이다. 이것은 단순히 프레임워크나 라이브러리가 아니라 React와 단방향 데이터 흐름의 개념을 보완하는 새로운 종류의 아키텍처이다. Facebook은 React로 작업할 때 이 패턴을 내부적으로 사용한다.
 
-     The workflow between dispatcher, stores and views components with distinct inputs and outputs as follows:
+     디스패처 간 워크플로우는 다음과 같이 고유한 입력 및 출력으로 구성 요소를 저장하고 볼 수 있다.
 
      ![flux](images/flux.png)
 

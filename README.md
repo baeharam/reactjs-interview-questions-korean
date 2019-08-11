@@ -174,8 +174,8 @@
 |150| [What are the advantages of Jest over Jasmine?](#what-are-the-advantages-of-jest-over-jasmine) |
 |151| [Give a simple example of Jest test case](#give-a-simple-example-of-jest-test-case) |
 |   | **React Redux** |
-|152| [What is Flux?](#what-is-flux) |
-|153| [What is Redux?](#what-is-redux) |
+|152| [flux란?](#flux란) |
+|153| [Redux란?](#redux란) |
 |154| [Redux의 핵심 원칙은?](#redux의-핵심-원칙은) |
 |155| [What are the downsides of Redux compared to Flux?](#what-are-the-downsides-of-redux-compared-to-flux) |
 |156| [What is the difference between mapStateToProps() and mapDispatchToProps()?](#what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops) |
@@ -338,6 +338,12 @@
 |310| [What are typical middleware choices for handling asynchronous calls in Redux?](#what-are-typical-middleware-choices-for-handling-asynchronous-calls-in-redux)|
 |311| [Is browsers understand JSX code?](#is-browsers-understand-jsx-code)|
 |312| [Describe about data flow in react?](#describe-about-data-flow-in-react)|
+|313| [What is react scripts?](#what-is-react-scripts)|
+|314| [What are the features of create react app?](#what-are-the-features-of-create-react-app)|
+|315| [What is the purpose of renderToNodeStream method?](#what-is-the-purpose-of-rendertonodestream-method)|
+|316| [What is MobX?](#what-is-mobx)|
+|317| [What are the differences between Redux and MobX?](#what-are-the-differences-between-redux-and-mobx)|
+|318| [Should I learn ES6 before learning ReactJS?](#should-i-learn-es6-before-learning-reactjs)|
 
 ## Core React
 
@@ -408,7 +414,7 @@
 
     ```javascript
     const Button = ({ onLogin }) =>
-      <div id={'login-btn'} onClick={onLogin} />
+      <div id={'login-btn'} onClick={onLogin}>Login</div>
     ```
 
     JSX는 `React.createElement()` 함수 트리로 변환된다. :
@@ -764,12 +770,16 @@
 
     ```javascript
     class MyComponent extends Component {
+      constructor(props){
+        super(props);
+        this.node = createRef();
+      }
       componentDidMount() {
-        this.node.scrollIntoView()
+        this.node.current.scrollIntoView();
       }
 
       render() {
-        return <div ref={node => this.node = node} />
+        return <div ref={this.node} />
       }
     }
     ```
@@ -2026,6 +2036,11 @@
 
      ```javascript
      class WindowDimensions extends React.Component {
+       constructor(props){
+         super(props);
+         this.updateDimensions = this.updateDimensions.bind(this);
+       }
+        
        componentWillMount() {
          this.updateDimensions()
        }
@@ -2039,7 +2054,7 @@
        }
 
        updateDimensions() {
-         this.setState({width: $(window).width(), height: $(window).height()})
+         this.setState({width: window.innerWidth, height: window.innerHeight})
        }
 
        render() {
@@ -2951,17 +2966,17 @@
 
 ## React Redux
 
-1.   ### What is flux?
+1.   ### flux란?
 
-     *Flux* is an *application design paradigm* used as a replacement for the more traditional MVC pattern. It is not a framework or a library but a new kind of architecture that complements React and the concept of Unidirectional Data Flow. Facebook uses this pattern internally when working with React.
+     *Flux*는 전통적인 MVC 패턴의 대체품으로 사용되는 *애플리케이션 디자인 패러다임*이다. 이것은 단순히 프레임워크나 라이브러리가 아니라 React와 단방향 데이터 흐름의 개념을 보완하는 새로운 종류의 아키텍처이다. Facebook은 React로 작업할 때 이 패턴을 내부적으로 사용한다.
 
-     The workflow between dispatcher, stores and views components with distinct inputs and outputs as follows:
+     디스패처 간 워크플로우는 다음과 같이 고유한 입력 및 출력으로 구성 요소를 저장하고 볼 수 있다.
 
      ![flux](images/flux.png)
 
-2.   ### What is Redux?
+2.   ### Redux란?
 
-     *Redux* is a predictable state container for JavaScript apps based on the *Flux design pattern*. Redux can be used together with React, or with any other view library. It is tiny (about 2kB) and has no dependencies.
+     *Redux*는 *Flux 디자인 패턴*을 기반으로하는 JavaScript 앱을 위한 예측 가능한 상태 컨테이너이다. Redux는 React와 함께 또는 다른 뷰 라이브러리와 함께 사용할 수 있다. 크기가 작고(2kB 정도) 종속성이 없다.
 
 3.   ### Redux의 핵심 원칙은?
 
@@ -3649,8 +3664,15 @@
      Relay is a JavaScript framework for providing a data layer and client-server communication to web applications using the React view layer.
 
 205. ### How to use TypeScript in `create-react-app` application?
+     Starting from react-scripts@2.1.0 or higher, there is a built-in support for typescript. You can just pass `--typescript` option as below
+     ```bash
+     npx create-react-app my-app --typescript
 
-     When you create a new project supply `--scripts-version` option as `react-scripts-ts`. `react-scripts-ts` is a set of adjustments to take the standard `create-react-app` project pipeline and bring TypeScript into the mix.
+     # or
+
+     yarn create react-app my-app --typescript
+     ```
+     But for lower versions of react scripts, just supply `--scripts-version` option as `react-scripts-ts` while you create a new project. `react-scripts-ts` is a set of adjustments to take the standard `create-react-app` project pipeline and bring TypeScript into the mix.
 
      Now the project layout should look like the following:
 
@@ -5134,3 +5156,63 @@
      No, browsers can't understand JSX code. You need a transpiler to convert your JSX to regular Javascript that browsers can understand. The most widely used transpiler right now is Babel.
 312. ### Describe about data flow in react?
      React implements one-way reactive data flow using props which reduce boilerplate and is easier to understand than traditional two-way data binding.
+313. ### What is react scripts?
+     The `react-scripts` package is a set of scripts from the create-react-app starter pack which helps you kick off projects without configuring. The `react-scripts start` command sets up the development environment and starts a server, as well as hot module reloading.
+314. ### What are the features of create react app?
+     Below are the list of some of the features provided by create react app.
+     1. React, JSX, ES6, Typescript and Flow syntax support.
+     2. Autoprefixed CSS
+     3. A live development server
+     4. A fast interactive unit test runner with built-in support for coverage reporting
+     5. A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps
+     6. An offline-first service worker and a web app manifest, meeting all the Progressive Web App criteria.
+
+315. ### What is the purpose of renderToNodeStream method?
+     The `ReactDOMServer#renderToNodeStream` method is used to generate HTML on the server and send the markup down on the initial request for faster page loads. It also helps search engines to crawl your pages easily for SEO purposes.
+     **Note:** Remember this method is not available in the browser but only server.
+316. ### What is MobX?
+     MobX is a simple, scalable and battle tested state management solution for applying functional reactive programming (TFRP). For reactJs application, you need to install below packages,
+     ```bash
+     npm install mobx --save
+     npm install mobx-react --save
+     ```
+317. ### What are the differences between Redux and MobX?
+     Below are the main differences between Redux and MobX,
+
+     | Topic | Redux | MobX |
+     | ----- | ------- |
+     | Definition| It is a javascript library for managing the application state | It is a library for reactively managing the state of your applications |
+     | Programming | It is mainly written in ES6 | It is written in JavaScript(ES5) |
+     | Data Store | There is only one large store exist for data storage | There is more than one store for storage |
+     | Usage | Mainly used for large and complex applications | Used for simple applications |
+     | Performance | Need to be improved | Provides better performance |
+     | How it stores | Uses JS Object to store | Uses observable to store the data |
+
+318. ### Should I learn ES6 before learning ReactJS?
+     No, you don’t have to learn es2015/es6 to learn react. But you may find many resources or React ecosystem uses ES6 extensively. Let's see some of the frequently used ES6 features,
+     1. Destructuring: To get props and use them in a component
+     ```javascript
+     // in es 5
+      var someData = this.props.someData
+      var dispatch = this.props.dispatch
+
+     // in es6
+     const { someData, dispatch } = this.props
+     ```
+     2. Spread operator: Helps in passing props down into a component
+     ```javascript
+     // in es 5
+     <SomeComponent myData={this.props.someData} dispatch={this.props.dispatch} />
+
+     // in es6
+     <SomeComponent {...this.props} />
+     ```
+     3. Arrow functions: Makes compact syntax
+     ```javascript
+     // es 5
+     var users = usersList.map(function (user) {
+      return <li>{user.name}</li>
+     })
+     // es 6
+     const users = usersList.map(user => <li>{user.name}</li>);
+     ```

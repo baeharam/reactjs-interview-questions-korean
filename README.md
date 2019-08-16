@@ -174,9 +174,9 @@
 |150| [What are the advantages of Jest over Jasmine?](#what-are-the-advantages-of-jest-over-jasmine) |
 |151| [Give a simple example of Jest test case](#give-a-simple-example-of-jest-test-case) |
 |   | **React Redux** |
-|152| [What is Flux?](#what-is-flux) |
-|153| [What is Redux?](#what-is-redux) |
-|154| [What are the core principles of Redux?](#what-are-the-core-principles-of-redux) |
+|152| [flux란?](#flux란) |
+|153| [Redux란?](#redux란) |
+|154| [Redux의 핵심 원칙은?](#redux의-핵심-원칙은) |
 |155| [Flux와 비교한 Redux의 단점은?](#flux와-비교한-redux의-단점은) |
 |156| [What is the difference between mapStateToProps() and mapDispatchToProps()?](#what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops) |
 |157| [Can I dispatch an action in reducer?](#can-i-dispatch-an-action-in-reducer) |
@@ -2966,25 +2966,25 @@
 
 ## React Redux
 
-1.   ### What is flux?
+1.   ### flux란?
 
-     *Flux* is an *application design paradigm* used as a replacement for the more traditional MVC pattern. It is not a framework or a library but a new kind of architecture that complements React and the concept of Unidirectional Data Flow. Facebook uses this pattern internally when working with React.
+     *Flux*는 전통적인 MVC 패턴의 대체품으로 사용되는 *애플리케이션 디자인 패러다임*이다. 이것은 단순히 프레임워크나 라이브러리가 아니라 React와 단방향 데이터 흐름의 개념을 보완하는 새로운 종류의 아키텍처이다. Facebook은 React로 작업할 때 이 패턴을 내부적으로 사용한다.
 
-     The workflow between dispatcher, stores and views components with distinct inputs and outputs as follows:
+     디스패처 간 워크플로우는 다음과 같이 고유한 입력 및 출력으로 구성 요소를 저장하고 볼 수 있다.
 
      ![flux](images/flux.png)
 
-2.   ### What is Redux?
+2.   ### Redux란?
 
-     *Redux* is a predictable state container for JavaScript apps based on the *Flux design pattern*. Redux can be used together with React, or with any other view library. It is tiny (about 2kB) and has no dependencies.
+     *Redux*는 *Flux 디자인 패턴*을 기반으로하는 JavaScript 앱을 위한 예측 가능한 상태 컨테이너이다. Redux는 React와 함께 또는 다른 뷰 라이브러리와 함께 사용할 수 있다. 크기가 작고(2kB 정도) 종속성이 없다.
 
-3.   ### What are the core principles of Redux?
+3.   ### Redux의 핵심 원칙은?
 
-     Redux follows three fundamental principles:
+     Redux는 세 가지 기본원칙을 따른다.
 
-     1. **Single source of truth:** The state of your whole application is stored in an object tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.
-     2. **State is read-only:** The only way to change the state is to emit an action, an object describing what happened. This ensures that neither the views nor the network callbacks will ever write directly to the state.
-     3. **Changes are made with pure functions:** To specify how the state tree is transformed by actions, you write reducers. Reducers are just pure functions that take the previous state and an action as parameters, and return the next state.
+     1. **진실의 단일 소스(Single source of truth):** 전체 애플리케이션의 state는 단일 저장소 내 Object Tree에 저장된다. 단일 state 트리를 사용하면 시간이 지남에 따른 변경사항을 추적하고 응용 프로그램을 디버그 또는 검사하기에 쉽다.
+     2. **State는 읽기 전용:** state를 변경하는 유일한 방법은 무슨 일이 있었는지 설명한 객체인 action을 내보내는 것이다. 뷰나 네트워크 콜백이 state에 직접 쓰지 않는다.
+     3. **Changes are made with pure functions:** 작업에 의해 state 트리가 변환되는 action을 지정하려면 reducer를 작성해야 한다. Reducers는 이전의 state와 action을 파라미터로 사용하고, 다음의 state를 return 하는 순수함수이다.
 
 4.   ### Flux와 비교한 Redux의 단점은?
 

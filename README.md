@@ -2982,7 +2982,7 @@
 
      Redux는 세 가지 기본원칙을 따른다.
 
-     1. **진실의 단일 소스:** 전체 애플리케이션의 state는 단일 저장소 내 Object Tree에 저장된다. 단일 state 트리를 사용하면 시간이 지남에 따른 변경사항을 추적하고 응용 프로그램을 디버그 또는 검사하기에 쉽다.
+     1. **진실의 단일 소스(Single source of truth):** 전체 애플리케이션의 state는 단일 저장소 내 Object Tree에 저장된다. 단일 state 트리를 사용하면 시간이 지남에 따른 변경사항을 추적하고 응용 프로그램을 디버그 또는 검사하기에 쉽다.
      2. **State는 읽기 전용:** state를 변경하는 유일한 방법은 무슨 일이 있었는지 설명한 객체인 action을 내보내는 것이다. 뷰나 네트워크 콜백이 state에 직접 쓰지 않는다.
      3. **Changes are made with pure functions:** 작업에 의해 state 트리가 변환되는 action을 지정하려면 reducer를 작성해야 한다. Reducers는 이전의 state와 action을 파라미터로 사용하고, 다음의 state를 return 하는 순수함수이다.
 

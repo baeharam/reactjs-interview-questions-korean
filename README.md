@@ -344,6 +344,8 @@
 |316| [What is MobX?](#what-is-mobx)|
 |317| [What are the differences between Redux and MobX?](#what-are-the-differences-between-redux-and-mobx)|
 |318| [Should I learn ES6 before learning ReactJS?](#should-i-learn-es6-before-learning-reactjs)|
+|319| [What is Concurrent Rendering?](#what-is-concurrent-rendering)|
+|320| [What is the difference between async mode and concurrent mode?](#what-is-the-difference-between-async-mode-and-concurrent-mode)|
 
 ## Core React
 
@@ -3017,6 +3019,16 @@
        }
      }
      ```
+     
+     Recommend always using the “object shorthand” form for the `mapDispatchToProps`
+        
+     Redux wrap it in another function that looks like (…args) => dispatch(onTodoClick(…args)), and pass that wrapper function as a prop to your component.
+      
+      ```javascript
+       const mapDispatchToProps = ({
+         onTodoClick
+       })
+      ```
 
 6.   ### Can I dispatch an action in reducer?
 
@@ -3024,7 +3036,7 @@
 
 7.   ### How to access Redux store outside a component?
 
-     Yes. You just need to export the store from the module where it created with `createStore()`. Also, it shouldn't pollute the global window object.
+     You just need to export the store from the module where it created with `createStore()`. Also, it shouldn't pollute the global window object.
 
      ```javascript
      store = createStore(myReducer)
@@ -5180,7 +5192,7 @@
      Below are the main differences between Redux and MobX,
 
      | Topic | Redux | MobX |
-     | ----- | ------- |
+     | ----- | ------- | ------- 
      | Definition| It is a javascript library for managing the application state | It is a library for reactively managing the state of your applications |
      | Programming | It is mainly written in ES6 | It is written in JavaScript(ES5) |
      | Data Store | There is only one large store exist for data storage | There is more than one store for storage |
@@ -5202,7 +5214,7 @@
      2. Spread operator: Helps in passing props down into a component
      ```javascript
      // in es 5
-     <SomeComponent myData={this.props.someData} dispatch={this.props.dispatch} />
+     <SomeComponent someData={this.props.someData} dispatch={this.props.dispatch} />
 
      // in es6
      <SomeComponent {...this.props} />
@@ -5216,3 +5228,16 @@
      // es 6
      const users = usersList.map(user => <li>{user.name}</li>);
      ```
+319. ### What is Concurrent Rendering?
+     The Concurrent rendering makes React apps to be more responsive by rendering component trees without blocking the main UI thread. It allows React to interrupt a long-running render to handle a high-priority event. i.e, When you enabled concurrent Mode, React will keep an eye on other tasks that need to be done, and if there's something with a higher priority it will pause what it is currently rendering and let the other task finish first. You can enable this in two ways,
+     ```javascript
+     // 1. Part of an app by wrapping with ConcurrentMode
+     <React.unstable_ConcurrentMode>
+       <Something />
+     </React.unstable_ConcurrentMode>
+
+     // 2. Whole app using createRoot
+     ReactDOM.unstable_createRoot(domNode).render(<App />);
+     ```
+320. ### What is the difference between async mode and concurrent mode?
+     Both refers the same thing. Previously concurrent Mode being referred to as "Async Mode" by React team. The name has been changed to highlight React’s ability to perform work on different priority levels. So it avoids the confusion from other approaches to Async Rendering.

@@ -178,7 +178,7 @@
 |153| [Redux란?](#redux란) |
 |154| [Redux의 핵심 원칙은?](#redux의-핵심-원칙은) |
 |155| [Flux와 비교한 Redux의 단점은?](#flux와-비교한-redux의-단점은) |
-|156| [What is the difference between mapStateToProps() and mapDispatchToProps()?](#what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops) |
+|156| [mapStateToProps()과 mapDispatchToProps()의 차이점은?](#mapstatetoprops과-mapdispatchtoprops의-차이점은?) |
 |157| [Can I dispatch an action in reducer?](#can-i-dispatch-an-action-in-reducer) |
 |158| [How to access Redux store outside a component?](#how-to-access-redux-store-outside-a-component) |
 |159| [What are the drawbacks of MVW pattern](#what-are-the-drawbacks-of-mvw-pattern) |
@@ -2996,9 +2996,9 @@
      2. **packages를 신중하게 선택해야 한다.:** Flux는 실행 취소 / 다시 실행, 지속성 또는 양식과 같은 문제를 명시적으로 해결하려고 시도하지 않지만, Redux에는 미들웨어 및 저장소 향상기와 같은 익스텐션이 있으며 풍부한 에코 시스템을 생성했다.
      3. **아직 좋은 흐름 통합은 없다.:** Flux는 현재 Redux가 지원하지 않는 매우 인상적인 정적 유형 검사를 수행 할 수 있다.
 
-5.   ### What is the difference between `mapStateToProps()` and `mapDispatchToProps()`?
+5.   ### `mapStateToProps()`과 `mapDispatchToProps()`의 차이점은?
 
-     `mapStateToProps()` is a utility which helps your component get updated state (which is updated by some other components):
+     `mapStateToProps()`는 컴포넌트가 다른 컴포넌트에 의해 업데이트된 state를 받아오는데 도와주는 유틸리티이다.
 
      ```javascript
      const mapStateToProps = (state) => {
@@ -3008,7 +3008,7 @@
      }
      ```
 
-     `mapDispatchToProps()` is a utility which will help your component to fire an action event (dispatching action which may cause change of application state):
+     `mapDispatchToProps()`는 컴포넌트가 응용프로그램 state 변경을 일으키는 dispatching action 이벤트를 발생시키는데 도와주는 유틸리티이다.
 
      ```javascript
      const mapDispatchToProps = (dispatch) => {
@@ -3020,9 +3020,9 @@
      }
      ```
      
-     Recommend always using the “object shorthand” form for the `mapDispatchToProps`
+     `mapDispatchToProps`에 대해서 항상 "객체 약식(object shorthand)" 양식을 사용하는 것을 추천한다.
         
-     Redux wrap it in another function that looks like (…args) => dispatch(onTodoClick(…args)), and pass that wrapper function as a prop to your component.
+     Redux는 (…args) => dispatch(onTodoClick(…args))와 같은 다른 함수로 래핑하고 해당 래퍼 함수를 ​​컴포넌트의 prop으로 전달합니다.
       
       ```javascript
        const mapDispatchToProps = ({

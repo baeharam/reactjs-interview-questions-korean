@@ -180,7 +180,7 @@
 |155| [Flux와 비교한 Redux의 단점은?](#flux와-비교한-redux의-단점은) |
 |156| [What is the difference between mapStateToProps() and mapDispatchToProps()?](#what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops) |
 |157| [Can I dispatch an action in reducer?](#can-i-dispatch-an-action-in-reducer) |
-|158| [How to access Redux store outside a component?](#how-to-access-redux-store-outside-a-component) |
+|158| [컴포넌트 외부의 Redux store에 접근하는 방법은?](#컴포넌트-외부의-Redux-store에-접근하는-방법은) |
 |159| [What are the drawbacks of MVW pattern](#what-are-the-drawbacks-of-mvw-pattern) |
 |160| [Are there any similarities between Redux and RxJS?](#are-there-any-similarities-between-redux-and-rxjs) |
 |161| [How to dispatch an action on load?](#how-to-dispatch-an-action-on-load) |
@@ -3034,9 +3034,9 @@
 
      Dispatching an action within a reducer is an **anti-pattern**. Your reducer should be *without side effects*, simply digesting the action payload and returning a new state object. Adding listeners and dispatching actions within the reducer can lead to chained actions and other side effects.
 
-7.   ### How to access Redux store outside a component?
+7.   ### 컴포넌트 외부의 Redux store에 접근하는 방법은?
 
-     You just need to export the store from the module where it created with `createStore()`. Also, it shouldn't pollute the global window object.
+     `createStore()`로 작성된 모듈에서 store를 내보내면 된다. 또한, 전역 window 객체를 오염시키지 않아야 한다.
 
      ```javascript
      store = createStore(myReducer)

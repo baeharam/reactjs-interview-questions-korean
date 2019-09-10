@@ -181,7 +181,7 @@
 |156| [mapStateToProps()과 mapDispatchToProps()의 차이점은?](#mapstatetoprops과-mapdispatchtoprops의-차이점은?) |
 |157| [reducer에서 action을 전달할 수 있나?](#reducer에서-action을-전달할-수-있나) |
 |158| [컴포넌트 외부의 Redux store에 접근하는 방법은?](#컴포넌트-외부의-Redux-store에-접근하는-방법은) |
-|159| [What are the drawbacks of MVW pattern](#what-are-the-drawbacks-of-mvw-pattern) |
+|159| [MVW 패턴의 단점은 무엇인가](#MVW-패턴의-단점은-무엇인가) |
 |160| [Are there any similarities between Redux and RxJS?](#are-there-any-similarities-between-redux-and-rxjs) |
 |161| [How to dispatch an action on load?](#how-to-dispatch-an-action-on-load) |
 |162| [How to use connect from React Redux?](#how-to-use-connect-from-react-redux) |
@@ -3044,12 +3044,12 @@
      export default store
      ```
 
-8.   ### What are the drawbacks of MVW pattern?
+8.   ### MVW 패턴의 단점은 무엇인가?
 
-     1. The DOM manipulation is very expensive which causes applications behaves slowly and inefficient.
-     2. Due to circular dependencies, a complicated model was created around models and views.
-     3. Lot of data changes happens for collaborative applications(like Google Docs).
-     4. No way to do undo (travel back in time) easily without adding so much extra code.
+     1. DOM 조작은 비용이 높아서 애플리케이션이 느리고 비효율적으로 작동하게 한다.
+     2. 순환 종속성으로 인해, 모델과 뷰를 중심으로한 복잡한 모델이 생성된다.
+     3. 구글 같은 공동작업 응용프로그램에서는 많은 데이터 변경이 발생한다.
+     4. 엄청 많은 코드를 추가하지 않고서는 쉽게 되돌릴 수 있는 방법은 없다.
 
 9.   ### Are there any similarities between Redux and RxJS?
 

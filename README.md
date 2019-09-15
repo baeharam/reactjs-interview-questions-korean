@@ -189,7 +189,7 @@
 |164| [Whats the purpose of at symbol in the redux connect decorator?](#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator) |
 |165| [What is the difference between React context and React Redux?](#what-is-the-difference-between-react-context-and-react-redux) |
 |166| [Why are Redux state functions called reducers?](#why-are-redux-state-functions-called-reducers) |
-|167| [How to make AJAX request in Redux?](#how-to-make-ajax-request-in-redux) |
+|167| [Redux에서 AJAX를 요청하는 방법은?](#Redux에서-AJAX를-요청하는-방법은) |
 |168| [Should I keep all component's state in Redux store?](#should-i-keep-all-components-state-in-redux-store) |
 |169| [What is the proper way to access Redux store?](#what-is-the-proper-way-to-access-redux-store) |
 |170| [What is the difference between component and container in React Redux?](#what-is-the-difference-between-component-and-container-in-react-redux) |
@@ -3208,11 +3208,11 @@
 
      Reducers always return the accumulation of the state (based on all previous and current actions). Therefore, they act as a reducer of state. Each time a Redux reducer is called, the state and action are passed as parameters. This state is then reduced (or accumulated) based on the action, and then the next state is returned. You could *reduce* a collection of actions and an initial state (of the store) on which to perform these actions to get the resulting final state.
 
-16.  ### How to make AJAX request in Redux?
+16.  ### Redux에서 AJAX를 요청하는 방법은?
 
-     You can use `redux-thunk` middleware which allows you to define async actions.
+     비동기 action을 정의할 수 있는 `redux-thunk` 미들웨어를 사용할 수 있다.
 
-     Let's take an example of fetching specific account as an AJAX call using *fetch API*:
+     *fetch API* 를 사용하여 특정 계정을 AJAX 호출로 가져오는 예시를 들어보자.
 
      ```javascript
      export function fetchAccount(id) {

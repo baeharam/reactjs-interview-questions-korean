@@ -187,7 +187,7 @@
 |162| [How to use connect from React Redux?](#how-to-use-connect-from-react-redux) |
 |163| [How to reset state in Redux?](#how-to-reset-state-in-redux) |
 |164| [Whats the purpose of at symbol in the redux connect decorator?](#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator) |
-|165| [What is the difference between React context and React Redux?](#what-is-the-difference-between-react-context-and-react-redux) |
+|165| [React context와 React Redux의 차이점은?](#React-context와-React-Redux의-차이점은) |
 |166| [Why are Redux state functions called reducers?](#why-are-redux-state-functions-called-reducers) |
 |167| [How to make AJAX request in Redux?](#how-to-make-ajax-request-in-redux) |
 |168| [Should I keep all component's state in Redux store?](#should-i-keep-all-components-state-in-redux-store) |
@@ -3200,9 +3200,9 @@
 
      The above examples are almost similar except the usage of decorator. The decorator syntax isn't built into any JavaScript runtimes yet, and is still experimental and subject to change. You can use babel for the decorators support.
 
-14.  ### What is the difference between React context and React Redux?
+14.  ### React context와 React Redux의 차이점은?
 
-     You can use **Context** in your application directly and is going to be great for passing down data to deeply nested components which what it was designed for. Whereas **Redux** is much more powerful and provides a large number of features that the Context API doesn't provide. Also, React Redux uses context internally but it doesn't expose this fact in the public API.
+     응용 프로그램에 **Context** 를 바로 사용할 수 있으며 설계된 중첩된 컴포넌트에 데이터를 전달하는 데 유용하다. 반면 **Redux** 는 훨씬 강력하고 Context API가 제공하지 않는 많은 기능을 제공한다. 또한, React Redux 는 내부적으로 Context를 사용하지만, 이 사실을 public API에 알리지 않는다.
 
 15.  ### Why are Redux state functions called reducers?
 

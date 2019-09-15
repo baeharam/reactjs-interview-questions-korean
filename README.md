@@ -193,7 +193,7 @@
 |168| [Should I keep all component's state in Redux store?](#should-i-keep-all-components-state-in-redux-store) |
 |169| [What is the proper way to access Redux store?](#what-is-the-proper-way-to-access-redux-store) |
 |170| [What is the difference between component and container in React Redux?](#what-is-the-difference-between-component-and-container-in-react-redux) |
-|171| [What is the purpose of the constants in Redux? ](#what-is-the-purpose-of-the-constants-in-redux) |
+|171| [Redux에서 상수의 목적은 무엇인가?](#Redux에서-상수의-목적은-무엇인가) |
 |172| [What are the different ways to write mapDispatchToProps()?](#what-are-the-different-ways-to-write-mapdispatchtoprops) |
 |173| [What is the use of the ownProps parameter in mapStateToProps() and mapDispatchToProps()?](#what-is-the-use-of-the-ownprops-parameter-in-mapstatetoprops-and-mapdispatchtoprops) |
 |174| [How to structure Redux top level directories?](#how-to-structure-redux-top-level-directories) |
@@ -3282,11 +3282,11 @@
 
      **Container** is an informal term for a component that is connected to a Redux store. Containers *subscribe* to Redux state updates and *dispatch* actions, and they usually don't render DOM elements; they delegate rendering to presentational child components.
 
-20.  ### What is the purpose of the constants in Redux?
+20.  ### Redux에서 상수의 목적은 무엇인가?
 
-     Constants allows you to easily find all usages of that specific functionality across the project when you use an IDE. It also prevents you from introducing silly bugs caused by typos – in which case, you will get a `ReferenceError` immediately.
+     상수를 사용하면 IDE를 사용할 때 프로젝트 전체에서 특정 기능의 모든 사용법을 쉽게 찾을 수 있다. 또한 오타로 인해 버그가 발생하는 것을 방지한다. - 이러한 경우, 즉시 `ReferenceError` 가 발생한다.
 
-     Normally we will save them in a single file (`constants.js` or `actionTypes.js`).
+     보통 하나의 파일로 저장한다 (`constants.js` 또는 `actionTypes.js`).
 
      ```javascript
      export const ADD_TODO = 'ADD_TODO'
@@ -3297,11 +3297,11 @@
      export const CLEAR_COMPLETED = 'CLEAR_COMPLETED'
      ```
 
-     In Redux you use them in two places:
+     Redux에서는 두 곳에서 사용한다.
 
-     1. **During action creation:**
+     1. **action을 작성할 때**
 
-         Let's take `actions.js`:
+         `actions.js` 을 보자.
 
          ```javascript
          import { ADD_TODO } from './actionTypes';
@@ -3311,9 +3311,9 @@
          }
          ```
 
-     2. **In reducers:**
+     2. **reducer 안에서**
 
-         Let's create `reducer.js`:
+         `reducer.js` 를 만들어 보자.
 
          ```javascript
          import { ADD_TODO } from './actionTypes'

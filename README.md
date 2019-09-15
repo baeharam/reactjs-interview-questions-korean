@@ -183,7 +183,7 @@
 |158| [컴포넌트 외부의 Redux store에 접근하는 방법은?](#컴포넌트-외부의-Redux-store에-접근하는-방법은) |
 |159| [What are the drawbacks of MVW pattern](#what-are-the-drawbacks-of-mvw-pattern) |
 |160| [Redux와 RxJS의 비슷한 점은?](#Redux와-RxJS의-비슷한-점은) |
-|161| [How to dispatch an action on load?](#how-to-dispatch-an-action-on-load) |
+|161| [로드 시점에 action을 전달하는 방법은?](#로드-시점에-action을-전달하는-방법은) |
 |162| [How to use connect from React Redux?](#how-to-use-connect-from-react-redux) |
 |163| [How to reset state in Redux?](#how-to-reset-state-in-redux) |
 |164| [Whats the purpose of at symbol in the redux connect decorator?](#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator) |
@@ -3058,9 +3058,9 @@
 
      Redux는 애플리케이션 전체에서 state를 관리하기 위한 도구이다. 일반적으로 UI 아키텍처로 사용된다. 이것을 Angular의 절반에 해당하는 대안이라고 생각하자. RxJS는 reactive 프로그래밍 라이브러리이다. 일반적으로 JavaScript에서 비동기 작업을 수행하는 도구로 사용된다. 이것을 Promises의 대안이라고 생각하자. Redux는 store가 reactive 하기 때문에 Reactive 패러다임을 사용한다. Store는 멀리서 행동을 관찰하고 스스로 변화시킨다. RxJS는 또한 Reactive 패러다임을 사용하지만, 아키텍처를 대체하는 것이 아닌 패턴을 달성하기 위한 기본 설계 블록, Observables를 제공한다.
 
-10.  ### How to dispatch an action on load?
+10.  ### 로드 시점에 action을 전달하는 방법은?
 
-     You can dispatch an action in `componentDidMount()` method and in `render()` method you can verify the data.
+    `componentDidMount()` 메서드에서 action을 전달할 수 있고 `render()` 메서드에서 데이터를 확인할 수 있다.
 
      ```javascript
      class App extends Component {

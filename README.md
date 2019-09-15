@@ -182,8 +182,8 @@
 |157| [reducer에서 action을 전달할 수 있나?](#reducer에서-action을-전달할-수-있나) |
 |158| [컴포넌트 외부의 Redux store에 접근하는 방법은?](#컴포넌트-외부의-Redux-store에-접근하는-방법은) |
 |159| [What are the drawbacks of MVW pattern](#what-are-the-drawbacks-of-mvw-pattern) |
-|160| [Are there any similarities between Redux and RxJS?](#are-there-any-similarities-between-redux-and-rxjs) |
-|161| [How to dispatch an action on load?](#how-to-dispatch-an-action-on-load) |
+|160| [Redux와 RxJS의 비슷한 점은?](#Redux와-RxJS의-비슷한-점은) |
+|161| [로드 시점에 action을 전달하는 방법은?](#로드-시점에-action을-전달하는-방법은) |
 |162| [React Redux에서 connect()를 사용하는 방법은?](#React-Redux에서-connect()를-사용하는-방법은) |
 |163| [How to reset state in Redux?](#how-to-reset-state-in-redux) |
 |164| [Whats the purpose of at symbol in the redux connect decorator?](#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator) |
@@ -324,7 +324,7 @@
 |296| [How do you set default value for uncontrolled component?](#how-do-you-set-default-value-for-uncontrolled-component)|
 |297| [What is your favorite React stack?](#what-is-your-favorite-react-stack)|
 |298| [What is the difference between Real DOM and Virtual DOM?](#what-is-the-difference-between-real-dom-and-virtual-dom)|
-|299| [How to add a bootstrap for a react application?](#how-to-add-a-bootstrap-for-a-react-application)|
+|299| [How to add Bootstrap to a react application?](#how-to-add-bootstrap-to-react-application)|
 |300| [Can you list down top websites or applications using react as front end framework?](#can-you-list-down-top-websites-or-applications-using-react-as-front-end-framework)|
 |301| [Is it recommended to use CSS In JS technique in React?](#is-it-recommended-to-use-css-in-js-technique-in-react)|
 |302| [Do I need to rewrite all my class components with hooks?](#do-i-need-to-rewrite-all-my-class-components-with-hooks)|
@@ -346,6 +346,7 @@
 |318| [Should I learn ES6 before learning ReactJS?](#should-i-learn-es6-before-learning-reactjs)|
 |319| [What is Concurrent Rendering?](#what-is-concurrent-rendering)|
 |320| [What is the difference between async mode and concurrent mode?](#what-is-the-difference-between-async-mode-and-concurrent-mode)|
+|321| [Can I use javascript urls in react16.9?](#can-i-use-javascript-urls-in-react16.9)|
 
 ## Core React
 
@@ -3051,15 +3052,15 @@
      3. Lot of data changes happens for collaborative applications(like Google Docs).
      4. No way to do undo (travel back in time) easily without adding so much extra code.
 
-9.   ### Are there any similarities between Redux and RxJS?
+9.   ### Redux와 RxJS의 비슷한 점은?
 
-     These libraries are very different for very different purposes, but there are some vague similarities.
+     이 라이브러리들은 다른 목적을 가진다는 점에서 매우 다르지만, 모호한 유사점을 가진다.
 
-     Redux is a tool for managing state throughout the application. It is usually used as an architecture for UIs. Think of it as an alternative to (half of) Angular. RxJS is a reactive programming library. It is usually used as a tool to accomplish asynchronous tasks in JavaScript. Think of it as an alternative to Promises. Redux uses the Reactive paradigm because the Store is reactive. The Store observes actions from a distance, and changes itself. RxJS also uses the Reactive paradigm, but instead of being an architecture, it gives you basic building blocks, Observables, to accomplish this pattern.
+     Redux는 애플리케이션 전체에서 state를 관리하기 위한 도구이다. 일반적으로 UI 아키텍처로 사용된다. 이것을 Angular의 절반에 해당하는 대안이라고 생각하자. RxJS는 reactive 프로그래밍 라이브러리이다. 일반적으로 JavaScript에서 비동기 작업을 수행하는 도구로 사용된다. 이것을 Promises의 대안이라고 생각하자. Redux는 store가 reactive 하기 때문에 Reactive 패러다임을 사용한다. Store는 멀리서 행동을 관찰하고 스스로 변화시킨다. RxJS는 또한 Reactive 패러다임을 사용하지만, 아키텍처를 대체하는 것이 아닌 패턴을 달성하기 위한 기본 설계 블록, Observables를 제공한다.
 
-10.  ### How to dispatch an action on load?
+10.  ### 로드 시점에 action을 전달하는 방법은?
 
-     You can dispatch an action in `componentDidMount()` method and in `render()` method you can verify the data.
+    `componentDidMount()` 메서드에서 action을 전달할 수 있고 `render()` 메서드에서 데이터를 확인할 수 있다.
 
      ```javascript
      class App extends Component {
@@ -5070,7 +5071,7 @@
      | It causes too much of memory wastage | 	There is no memory wastage|
      | Creates a new DOM if element updates | It updates the JSX if element update|
 
-299. ### How to add a bootstrap for a react application?
+299. ### How to add Bootstrap to a react application?
      Bootstrap can be added to your React app in a three possible ways
      1. Using the Bootstrap CDN:
         This is the easiest way to add bootstrap. Add both bootstrap CSS and JS resources in a head tag.
@@ -5241,3 +5242,13 @@
      ```
 320. ### What is the difference between async mode and concurrent mode?
      Both refers the same thing. Previously concurrent Mode being referred to as "Async Mode" by React team. The name has been changed to highlight React’s ability to perform work on different priority levels. So it avoids the confusion from other approaches to Async Rendering.
+321. ### Can I use javascript urls in react16.9?
+     Yes, you can use javascript: URLs but it will log a warning in the console. Because URLs starting with javascript: are dangerous by including unsanitized output in a tag like <a href> and create a security hole.
+     ```javascript
+     const companyProfile = {
+       website: "javascript: alert('Your website is hacked')",
+     };
+     // It will log a warning
+     <a href={companyProfile.website}>More details</a>
+     ```
+     Remember that the future versions will throw an error for javascript URLs.

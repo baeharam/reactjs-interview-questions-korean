@@ -3088,7 +3088,7 @@
      container에서 store를 사용하려면 다음 두 단계를 수행해야 한다.
 
      1. **`mapStateToProps() 사용하기`:** store의 state 변수를 지정한 props에 매핑한다
-     2. **위의 props와 컨테이너를 연결하기:** `mapStateToProps`함수로 반환한 객체가 컨테이너에 연결되어 있다. `react-redux`에서 `connect()`를 가져올 수 있다.
+     2. **위의 props와 컨테이너를 연결하기:** `mapStateToProps` 함수로 반환한 객체가 컨테이너에 연결되어 있다. `react-redux`에서 `connect()`를 가져올 수 있다.
 
          ```jsx harmony
          import React from 'react'

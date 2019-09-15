@@ -184,7 +184,7 @@
 |159| [What are the drawbacks of MVW pattern](#what-are-the-drawbacks-of-mvw-pattern) |
 |160| [Redux와 RxJS의 비슷한 점은?](#Redux와-RxJS의-비슷한-점은) |
 |161| [로드 시점에 action을 전달하는 방법은?](#로드-시점에-action을-전달하는-방법은) |
-|162| [How to use connect from React Redux?](#how-to-use-connect-from-react-redux) |
+|162| [React Redux에서 connect()를 사용하는 방법은?](#React-Redux에서-connect()를-사용하는-방법은) |
 |163| [How to reset state in Redux?](#how-to-reset-state-in-redux) |
 |164| [Whats the purpose of at symbol in the redux connect decorator?](#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator) |
 |165| [What is the difference between React context and React Redux?](#what-is-the-difference-between-react-context-and-react-redux) |
@@ -3084,12 +3084,12 @@
      export default connect(mapStateToProps, mapDispatchToProps)(App)
      ```
 
-11.  ### How to use `connect()` from React Redux?
+11.  ### React Redux에서 `connect()`를 사용하는 방법은?
 
-     You need to follow two steps to use your store in your container:
+     container에서 store를 사용하려면 다음 두 단계를 수행해야 한다.
 
-     1. **Use `mapStateToProps()`:** It maps the state variables from your store to the props that you specify.
-     2. **Connect the above props to your container:** The object returned by the `mapStateToProps` function is connected to the container. You can import `connect()` from `react-redux`.
+     1. **`mapStateToProps() 사용하기`:** store의 state 변수를 지정한 props에 매핑한다
+     2. **위의 props와 컨테이너를 연결하기:** `mapStateToProps` 함수로 반환한 객체가 컨테이너에 연결되어 있다. `react-redux`에서 `connect()`를 가져올 수 있다.
 
          ```jsx harmony
          import React from 'react'

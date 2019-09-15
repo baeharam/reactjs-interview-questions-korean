@@ -195,7 +195,7 @@
 |170| [What is the difference between component and container in React Redux?](#what-is-the-difference-between-component-and-container-in-react-redux) |
 |171| [What is the purpose of the constants in Redux? ](#what-is-the-purpose-of-the-constants-in-redux) |
 |172| [What are the different ways to write mapDispatchToProps()?](#what-are-the-different-ways-to-write-mapdispatchtoprops) |
-|173| [What is the use of the ownProps parameter in mapStateToProps() and mapDispatchToProps()?](#what-is-the-use-of-the-ownprops-parameter-in-mapstatetoprops-and-mapdispatchtoprops) |
+|173| [mapStateToProps() 과 mapDispatchToProps()에서 ownProps 매개 변수의 사용방법은?](#mapstatetoprops-과-mapdispatchtoprops에서-ownProps-매개-변수의-사용방법은) |
 |174| [How to structure Redux top level directories?](#how-to-structure-redux-top-level-directories) |
 |175| [What is redux-saga?](#what-is-redux-saga) |
 |176| [What is the mental model of redux-saga?](#what-is-the-mental-model-of-redux-saga) |
@@ -3356,9 +3356,9 @@
 
      The third option is just a shorthand for the first one.
 
-22.  ### What is the use of the `ownProps` parameter in `mapStateToProps()` and `mapDispatchToProps()`?
+22.  ### `mapStateToProps()` 과 `mapDispatchToProps()` 에서 `ownProps` 매개 변수를 사용하는 방법은?
 
-     If the `ownProps` parameter is specified, React Redux will pass the props that were passed to the component into your *connect* functions. So, if you use a connected component:
+     `ownProps` 매개 변수가 지정되면, React Redux는 컴포넌트에 전달된 props를 *connect* 함수로 전달한다. 따라서, 연결된 컴포넌트를 사용하는 경우.
 
      ```jsx harmony
      import ConnectedComponent from './containers/ConnectedComponent';
@@ -3366,13 +3366,13 @@
      <ConnectedComponent user={'john'} />
      ```
 
-     The `ownProps` inside your `mapStateToProps()` and `mapDispatchToProps()` functions will be an object:
+     `mapStateToProps()`과 `mapDispatchToProps()` 함수내에서 `ownProps` 는 객체가 된다.
 
      ```javascript
      { user: 'john' }
      ```
 
-     You can use this object to decide what to return from those functions.
+     이 객체를 사용하여 해당 함수에서 무엇을 반환할지 결정할 수 있다.
 
 23.  ### How to structure Redux top level directories?
 

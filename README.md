@@ -188,7 +188,7 @@
 |163| [How to reset state in Redux?](#how-to-reset-state-in-redux) |
 |164| [Whats the purpose of at symbol in the redux connect decorator?](#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator) |
 |165| [What is the difference between React context and React Redux?](#what-is-the-difference-between-react-context-and-react-redux) |
-|166| [Why are Redux state functions called reducers?](#why-are-redux-state-functions-called-reducers) |
+|166| [Redux state 함수가 reducer라고 불리는 이유는?](#Redux-state-함수가-reducer라고-불리는-이유는) |
 |167| [How to make AJAX request in Redux?](#how-to-make-ajax-request-in-redux) |
 |168| [Should I keep all component's state in Redux store?](#should-i-keep-all-components-state-in-redux-store) |
 |169| [What is the proper way to access Redux store?](#what-is-the-proper-way-to-access-redux-store) |
@@ -3204,9 +3204,9 @@
 
      You can use **Context** in your application directly and is going to be great for passing down data to deeply nested components which what it was designed for. Whereas **Redux** is much more powerful and provides a large number of features that the Context API doesn't provide. Also, React Redux uses context internally but it doesn't expose this fact in the public API.
 
-15.  ### Why are Redux state functions called reducers?
+15.  ### Redux state 함수가 reducer라고 불리는 이유는?
 
-     Reducers always return the accumulation of the state (based on all previous and current actions). Therefore, they act as a reducer of state. Each time a Redux reducer is called, the state and action are passed as parameters. This state is then reduced (or accumulated) based on the action, and then the next state is returned. You could *reduce* a collection of actions and an initial state (of the store) on which to perform these actions to get the resulting final state.
+     Reducers는 항상 state의 누적을 반환한다(모든 이전과 현재의 action을 기반으로 한). 그러므로, state를 줄이는 역할을 한다. Redux reducer가 호출될 때마다 state 및 action이 매개변수로 전달된다. 그런 다음 state는 action에 따라 감속(또는 누적)되고 다음 state가 반환된다. action 컬렉션 및 결과적인 최종 state를 얻기 위해 이러한 state를 수행할 store의 초기 상태를 *줄일 수 있다*.
 
 16.  ### How to make AJAX request in Redux?
 

@@ -182,7 +182,7 @@
 |157| [reducer에서 action을 전달할 수 있나?](#reducer에서-action을-전달할-수-있나) |
 |158| [컴포넌트 외부의 Redux store에 접근하는 방법은?](#컴포넌트-외부의-Redux-store에-접근하는-방법은) |
 |159| [What are the drawbacks of MVW pattern](#what-are-the-drawbacks-of-mvw-pattern) |
-|160| [Are there any similarities between Redux and RxJS?](#are-there-any-similarities-between-redux-and-rxjs) |
+|160| [Redux와 RxJS의 비슷한 점은?](#Redux와-RxJS의-비슷한-점은) |
 |161| [How to dispatch an action on load?](#how-to-dispatch-an-action-on-load) |
 |162| [How to use connect from React Redux?](#how-to-use-connect-from-react-redux) |
 |163| [How to reset state in Redux?](#how-to-reset-state-in-redux) |
@@ -3052,11 +3052,11 @@
      3. Lot of data changes happens for collaborative applications(like Google Docs).
      4. No way to do undo (travel back in time) easily without adding so much extra code.
 
-9.   ### Are there any similarities between Redux and RxJS?
+9.   ### Redux와 RxJS의 비슷한 점은?
 
-     These libraries are very different for very different purposes, but there are some vague similarities.
+     이 라이브러리들은 다른 목적을 가진다는 점에서 매우 다르지만, 모호한 유사점을 가진다.
 
-     Redux is a tool for managing state throughout the application. It is usually used as an architecture for UIs. Think of it as an alternative to (half of) Angular. RxJS is a reactive programming library. It is usually used as a tool to accomplish asynchronous tasks in JavaScript. Think of it as an alternative to Promises. Redux uses the Reactive paradigm because the Store is reactive. The Store observes actions from a distance, and changes itself. RxJS also uses the Reactive paradigm, but instead of being an architecture, it gives you basic building blocks, Observables, to accomplish this pattern.
+     Redux는 애플리케이션 전체에서 state를 관리하기 위한 도구이다. 일반적으로 UI 아키텍처로 사용된다. 이것을 Angular의 절반에 해당하는 대안이라고 생각하자. RxJS는 reactive 프로그래밍 라이브러리이다. 일반적으로 JavaScript에서 비동기 작업을 수행하는 도구로 사용된다. 이것을 Promises의 대안이라고 생각하자. Redux는 store가 reactive 하기 때문에 Reactive 패러다임을 사용한다. Store는 멀리서 행동을 관찰하고 스스로 변화시킨다. RxJS는 또한 Reactive 패러다임을 사용하지만, 아키텍처를 대체하는 것이 아닌 패턴을 달성하기 위한 기본 설계 블록, Observables를 제공한다.
 
 10.  ### How to dispatch an action on load?
 

@@ -3147,13 +3147,13 @@
      }
      ```
 
-13.  ### Whats the purpose of `at` symbol in the Redux connect decorator?
+13.  ### Redux connect 데코레이터에서 `at` 기호의 목적은?
 
-     The **@** symbol is in fact a JavaScript expression used to signify decorators. *Decorators* make it possible to annotate and modify classes and properties at design time.
+     **@** 기호는 실제로 데코레이터를 나타내는데 사용되는 JavaScript 표현식이다. *데토레이터* 를 사용하면 디자인 타임에 클래스와 속성에 주석을 달고 수정할 수 있다.
 
-     Let's take an example setting up Redux without and with a decorator.
+     데코레이터를 사용하는 것과 사용하지 않고 Redux를 설정하는 예를 살펴보자.
 
-     * **Without decorator:**
+     * **데코레이터가 없을 경우:**
 
          ```javascript
          import React from 'react'
@@ -3176,7 +3176,7 @@
          export default connect(mapStateToProps, mapDispatchToProps)(MyApp)
          ```
 
-     * **With decorator:**
+     * **데코레이터가 있을 경우:**
 
          ```javascript
          import React from 'react'
@@ -3198,7 +3198,7 @@
          }
          ```
 
-     The above examples are almost similar except the usage of decorator. The decorator syntax isn't built into any JavaScript runtimes yet, and is still experimental and subject to change. You can use babel for the decorators support.
+     위의 예제들는 데코레이터 사용을 제외하고는 거의 비슷하다. 데코레이터 구문은 아직 JavaScript 런타임에 내장되어 있지 않다. 실험 중이며 변경될 수 있다. 현재 데코레이터 지원을 위해서 babel을 사용하면 된다.
 
 14.  ### What is the difference between React context and React Redux?
 

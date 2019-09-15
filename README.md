@@ -185,7 +185,7 @@
 |160| [Are there any similarities between Redux and RxJS?](#are-there-any-similarities-between-redux-and-rxjs) |
 |161| [How to dispatch an action on load?](#how-to-dispatch-an-action-on-load) |
 |162| [How to use connect from React Redux?](#how-to-use-connect-from-react-redux) |
-|163| [How to reset state in Redux?](#how-to-reset-state-in-redux) |
+|163| [Redux에서 state를 재설정하는 방법은?](#Redux에서-state를-재설정하는-방법은) |
 |164| [Whats the purpose of at symbol in the redux connect decorator?](#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator) |
 |165| [What is the difference between React context and React Redux?](#what-is-the-difference-between-react-context-and-react-redux) |
 |166| [Why are Redux state functions called reducers?](#why-are-redux-state-functions-called-reducers) |

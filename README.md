@@ -194,7 +194,7 @@
 |169| [What is the proper way to access Redux store?](#what-is-the-proper-way-to-access-redux-store) |
 |170| [What is the difference between component and container in React Redux?](#what-is-the-difference-between-component-and-container-in-react-redux) |
 |171| [What is the purpose of the constants in Redux? ](#what-is-the-purpose-of-the-constants-in-redux) |
-|172| [What are the different ways to write mapDispatchToProps()?](#what-are-the-different-ways-to-write-mapdispatchtoprops) |
+|172| [mapDispatchToProps()를 작성하는 다른 방법은?](#mapdispatchtoprops를-작성하는-다른-방법은) |
 |173| [What is the use of the ownProps parameter in mapStateToProps() and mapDispatchToProps()?](#what-is-the-use-of-the-ownprops-parameter-in-mapstatetoprops-and-mapdispatchtoprops) |
 |174| [How to structure Redux top level directories?](#how-to-structure-redux-top-level-directories) |
 |175| [What is redux-saga?](#what-is-redux-saga) |
@@ -3334,9 +3334,9 @@
          }
          ```
 
-21.  ### What are the different ways to write `mapDispatchToProps()`?
+21.  ### `mapDispatchToProps()`를 작성하는 다른 방법은?
 
-     There are a few ways of binding *action creators* to `dispatch()` in `mapDispatchToProps()`. Below are the possible options:
+    `mapDispatchToProps()`에서 *action creators*를 `dispatch()`에 바인딩하는 몇 가지 방법이 있다. 가능한 옵션은 아래와 같다.
 
      ```javascript
      const mapDispatchToProps = (dispatch) => ({
@@ -3354,7 +3354,7 @@
      const mapDispatchToProps = { action }
      ```
 
-     The third option is just a shorthand for the first one.
+    세 번째 옵션은 첫 번째 옵션의 약어이다.
 
 22.  ### What is the use of the `ownProps` parameter in `mapStateToProps()` and `mapDispatchToProps()`?
 

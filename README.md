@@ -192,7 +192,7 @@
 |167| [How to make AJAX request in Redux?](#how-to-make-ajax-request-in-redux) |
 |168| [Should I keep all component's state in Redux store?](#should-i-keep-all-components-state-in-redux-store) |
 |169| [What is the proper way to access Redux store?](#what-is-the-proper-way-to-access-redux-store) |
-|170| [What is the difference between component and container in React Redux?](#what-is-the-difference-between-component-and-container-in-react-redux) |
+|170| [React Redux에서 컴포넌트와 컨테이너의 차이점은?](#React-Redux에서-컴포넌트와-컨테이너의-차이점은) |
 |171| [What is the purpose of the constants in Redux? ](#what-is-the-purpose-of-the-constants-in-redux) |
 |172| [What are the different ways to write mapDispatchToProps()?](#what-are-the-different-ways-to-write-mapdispatchtoprops) |
 |173| [What is the use of the ownProps parameter in mapStateToProps() and mapDispatchToProps()?](#what-is-the-use-of-the-ownprops-parameter-in-mapstatetoprops-and-mapdispatchtoprops) |
@@ -3275,11 +3275,11 @@
      }
      ```
 
-19.  ### What is the difference between component and container in React Redux?
+19.  ### React Redux에서 컴포넌트와 컨테이너의 차이점은?
 
-     **Component** is a class or function component that describes the presentational part of your application.
+     **Component** 는 애플리케이션의 presentational 부분을 묘사하는 클래스 또는 함수형 컴포넌트이다.
 
-     **Container** is an informal term for a component that is connected to a Redux store. Containers *subscribe* to Redux state updates and *dispatch* actions, and they usually don't render DOM elements; they delegate rendering to presentational child components.
+     **Container** 는 Redux store에 연결된 컴포넌트에 대한 비공식 용어이다. 컨테이너는 Redux state 업데이트 및 *dispatch* action을 구독하며 일반적으로 DOM 요소를 렌더링하지 않는다; 그들은 presentational 자식 컴포넌트에 렌더링을 위임한다.
 
 20.  ### What is the purpose of the constants in Redux?
 

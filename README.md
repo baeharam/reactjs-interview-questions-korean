@@ -3235,9 +3235,9 @@
      }
      ```
 
-17.  ### Should I keep all component's state in Redux store?
+17.  ### Redux store에 모든 컴포넌트의 state를 유지해야 하나?
 
-      Keep your data in the Redux store, and the UI related state internally in the component.
+      Redux store에 데이터를 유지하고, 컴포넌트 내부에 UI 관련 state를 유지하면 된다.
 
 18.  ### What is the proper way to access Redux store?
 

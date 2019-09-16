@@ -182,19 +182,19 @@
 |157| [reducer에서 action을 전달할 수 있나?](#reducer에서-action을-전달할-수-있나) |
 |158| [컴포넌트 외부의 Redux store에 접근하는 방법은?](#컴포넌트-외부의-Redux-store에-접근하는-방법은) |
 |159| [What are the drawbacks of MVW pattern](#what-are-the-drawbacks-of-mvw-pattern) |
-|160| [Are there any similarities between Redux and RxJS?](#are-there-any-similarities-between-redux-and-rxjs) |
-|161| [How to dispatch an action on load?](#how-to-dispatch-an-action-on-load) |
-|162| [How to use connect from React Redux?](#how-to-use-connect-from-react-redux) |
-|163| [How to reset state in Redux?](#how-to-reset-state-in-redux) |
+|160| [Redux와 RxJS의 비슷한 점은?](#Redux와-RxJS의-비슷한-점은) |
+|161| [로드 시점에 action을 전달하는 방법은?](#로드-시점에-action을-전달하는-방법은) |
+|162| [React Redux에서 connect()를 사용하는 방법은?](#React-Redux에서-connect()를-사용하는-방법은) |
+|163| [Redux에서 state를 재설정하는 방법은?](#Redux에서-state를-재설정하는-방법은) |
 |164| [Whats the purpose of at symbol in the redux connect decorator?](#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator) |
-|165| [What is the difference between React context and React Redux?](#what-is-the-difference-between-react-context-and-react-redux) |
+|165| [React context와 React Redux의 차이점은?](#React-context와-React-Redux의-차이점은) |
 |166| [Why are Redux state functions called reducers?](#why-are-redux-state-functions-called-reducers) |
-|167| [How to make AJAX request in Redux?](#how-to-make-ajax-request-in-redux) |
+|167| [Redux에서 AJAX를 요청하는 방법은?](#Redux에서-AJAX를-요청하는-방법은) |
 |168| [Should I keep all component's state in Redux store?](#should-i-keep-all-components-state-in-redux-store) |
-|169| [What is the proper way to access Redux store?](#what-is-the-proper-way-to-access-redux-store) |
+|169| [Redux store에 접근하는 올바른 방법은?](#Redux-store에-접근하는-올바른-방법은) |
 |170| [What is the difference between component and container in React Redux?](#what-is-the-difference-between-component-and-container-in-react-redux) |
 |171| [What is the purpose of the constants in Redux? ](#what-is-the-purpose-of-the-constants-in-redux) |
-|172| [What are the different ways to write mapDispatchToProps()?](#what-are-the-different-ways-to-write-mapdispatchtoprops) |
+|172| [mapDispatchToProps()를 작성하는 다른 방법은?](#mapdispatchtoprops를-작성하는-다른-방법은) |
 |173| [mapStateToProps() 과 mapDispatchToProps()에서 ownProps 매개 변수의 사용방법은?](#mapstatetoprops-과-mapdispatchtoprops에서-ownProps-매개-변수의-사용방법은) |
 |174| [How to structure Redux top level directories?](#how-to-structure-redux-top-level-directories) |
 |175| [What is redux-saga?](#what-is-redux-saga) |
@@ -3052,15 +3052,15 @@
      3. Lot of data changes happens for collaborative applications(like Google Docs).
      4. No way to do undo (travel back in time) easily without adding so much extra code.
 
-9.   ### Are there any similarities between Redux and RxJS?
+9.   ### Redux와 RxJS의 비슷한 점은?
 
-     These libraries are very different for very different purposes, but there are some vague similarities.
+     이 라이브러리들은 다른 목적을 가진다는 점에서 매우 다르지만, 모호한 유사점을 가진다.
 
-     Redux is a tool for managing state throughout the application. It is usually used as an architecture for UIs. Think of it as an alternative to (half of) Angular. RxJS is a reactive programming library. It is usually used as a tool to accomplish asynchronous tasks in JavaScript. Think of it as an alternative to Promises. Redux uses the Reactive paradigm because the Store is reactive. The Store observes actions from a distance, and changes itself. RxJS also uses the Reactive paradigm, but instead of being an architecture, it gives you basic building blocks, Observables, to accomplish this pattern.
+     Redux는 애플리케이션 전체에서 state를 관리하기 위한 도구이다. 일반적으로 UI 아키텍처로 사용된다. 이것을 Angular의 절반에 해당하는 대안이라고 생각하자. RxJS는 reactive 프로그래밍 라이브러리이다. 일반적으로 JavaScript에서 비동기 작업을 수행하는 도구로 사용된다. 이것을 Promises의 대안이라고 생각하자. Redux는 store가 reactive 하기 때문에 Reactive 패러다임을 사용한다. Store는 멀리서 행동을 관찰하고 스스로 변화시킨다. RxJS는 또한 Reactive 패러다임을 사용하지만, 아키텍처를 대체하는 것이 아닌 패턴을 달성하기 위한 기본 설계 블록, Observables를 제공한다.
 
-10.  ### How to dispatch an action on load?
+10.  ### 로드 시점에 action을 전달하는 방법은?
 
-     You can dispatch an action in `componentDidMount()` method and in `render()` method you can verify the data.
+    `componentDidMount()` 메서드에서 action을 전달할 수 있고 `render()` 메서드에서 데이터를 확인할 수 있다.
 
      ```javascript
      class App extends Component {
@@ -3084,12 +3084,12 @@
      export default connect(mapStateToProps, mapDispatchToProps)(App)
      ```
 
-11.  ### How to use `connect()` from React Redux?
+11.  ### React Redux에서 `connect()`를 사용하는 방법은?
 
-     You need to follow two steps to use your store in your container:
+     container에서 store를 사용하려면 다음 두 단계를 수행해야 한다.
 
-     1. **Use `mapStateToProps()`:** It maps the state variables from your store to the props that you specify.
-     2. **Connect the above props to your container:** The object returned by the `mapStateToProps` function is connected to the container. You can import `connect()` from `react-redux`.
+     1. **`mapStateToProps() 사용하기`:** store의 state 변수를 지정한 props에 매핑한다
+     2. **위의 props와 컨테이너를 연결하기:** `mapStateToProps` 함수로 반환한 객체가 컨테이너에 연결되어 있다. `react-redux`에서 `connect()`를 가져올 수 있다.
 
          ```jsx harmony
          import React from 'react'
@@ -3108,11 +3108,11 @@
          export default connect(mapStateToProps)(App)
          ```
 
-12.  ### How to reset state in Redux?
+12.  ### Redux에서 state를 재설정하는 방법은?
 
-     You need to write a *root reducer* in your application which delegate handling the action to the reducer generated by `combineReducers()`.
+     `combineReducers()` 으로 만들어진 reducer의 action 처리를 위임하는 *root reducer* 를 애플리케이션에 작성해야 한다.
 
-     For example, let us take `rootReducer()` to return the initial state after `USER_LOGOUT` action. As we know, reducers are supposed to return the initial state when they are called with `undefined` as the first argument, no matter the action.
+     예를 들어, `USER_LOGOUT` action 후 초기 state를 리턴하기 위해 `rootReducer()` 를 사용하여야 한다. 알다시피, reducer는 action과 관계없이 첫 번째 인수로 `undefined` 로 호출될 때 초기 상태를 반환해야 한다.
 
      ```javascript
      const appReducer = combineReducers({
@@ -3128,7 +3128,7 @@
      }
      ```
 
-     In case of using `redux-persist`, you may also need to clean your storage. `redux-persist` keeps a copy of your state in a storage engine. First, you need to import the appropriate storage engine and then, to parse the state before setting it to undefined and clean each storage state key.
+     `redux-persist`를 사용하는 경우, storage를 정리해야 할 수 있다. `redux-persist` 는 state 엔진을 storage 엔진에 보관한다. 먼저, 적절한 storage 엔진을 가져와서 state 키를 정의하지 않고 정리하기 전에 state를 구문 분석해야 한다.
 
      ```javascript
      const appReducer = combineReducers({
@@ -3201,19 +3201,19 @@
 
      The above examples are almost similar except the usage of decorator. The decorator syntax isn't built into any JavaScript runtimes yet, and is still experimental and subject to change. You can use babel for the decorators support.
 
-14.  ### What is the difference between React context and React Redux?
+14.  ### React context와 React Redux의 차이점은?
 
-     You can use **Context** in your application directly and is going to be great for passing down data to deeply nested components which what it was designed for. Whereas **Redux** is much more powerful and provides a large number of features that the Context API doesn't provide. Also, React Redux uses context internally but it doesn't expose this fact in the public API.
+     응용 프로그램에 **Context** 를 바로 사용할 수 있으며 설계된 중첩된 컴포넌트에 데이터를 전달하는 데 유용하다. 반면 **Redux** 는 훨씬 강력하고 Context API가 제공하지 않는 많은 기능을 제공한다. 또한, React Redux 는 내부적으로 Context를 사용하지만, 이 사실을 public API에 알리지 않는다.
 
 15.  ### Why are Redux state functions called reducers?
 
      Reducers always return the accumulation of the state (based on all previous and current actions). Therefore, they act as a reducer of state. Each time a Redux reducer is called, the state and action are passed as parameters. This state is then reduced (or accumulated) based on the action, and then the next state is returned. You could *reduce* a collection of actions and an initial state (of the store) on which to perform these actions to get the resulting final state.
 
-16.  ### How to make AJAX request in Redux?
+16.  ### Redux에서 AJAX를 요청하는 방법은?
 
-     You can use `redux-thunk` middleware which allows you to define async actions.
+     비동기 action을 정의할 수 있는 `redux-thunk` 미들웨어를 사용할 수 있다.
 
-     Let's take an example of fetching specific account as an AJAX call using *fetch API*:
+     *fetch API* 를 사용하여 특정 계정을 AJAX 호출로 가져오는 예시를 들어보자.
 
      ```javascript
      export function fetchAccount(id) {
@@ -3235,15 +3235,15 @@
      }
      ```
 
-17.  ### Should I keep all component's state in Redux store?
+17.  ### Redux store에 모든 컴포넌트의 state를 유지해야 하나?
 
-      Keep your data in the Redux store, and the UI related state internally in the component.
+      Redux store에 데이터를 유지하고, 컴포넌트 내부에 UI 관련 state를 유지하면 된다.
 
-18.  ### What is the proper way to access Redux store?
+18.  ### Redux store에 접근하는 올바른 방법은?
 
-     The best way to access your store in a component is to use the `connect()` function, that creates a new component that wraps around your existing one. This pattern is called *Higher-Order Components*, and is generally the preferred way of extending a component's functionality in React. This allows you to map state and action creators to your component, and have them passed in automatically as your store updates.
+     컴포넌트에서 store에 접근하는 가장 좋은 방법은 `connect()` 함수를 사용하여 기존 컴포넌트를 감싸는 새로운 컴포넌트를 만드는 것이다. 이러한 패턴을 *Higher-Order Components* 라고 하며, 일반적으로 React에서 컴포넌트의 기능을 확장하는데 선호되는 방법이다. 이를 통해 state 및 action 생성자를 컴포넌트에 매핑하고 store 업데이트 시 자동으로 전달할 수 있다.
 
-     Let's take an example of `<FilterLink>` component using connect:
+     connect를 사용한 `<FilterLink>` 컴포넌트 예시를 보자.
 
      ```javascript
      import { connect } from 'react-redux'
@@ -3266,7 +3266,7 @@
      export default FilterLink
      ```
 
-     Due to it having quite a few performance optimizations and generally being less likely to cause bugs, the Redux developers almost always recommend using `connect()` over accessing the store directly (using context API).
+     성능 최적화가 상당히 적고 일반적으로 버그가 발생할 가능성이 작기 때문에 Redux 개발자는 항상 Context API를 사용하여 저장소에 접근하는 것보다는 `connect()` 를 사용하는 것이 좋다.
 
      ```javascript
      class MyComponent {
@@ -3334,9 +3334,9 @@
          }
          ```
 
-21.  ### What are the different ways to write `mapDispatchToProps()`?
+21.  ### `mapDispatchToProps()`를 작성하는 다른 방법은?
 
-     There are a few ways of binding *action creators* to `dispatch()` in `mapDispatchToProps()`. Below are the possible options:
+    `mapDispatchToProps()`에서 *action creators*를 `dispatch()`에 바인딩하는 몇 가지 방법이 있다. 가능한 옵션은 아래와 같다.
 
      ```javascript
      const mapDispatchToProps = (dispatch) => ({
@@ -3354,7 +3354,7 @@
      const mapDispatchToProps = { action }
      ```
 
-     The third option is just a shorthand for the first one.
+    세 번째 옵션은 첫 번째 옵션의 약어이다.
 
 22.  ### `mapStateToProps()` 과 `mapDispatchToProps()` 에서 `ownProps` 매개 변수를 사용하는 방법은?
 

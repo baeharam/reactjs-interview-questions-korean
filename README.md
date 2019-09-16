@@ -191,7 +191,7 @@
 |166| [Why are Redux state functions called reducers?](#why-are-redux-state-functions-called-reducers) |
 |167| [Redux에서 AJAX를 요청하는 방법은?](#Redux에서-AJAX를-요청하는-방법은) |
 |168| [Should I keep all component's state in Redux store?](#should-i-keep-all-components-state-in-redux-store) |
-|169| [What is the proper way to access Redux store?](#what-is-the-proper-way-to-access-redux-store) |
+|169| [Redux store에 접근하는 올바른 방법은?](#Redux-store에-접근하는-올바른-방법은) |
 |170| [What is the difference between component and container in React Redux?](#what-is-the-difference-between-component-and-container-in-react-redux) |
 |171| [What is the purpose of the constants in Redux? ](#what-is-the-purpose-of-the-constants-in-redux) |
 |172| [What are the different ways to write mapDispatchToProps()?](#what-are-the-different-ways-to-write-mapdispatchtoprops) |
@@ -3239,11 +3239,11 @@
 
       Redux store에 데이터를 유지하고, 컴포넌트 내부에 UI 관련 state를 유지하면 된다.
 
-18.  ### What is the proper way to access Redux store?
+18.  ### Redux store에 접근하는 올바른 방법은?
 
-     The best way to access your store in a component is to use the `connect()` function, that creates a new component that wraps around your existing one. This pattern is called *Higher-Order Components*, and is generally the preferred way of extending a component's functionality in React. This allows you to map state and action creators to your component, and have them passed in automatically as your store updates.
+     컴포넌트에서 store에 접근하는 가장 좋은 방법은 `connect()` 함수를 사용하여 기존 컴포넌트를 감싸는 새로운 컴포넌트를 만드는 것이다. 이러한 패턴을 *Higher-Order Components* 라고 하며, 일반적으로 React에서 컴포넌트의 기능을 확장하는데 선호되는 방법이다. 이를 통해 state 및 action 생성자를 컴포넌트에 매핑하고 store 업데이트 시 자동으로 전달할 수 있다.
 
-     Let's take an example of `<FilterLink>` component using connect:
+     connect를 사용한 `<FilterLink>` 컴포넌트 예시를 보자.
 
      ```javascript
      import { connect } from 'react-redux'
@@ -3266,7 +3266,7 @@
      export default FilterLink
      ```
 
-     Due to it having quite a few performance optimizations and generally being less likely to cause bugs, the Redux developers almost always recommend using `connect()` over accessing the store directly (using context API).
+     성능 최적화가 상당히 적고 일반적으로 버그가 발생할 가능성이 작기 때문에 Redux 개발자는 항상 Context API를 사용하여 저장소에 접근하는 것보다는 `connect()` 를 사용하는 것이 좋다.
 
      ```javascript
      class MyComponent {

@@ -3366,7 +3366,7 @@
      <ConnectedComponent user={'john'} />
      ```
 
-     `mapStateToProps()`과 `mapDispatchToProps()` 함수내에서 `ownProps` 는 객체가 된다.
+     `mapStateToProps()`과 `mapDispatchToProps()` 함수 내에서 `ownProps` 는 객체가 된다.
 
      ```javascript
      { user: 'john' }

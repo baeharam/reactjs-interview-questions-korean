@@ -193,7 +193,7 @@
 |168| [Should I keep all component's state in Redux store?](#should-i-keep-all-components-state-in-redux-store) |
 |169| [Redux store에 접근하는 올바른 방법은?](#Redux-store에-접근하는-올바른-방법은) |
 |170| [React Redux에서 컴포넌트와 컨테이너의 차이점은?](#React-Redux에서-컴포넌트와-컨테이너의-차이점은) |
-|171| [What is the purpose of the constants in Redux? ](#what-is-the-purpose-of-the-constants-in-redux) |
+|171| [Redux에서 상수의 목적은 무엇인가?](#Redux에서-상수의-목적은-무엇인가) |
 |172| [mapDispatchToProps()를 작성하는 다른 방법은?](#mapdispatchtoprops를-작성하는-다른-방법은) |
 |173| [mapStateToProps() 과 mapDispatchToProps()에서 ownProps 매개 변수의 사용방법은?](#mapstatetoprops-과-mapdispatchtoprops에서-ownProps-매개-변수의-사용방법은) |
 |174| [How to structure Redux top level directories?](#how-to-structure-redux-top-level-directories) |
@@ -3282,11 +3282,11 @@
 
      **Container** 는 Redux store에 연결된 컴포넌트에 대한 비공식 용어이다. 컨테이너는 Redux state 업데이트 및 *dispatch* action을 구독하며 일반적으로 DOM 요소를 렌더링하지 않는다. 그들은 presentational 자식 컴포넌트에 렌더링을 위임한다.
 
-20.  ### What is the purpose of the constants in Redux?
+20.  ### Redux에서 상수의 목적은 무엇인가?
 
-     Constants allows you to easily find all usages of that specific functionality across the project when you use an IDE. It also prevents you from introducing silly bugs caused by typos – in which case, you will get a `ReferenceError` immediately.
+     상수를 사용하면 IDE를 사용할 때 프로젝트 전체에서 특정 기능의 모든 사용법을 쉽게 찾을 수 있다. 오타같은 경우 `ReferenceError` 를 던져주어 버그 발생을 사전에 방지한다.
 
-     Normally we will save them in a single file (`constants.js` or `actionTypes.js`).
+     보통 하나의 파일로 저장한다 (`constants.js` 또는 `actionTypes.js`).
 
      ```javascript
      export const ADD_TODO = 'ADD_TODO'
@@ -3297,11 +3297,11 @@
      export const CLEAR_COMPLETED = 'CLEAR_COMPLETED'
      ```
 
-     In Redux you use them in two places:
+     Redux에서는 두 곳에서 사용한다.
 
-     1. **During action creation:**
+     1. **action을 작성할 때**
 
-         Let's take `actions.js`:
+         `actions.js` 을 보자.
 
          ```javascript
          import { ADD_TODO } from './actionTypes';
@@ -3311,9 +3311,9 @@
          }
          ```
 
-     2. **In reducers:**
+     2. **reducer 안에서**
 
-         Let's create `reducer.js`:
+         `reducer.js` 를 만들어 보자.
 
          ```javascript
          import { ADD_TODO } from './actionTypes'

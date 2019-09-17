@@ -3280,7 +3280,7 @@
 
      **Component** 는 애플리케이션의 presentational 부분을 묘사하는 클래스 또는 함수형 컴포넌트이다.
 
-     **Container** 는 Redux store에 연결된 컴포넌트에 대한 비공식 용어이다. 컨테이너는 Redux state 업데이트 및 *dispatch* action을 구독하며 일반적으로 DOM 요소를 렌더링하지 않는다; 그들은 presentational 자식 컴포넌트에 렌더링을 위임한다.
+     **Container** 는 Redux store에 연결된 컴포넌트에 대한 비공식 용어이다. 컨테이너는 Redux state 업데이트 및 *dispatch* action을 구독하며 일반적으로 DOM 요소를 렌더링하지 않는다. 그들은 presentational 자식 컴포넌트에 렌더링을 위임한다.
 
 20.  ### What is the purpose of the constants in Redux?
 

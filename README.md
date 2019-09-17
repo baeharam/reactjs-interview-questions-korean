@@ -3206,7 +3206,7 @@
 
 15.  ### Redux state 함수가 reducer라고 불리는 이유는?
 
-     Reducers는 항상 state의 누적을 반환한다(모든 이전과 현재의 action을 기반으로 한). 그러므로, state를 줄이는 역할을 한다. Redux reducer가 호출될 때마다 state 및 action이 매개변수로 전달된다. 그런 다음 state는 action에 따라 감속(또는 누적)되고 다음 state가 반환된다. action 컬렉션 및 결과적인 최종 state를 얻기 위해 이러한 state를 수행할 store의 초기 상태를 *줄일 수 있다*.
+     Reducers는 항상 state의 누적을 반환한다(모든 이전과 현재의 action을 기반으로 한다). 그러므로, state를 줄이는 역할을 한다. Redux reducer가 호출될 때마다 state 및 action이 매개변수로 전달된다. 그런 다음 state는 action에 따라 감속(또는 누적)되고 다음 state가 반환된다. action 컬렉션 및 결과적인 최종 state를 얻기 위해 이러한 state를 수행할 store의 초기 상태를 *줄일 수 있다*.
 
 16.  ### How to make AJAX request in Redux?
 

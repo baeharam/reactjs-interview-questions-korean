@@ -3358,7 +3358,7 @@
 
 22.  ### `mapStateToProps()` 과 `mapDispatchToProps()` 에서 `ownProps` 매개 변수를 사용하는 방법은?
 
-     `ownProps` 매개 변수가 지정되면, React Redux는 컴포넌트에 전달된 props를 *connect* 함수로 전달한다. 따라서, 연결된 컴포넌트를 사용하는 경우.
+     `ownProps` 매개 변수가 지정되면, React Redux는 컴포넌트에 전달된 props를 *connect* 함수로 전달한다. 따라서, 연결된 컴포넌트를 사용하는 경우,
 
      ```jsx harmony
      import ConnectedComponent from './containers/ConnectedComponent';

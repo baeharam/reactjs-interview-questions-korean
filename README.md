@@ -197,7 +197,7 @@
 |172| [mapDispatchToProps()를 작성하는 다른 방법은?](#mapdispatchtoprops를-작성하는-다른-방법은) |
 |173| [mapStateToProps() 과 mapDispatchToProps()에서 ownProps 매개 변수의 사용방법은?](#mapstatetoprops-과-mapdispatchtoprops에서-ownProps-매개-변수의-사용방법은) |
 |174| [How to structure Redux top level directories?](#how-to-structure-redux-top-level-directories) |
-|175| [What is redux-saga?](#what-is-redux-saga) |
+|175| [redux-saga란?](#redux-saga란) |
 |176| [What is the mental model of redux-saga?](#what-is-the-mental-model-of-redux-saga) |
 |177| [What are the differences between call and put in redux-saga](#what-are-the-differences-between-call-and-put-in-redux-saga) |
 |178| [What is Redux Thunk?](#what-is-redux-thunk) |
@@ -3386,11 +3386,11 @@
 
      This structure works well for small and medium size apps.
 
-24.  ### What is redux-saga?
+24.  ### redux-saga란?
 
-     `redux-saga` is a library that aims to make side effects (asynchronous things like data fetching and impure things like accessing the browser cache) in React/Redux applications easier and better.
+     `redux-saga`는 React/Redux 애플리케이션에서 side-effect(데이터 가져오기 같은 비동기식 및 브라우저 캐시 액세스와 같이 불쾌한 것)를 더욱 쉽고 효과적으로 처리하는 것을 목표로 하는 라이브러리이다.
 
-     It is available in NPM:
+     NPM에서 사용 가능하다.
 
      ```console
      $ npm install --save redux-saga

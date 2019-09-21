@@ -199,7 +199,7 @@
 |174| [Redux 최상위 디렉토리를 구성하는 방법은?](#Redux-최상위-디렉토리를-구성하는-방법은) |
 |175| [redux-saga란?](#redux-saga란) |
 |176| [redux-saga의 정신 모델은?](#redux-saga의-정신-모델은) |
-|177| [What are the differences between call and put in redux-saga](#what-are-the-differences-between-call-and-put-in-redux-saga) |
+|177| [redux-saga에서 call과 put의 차이점은?](#redux-saga에서-call과-put의-차이점은) |
 |178| [What is Redux Thunk?](#what-is-redux-thunk) |
 |179| [What are the differences between redux-saga and redux-thunk](#what-are-the-differences-between-redux-saga-and-redux-thunk) |
 |180| [What is Redux DevTools?](#what-is-redux-devtools) |
@@ -3400,11 +3400,11 @@
 
      *Saga* 는 응용 프로그램에서 별도의 thread와 유사하며, side-effect 의 주된 원인이다. `redux-saga` 는 redux *middleware*로, 이 thread는 일반적인 Redux action으로 메인 응용 프로그램에서 시작, 일시 중지 및 취소 할 수 있으며, 전체 Redux 응용 프로그램 state에 접근할 수 있으며, Redux action도 전달할 수 있다.
 
-26.  ### What are the differences between `call()` and `put()` in redux-saga?
+26.  ### redux-saga에서 `call()`과 `put()`의 차이점은?
 
-     Both `call()` and `put()` are effect creator functions. `call()` function is used to create effect description, which instructs middleware to call the promise. `put()` function creates an effect, which instructs middleware to dispatch an action to the store.
+     `call()`과 `put()` 둘 다 effect 생성함수이다. `call()` 함수는 effect 설명을 작성하는 데 사용되며 미들웨어가 promise를 호출하도록 한다. `put()` 함수는 effect를 작성하여 미들웨어가 action을 store에 전달하도록 해준다.
 
-     Let's take example of how these effects work for fetching particular user data.
+     특정 사용자 데이터를 가져오는데 effect가 어떻게 작동하는지 예를 들어보자.
 
      ```javascript
      function* fetchUserSaga(action) {

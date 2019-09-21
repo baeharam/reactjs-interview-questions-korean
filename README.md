@@ -196,7 +196,7 @@
 |171| [Redux에서 상수의 목적은 무엇인가?](#Redux에서-상수의-목적은-무엇인가) |
 |172| [mapDispatchToProps()를 작성하는 다른 방법은?](#mapdispatchtoprops를-작성하는-다른-방법은) |
 |173| [mapStateToProps() 과 mapDispatchToProps()에서 ownProps 매개 변수의 사용방법은?](#mapstatetoprops-과-mapdispatchtoprops에서-ownProps-매개-변수의-사용방법은) |
-|174| [How to structure Redux top level directories?](#how-to-structure-redux-top-level-directories) |
+|174| [Redux 최상위 디렉토리를 구성하는 방법은?](#Redux-최상위-디렉토리를-구성하는-방법은) |
 |175| [What is redux-saga?](#what-is-redux-saga) |
 |176| [What is the mental model of redux-saga?](#what-is-the-mental-model-of-redux-saga) |
 |177| [What are the differences between call and put in redux-saga](#what-are-the-differences-between-call-and-put-in-redux-saga) |
@@ -3374,17 +3374,17 @@
 
      이 객체를 사용하여 해당 함수에서 무엇을 반환할지 결정할 수 있다.
 
-23.  ### How to structure Redux top level directories?
+23.  ### Redux 최상위 디렉토리를 구성하는 방법은?
 
-     Most of the applications has several top-level directories as below:
+     대부분의 응용 프로그램에는 아래와 같은 여러 최상위 디렉터리가 있다.
 
-     1. **Components**: Used for *dumb* components unaware of Redux.
-     2. **Containers**: Used for *smart* components connected to Redux.
-     3. **Actions**: Used for all action creators, where file names correspond to part of the app.
-     4. **Reducers**: Used for all reducers, where files name correspond to state key.
-     5. **Store**: Used for store initialization.
+     1. **Components**: Redux를 인식하지 못하는 *dumb* 컴포넌트에 사용된다.
+     2. **Containers**: Redux에 연결된 *smart*  컴포넌트에 사용된다.
+     3. **Actions**: 모든 action creator에 사용되며, 파일 이름이 앱의 일부이다. 
+     4. **Reducers**: 모든 reducer에 사용되며, 파일 이름은 state 키이다.
+     5. **Store**: store 초기화에 사용된다.
 
-     This structure works well for small and medium size apps.
+     이 구조는 중소규모의 앱에 적합하다.
 
 24.  ### What is redux-saga?
 

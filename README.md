@@ -200,7 +200,7 @@
 |175| [redux-saga란?](#redux-saga란) |
 |176| [redux-saga의 정신 모델은?](#redux-saga의-정신-모델은) |
 |177| [What are the differences between call and put in redux-saga](#what-are-the-differences-between-call-and-put-in-redux-saga) |
-|178| [What is Redux Thunk?](#what-is-redux-thunk) |
+|178| [Redux Thunk란?](#Redux-Thunk란) |
 |179| [What are the differences between redux-saga and redux-thunk](#what-are-the-differences-between-redux-saga-and-redux-thunk) |
 |180| [What is Redux DevTools?](#what-is-redux-devtools) |
 |181| [What are the features of Redux DevTools?](#what-are-the-features-of-redux-devtools) |
@@ -3420,9 +3420,9 @@
      }
      ```
 
-27.  ### What is Redux Thunk?
+27.  ### Redux Thunk란?
 
-     *Redux Thunk* middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. The inner function receives the store methods `dispatch()` and `getState()` as parameters.
+     *Redux Thunk* 미들웨어는 action 대신 함수를 리턴하는 action 생성자를 작성하도록 해준다. thunk는 action의 dispatch를 지연시키거나 특정한 조건을 만족한 경우 dispatch 해야 하는 곳에 사용된다. 내부 함수는 store 메서드 `dispatch()`와 `getState()`를 매개변수로 받는다.
 
 28.  ### What are the differences between `redux-saga` and `redux-thunk`?
 

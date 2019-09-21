@@ -198,7 +198,7 @@
 |173| [mapStateToProps() 과 mapDispatchToProps()에서 ownProps 매개 변수의 사용방법은?](#mapstatetoprops-과-mapdispatchtoprops에서-ownProps-매개-변수의-사용방법은) |
 |174| [Redux 최상위 디렉토리를 구성하는 방법은?](#Redux-최상위-디렉토리를-구성하는-방법은) |
 |175| [redux-saga란?](#redux-saga란) |
-|176| [What is the mental model of redux-saga?](#what-is-the-mental-model-of-redux-saga) |
+|176| [redux-saga의 정신 모델은?](#redux-saga의-정신-모델은) |
 |177| [What are the differences between call and put in redux-saga](#what-are-the-differences-between-call-and-put-in-redux-saga) |
 |178| [What is Redux Thunk?](#what-is-redux-thunk) |
 |179| [What are the differences between redux-saga and redux-thunk](#what-are-the-differences-between-redux-saga-and-redux-thunk) |
@@ -3396,9 +3396,9 @@
      $ npm install --save redux-saga
      ```
 
-25.  ### What is the mental model of redux-saga?
+25.  ### redux-saga의 정신 모델은?
 
-     *Saga* is like a separate thread in your application, that's solely responsible for side effects. `redux-saga` is a redux *middleware*, which means this thread can be started, paused and cancelled from the main application with normal Redux actions, it has access to the full Redux application state and it can dispatch Redux actions as well.
+     *Saga* 는 응용 프로그램에서 별도의 thread와 유사하며, side-effect 의 주된 원인이다. `redux-saga` 는 redux *middleware*로, 이 thread는 일반적인 Redux action으로 메인 응용 프로그램에서 시작, 일시 중지 및 취소 할 수 있으며, 전체 Redux 응용 프로그램 state에 접근할 수 있으며, Redux action도 전달할 수 있다.
 
 26.  ### What are the differences between `call()` and `put()` in redux-saga?
 

@@ -201,7 +201,7 @@
 |176| [redux-saga의 정신 모델은?](#redux-saga의-정신-모델은) |
 |177| [redux-saga에서 call과 put의 차이점은?](#redux-saga에서-call과-put의-차이점은) |
 |178| [Redux Thunk란?](#Redux-Thunk란) |
-|179| [What are the differences between redux-saga and redux-thunk](#what-are-the-differences-between-redux-saga-and-redux-thunk) |
+|179| [redux-saga와 redux-thunk의 차이점은?](#redux-saga와-redux-thunk의-차이점은) |
 |180| [What is Redux DevTools?](#what-is-redux-devtools) |
 |181| [What are the features of Redux DevTools?](#what-are-the-features-of-redux-devtools) |
 |182| [What are Redux selectors and Why to use them?](#what-are-redux-selectors-and-why-to-use-them) |
@@ -3424,9 +3424,9 @@
 
      *Redux Thunk* 미들웨어는 action 대신 함수를 리턴하는 action 생성자를 작성하도록 해준다. thunk는 action의 dispatch를 지연시키거나 특정한 조건을 만족한 경우 dispatch 해야 하는 곳에 사용된다. 내부 함수는 store 메서드 `dispatch()`와 `getState()`를 매개변수로 받는다.
 
-28.  ### What are the differences between `redux-saga` and `redux-thunk`?
+28.  ### `redux-saga`와 `redux-thunk`의 차이점은?
 
-     Both *Redux Thunk* and *Redux Saga* take care of dealing with side effects. In most of the scenarios, Thunk uses *Promises* to deal with them, whereas Saga uses *Generators*. Thunk is simple to use and Promises are familiar to many developers, Sagas/Generators are more powerful but you will need to learn them. But both middleware can coexist, so you can start with Thunks and introduce Sagas when/if you need them.
+     *Redux Thunk*와 *Redux Saga*는 side effects를 처리한다. 대부분의 시나리오에서 Thunk는 *Promises*를 사용하여 처리하고 Saga는 *Generators*를 사용한다. Thunk는 사용하기 쉽고 Promises는 많은 개발자에게 친숙하다. Sagas/Generators는 더 강력하지만, 학습을 할 필요가 있다. 그러나 두 미들웨어는 공존할 수 있어서 필요할 때 Thunks로 시작하고 필요할 때 Sagas를 소개할 수 있다.
 
 29.  ### What is Redux DevTools?
 

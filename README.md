@@ -3424,7 +3424,7 @@
 
      *Redux Thunk* middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. The inner function receives the store methods `dispatch()` and `getState()` as parameters.
 
-28.  ### `redux-saga`와 `redux-thunk`의 차이점은?
+28.  ### `redux-saga`와 `redux-thunk`의 차이점은? 
 
      *Redux Thunk*와 *Redux Saga*는 side effects를 처리한다. 대부분의 시나리오에서 Thunk는 *Promises*를 사용하여 처리하고 Saga는 *Generators*를 사용한다. Thunk는 사용하기 쉽고 Promises는 많은 개발자에게 친숙하다. Sagas/Generators는 더 강력하지만, 학습을 할 필요가 있다. 그러나 두 미들웨어는 공존할 수 있어서 필요할 때 Thunks로 시작하고 필요할 때 Sagas를 소개할 수 있다.
 

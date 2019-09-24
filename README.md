@@ -203,7 +203,7 @@
 |178| [Redux Thunk란?](#Redux-Thunk란) |
 |179| [redux-saga와 redux-thunk의 차이점은?](#redux-saga와-redux-thunk의-차이점은) |
 |180| [What is Redux DevTools?](#what-is-redux-devtools) |
-|181| [What are the features of Redux DevTools?](#what-are-the-features-of-redux-devtools) |
+|181| [Redux DevTools의 기능에는 무엇이 있나?](#Redux-DevTools의-기능에는-무엇이-있나) |
 |182| [What are Redux selectors and Why to use them?](#what-are-redux-selectors-and-why-to-use-them) |
 |183| [What is Redux Form?](#what-is-redux-form) |
 |184| [What are the main features of Redux Form?](#what-are-the-main-features-of-redux-form) |
@@ -3432,13 +3432,13 @@
 
      *Redux DevTools* is a live-editing time travel environment for Redux with hot reloading, action replay, and customizable UI. If you don't want to bother with installing Redux DevTools and integrating it into your project, consider using Redux DevTools Extension for Chrome and Firefox.
 
-30.  ### What are the features of Redux DevTools?
+30.  ### Redux DevTools의 기능에는 무엇이 있나?
 
-     1. Lets you inspect every state and action payload.
-     2. Lets you go back in time by *cancelling* actions.
-     3. If you change the reducer code, each *staged* action will be re-evaluated.
-     4. If the reducers throw, you will see during which action this happened, and what the error was.
-     5. With `persistState()` store enhancer, you can persist debug sessions across page reloads.
+     1. 모든 state와 action payload를 검사할 수 있다.
+     2. action을 *취소하여* 시간을 되돌릴 수 있다.
+     3. reducer 코드를 변경하면, 각 *단계별* action이 다시 평가된다.
+     4. reducers가 throw되면, 어떤 action이 발생했는지와 오류가 무엇인지 알 수 있다.
+     5. `persistState()` store enhancer를 사용하게 되면, 페이지를 다시 로드해도 디버그 세션을 유지할 수 있다.
 
 31.  ### What are Redux selectors and why to use them?
 

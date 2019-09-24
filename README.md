@@ -204,7 +204,7 @@
 |179| [redux-saga와 redux-thunk의 차이점은?](#redux-saga와-redux-thunk의-차이점은) |
 |180| [What is Redux DevTools?](#what-is-redux-devtools) |
 |181| [What are the features of Redux DevTools?](#what-are-the-features-of-redux-devtools) |
-|182| [What are Redux selectors and Why to use them?](#what-are-redux-selectors-and-why-to-use-them) |
+|182| [Redux selectors가 무엇이며 사용해야하는 이유는?](#Redux-selectors가-무엇이며-사용해야하는-이유는) |
 |183| [What is Redux Form?](#what-is-redux-form) |
 |184| [What are the main features of Redux Form?](#what-are-the-main-features-of-redux-form) |
 |185| [How to add multiple middlewares to Redux?](#how-to-add-multiple-middlewares-to-redux) |
@@ -3440,11 +3440,11 @@
      4. If the reducers throw, you will see during which action this happened, and what the error was.
      5. With `persistState()` store enhancer, you can persist debug sessions across page reloads.
 
-31.  ### What are Redux selectors and why to use them?
+31.  ### Redux selectors가 무엇이며 사용해야하는 이유는?
 
-     *Selectors* are functions that take Redux state as an argument and return some data to pass to the component.
+     *Selectors*는 Redux state를 인수로 사용하며 일부 데이터를 component에 전달하는 함수이다.
 
-     For example, to get user details from the state:
+     예를 들어, state에서 사용자 세부 사항을 얻으려면 아래와 같이 하면 된다.
 
      ```javascript
      const getUserData = state => state.user.data

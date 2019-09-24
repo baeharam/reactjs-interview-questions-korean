@@ -206,7 +206,7 @@
 |181| [What are the features of Redux DevTools?](#what-are-the-features-of-redux-devtools) |
 |182| [What are Redux selectors and Why to use them?](#what-are-redux-selectors-and-why-to-use-them) |
 |183| [What is Redux Form?](#what-is-redux-form) |
-|184| [What are the main features of Redux Form?](#what-are-the-main-features-of-redux-form) |
+|184| [Redux Form의 주요 기능은?](#Redux-Form의-주요-기능은) |
 |185| [How to add multiple middlewares to Redux?](#how-to-add-multiple-middlewares-to-redux) |
 |186| [How to set initial state in Redux?](#how-to-set-initial-state-in-redux) |
 |187| [How Relay is different from Redux?](#how-relay-is-different-from-redux) |
@@ -3454,11 +3454,11 @@
 
      *Redux Form* works with React and Redux to enable a form in React to use Redux to store all of its state. Redux Form can be used with raw HTML5 inputs, but it also works very well with common UI frameworks like Material UI, React Widgets and React Bootstrap.
 
-33.  ### What are the main features of Redux Form?
+33.  ### Redux Form의 주요 기능은?
 
-       1. Field values persistence via Redux store.
-       2. Validation (sync/async) and submission.
-       3. Formatting, parsing and normalization of field values.
+       1. Redux store를 통한 필드 값 지속.
+       2. 유효성 검사 (sync/async) 및 제출.
+       3. 필드 값의 형식화, parsing 및 표준화.
 
 34.  ### How to add multiple middlewares to Redux?
 

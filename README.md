@@ -205,7 +205,7 @@
 |180| [What is Redux DevTools?](#what-is-redux-devtools) |
 |181| [What are the features of Redux DevTools?](#what-are-the-features-of-redux-devtools) |
 |182| [What are Redux selectors and Why to use them?](#what-are-redux-selectors-and-why-to-use-them) |
-|183| [What is Redux Form?](#what-is-redux-form) |
+|183| [Redux Form이란?](#Redux-Form이란) |
 |184| [What are the main features of Redux Form?](#what-are-the-main-features-of-redux-form) |
 |185| [How to add multiple middlewares to Redux?](#how-to-add-multiple-middlewares-to-redux) |
 |186| [How to set initial state in Redux?](#how-to-set-initial-state-in-redux) |
@@ -3450,9 +3450,9 @@
      const getUserData = state => state.user.data
      ```
 
-32.  ### What is Redux Form?
+32.  ### Redux Form이란?
 
-     *Redux Form* works with React and Redux to enable a form in React to use Redux to store all of its state. Redux Form can be used with raw HTML5 inputs, but it also works very well with common UI frameworks like Material UI, React Widgets and React Bootstrap.
+     *Redux Form*은 React 및 Redux와 함께 작동하며 React의 양식에서 Redux를 사용하여 모든 state를 저장할 수 있다. Redux Form은 원시 HTML5 입력과 함께 사용할 수 있으며, Material UI, React Widgets 및 React Bootstrap과 같은 일반적인 UI 프레임워크와도 잘 작동한다.
 
 33.  ### What are the main features of Redux Form?
 

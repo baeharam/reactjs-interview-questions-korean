@@ -207,7 +207,7 @@
 |182| [Redux selectors가 무엇이며 사용해야하는 이유는?](#Redux-selectors가-무엇이며-사용해야하는-이유는) |
 |183| [Redux Form이란?](#Redux-Form이란) |
 |184| [Redux Form의 주요 기능은?](#Redux-Form의-주요-기능은) |
-|185| [How to add multiple middlewares to Redux?](#how-to-add-multiple-middlewares-to-redux) |
+|185| [Redux에 여러 미들웨어를 추가하는 방법은?](#Redux에-여러-미들웨어를-추가하는-방법은) |
 |186| [How to set initial state in Redux?](#how-to-set-initial-state-in-redux) |
 |187| [How Relay is different from Redux?](#how-relay-is-different-from-redux) |
 |   | **React Native** |
@@ -3460,11 +3460,11 @@
        2. 유효성 검사 (sync/async) 및 제출.
        3. 필드 값의 형식화, parsing 및 표준화.
 
-34.  ### How to add multiple middlewares to Redux?
+34.  ### Redux에 여러 미들웨어를 추가하는 방법은?
 
-     You can use `applyMiddleware()`.
+     `applyMiddleware()`를 사용할 수 있다.
 
-     For example, you can add `redux-thunk` and `logger` passing them as arguments to `applyMiddleware()`:
+     예를 들어, `redux-thunk`와 `logger`를 추가하여 `applyMiddleware()`에 인수로 전달할 수 있다.
 
      ```javascript
      import { createStore, applyMiddleware } from 'redux'

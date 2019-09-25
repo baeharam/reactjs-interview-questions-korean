@@ -202,10 +202,10 @@
 |177| [redux-saga에서 call과 put의 차이점은?](#redux-saga에서-call과-put의-차이점은) |
 |178| [Redux Thunk란?](#Redux-Thunk란) |
 |179| [redux-saga와 redux-thunk의 차이점은?](#redux-saga와-redux-thunk의-차이점은) |
-|180| [What is Redux DevTools?](#what-is-redux-devtools) |
+|180| [Redux DevTools이란?](#Redux-DevTools이란) |
 |181| [Redux DevTools의 기능에는 무엇이 있나?](#Redux-DevTools의-기능에는-무엇이-있나) |
 |182| [What are Redux selectors and Why to use them?](#what-are-redux-selectors-and-why-to-use-them) |
-|183| [What is Redux Form?](#what-is-redux-form) |
+|183| [Redux Form이란?](#Redux-Form이란) |
 |184| [What are the main features of Redux Form?](#what-are-the-main-features-of-redux-form) |
 |185| [How to add multiple middlewares to Redux?](#how-to-add-multiple-middlewares-to-redux) |
 |186| [How to set initial state in Redux?](#how-to-set-initial-state-in-redux) |
@@ -3428,9 +3428,9 @@
 
      *Redux Thunk*와 *Redux Saga*는 side effects를 처리한다. 대부분의 시나리오에서 Thunk는 *Promises*를 사용하여 처리하고 Saga는 *Generators*를 사용한다. Thunk는 사용하기 쉽고 Promises는 많은 개발자에게 친숙하다. Sagas/Generators는 더 강력하지만, 학습을 할 필요가 있다. 그러나 두 미들웨어는 공존할 수 있어서 필요할 때 Thunks로 시작하고 필요할 때 Sagas를 소개할 수 있다.
 
-29.  ### What is Redux DevTools?
+29.  ### Redux DevTools이란?
 
-     *Redux DevTools* is a live-editing time travel environment for Redux with hot reloading, action replay, and customizable UI. If you don't want to bother with installing Redux DevTools and integrating it into your project, consider using Redux DevTools Extension for Chrome and Firefox.
+     *Redux DevTools*는 핫 리로딩, action 리플레이 및 사용자 정의 UI 가능한 UI가 있는 Redux의 실시간 편집하는 시간 여행 환경이다. Redux DevTools 설치 와 프로젝트 통합을 방해하지 않으려면, Chrome 및 Firefox 용 Redux DevTools Extension 사용을 고려해야 한다.
 
 30.  ### Redux DevTools의 기능에는 무엇이 있나?
 
@@ -3450,9 +3450,9 @@
      const getUserData = state => state.user.data
      ```
 
-32.  ### What is Redux Form?
+32.  ### Redux Form이란?
 
-     *Redux Form* works with React and Redux to enable a form in React to use Redux to store all of its state. Redux Form can be used with raw HTML5 inputs, but it also works very well with common UI frameworks like Material UI, React Widgets and React Bootstrap.
+     *Redux Form*은 React 및 Redux와 함께 작동하며 React의 양식에서 Redux를 사용하여 모든 state를 저장할 수 있다. Redux Form은 원시 HTML5 입력과 함께 사용할 수 있으며, Material UI, React Widgets 및 React Bootstrap과 같은 일반적인 UI 프레임워크와도 잘 작동한다.
 
 33.  ### What are the main features of Redux Form?
 

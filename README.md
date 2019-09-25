@@ -202,7 +202,7 @@
 |177| [redux-saga에서 call과 put의 차이점은?](#redux-saga에서-call과-put의-차이점은) |
 |178| [Redux Thunk란?](#Redux-Thunk란) |
 |179| [redux-saga와 redux-thunk의 차이점은?](#redux-saga와-redux-thunk의-차이점은) |
-|180| [What is Redux DevTools?](#what-is-redux-devtools) |
+|180| [Redux DevTools이란?](#Redux-DevTools이란) |
 |181| [What are the features of Redux DevTools?](#what-are-the-features-of-redux-devtools) |
 |182| [What are Redux selectors and Why to use them?](#what-are-redux-selectors-and-why-to-use-them) |
 |183| [Redux Form이란?](#Redux-Form이란) |
@@ -3428,9 +3428,9 @@
 
      *Redux Thunk*와 *Redux Saga*는 side effects를 처리한다. 대부분의 시나리오에서 Thunk는 *Promises*를 사용하여 처리하고 Saga는 *Generators*를 사용한다. Thunk는 사용하기 쉽고 Promises는 많은 개발자에게 친숙하다. Sagas/Generators는 더 강력하지만, 학습을 할 필요가 있다. 그러나 두 미들웨어는 공존할 수 있어서 필요할 때 Thunks로 시작하고 필요할 때 Sagas를 소개할 수 있다.
 
-29.  ### What is Redux DevTools?
+29.  ### Redux DevTools이란?
 
-     *Redux DevTools* is a live-editing time travel environment for Redux with hot reloading, action replay, and customizable UI. If you don't want to bother with installing Redux DevTools and integrating it into your project, consider using Redux DevTools Extension for Chrome and Firefox.
+     *Redux DevTools*는 핫 리로딩, action 리플레이 및 사용자 정의 UI 가능한 UI가 있는 Redux의 실시간 편집하는 시간 여행 환경이다. Redux DevTools 설치 와 프로젝트 통합을 방해하지 않으려면, Chrome 및 Firefox 용 Redux DevTools Extension 사용을 고려해야 한다.
 
 30.  ### What are the features of Redux DevTools?
 

@@ -208,7 +208,7 @@
 |183| [Redux Form이란?](#Redux-Form이란) |
 |184| [Redux Form의 주요 기능은?](#Redux-Form의-주요-기능은) |
 |185| [Redux에 여러 미들웨어를 추가하는 방법은?](#Redux에-여러-미들웨어를-추가하는-방법은) |
-|186| [How to set initial state in Redux?](#how-to-set-initial-state-in-redux) |
+|186| [Redux에서 초기 state를 설정하는 방법은?](#Redux에서-초기-state를-설정하는-방법은) |
 |187| [How Relay is different from Redux?](#how-relay-is-different-from-redux) |
 |   | **React Native** |
 |188| [What is the difference between React Native and React?](#what-is-the-difference-between-react-native-and-react) |
@@ -3471,9 +3471,9 @@
      const createStoreWithMiddleware = applyMiddleware(ReduxThunk, logger)(createStore)
      ```
 
-35.  ### How to set initial state in Redux?
+35.  ### Redux에서 초기 state를 설정하는 방법은?
 
-     You need to pass initial state as second argument to createStore:
+     createStore에 두번째 인자로 초기 state를 전달해야한다.
 
      ```javascript
      const rootReducer = combineReducers({

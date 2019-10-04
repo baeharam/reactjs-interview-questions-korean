@@ -218,7 +218,7 @@
 |   | **React supported libraries and Integration** |
 |192| [reselect이란 무엇이며 어떻게 작동하나?](#reselect이란-무엇이며-어떻게-작동하나) |
 |193| [Flow란?](#what-is-flow) |
-|194| [What is the difference between Flow and PropTypes?](#what-is-the-difference-between-flow-and-proptypes) |
+|194| [Flow와 PropTypes의 차이점은?](#Flow와-PropTypes의-차이점은) |
 |195| [How to use font-awesome icons in React?](#how-to-use-font-awesome-icons-in-react) |
 |196| [What is React Dev Tools?](#what-is-react-dev-tools) |
 |197| [Why is DevTools not loading in Chrome for local files?](#why-is-devtools-not-loading-in-chrome-for-local-files) |
@@ -3538,9 +3538,9 @@
 
      *Flow*는 JavaScript에서 타입 오류를 잡아내기 위해 설계된 *정적 타입 검사기* 이다. Flow 타입은 기존 타입 시스템보다 훨씬 세밀한 차이를 표현할 수 있다. 예를 들어, Flow는 대부분의 타입 시스템과 달리 `null`과 관련된 오류를 찾아내는 데 도움이 된다.
 
-194. ### What is the difference between Flow and PropTypes?
+194. ### Flow와 PropTypes의 차이점은?
 
-     Flow is a *static analysis tool* (static checker) which uses a superset of the language, allowing you to add type annotations to all of your code and catch an entire class of bugs at compile time. PropTypes is a *basic type checker* (runtime checker) which has been patched onto React. It can't check anything other than the types of the props being passed to a given component. If you want more flexible typechecking for your entire project Flow/TypeScript are appropriate choices.
+     Flow는 언어의 상위 집합을 사용하는 *정적 분석 도구* (정적 검사기)로, 모든 코드에 타입 어노테이션을 추가하여 컴파일 타임에 전체 버그 클래스를 잡을 수 있다. PropTypes은 React에 패치된 *기본 타입 검사기* (런타임 검사기)이다. 주어진 컴포넌트에 전달되는 props 타입 이외의 것은 확인할 수 없다. 전체 프로젝트에 유연한 타입검사를 원할 경우 Flow / TypeScript가 적합하다.
 
 195. ### How to use Font Awesome icons in React?
 

@@ -209,7 +209,7 @@
 |184| [Redux Form의 주요 기능은?](#Redux-Form의-주요-기능은) |
 |185| [Redux에 여러 미들웨어를 추가하는 방법은?](#Redux에-여러-미들웨어를-추가하는-방법은) |
 |186| [Redux에서 초기 state를 설정하는 방법은?](#Redux에서-초기-state를-설정하는-방법은) |
-|187| [How Relay is different from Redux?](#how-relay-is-different-from-redux) |
+|187| [Relay와 Redux의 차이점은?](#Relay와-Redux의-차이점은) |
 |   | **React Native** |
 |188| [What is the difference between React Native and React?](#what-is-the-difference-between-react-native-and-react) |
 |189| [How to test React Native apps?](#how-to-test-react-native-apps) |
@@ -217,7 +217,7 @@
 |191| [How to debug your React Native?](#how-to-debug-your-react-native) |
 |   | **React supported libraries and Integration** |
 |192| [reselect이란 무엇이며 어떻게 작동하나?](#reselect이란-무엇이며-어떻게-작동하나) |
-|193| [What is Flow?](#what-is-flow) |
+|193| [Flow란?](#what-is-flow) |
 |194| [Flow와 PropTypes의 차이점은?](#Flow와-PropTypes의-차이점은) |
 |195| [How to use font-awesome icons in React?](#how-to-use-font-awesome-icons-in-react) |
 |196| [What is React Dev Tools?](#what-is-react-dev-tools) |
@@ -3491,9 +3491,9 @@
      )
      ```
 
-36.  ### How Relay is different from Redux?
+36.  ### Relay와 Redux의 차이점은?
 
-     Relay is similar to Redux in that they both use a single store. The main difference is that relay only manages state originated from the server, and all access to the state is used via *GraphQL* queries (for reading data) and mutations (for changing data). Relay caches the data for you and optimizes data fetching for you, by fetching only changed data and nothing more.
+     Relay와 Redux는 둘 다 단일 저장소를 사용한다는 점에서 유사하다. 가장 큰 차이점은 relay는 서버에서 시작된 state만 관리하고 상태에 대한 모든 접근을 *GraphQL* queries(데이터 읽기) 및 mutations(데이터 변경)를 통해서 한다. Relay는 데이터를 캐시하고 변경된 데이터만 가져오고 더 이상 가져오지 않기 때문에 데이터 가져오기를 최적화할 수 있다.
 
 ## React Native
 
@@ -3534,9 +3534,9 @@
 
      Reselect은 마지막 호출의 마지막 입/출력 사본을 유지하고, 입력 중 하나가 변경된 경우에만 결과를 다시 계산한다. 동일한 입력이 동시에 두 번 제공되면, Reselect는 캐시된 출력을 반환한다. 메모 및 캐시는 완전히 사용자 정의할 수 있다.
 
-193. ### What is Flow?
+193. ### Flow란?
 
-     *Flow* is a *static type checker* designed to find type errors in JavaScript. Flow types can express much more fine-grained distinctions than traditional type systems. For example, Flow helps you catch errors involving `null`, unlike most type systems.
+     *Flow*는 JavaScript에서 타입 오류를 잡아내기 위해 설계된 *정적 타입 검사기* 이다. Flow 타입은 기존 타입 시스템보다 훨씬 세밀한 차이를 표현할 수 있다. 예를 들어, Flow는 대부분의 타입 시스템과 달리 `null`과 관련된 오류를 찾아내는 데 도움이 된다.
 
 194. ### Flow와 PropTypes의 차이점은?
 

@@ -209,7 +209,7 @@
 |184| [Redux Form의 주요 기능은?](#Redux-Form의-주요-기능은) |
 |185| [Redux에 여러 미들웨어를 추가하는 방법은?](#Redux에-여러-미들웨어를-추가하는-방법은) |
 |186| [Redux에서 초기 state를 설정하는 방법은?](#Redux에서-초기-state를-설정하는-방법은) |
-|187| [How Relay is different from Redux?](#how-relay-is-different-from-redux) |
+|187| [Relay와 Redux의 차이점은?](#Relay와-Redux의-차이점은) |
 |   | **React Native** |
 |188| [What is the difference between React Native and React?](#what-is-the-difference-between-react-native-and-react) |
 |189| [How to test React Native apps?](#how-to-test-react-native-apps) |
@@ -3491,9 +3491,9 @@
      )
      ```
 
-36.  ### How Relay is different from Redux?
+36.  ### Relay와 Redux의 차이점은?
 
-     Relay is similar to Redux in that they both use a single store. The main difference is that relay only manages state originated from the server, and all access to the state is used via *GraphQL* queries (for reading data) and mutations (for changing data). Relay caches the data for you and optimizes data fetching for you, by fetching only changed data and nothing more.
+     Relay와 Redux는 둘 다 단일 저장소를 사용한다는 점에서 유사하다. 가장 큰 차이점은 relay는 서버에서 시작된 state만 관리하고 상태에 대한 모든 접근을 *GraphQL* queries(데이터 읽기) 및 mutations(데이터 변경)를 통해서 한다. Relay는 데이터를 캐시하고 변경된 데이터만 가져오고 더 이상 가져오지 않기 때문에 데이터 가져오기를 최적화할 수 있다.
 
 ## React Native
 

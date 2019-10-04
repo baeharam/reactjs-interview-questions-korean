@@ -219,7 +219,7 @@
 |192| [reselect이란 무엇이며 어떻게 작동하나?](#reselect이란-무엇이며-어떻게-작동하나) |
 |193| [Flow란?](#what-is-flow) |
 |194| [Flow와 PropTypes의 차이점은?](#Flow와-PropTypes의-차이점은) |
-|195| [How to use font-awesome icons in React?](#how-to-use-font-awesome-icons-in-react) |
+|195| [React에서 Font Awesome icons를 어떻게 사용하나?](#React에서-Font-Awesome-icons를-어떻게-사용하나) |
 |196| [What is React Dev Tools?](#what-is-react-dev-tools) |
 |197| [Why is DevTools not loading in Chrome for local files?](#why-is-devtools-not-loading-in-chrome-for-local-files) |
 |198| [How to use Polymer in React?](#how-to-use-polymer-in-react) |
@@ -3542,23 +3542,23 @@
 
      Flow는 언어의 상위 집합을 사용하는 *정적 분석 도구* (정적 검사기)로, 모든 코드에 타입 어노테이션을 추가하여 컴파일 타임에 전체 버그 클래스를 잡을 수 있다. PropTypes은 React에 패치된 *기본 타입 검사기* (런타임 검사기)이다. 주어진 컴포넌트에 전달되는 props 타입 이외의 것은 확인할 수 없다. 전체 프로젝트에 유연한 타입검사를 원할 경우 Flow / TypeScript가 적합하다.
 
-195. ### How to use Font Awesome icons in React?
+195. ### React에서 Font Awesome icons를 어떻게 사용하나?
 
-     The below steps followed to include Font Awesome in React:
+     아래의 예제는 React에 Font Awesome을 포함시키는 것이다.
 
-     1. Install `font-awesome`:
+     1. `font-awesome` 설치한다.
 
      ```console
      $ npm install --save font-awesome
      ```
 
-     1. Import `font-awesome` in your `index.js` file:
+     1. `index.js` 파일에 `font-awesome` Import한다.
 
      ```javascript
      import 'font-awesome/css/font-awesome.min.css'
      ```
 
-     1. Add Font Awesome classes in `className`:
+     1. `className`에 Font Awesome 클래스를 추가한다.
 
      ```javascript
      render() {

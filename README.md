@@ -222,7 +222,7 @@
 |195| [React에서 Font Awesome icons를 어떻게 사용하나?](#React에서-Font-Awesome-icons를-어떻게-사용하나) |
 |196| [What is React Dev Tools?](#what-is-react-dev-tools) |
 |197| [Why is DevTools not loading in Chrome for local files?](#why-is-devtools-not-loading-in-chrome-for-local-files) |
-|198| [How to use Polymer in React?](#how-to-use-polymer-in-react) |
+|198| [React에서 Polymer를 사용하는 방법은?](#React에서-Polymer를-사용하는-방법은) |
 |199| [What are the advantages of React over Vue.js?](#what-are-the-advantages-of-react-over-vuejs) |
 |200| [What is the difference between React and Angular?](#what-is-the-difference-between-react-and-angular) |
 |201| [Why React tab is not showing up in DevTools?](#why-react-tab-is-not-showing-up-in-devtools) |
@@ -3579,9 +3579,9 @@
 
      If you opened a local HTML file in your browser (`file://...`) then you must first open *Chrome Extensions* and check `Allow access to file URLs`.
 
-198. ### How to use Polymer in React?
+198. ### React에서 Polymer를 사용하는 방법은?
 
-     1. Create a Polymer element:
+     1. Polymer 엘리먼트를 만든다.
 
          ```jsx harmony
          <link rel='import' href='../../bower_components/polymer/polymer.html' />
@@ -3593,13 +3593,13 @@
          })
          ```
 
-     2. Create the Polymer component HTML tag by importing it in a HTML document, e.g. import it in the `index.html` of your React application:
+     2. Polymer 컴포넌트 HTML 태그를 HTML 문서로 가져와서 만든다. (예 : React 애플리케이션의 `index.html`로 가져오십시오.)
 
          ```html
          <link rel='import' href='./src/polymer-components/calender-element.html'>
          ```
 
-         1. Use that element in the JSX file:
+         1. JSX 파일에서 해당 엘리먼트를 사용한다.
 
          ```javascript
          import React from 'react'

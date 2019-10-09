@@ -220,11 +220,11 @@
 |193| [Flow란?](#what-is-flow) |
 |194| [Flow와 PropTypes의 차이점은?](#Flow와-PropTypes의-차이점은) |
 |195| [React에서 Font Awesome icons를 어떻게 사용하나?](#React에서-Font-Awesome-icons를-어떻게-사용하나) |
-|196| [What is React Dev Tools?](#what-is-react-dev-tools) |
-|197| [Why is DevTools not loading in Chrome for local files?](#why-is-devtools-not-loading-in-chrome-for-local-files) |
-|198| [How to use Polymer in React?](#how-to-use-polymer-in-react) |
-|199| [What are the advantages of React over Vue.js?](#what-are-the-advantages-of-react-over-vuejs) |
-|200| [What is the difference between React and Angular?](#what-is-the-difference-between-react-and-angular) |
+|196| [React Dev Tools이란?](#React-Dev-Tools이란) |
+|197| [로컬 파일을 연 Chrome에서 DevTools이 로딩되지 않는 이유는?](#로컬-파일을-연-Chrome에서-DevTools이-로딩되지-않는-이유는) |
+|198| [React에서 Polymer를 사용하는 방법은?](#React에서-Polymer를-사용하는-방법은) |
+|199| [Vue.js보다 React의 장점은 무엇인가?](#Vue.js보다-React의-장점은-무엇인가) |
+|200| [React와 Angular의 차이점은?](#React와-Angular의-차이점은) |
 |201| [DevTools에 React 탭이 표시되지 않는 이유는?](#DevTools에-React-탭이-표시되지-않는-이유는) |
 |202| [What are styled components?](#what-are-styled-components) |
 |203| [Give an example of Styled Components?](#give-an-example-of-styled-components) |
@@ -3566,22 +3566,22 @@
      }
      ```
 
-196. ### What is React Dev Tools?
+196. ### React Dev Tools이란?
 
-     *React Developer Tools* let you inspect the component hierarchy, including component props and state. It exists both as a browser extension (for Chrome and Firefox), and as a standalone app (works with other environments including Safari, IE, and React Native).
+     *React Developer Tools* 를 사용하면 컴포넌트 props와 state를 포함한 컴포넌트 계층을 검사할 수 있다. 브라우저 확장 (Chrome과 Firefox 용), 독립실행형 앱(Safari, IE, 와 React Native 등의 다른 환경에서 작동하는)으로 있다. 
 
-     The official extensions available for different browsers or environments.
+     다른 브라우저 또는 환경에서 사용 가능한 공식 확장
      1. **Chrome extension**
      2. **Firefox extension**
      3. **Standalone app** (Safari, React Native, etc)
 
-197. ### Why is DevTools not loading in Chrome for local files?
+197. ### 로컬 파일을 연 Chrome에서 DevTools이 로딩되지 않는 이유는?
 
-     If you opened a local HTML file in your browser (`file://...`) then you must first open *Chrome Extensions* and check `Allow access to file URLs`.
+     브라우저에서 로컬 HTML 파일(`file://...`)을 연 경우 먼저 *Chrome Extensions*을 열고 `Allow access to file URLs`을 선택해야 한다.
 
-198. ### How to use Polymer in React?
+198. ### React에서 Polymer를 사용하는 방법은?
 
-     1. Create a Polymer element:
+     1. Polymer 엘리먼트를 만든다.
 
          ```jsx harmony
          <link rel='import' href='../../bower_components/polymer/polymer.html' />
@@ -3593,13 +3593,13 @@
          })
          ```
 
-     2. Create the Polymer component HTML tag by importing it in a HTML document, e.g. import it in the `index.html` of your React application:
+     2. Polymer 컴포넌트 HTML 태그를 HTML 문서로 가져와서 만든다. (예 : React 애플리케이션의 `index.html`로 가져오십시오.)
 
          ```html
          <link rel='import' href='./src/polymer-components/calender-element.html'>
          ```
 
-         1. Use that element in the JSX file:
+         1. JSX 파일에서 해당 엘리먼트를 사용한다.
 
          ```javascript
          import React from 'react'
@@ -3615,24 +3615,24 @@
          export default MyComponent
          ```
 
-199. ### What are the advantages of React over Vue.js?
+199. ### Vue.js보다 React의 장점은 무엇인가?
 
-     React has the following advantages over Vue.js:
+     React가 Vue.js에 비해 아래와 같은 장점이 있다.
 
-     1. Gives more flexibility in large apps developing.
-     2. Easier to test.
-     3. Suitable for mobile apps creating.
-     4. More information and solutions available.
+     1. 대규모 앱 개발에 있어서 더 많은 유연성을 제공한다.
+     2. 테스트하기 쉽다.
+     3. 모바일 앱 제작에 적합하다.
+     4. 더 많은 정보와 유용한 솔루션을 가지고 있다.
 
-200. ### What is the difference between React and Angular?
+200. ### React와 Angular의 차이점은?
 
      | React | Angular |
      | ----- | ------- |
-     | React is a library and has only the View layer | Angular is a framework and has complete MVC functionality |
-     | React handles rendering on the server side | AngularJS renders only on the client side but Angular 2 and above renders on the server side |
-     | React uses JSX that looks like HTML in JS which can be confusing | Angular follows the template approach for HTML, which makes code shorter and easy to understand |
-     | React Native, which is a React type to build mobile applications are faster and more stable | Ionic, Angular's mobile native app is relatively less stable and slower |
-     | In React, data flows only in one way and hence debugging is easy | In Angular, data flows both way i.e it has two-way data binding between children and parent and hence debugging is often difficult |
+     | React는 라이브러리이며 View 단만 있다. | Angular는 프레임워크이며 완전한 MVC 기능이 있다. |
+     | React는 서버 측에서 렌더링할 수 있다. | AngularJS는 클라이언트 측에서만 렌더링 되지만 Angular 2 이상에서 서버 측에서 렌더링이 된다. |
+     | React는 혼란스러울 수 있는 JS를 HTML처럼 보이는 JSX를 사용한다. | Angular는 HTML에 대한 템플릿 접근 방식을 따르므로 코드가 더 짧고 이해하기 쉽다. |
+     | 모바일 애플리케이션을 빌드하기 위한 React 유형인 React Native는 더 빠르고 안정적이다. | Ionic, Angular의 모바일 네이티브 앱은 상대적으로 덜 안정적이며 느리다. |
+     | React에서 데이터는 한 방향으로만 흐르므로 디버깅이 쉽다. | Angular에서는 데이터가 양방향으로 흐른다. 즉 자식과 부모 사이에 양방향 데이터 바인딩이 있음으로 디버깅이 어려운 경우가 많다. |
 
 201. ### DevTools에 React 탭이 표시되지 않는 이유는?
 

@@ -228,7 +228,7 @@
 |201| [DevTools에 React 탭이 표시되지 않는 이유는?](#DevTools에-React-탭이-표시되지-않는-이유는) |
 |202| [What are styled components?](#what-are-styled-components) |
 |203| [Styled Components의 예시는?](#Styled-Components의-예시는) |
-|204| [What is Relay?](#what-is-relay) |
+|204| [Relay란?](#Relay란) |
 |205| [How to use TypeScript in create-react-app application?](#how-to-use-typescript-in-create-react-app-application) |
 |   | **Miscellaneous** |
 |206| [What are the main features of reselect library?](#what-are-the-main-features-of-reselect-library) |
@@ -3672,9 +3672,9 @@
      </Wrapper>
      ```
 
-204. ### What is Relay?
+204. ### Relay란?
 
-     Relay is a JavaScript framework for providing a data layer and client-server communication to web applications using the React view layer.
+     Relay는 React View 계층을 사용하여 웹 애플리케이션에 데이터 계층과 클라이언트-서버 통신을 제공하기 위한 JavaScript 프레임워크이다.
 
 205. ### How to use TypeScript in `create-react-app` application?
      Starting from react-scripts@2.1.0 or higher, there is a built-in support for typescript. You can just pass `--typescript` option as below

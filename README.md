@@ -224,7 +224,7 @@
 |197| [로컬 파일을 연 Chrome에서 DevTools이 로딩되지 않는 이유는?](#로컬-파일을-연-Chrome에서-DevTools이-로딩되지-않는-이유는) |
 |198| [React에서 Polymer를 사용하는 방법은?](#React에서-Polymer를-사용하는-방법은) |
 |199| [Vue.js보다 React의 장점은 무엇인가?](#Vue.js보다-React의-장점은-무엇인가) |
-|200| [What is the difference between React and Angular?](#what-is-the-difference-between-react-and-angular) |
+|200| [React와 Angular의 차이점은?](#React와-Angular의-차이점은) |
 |201| [Why React tab is not showing up in DevTools?](#why-react-tab-is-not-showing-up-in-devtools) |
 |202| [What are styled components?](#what-are-styled-components) |
 |203| [Give an example of Styled Components?](#give-an-example-of-styled-components) |
@@ -3624,15 +3624,15 @@
      3. 모바일 앱 제작에 적합하다.
      4. 더 많은 정보와 유용한 솔루션을 가지고 있다.
 
-200. ### What is the difference between React and Angular?
+200. ### React와 Angular의 차이점은?
 
      | React | Angular |
      | ----- | ------- |
-     | React is a library and has only the View layer | Angular is a framework and has complete MVC functionality |
-     | React handles rendering on the server side | AngularJS renders only on the client side but Angular 2 and above renders on the server side |
-     | React uses JSX that looks like HTML in JS which can be confusing | Angular follows the template approach for HTML, which makes code shorter and easy to understand |
-     | React Native, which is a React type to build mobile applications are faster and more stable | Ionic, Angular's mobile native app is relatively less stable and slower |
-     | In React, data flows only in one way and hence debugging is easy | In Angular, data flows both way i.e it has two-way data binding between children and parent and hence debugging is often difficult |
+     | React는 라이브러리이며 View 단만 있다. | Angular는 프레임워크이며 완전한 MVC 기능이 있다. |
+     | React는 서버 측에서 렌더링할 수 있다. | AngularJS는 클라이언트 측에서만 렌더링 되지만 Angular 2 이상에서 서버 측에서 렌더링이 된다. |
+     | React는 혼란스러울 수 있는 JS를 HTML처럼 보이는 JSX를 사용한다. | Angular는 HTML에 대한 템플릿 접근 방식을 따르므로 코드가 더 짧고 이해하기 쉽다. |
+     | 모바일 애플리케이션을 빌드하기 위한 React 유형인 React Native는 더 빠르고 안정적이다. | Ionic, Angular의 모바일 네이티브 앱은 상대적으로 덜 안정적이며 느리다. |
+     | React에서 데이터는 한 방향으로만 흐르므로 디버깅이 쉽다. | Angular에서는 데이터가 양방향으로 흐른다. 즉 자식과 부모 사이에 양방향 데이터 바인딩이 있음으로 디버깅이 어려운 경우가 많다. |
 
 201. ### Why React tab is not showing up in DevTools?
 

@@ -223,7 +223,7 @@
 |196| [React Dev Tools이란?](#React-Dev-Tools이란) |
 |197| [로컬 파일을 연 Chrome에서 DevTools이 로딩되지 않는 이유는?](#로컬-파일을-연-Chrome에서-DevTools이-로딩되지-않는-이유는) |
 |198| [React에서 Polymer를 사용하는 방법은?](#React에서-Polymer를-사용하는-방법은) |
-|199| [What are the advantages of React over Vue.js?](#what-are-the-advantages-of-react-over-vuejs) |
+|199| [Vue.js보다 React의 장점은 무엇인가?](#Vue.js보다-React의-장점은-무엇인가) |
 |200| [What is the difference between React and Angular?](#what-is-the-difference-between-react-and-angular) |
 |201| [Why React tab is not showing up in DevTools?](#why-react-tab-is-not-showing-up-in-devtools) |
 |202| [What are styled components?](#what-are-styled-components) |
@@ -3615,14 +3615,14 @@
          export default MyComponent
          ```
 
-199. ### What are the advantages of React over Vue.js?
+199. ### Vue.js보다 React의 장점은 무엇인가?
 
-     React has the following advantages over Vue.js:
+     React가 Vue.js에 비해 아래와 같은 장점이 있다.
 
-     1. Gives more flexibility in large apps developing.
-     2. Easier to test.
-     3. Suitable for mobile apps creating.
-     4. More information and solutions available.
+     1. 대규모 앱 개발에 있어서 더 많은 유연성을 제공한다.
+     2. 테스트하기 쉽다.
+     3. 모바일 앱 제작에 적합하다.
+     4. 더 많은 정보와 유용한 솔루션을 가지고 있다.
 
 200. ### What is the difference between React and Angular?
 

@@ -221,7 +221,7 @@
 |194| [Flow와 PropTypes의 차이점은?](#Flow와-PropTypes의-차이점은) |
 |195| [React에서 Font Awesome icons를 어떻게 사용하나?](#React에서-Font-Awesome-icons를-어떻게-사용하나) |
 |196| [What is React Dev Tools?](#what-is-react-dev-tools) |
-|197| [Why is DevTools not loading in Chrome for local files?](#why-is-devtools-not-loading-in-chrome-for-local-files) |
+|197| [로컬 파일을 연 Chrome에서 DevTools이 로딩되지 않는 이유는?](#로컬-파일을-연-Chrome에서-DevTools이-로딩되지-않는-이유는) |
 |198| [How to use Polymer in React?](#how-to-use-polymer-in-react) |
 |199| [What are the advantages of React over Vue.js?](#what-are-the-advantages-of-react-over-vuejs) |
 |200| [What is the difference between React and Angular?](#what-is-the-difference-between-react-and-angular) |
@@ -3575,9 +3575,9 @@
      2. **Firefox extension**
      3. **Standalone app** (Safari, React Native, etc)
 
-197. ### Why is DevTools not loading in Chrome for local files?
+197. ### 로컬 파일을 연 Chrome에서 DevTools이 로딩되지 않는 이유는?
 
-     If you opened a local HTML file in your browser (`file://...`) then you must first open *Chrome Extensions* and check `Allow access to file URLs`.
+     브라우저에서 로컬 HTML 파일(`file://...`)을 연 경우 먼저 *Chrome Extensions*을 열고 `Allow access to file URLs`을 선택해야 한다.
 
 198. ### How to use Polymer in React?
 

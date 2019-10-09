@@ -225,7 +225,7 @@
 |198| [React에서 Polymer를 사용하는 방법은?](#React에서-Polymer를-사용하는-방법은) |
 |199| [Vue.js보다 React의 장점은 무엇인가?](#Vue.js보다-React의-장점은-무엇인가) |
 |200| [React와 Angular의 차이점은?](#React와-Angular의-차이점은) |
-|201| [Why React tab is not showing up in DevTools?](#why-react-tab-is-not-showing-up-in-devtools) |
+|201| [DevTools에 React 탭이 표시되지 않는 이유는?](#DevTools에-React-탭이-표시되지-않는-이유는) |
 |202| [What are styled components?](#what-are-styled-components) |
 |203| [Give an example of Styled Components?](#give-an-example-of-styled-components) |
 |204| [What is Relay?](#what-is-relay) |
@@ -3634,9 +3634,9 @@
      | 모바일 애플리케이션을 빌드하기 위한 React 유형인 React Native는 더 빠르고 안정적이다. | Ionic, Angular의 모바일 네이티브 앱은 상대적으로 덜 안정적이며 느리다. |
      | React에서 데이터는 한 방향으로만 흐르므로 디버깅이 쉽다. | Angular에서는 데이터가 양방향으로 흐른다. 즉 자식과 부모 사이에 양방향 데이터 바인딩이 있음으로 디버깅이 어려운 경우가 많다. |
 
-201. ### Why React tab is not showing up in DevTools?
+201. ### DevTools에 React 탭이 표시되지 않는 이유는?
 
-     When the page loads, *React DevTools* sets a global named `__REACT_DEVTOOLS_GLOBAL_HOOK__`, then React communicates with that hook during initialization. If the website is not using React or if React fails to communicate with DevTools then it won't show up the tab.
+     페이지가 로딩되면, *React DevTools*가 `__REACT_DEVTOOLS_GLOBAL_HOOK__`이라는 전역을 설정한 후 초기화 중에 React가 해당 hook과 통신한다.  웹사이트가 React를 사용하지 않거나 React가 DevTool과 통신하지 못하면 탭이 표시되지 않는다.
 
 202. ### What are Styled Components?
 

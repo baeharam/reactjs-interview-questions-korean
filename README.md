@@ -229,7 +229,7 @@
 |202| [What are styled components?](#what-are-styled-components) |
 |203| [Styled Components의 예시는?](#Styled-Components의-예시는) |
 |204| [Relay란?](#Relay란) |
-|205| [How to use TypeScript in create-react-app application?](#how-to-use-typescript-in-create-react-app-application) |
+|205| [create-react-app 애플리케이션에서 TypeScript를 사용하는 방법?](#create-react-app-애플리케이션에서-TypeScript를-사용하는-방법) |
 |   | **Miscellaneous** |
 |206| [What are the main features of reselect library?](#what-are-the-main-features-of-reselect-library) |
 |207| [Give an example of reselect usage?](#give-an-example-of-reselect-usage) |
@@ -3676,8 +3676,10 @@
 
      Relay는 React View 계층을 사용하여 웹 애플리케이션에 데이터 계층과 클라이언트-서버 통신을 제공하기 위한 JavaScript 프레임워크이다.
 
-205. ### How to use TypeScript in `create-react-app` application?
-     Starting from react-scripts@2.1.0 or higher, there is a built-in support for typescript. You can just pass `--typescript` option as below
+205. ### `create-react-app` 애플리케이션에서 TypeScript를 사용하는 방법?
+     
+     react-scripts@2.1.0 이상부터, typescript를 기본적으로 지원한다. 아래와 같이 `--typescript` 옵션을 전달할 수 있다.
+
      ```bash
      npx create-react-app my-app --typescript
 
@@ -3685,9 +3687,10 @@
 
      yarn create react-app my-app --typescript
      ```
-     But for lower versions of react scripts, just supply `--scripts-version` option as `react-scripts-ts` while you create a new project. `react-scripts-ts` is a set of adjustments to take the standard `create-react-app` project pipeline and bring TypeScript into the mix.
+     
+     그러나 더 낮은 버전의 react scripts의 경우 새 프로젝트를 만드는 동안 `--scripts-version` 옵션을 `react-scripts-ts`로 제공하여라. `react-scripts-ts`는 표준 `create-react-app` 프로젝트 파이프라인을 취하고 TypeScript를 믹스로 가져오기 위한 조정 세트이다.
 
-     Now the project layout should look like the following:
+     이제 프로젝트 레이아웃은 다음과 같아야 한다.
 
      ```
      my-app/

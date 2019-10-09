@@ -227,7 +227,7 @@
 |200| [What is the difference between React and Angular?](#what-is-the-difference-between-react-and-angular) |
 |201| [Why React tab is not showing up in DevTools?](#why-react-tab-is-not-showing-up-in-devtools) |
 |202| [What are styled components?](#what-are-styled-components) |
-|203| [Give an example of Styled Components?](#give-an-example-of-styled-components) |
+|203| [Styled Components의 예시는?](#Styled-Components의-예시는) |
 |204| [What is Relay?](#what-is-relay) |
 |205| [How to use TypeScript in create-react-app application?](#how-to-use-typescript-in-create-react-app-application) |
 |   | **Miscellaneous** |
@@ -3642,9 +3642,9 @@
 
      `styled-components` is a JavaScript library for styling React applications. It removes the mapping between styles and components, and lets you write actual CSS augmented with JavaScript.
 
-203. ### Give an example of Styled Components?
+203. ### Styled Components의 예시는?
 
-     Lets create `<Title>` and `<Wrapper>` components with specific styles for each.
+     각각에 대해 특정 스타일로 `<Title>`과 `<Wrapper>` 컴포넌트를 만들어 보자.
 
      ```javascript
      import React from 'react'
@@ -3664,7 +3664,7 @@
      `
      ```
 
-     These two variables, `Title` and `Wrapper`, are now components that you can render just like any other react component.
+     `Title`과 `Wrapper`는 이제 서로 다른 react component처럼 렌더링 할 수 있는 컴포넌트이다.
 
      ```jsx harmony
      <Wrapper>

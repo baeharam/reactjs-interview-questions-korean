@@ -226,7 +226,7 @@
 |199| [What are the advantages of React over Vue.js?](#what-are-the-advantages-of-react-over-vuejs) |
 |200| [What is the difference between React and Angular?](#what-is-the-difference-between-react-and-angular) |
 |201| [Why React tab is not showing up in DevTools?](#why-react-tab-is-not-showing-up-in-devtools) |
-|202| [What are styled components?](#what-are-styled-components) |
+|202| [ Styled Components란?](#Styled-Components란) |
 |203| [Give an example of Styled Components?](#give-an-example-of-styled-components) |
 |204| [What is Relay?](#what-is-relay) |
 |205| [How to use TypeScript in create-react-app application?](#how-to-use-typescript-in-create-react-app-application) |
@@ -3638,9 +3638,9 @@
 
      When the page loads, *React DevTools* sets a global named `__REACT_DEVTOOLS_GLOBAL_HOOK__`, then React communicates with that hook during initialization. If the website is not using React or if React fails to communicate with DevTools then it won't show up the tab.
 
-202. ### What are Styled Components?
+202. ### Styled Components란?
 
-     `styled-components` is a JavaScript library for styling React applications. It removes the mapping between styles and components, and lets you write actual CSS augmented with JavaScript.
+     `styled-components`는 React 애플리케이션 스타일링을 위한 JavaScript 라이브러리이다. 스타일과 컴포넌트 간의 매핑을 제거하고 JavaScript로 보강된 실제 CSS를 작성할 수 있다.
 
 203. ### Give an example of Styled Components?
 

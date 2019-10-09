@@ -220,7 +220,7 @@
 |193| [Flow란?](#what-is-flow) |
 |194| [Flow와 PropTypes의 차이점은?](#Flow와-PropTypes의-차이점은) |
 |195| [React에서 Font Awesome icons를 어떻게 사용하나?](#React에서-Font-Awesome-icons를-어떻게-사용하나) |
-|196| [What is React Dev Tools?](#what-is-react-dev-tools) |
+|196| [React Dev Tools이란?](#React-Dev-Tools이란) |
 |197| [로컬 파일을 연 Chrome에서 DevTools이 로딩되지 않는 이유는?](#로컬-파일을-연-Chrome에서-DevTools이-로딩되지-않는-이유는) |
 |198| [How to use Polymer in React?](#how-to-use-polymer-in-react) |
 |199| [What are the advantages of React over Vue.js?](#what-are-the-advantages-of-react-over-vuejs) |
@@ -3566,11 +3566,11 @@
      }
      ```
 
-196. ### What is React Dev Tools?
+196. ### React Dev Tools이란?
 
-     *React Developer Tools* let you inspect the component hierarchy, including component props and state. It exists both as a browser extension (for Chrome and Firefox), and as a standalone app (works with other environments including Safari, IE, and React Native).
+     *React Developer Tools* 를 사용하면 컴포넌트 props와 state를 포함한 컴포넌트 계층을 검사할 수 있다. 브라우저 확장 (Chrome과 Firefox 용), 독립실행형 앱(Safari, IE, 와 React Native 등의 다른 환경에서 작동하는)으로 있다. 
 
-     The official extensions available for different browsers or environments.
+     다른 브라우저 또는 환경에서 사용 가능한 공식 확장
      1. **Chrome extension**
      2. **Firefox extension**
      3. **Standalone app** (Safari, React Native, etc)

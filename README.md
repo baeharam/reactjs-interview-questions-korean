@@ -226,7 +226,7 @@
 |199| [Vue.js보다 React의 장점은 무엇인가?](#Vue.js보다-React의-장점은-무엇인가) |
 |200| [React와 Angular의 차이점은?](#React와-Angular의-차이점은) |
 |201| [DevTools에 React 탭이 표시되지 않는 이유는?](#DevTools에-React-탭이-표시되지-않는-이유는) |
-|202| [What are styled components?](#what-are-styled-components) |
+|202| [Styled Components란?](#Styled-Components란) |
 |203| [Styled Components의 예시는?](#Styled-Components의-예시는) |
 |204| [Relay란?](#Relay란) |
 |205| [create-react-app 애플리케이션에서 TypeScript를 사용하는 방법?](#create-react-app-애플리케이션에서-TypeScript를-사용하는-방법) |
@@ -3638,9 +3638,9 @@
 
      페이지가 로딩되면, *React DevTools*가 `__REACT_DEVTOOLS_GLOBAL_HOOK__`이라는 전역을 설정한 후 초기화 중에 React가 해당 hook과 통신한다.  웹사이트가 React를 사용하지 않거나 React가 DevTool과 통신하지 못하면 탭이 표시되지 않는다.
 
-202. ### What are Styled Components?
+202. ### Styled Components란?
 
-     `styled-components` is a JavaScript library for styling React applications. It removes the mapping between styles and components, and lets you write actual CSS augmented with JavaScript.
+     `styled-components`는 React 애플리케이션 스타일링을 위한 JavaScript 라이브러리이다. 스타일과 컴포넌트 간의 매핑을 제거하고 JavaScript로 보강된 실제 CSS를 작성할 수 있다.
 
 203. ### Styled Components의 예시는?
 

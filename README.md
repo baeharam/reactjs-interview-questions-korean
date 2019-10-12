@@ -233,7 +233,7 @@
 |   | **Miscellaneous** |
 |206| [What are the main features of reselect library?](#what-are-the-main-features-of-reselect-library) |
 |207| [Give an example of reselect usage?](#give-an-example-of-reselect-usage) |
-|208| [What is an action in Redux?](#what-is-an-action-in-redux) |
+|208| [Redux에서 action이란?](#Redux에서-action이란) |
 |209| [Does the statics object work with ES6 classes in React?](#does-the-statics-object-work-with-es6-classes-in-react) |
 |210| [Can Redux only be used with React?](#can-redux-only-be-used-with-react) |
 |211| [Do you need to have a particular build tool to use Redux?](#do-you-need-to-have-a-particular-build-tool-to-use-redux) |
@@ -3757,11 +3757,11 @@
      console.log(totalSelector(exampleState))    // { total: 2.322 }
      ```
 
-3.   ### What is an action in Redux?
+3.   ### Redux에서 action이란?
 
-     *Actions* are plain JavaScript objects or payloads of information that send data from your application to your store. They are the only source of information for the store. Actions must have a type property that indicates the type of action being performed.
+     *Actions*은 응용프로그램에서 store로 데이터를 보내는 일반 JavaScript 객체나 정보의 payload이다. 이것들은 store에 대한 유일한 정보 소스이다. Actions에는 수행 중인 action 유형을 나타내는 type 속성이 있어야 한다.
 
-     For example an example action which represents adding a new todo item:
+     새로운 할 일 항목 추가를 나타내는 동작에 대한 예시이다.
 
      ```
      {

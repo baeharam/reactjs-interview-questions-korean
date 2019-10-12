@@ -232,7 +232,7 @@
 |205| [create-react-app 애플리케이션에서 TypeScript를 사용하는 방법?](#create-react-app-애플리케이션에서-TypeScript를-사용하는-방법) |
 |   | **Miscellaneous** |
 |206| [What are the main features of reselect library?](#what-are-the-main-features-of-reselect-library) |
-|207| [Give an example of reselect usage?](#give-an-example-of-reselect-usage) |
+|207| [Reselect 사용법에 대한 예시는?](#Reselect-사용법에-대한-예시는) |
 |208| [What is an action in Redux?](#what-is-an-action-in-redux) |
 |209| [Does the statics object work with ES6 classes in React?](#does-the-statics-object-work-with-es6-classes-in-react) |
 |210| [Can Redux only be used with React?](#can-redux-only-be-used-with-react) |
@@ -3715,9 +3715,9 @@
        2. Selectors are efficient. A selector is not recomputed unless one of its arguments changes.
        3. Selectors are composable. They can be used as input to other selectors.
 
-2.   #### Give an example of Reselect usage?
+2.   #### Reselect 사용법에 대한 예시는?
 
-     Let's take calculations and different amounts of a shipment order with the simplified usage of Reselect:
+     Reselect의 간단한 사용법으로는 다른 수량의 선적 주문을 계산해보자.
 
      ```javascript
      import { createSelector } from 'reselect'

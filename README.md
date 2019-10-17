@@ -235,7 +235,7 @@
 |207| [Give an example of reselect usage?](#give-an-example-of-reselect-usage) |
 |208| [What is an action in Redux?](#what-is-an-action-in-redux) |
 |209| [Does the statics object work with ES6 classes in React?](#does-the-statics-object-work-with-es6-classes-in-react) |
-|210| [Can Redux only be used with React?](#can-redux-only-be-used-with-react) |
+|210| [Redux는 React에서만 사용 가능한가?](#Redux는-React에서만-사용-가능한가) |
 |211| [Do you need to have a particular build tool to use Redux?](#do-you-need-to-have-a-particular-build-tool-to-use-redux) |
 |212| [How Redux Form initialValues get updated from state?](#how-redux-form-initialvalues-get-updated-from-state) |
 |213| [How React PropTypes allow different type for one prop?](#how-react-proptypes-allow-different-types-for-one-prop) |
@@ -3806,9 +3806,9 @@
      Component.someMethod = function(){....}
      ```
 
-5.   ### Can Redux only be used with React?
+5.   ### Redux는 React에서만 사용 가능한가?
 
-     Redux can be used as a data store for any UI layer. The most common usage is with React and React Native, but there are bindings available for Angular, Angular 2, Vue, Mithril, and more. Redux simply provides a subscription mechanism which can be used by any other code.
+     Redux는 모든 UI 계층의 데이터 저장소로 사용할 수 있다. 주 사용처는 React와 React Native이지만, Angular, Angular 2, Vue, Mithril 등에서 사용할 수 있다. Redux는 다른 코드에서 사용할 수 있는 subscription 메커니즘을 제공한다.
 
 6.   ### Do you need to have a particular build tool to use Redux?
 

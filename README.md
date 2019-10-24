@@ -231,8 +231,8 @@
 |204| [Relay란?](#Relay란) |
 |205| [create-react-app 애플리케이션에서 TypeScript를 사용하는 방법?](#create-react-app-애플리케이션에서-TypeScript를-사용하는-방법) |
 |   | **Miscellaneous** |
-|206| [What are the main features of reselect library?](#what-are-the-main-features-of-reselect-library) |
-|207| [Give an example of reselect usage?](#give-an-example-of-reselect-usage) |
+|206| [Reselect 라이브러리의 주요 기능은?](#Reselect-라이브러리의-주요-기능은) |
+|207| [Reselect 사용법에 대한 예시는?](#Reselect-사용법에-대한-예시는) |
 |208| [Redux에서 action이란?](#Redux에서-action이란) |
 |209| [Does the statics object work with ES6 classes in React?](#does-the-statics-object-work-with-es6-classes-in-react) |
 |210| [Can Redux only be used with React?](#can-redux-only-be-used-with-react) |
@@ -3709,15 +3709,15 @@
 
 ## Miscellaneous
 
-1.   ### What are the main features of Reselect library?
+1.   ### Reselect 라이브러리의 주요 기능은?
 
-       1. Selectors can compute derived data, allowing Redux to store the minimal possible state.
-       2. Selectors are efficient. A selector is not recomputed unless one of its arguments changes.
-       3. Selectors are composable. They can be used as input to other selectors.
+       1. Selectors는 파생된 데이터를 계산하여, Redux가 가능한 최소의 state를 저장할 수 있도록 한다.
+       2. Selectors는 효율적이다. selector는 인자 중 하나도 변화가 없다면 재계산을 하지 않는다.
+       3. Selectors는 composable하다. 다른 selector에 대한 입력으로 사용할 수 있다.
 
-2.   #### Give an example of Reselect usage?
+2.   #### Reselect 사용법에 대한 예시는?
 
-     Let's take calculations and different amounts of a shipment order with the simplified usage of Reselect:
+     Reselect의 간단한 사용법으로는 다른 수량의 선적 주문을 계산해보자.
 
      ```javascript
      import { createSelector } from 'reselect'

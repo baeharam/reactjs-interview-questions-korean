@@ -231,11 +231,11 @@
 |204| [Relay란?](#Relay란) |
 |205| [create-react-app 애플리케이션에서 TypeScript를 사용하는 방법?](#create-react-app-애플리케이션에서-TypeScript를-사용하는-방법) |
 |   | **Miscellaneous** |
-|206| [What are the main features of reselect library?](#what-are-the-main-features-of-reselect-library) |
-|207| [Give an example of reselect usage?](#give-an-example-of-reselect-usage) |
-|208| [What is an action in Redux?](#what-is-an-action-in-redux) |
-|209| [Does the statics object work with ES6 classes in React?](#does-the-statics-object-work-with-es6-classes-in-react) |
-|210| [Can Redux only be used with React?](#can-redux-only-be-used-with-react) |
+|206| [Reselect 라이브러리의 주요 기능은?](#Reselect-라이브러리의-주요-기능은) |
+|207| [Reselect 사용법에 대한 예시는?](#Reselect-사용법에-대한-예시는) |
+|208| [Redux에서 action이란?](#Redux에서-action이란) |
+|209| [React의 ES6 클래스는 static object와 함께 사용 가능한가?](#React의-ES6-클래스는-static-object와-함께-사용-가능한가?) |
+|210| [Redux는 React에서만 사용 가능한가?](#Redux는-React에서만-사용-가능한가) |
 |211| [Redux를 사용하기 위한 특별한 빌드 도구가 필요한가?](#Redux를-사용하기-위한-특별한-빌드-도구가-필요한가) |
 |212| [How Redux Form initialValues get updated from state?](#how-redux-form-initialvalues-get-updated-from-state) |
 |213| [How React PropTypes allow different type for one prop?](#how-react-proptypes-allow-different-types-for-one-prop) |
@@ -3709,15 +3709,15 @@
 
 ## Miscellaneous
 
-1.   ### What are the main features of Reselect library?
+1.   ### Reselect 라이브러리의 주요 기능은?
 
-       1. Selectors can compute derived data, allowing Redux to store the minimal possible state.
-       2. Selectors are efficient. A selector is not recomputed unless one of its arguments changes.
-       3. Selectors are composable. They can be used as input to other selectors.
+       1. Selectors는 파생된 데이터를 계산하여, Redux가 가능한 최소의 state를 저장할 수 있도록 한다.
+       2. Selectors는 효율적이다. selector는 인자 중 하나도 변화가 없다면 재계산을 하지 않는다.
+       3. Selectors는 composable하다. 다른 selector에 대한 입력으로 사용할 수 있다.
 
-2.   #### Give an example of Reselect usage?
+2.   #### Reselect 사용법에 대한 예시는?
 
-     Let's take calculations and different amounts of a shipment order with the simplified usage of Reselect:
+     Reselect의 간단한 사용법으로는 다른 수량의 선적 주문을 계산해보자.
 
      ```javascript
      import { createSelector } from 'reselect'
@@ -3757,11 +3757,11 @@
      console.log(totalSelector(exampleState))    // { total: 2.322 }
      ```
 
-3.   ### What is an action in Redux?
+3.   ### Redux에서 action이란?
 
-     *Actions* are plain JavaScript objects or payloads of information that send data from your application to your store. They are the only source of information for the store. Actions must have a type property that indicates the type of action being performed.
+     *Actions*은 응용프로그램에서 store로 데이터를 보내는 일반 JavaScript 객체나 정보의 payload이다. 이것들은 store에 대한 유일한 정보 소스이다. Actions에는 수행 중인 action 유형을 나타내는 type 속성이 있어야 한다.
 
-     For example an example action which represents adding a new todo item:
+     새로운 할 일 항목 추가를 나타내는 동작에 대한 예시이다.
 
      ```
      {
@@ -3770,9 +3770,9 @@
      }
      ```
 
-4.   ### Does the statics object work with ES6 classes in React?
+4.   ### React의 ES6 클래스는 static object와 함께 사용 가능한가?
 
-     No, `statics` only works with `React.createClass()`:
+     안된다, `statics`은 `React.createClass()`에서만 작동한다.
 
      ```javascript
      someComponent= React.createClass({
@@ -3784,7 +3784,7 @@
      })
      ```
 
-     But you can write statics inside ES6+ classes or writing them outside class as below,
+     그러나 ES6+ classes 안에서 static을 사용하거나 아래와 같이 클래스 외부에서 작성할 수 있다.
 
      ```javascript
      class Component extends React.Component {
@@ -3806,9 +3806,9 @@
      Component.someMethod = function(){....}
      ```
 
-5.   ### Can Redux only be used with React?
+5.   ### Redux는 React에서만 사용 가능한가?
 
-     Redux can be used as a data store for any UI layer. The most common usage is with React and React Native, but there are bindings available for Angular, Angular 2, Vue, Mithril, and more. Redux simply provides a subscription mechanism which can be used by any other code.
+     Redux는 모든 UI 계층의 데이터 저장소로 사용할 수 있다. 주 사용처는 React와 React Native이지만, Angular, Angular 2, Vue, Mithril 등에서 사용할 수 있다. Redux는 다른 코드에서 사용할 수 있는 subscription 메커니즘을 제공한다.
 
 6.   ### Redux를 사용하기 위한 특별한 빌드 도구가 필요한가?
 

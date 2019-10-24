@@ -236,7 +236,7 @@
 |208| [Redux에서 action이란?](#Redux에서-action이란) |
 |209| [React의 ES6 클래스는 static object와 함께 사용 가능한가?](#React의-ES6-클래스는-static-object와-함께-사용-가능한가?) |
 |210| [Redux는 React에서만 사용 가능한가?](#Redux는-React에서만-사용-가능한가) |
-|211| [Do you need to have a particular build tool to use Redux?](#do-you-need-to-have-a-particular-build-tool-to-use-redux) |
+|211| [Redux를 사용하기 위한 특별한 빌드 도구가 필요한가?](#Redux를-사용하기-위한-특별한-빌드-도구가-필요한가) |
 |212| [How Redux Form initialValues get updated from state?](#how-redux-form-initialvalues-get-updated-from-state) |
 |213| [How React PropTypes allow different type for one prop?](#how-react-proptypes-allow-different-types-for-one-prop) |
 |214| [Can I import an SVG file as react component?](#can-i-import-an-svg-file-as-react-component) |
@@ -3810,9 +3810,9 @@
 
      Redux는 모든 UI 계층의 데이터 저장소로 사용할 수 있다. 주 사용처는 React와 React Native이지만, Angular, Angular 2, Vue, Mithril 등에서 사용할 수 있다. Redux는 다른 코드에서 사용할 수 있는 subscription 메커니즘을 제공한다.
 
-6.   ### Do you need to have a particular build tool to use Redux?
+6.   ### Redux를 사용하기 위한 특별한 빌드 도구가 필요한가?
 
-     Redux is originally written in ES6 and transpiled for production into ES5 with Webpack and Babel. You should be able to use it regardless of your JavaScript build process. Redux also offers a UMD build that can be used directly without any build process at all.
+     Redux는 ES6로 작성되었으며 Webpack과 Babel을 사용하여 ES5로 변환되어있다. JavaScript 빌드 프로세스에 관련 없이 사용할 수 있어야 한다. 또한 Redux는 빌드 프로세스 없이 직접 사용할 수 있는 UMD 빌드를 제공한다.
 
 7.   ### How Redux Form `initialValues` get updated from state?
 

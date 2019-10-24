@@ -234,7 +234,7 @@
 |206| [Reselect 라이브러리의 주요 기능은?](#Reselect-라이브러리의-주요-기능은) |
 |207| [Reselect 사용법에 대한 예시는?](#Reselect-사용법에-대한-예시는) |
 |208| [Redux에서 action이란?](#Redux에서-action이란) |
-|209| [Does the statics object work with ES6 classes in React?](#does-the-statics-object-work-with-es6-classes-in-react) |
+|209| [React의 ES6 클래스는 static object와 함께 사용 가능한가?](#React의-ES6-클래스는-static-object와-함께-사용-가능한가?) |
 |210| [Can Redux only be used with React?](#can-redux-only-be-used-with-react) |
 |211| [Do you need to have a particular build tool to use Redux?](#do-you-need-to-have-a-particular-build-tool-to-use-redux) |
 |212| [How Redux Form initialValues get updated from state?](#how-redux-form-initialvalues-get-updated-from-state) |
@@ -3770,9 +3770,9 @@
      }
      ```
 
-4.   ### Does the statics object work with ES6 classes in React?
+4.   ### React의 ES6 클래스는 static object와 함께 사용 가능한가?
 
-     No, `statics` only works with `React.createClass()`:
+     안된다, `statics`은 `React.createClass()`에서만 작동한다.
 
      ```javascript
      someComponent= React.createClass({
@@ -3784,7 +3784,7 @@
      })
      ```
 
-     But you can write statics inside ES6+ classes or writing them outside class as below,
+     그러나 ES6+ classes 안에서 static을 사용하거나 아래와 같이 클래스 외부에서 작성할 수 있다.
 
      ```javascript
      class Component extends React.Component {

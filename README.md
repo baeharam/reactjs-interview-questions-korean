@@ -237,7 +237,7 @@
 |209| [React의 ES6 클래스는 static object와 함께 사용 가능한가?](#React의-ES6-클래스는-static-object와-함께-사용-가능한가?) |
 |210| [Redux는 React에서만 사용 가능한가?](#Redux는-React에서만-사용-가능한가) |
 |211| [Redux를 사용하기 위한 특별한 빌드 도구가 필요한가?](#Redux를-사용하기-위한-특별한-빌드-도구가-필요한가) |
-|212| [How Redux Form initialValues get updated from state?](#how-redux-form-initialvalues-get-updated-from-state) |
+|212| [Redux Form `initialValues`는 state에서 어떻게 업데이트하나?](#Redux-Form-initialValues는-state에서-어떻게-업데이트하나) |
 |213| [How React PropTypes allow different type for one prop?](#how-react-proptypes-allow-different-types-for-one-prop) |
 |214| [Can I import an SVG file as react component?](#can-i-import-an-svg-file-as-react-component) |
 |215| [Why are inline ref callbacks or functions not recommended?](#why-are-inline-ref-callbacks-or-functions-not-recommended)|
@@ -3814,9 +3814,9 @@
 
      Redux는 ES6로 작성되었으며 Webpack과 Babel을 사용하여 ES5로 변환되어있다. JavaScript 빌드 프로세스에 관련 없이 사용할 수 있어야 한다. 또한 Redux는 빌드 프로세스 없이 직접 사용할 수 있는 UMD 빌드를 제공한다.
 
-7.   ### How Redux Form `initialValues` get updated from state?
+7.   ### Redux Form `initialValues`는 state에서 어떻게 업데이트하나?
 
-     You need to add `enableReinitialize : true` setting.
+     `enableReinitialize : true` 설정을 추가해야 한다.
 
      ```javascript
      const InitializeFromStateForm = reduxForm({
@@ -3825,7 +3825,7 @@
      })(UserEdit)
      ```
 
-     If your `initialValues` prop gets updated, your form will update too.
+     `initialValues` prop가 업데이트되면, form도 업데이트된다.
 
 8.   ### How React PropTypes allow different types for one prop?
 

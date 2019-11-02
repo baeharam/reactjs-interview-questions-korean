@@ -240,7 +240,7 @@
 |212| [How Redux Form initialValues get updated from state?](#how-redux-form-initialvalues-get-updated-from-state) |
 |213| [How React PropTypes allow different type for one prop?](#how-react-proptypes-allow-different-types-for-one-prop) |
 |214| [Can I import an SVG file as react component?](#can-i-import-an-svg-file-as-react-component) |
-|215| [Why are inline ref callbacks or functions not recommended?](#why-are-inline-ref-callbacks-or-functions-not-recommended)|
+|215| [인라인 ref 콜백 또는 함수를 권장하지 않는 이유는?](#인라인-ref-콜백-또는-함수를-권장하지-않는-이유는)|
 |216| [What is render hijacking in React?](#what-is-render-hijacking-in-react)|
 |217| [What are HOC factory implementations?](#what-are-hoc-factory-implementations)|
 |218| [How to pass numbers to React component?](#how-to-pass-numbers-to-react-component)|
@@ -3859,9 +3859,10 @@
 
      **Note**: Don't forget about the curly braces in the import.
 
-10.  ### Why are inline ref callbacks or functions not recommended?
+10.  ### 인라인 ref 콜백 또는 함수를 권장하지 않는 이유는?
 
-     If the ref callback is defined as an inline function, it will get called twice during updates, first with null and then again with the DOM element. This is because a new instance of the function is created with each render, so React needs to clear the old ref and set up the new one.
+     ref 콜백이 인라인 함수로 정의된 경우 업데이트 중에 두 번 호출된다. (먼저 null로, DOM 요소로 다시 호출됨)
+    렌더링마다 함수의 새 인스턴스가 생성되므로 React는 이전 참조를 지우고 새 참조를 설정해야 하기 때문이다.
 
      ```jsx
      class UserForm extends Component {
@@ -3883,7 +3884,7 @@
      }
      ```
 
-     But our expectation is for the ref callback to get called once, when the component mounts. One quick fix is to use the ES7 class property syntax to define the function
+    그러나 컴포넌트가 마운트될 때 ref 콜백이 한 번 호출되기를 기대한다. 빠른 수정은 ES7 클래스 구문을 사용하여 함수를 정의하는 것이다.
 
      ```jsx
      class UserForm extends Component {

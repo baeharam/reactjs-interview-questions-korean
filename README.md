@@ -241,7 +241,7 @@
 |213| [How React PropTypes allow different type for one prop?](#how-react-proptypes-allow-different-types-for-one-prop) |
 |214| [Can I import an SVG file as react component?](#can-i-import-an-svg-file-as-react-component) |
 |215| [Why are inline ref callbacks or functions not recommended?](#why-are-inline-ref-callbacks-or-functions-not-recommended)|
-|216| [What is render hijacking in React?](#what-is-render-hijacking-in-react)|
+|216| [react에서 render hijacking이란?](#react에서-render-hijacking이란)|
 |217| [What are HOC factory implementations?](#what-are-hoc-factory-implementations)|
 |218| [How to pass numbers to React component?](#how-to-pass-numbers-to-react-component)|
 |219| [Do I need to keep all my state into Redux? Should I ever use react internal state?](#do-i-need-to-keep-all-my-state-into-redux-should-i-ever-use-react-internal-state)|
@@ -3908,9 +3908,9 @@
      }
      ```
 
-11.  ### What is render hijacking in react?
+11.  ### react에서 render hijacking이란?
 
-     The concept of render hijacking is the ability to control what a component will output from another component. It actually means that you decorate your component by wrapping it into a Higher-Order component. By wrapping you can inject additional props or make other changes, which can cause changing logic of rendering. It does not actually enables hijacking, but by using HOC you make your component behave in different way.
+     render hijacking의 개념은 컴포넌트가 다른 컴포넌트에서 출력할 내용을 제어하는 기능이다. 실제로 컴포넌트를 Higher-Order component로 감싸서 나타낸다. 감싸게 되면 추가 props 주입하거나 다른 변경사항을 수행하여 렌더링 논리가 변경될 수 있다. 실제로 hijacking을 사용하지 않지만 HOC를 사용하면 컴포넌트가 다른 방식으로 동작하게 된다.
 
 12.  ### What are HOC factory implementations?
      There are two main ways of implementing HOCs in React. 1. Props Proxy (PP) and 2. Inheritance Inversion (II). They follow different approaches for manipulating the *WrappedComponent*.

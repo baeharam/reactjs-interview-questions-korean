@@ -239,7 +239,7 @@
 |211| [Redux를 사용하기 위한 특별한 빌드 도구가 필요한가?](#Redux를-사용하기-위한-특별한-빌드-도구가-필요한가) |
 |212| [Redux Form `initialValues`는 state에서 어떻게 업데이트하나?](#Redux-Form-initialValues는-state에서-어떻게-업데이트하나) |
 |213| [How React PropTypes allow different type for one prop?](#how-react-proptypes-allow-different-types-for-one-prop) |
-|214| [Can I import an SVG file as react component?](#can-i-import-an-svg-file-as-react-component) |
+|214| [SVG file을 react 컴포넌트로 가져올 수 있나?](#SVG-file을-react-컴포넌트로-가져올-수-있나) |
 |215| [Why are inline ref callbacks or functions not recommended?](#why-are-inline-ref-callbacks-or-functions-not-recommended)|
 |216| [What is render hijacking in React?](#what-is-render-hijacking-in-react)|
 |217| [What are HOC factory implementations?](#what-are-hoc-factory-implementations)|
@@ -3842,9 +3842,9 @@
      }
      ```
 
-9.   ### Can I import an SVG file as react component?
+9.   ### SVG file을 react 컴포넌트로 가져올 수 있나?
 
-     You can import SVG directly as component instead of loading it as a file. This feature is available with `react-scripts@2.0.0` and higher.
+     SVG를 파일로 로드하는 대신에 컴포넌트로 직접 가져올 수 있다. 해당 기능은 `react-scripts@2.0.0` 또는 그 이상에서 사용 가능하다.
 
      ```jsx harmony
      import { ReactComponent as Logo } from './logo.svg'
@@ -3857,7 +3857,7 @@
      )
      ```
 
-     **Note**: Don't forget about the curly braces in the import.
+     **Note**: import에서 중괄호를 잊어서는 안된다.
 
 10.  ### Why are inline ref callbacks or functions not recommended?
 

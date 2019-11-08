@@ -238,7 +238,7 @@
 |210| [Can Redux only be used with React?](#can-redux-only-be-used-with-react) |
 |211| [Do you need to have a particular build tool to use Redux?](#do-you-need-to-have-a-particular-build-tool-to-use-redux) |
 |212| [How Redux Form initialValues get updated from state?](#how-redux-form-initialvalues-get-updated-from-state) |
-|213| [React PropTypes이 하나의 prop에서 다른 타입들은 허용하는 방법은?](#React-PropTypes이-하나의-prop에서-다른-타입들은-허용하는-방법은) |
+|213| [React PropTypes이 하나의 prop에서 다른 타입들을 허용하는 방법은?](#React-PropTypes이-하나의-prop에서-다른-타입들은-허용하는-방법은) |
 |214| [Can I import an SVG file as react component?](#can-i-import-an-svg-file-as-react-component) |
 |215| [Why are inline ref callbacks or functions not recommended?](#why-are-inline-ref-callbacks-or-functions-not-recommended)|
 |216| [What is render hijacking in React?](#what-is-render-hijacking-in-react)|
@@ -3827,7 +3827,7 @@
 
      If your `initialValues` prop gets updated, your form will update too.
 
-8.   ### React PropTypes이 하나의 prop에서 다른 타입들은 허용하는 방법은?
+8.   ### React PropTypes이 하나의 prop에서 다른 타입들을 허용하는 방법은?
 
      `PropTypes`의 `oneOfType()` 메소드를 사용할 수 있다.
 

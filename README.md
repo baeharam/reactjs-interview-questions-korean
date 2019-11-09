@@ -238,7 +238,7 @@
 |210| [Redux는 React에서만 사용 가능한가?](#Redux는-React에서만-사용-가능한가) |
 |211| [Redux를 사용하기 위한 특별한 빌드 도구가 필요한가?](#Redux를-사용하기-위한-특별한-빌드-도구가-필요한가) |
 |212| [Redux Form `initialValues`는 state에서 어떻게 업데이트하나?](#Redux-Form-initialValues는-state에서-어떻게-업데이트하나) |
-|213| [How React PropTypes allow different type for one prop?](#how-react-proptypes-allow-different-types-for-one-prop) |
+|213| [React PropTypes이 하나의 prop에서 다른 타입들을 허용하는 방법은?](#React-PropTypes이-하나의-prop에서-다른-타입들은-허용하는-방법은) |
 |214| [SVG file을 react 컴포넌트로 가져올 수 있나?](#SVG-file을-react-컴포넌트로-가져올-수-있나) |
 |215| [인라인 ref 콜백 또는 함수를 권장하지 않는 이유는?](#인라인-ref-콜백-또는-함수를-권장하지-않는-이유는)|
 |216| [react에서 render hijacking이란?](#react에서-render-hijacking이란)|
@@ -3827,11 +3827,11 @@
 
      `initialValues` prop가 업데이트되면, form도 업데이트된다.
 
-8.   ### How React PropTypes allow different types for one prop?
+8.   ### React PropTypes이 하나의 prop에서 다른 타입들을 허용하는 방법은?
 
-     You can use `oneOfType()` method of `PropTypes`.
+     `PropTypes`의 `oneOfType()` 메소드를 사용할 수 있다.
 
-     For example, the height property can be defined with either `string` or `number` type as below:
+     예를 들어, height 속성은 아래와 같이 `string` 또는 `number` 타입으로 정의될 수 있다.
 
      ```javascript
      Component.PropTypes = {

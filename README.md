@@ -242,7 +242,7 @@
 |214| [SVG file을 react 컴포넌트로 가져올 수 있나?](#SVG-file을-react-컴포넌트로-가져올-수-있나) |
 |215| [인라인 ref 콜백 또는 함수를 권장하지 않는 이유는?](#인라인-ref-콜백-또는-함수를-권장하지-않는-이유는)|
 |216| [react에서 render hijacking이란?](#react에서-render-hijacking이란)|
-|217| [What are HOC factory implementations?](#what-are-hoc-factory-implementations)|
+|217| [HOC 팩토리 구현이란?](#HOC-팩토리-구현이란)|
 |218| [How to pass numbers to React component?](#how-to-pass-numbers-to-react-component)|
 |219| [Do I need to keep all my state into Redux? Should I ever use react internal state?](#do-i-need-to-keep-all-my-state-into-redux-should-i-ever-use-react-internal-state)|
 |220| [What is the purpose of registerServiceWorker in React?](#what-is-the-purpose-of-registerserviceworker-in-react)|
@@ -3913,12 +3913,13 @@
 
      render hijacking의 개념은 컴포넌트가 다른 컴포넌트에서 출력할 내용을 제어하는 기능이다. 실제로 컴포넌트를 Higher-Order component로 감싸서 나타낸다. 감싸게 되면 추가 props 주입하거나 다른 변경사항을 수행하여 렌더링 논리가 변경될 수 있다. 실제로 hijacking을 사용하지 않지만 HOC를 사용하면 컴포넌트가 다른 방식으로 동작하게 된다.
 
-12.  ### What are HOC factory implementations?
-     There are two main ways of implementing HOCs in React. 1. Props Proxy (PP) and 2. Inheritance Inversion (II). They follow different approaches for manipulating the *WrappedComponent*.
+12.  ### HOC 팩토리 구현이란?
+     
+     React에서 HOC을 구현하는 방법은 크게 2가지이다. 1. Props Proxy (PP)와 2. Inheritance Inversion (II). *WrappedComponent*를 조작하기 위한 다양한 접근법이 있다.
 
      **Props Proxy**
 
-     In this approach, the render method of the HOC returns a React Element of the type of the WrappedComponent. We also pass through the props that the HOC receives, hence the name **Props Proxy**.
+     이 접근법에서 HOC render 메서드는 WrappedComponent 타입의 React Element를 반환한다. 우리는 HOC가 받은 props를 전달하므로, **Props Proxy**라고 불린다.
 
      ```jsx
 
@@ -3932,7 +3933,7 @@
      ```
      **Inheritance Inversion**
 
-     In this approach, the returned HOC class (Enhancer) extends the WrappedComponent. It is called Inheritance Inversion because instead of the WrappedComponent extending some Enhancer class, it is passively extended by the Enhancer. In this way the relationship between them seems **inverse**.
+     이 접근법에서 반환된 HOC 클래스(Enhancer)가 WrappedComponent를 확장한다. 일부 Enhancer 클래스를 확장하는 WrappedComponent 대신 Enhancer에 의해 수동으로 화장되므로 Inheritance Inversion이라고 불린다. 이런 식으로 그들 사이의 관계는 **inverse**로 보인다.
 
      ```jsx
      function iiHOC(WrappedComponent) {

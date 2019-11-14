@@ -243,7 +243,7 @@
 |215| [인라인 ref 콜백 또는 함수를 권장하지 않는 이유는?](#인라인-ref-콜백-또는-함수를-권장하지-않는-이유는)|
 |216| [react에서 render hijacking이란?](#react에서-render-hijacking이란)|
 |217| [What are HOC factory implementations?](#what-are-hoc-factory-implementations)|
-|218| [How to pass numbers to React component?](#how-to-pass-numbers-to-react-component)|
+|218| [React 컴포넌트에 숫자를 전달하는 방법은?](#React-컴포넌트에-숫자를-전달하는-방법은)|
 |219| [Do I need to keep all my state into Redux? Should I ever use react internal state?](#do-i-need-to-keep-all-my-state-into-redux-should-i-ever-use-react-internal-state)|
 |220| [What is the purpose of registerServiceWorker in React?](#what-is-the-purpose-of-registerserviceworker-in-react)|
 |221| [What is React memo function?](#what-is-react-memo-function)|
@@ -3943,9 +3943,9 @@
       }
      }
      ```
-13.  ### How to pass numbers to React component?
+13.  ### React 컴포넌트에 숫자를 전달하는 방법은?
 
-     You should be passing the numbers via curly braces({}) where as strings inn quotes
+     중괄호({})를 통해서 숫자를 전달해야 한다. 여기서 문자열은 따옴표로 묶는다.
 
      ```jsx
         React.render(<User age={30} department={"IT"} />, document.getElementById('container'));

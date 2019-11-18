@@ -3933,7 +3933,7 @@
      ```
      **Inheritance Inversion**
 
-     이 접근법에서 반환된 HOC 클래스(Enhancer)가 WrappedComponent를 확장한다. 일부 Enhancer 클래스를 확장하는 WrappedComponent 대신 Enhancer에 의해 수동으로 화장되므로 Inheritance Inversion이라고 불린다. 이런 식으로 그들 사이의 관계는 **inverse**로 보인다.
+     이 접근법에서 반환된 HOC 클래스(Enhancer)가 WrappedComponent를 확장한다. 일부 Enhancer 클래스를 확장하는 WrappedComponent 대신 Enhancer에 의해 수동으로 확장되므로 Inheritance Inversion이라고 불린다. 이러한 방식을 통해 그들 사이의 관계는 **inverse**해진다.
 
      ```jsx
      function iiHOC(WrappedComponent) {

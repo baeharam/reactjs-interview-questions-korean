@@ -245,7 +245,7 @@
 |217| [What are HOC factory implementations?](#what-are-hoc-factory-implementations)|
 |218| [How to pass numbers to React component?](#how-to-pass-numbers-to-react-component)|
 |219| [Do I need to keep all my state into Redux? Should I ever use react internal state?](#do-i-need-to-keep-all-my-state-into-redux-should-i-ever-use-react-internal-state)|
-|220| [What is the purpose of registerServiceWorker in React?](#what-is-the-purpose-of-registerserviceworker-in-react)|
+|220| [React에서 registerServiceWorker의 목적은?](#React에서-registerServiceWorker의-목적은)|
 |221| [What is React memo function?](#what-is-react-memo-function)|
 |222| [What is React lazy function?](#what-is-react-lazy-function)|
 |223| [How to prevent unnecessary updates using setState?](#how-to-prevent-unnecessary-updates-using-setstate)|

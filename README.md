@@ -247,7 +247,7 @@
 |219| [Do I need to keep all my state into Redux? Should I ever use react internal state?](#do-i-need-to-keep-all-my-state-into-redux-should-i-ever-use-react-internal-state)|
 |220| [What is the purpose of registerServiceWorker in React?](#what-is-the-purpose-of-registerserviceworker-in-react)|
 |221| [What is React memo function?](#what-is-react-memo-function)|
-|222| [What is React lazy function?](#what-is-react-lazy-function)|
+|222| [React의 lazy function란?](#React의-lazy-function란)|
 |223| [How to prevent unnecessary updates using setState?](#how-to-prevent-unnecessary-updates-using-setstate)|
 |224| [How do you render Array, Strings and Numbers in React 16 Version?](#how-do-you-render-array-strings-and-numbers-in-react-16-version)|
 |225| [How to use class field declarations syntax in React classes?](#how-to-use-class-field-declarations-syntax-in-react-classes)|
@@ -3981,8 +3981,8 @@
       /* only rerenders if props change */
      });
      ```
-17.  ### What is React lazy function?
-     The React.lazy function lets you render an dynamic import as a regular component. It will automatically load the bundle containing the OtherComponent when the component gets rendered. This must return a Promise which resolves to a module with a default export containing a React component.
+17.  ### React의 lazy function란?
+     React.lazy 함수를 사용하면 dynamic import로 일반 컴포넌트를 렌더링할 수 있다. 컴포넌트가 렌더링 될 때 OtherComponent를 포함한 번들을 자동으로 로드한다. React 컴포넌트를 포함한 기본 내보내기가 있는 모듈로 해석되는 Promise를 리턴해야한다.
      ```jsx
      const OtherComponent = React.lazy(() => import('./OtherComponent'));
 
@@ -3995,7 +3995,8 @@
      }
      ```
      **Note:**
-     React.lazy and Suspense is not yet available for server-side rendering. If you want to do code-splitting in a server rendered app, we still recommend React Loadable.
+     React.lazy 및 Suspense는 아직 server-side 렌더링에 사용할 수 없다. 서버 렌더링 앱에서 code-splitting을 수행하려는 경우 여전히 React Loadable이 권장된다.
+
 18.  ### How to prevent unnecessary updates using setState?
      You can compare current value of the state with an existing state value and decide whether to rerender the page or not. If the values are same then you need to return **null** to stop rerendering otherwise return the latest state value. For example, the user profile information is conditionally rendered as follows,
      ```jsx

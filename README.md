@@ -246,7 +246,7 @@
 |218| [React 컴포넌트에 숫자를 전달하는 방법은?](#React-컴포넌트에-숫자를-전달하는-방법은)|
 |219| [모든 state를 Redux에서 관리를 해야하나? react 내부 state를 사용해야하나?](#모든-state를-Redux에서-관리를-해야하나-react-내부-state를-사용해야하나)|
 |220| [React에서 registerServiceWorker의 목적은?](#React에서-registerServiceWorker의-목적은)|
-|221| [What is React memo function?](#what-is-react-memo-function)|
+|221| [React의 memo 함수란?](#React의-memo-함수란)|
 |222| [What is React lazy function?](#what-is-react-lazy-function)|
 |223| [How to prevent unnecessary updates using setState?](#how-to-prevent-unnecessary-updates-using-setstate)|
 |224| [How do you render Array, Strings and Numbers in React 16 Version?](#how-do-you-render-array-strings-and-numbers-in-react-16-version)|
@@ -3975,9 +3975,9 @@
         ReactDOM.render(<App />, document.getElementById('root'));
         registerServiceWorker();
      ```
-16.  ### What is React memo function?
+16.  ### React의 memo 함수란?
 
-     Class components can be restricted from rendering when their input props are the same using **PureComponent or shouldComponentUpdate**. Now you can do the same with function components by wrapping them in **React.memo**.
+      **PureComponent 또는 shouldComponentUpdate** 사용시 입력 props가 동일하다면, 클래스 컴포넌트의 렌더링이 제한될 수 있다. 이제는 함수형 컴포넌트를 **React.memo**로 감싸서 동일한 기능을 수행할 수 있다.
      ```jsx
      const MyComponent = React.memo(function MyComponent(props) {
       /* only rerenders if props change */

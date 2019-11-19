@@ -242,10 +242,10 @@
 |214| [SVG file을 react 컴포넌트로 가져올 수 있나?](#SVG-file을-react-컴포넌트로-가져올-수-있나) |
 |215| [인라인 ref 콜백 또는 함수를 권장하지 않는 이유는?](#인라인-ref-콜백-또는-함수를-권장하지-않는-이유는)|
 |216| [react에서 render hijacking이란?](#react에서-render-hijacking이란)|
-|217| [What are HOC factory implementations?](#what-are-hoc-factory-implementations)|
-|218| [How to pass numbers to React component?](#how-to-pass-numbers-to-react-component)|
-|219| [Do I need to keep all my state into Redux? Should I ever use react internal state?](#do-i-need-to-keep-all-my-state-into-redux-should-i-ever-use-react-internal-state)|
-|220| [What is the purpose of registerServiceWorker in React?](#what-is-the-purpose-of-registerserviceworker-in-react)|
+|217| [HOC 팩토리 구현이란?](#HOC-팩토리-구현이란)|
+|218| [React 컴포넌트에 숫자를 전달하는 방법은?](#React-컴포넌트에-숫자를-전달하는-방법은)|
+|219| [모든 state를 Redux에서 관리를 해야하나? react 내부 state를 사용해야하나?](#모든-state를-Redux에서-관리를-해야하나-react-내부-state를-사용해야하나)|
+|220| [React에서 registerServiceWorker의 목적은?](#React에서-registerServiceWorker의-목적은)|
 |221| [React의 memo 함수란?](#React의-memo-함수란)|
 |222| [What is React lazy function?](#what-is-react-lazy-function)|
 |223| [How to prevent unnecessary updates using setState?](#how-to-prevent-unnecessary-updates-using-setstate)|
@@ -3913,12 +3913,13 @@
 
      render hijacking의 개념은 컴포넌트가 다른 컴포넌트에서 출력할 내용을 제어하는 기능이다. 실제로 컴포넌트를 Higher-Order component로 감싸서 나타낸다. 감싸게 되면 추가 props 주입하거나 다른 변경사항을 수행하여 렌더링 논리가 변경될 수 있다. 실제로 hijacking을 사용하지 않지만 HOC를 사용하면 컴포넌트가 다른 방식으로 동작하게 된다.
 
-12.  ### What are HOC factory implementations?
-     There are two main ways of implementing HOCs in React. 1. Props Proxy (PP) and 2. Inheritance Inversion (II). They follow different approaches for manipulating the *WrappedComponent*.
+12.  ### HOC 팩토리 구현이란?
+     
+     React에서 HOC을 구현하는 방법은 크게 2가지이다. 1. Props Proxy (PP)와 2. Inheritance Inversion (II). *WrappedComponent*를 조작하기 위한 다양한 접근법이 있다.
 
      **Props Proxy**
 
-     In this approach, the render method of the HOC returns a React Element of the type of the WrappedComponent. We also pass through the props that the HOC receives, hence the name **Props Proxy**.
+     이 접근법에서 HOC render 메서드는 WrappedComponent 타입의 React Element를 반환한다. 우리는 HOC가 받은 props를 전달하므로, **Props Proxy**라고 불린다.
 
      ```jsx
 
@@ -3932,7 +3933,7 @@
      ```
      **Inheritance Inversion**
 
-     In this approach, the returned HOC class (Enhancer) extends the WrappedComponent. It is called Inheritance Inversion because instead of the WrappedComponent extending some Enhancer class, it is passively extended by the Enhancer. In this way the relationship between them seems **inverse**.
+     이 접근법에서 반환된 HOC 클래스(Enhancer)가 WrappedComponent를 확장한다. 일부 Enhancer 클래스를 확장하는 WrappedComponent 대신 Enhancer에 의해 수동으로 확장되므로 Inheritance Inversion이라고 불린다. 이러한 방식을 통해 그들 사이의 관계는 **inverse**해진다.
 
      ```jsx
      function iiHOC(WrappedComponent) {
@@ -3943,26 +3944,27 @@
       }
      }
      ```
-13.  ### How to pass numbers to React component?
+13.  ### React 컴포넌트에 숫자를 전달하는 방법은?
 
-     You should be passing the numbers via curly braces({}) where as strings inn quotes
+     중괄호({})를 통해서 숫자를 전달해야 한다. 여기서 문자열은 따옴표로 묶는다.
 
      ```jsx
         React.render(<User age={30} department={"IT"} />, document.getElementById('container'));
      ```
-14.  ### Do I need to keep all my state into Redux? Should I ever use react internal state?
-     It is up to developer decision. i.e, It is developer job to determine what kinds of state make up your application, and where each piece of state should live. Some users prefer to keep every single piece of data in Redux, to maintain a fully serializable and controlled version of their application at all times. Others prefer to keep non-critical or UI state, such as “is this dropdown currently open”, inside a component's internal state.
+14.  ### 모든 state를 Redux에서 관리를 해야 하나? react 내부 state를 사용해야 하나?
+     
+     개발자의 결정에 달려있다. 즉 응용 프로그램을 구성하는 state의 종류와 각 state의 위치를 결정하는 것은 개발자의 작업이다. 일부 사용자는 애플리케이션의 직렬화 및 제어 가능한 버전을 유지하기 위해 Redux로 모든 단일 데이터를 유지하는 것을 선호한다. 다른 사람들은 컴포넌트의 내부 state를 “이 드롭다운이 현재 열려있습니까”와 같이 중요하지 않거나 UI state를 유지하는 것을 선호한다.
 
-     Below are the thumb rules to determine what kind of data should be put into Redux
-     1. Do other parts of the application care about this data?
-     2. Do you need to be able to create further derived data based on this original data?
-     3. Is the same data being used to drive multiple components?
-     4. Is there value to you in being able to restore this state to a given point in time (ie, time travel debugging)?
-     5. Do you want to cache the data (ie, use what's in state if it's already there instead of re-requesting it)?
+     아래는 어떤 종류의 데이터를 Redux에 넣어야 하는지 결정하는 규칙이다.
+     1. 응용 프로그램의 다른 부분이 데이터를 관리하나?
+     2. 원본 데이터를 기반으로 추가 파생 데이터를 작성할 수 있어야 하나?
+     3. 여러 컴포넌트를 구동하는데 동일한 데이터가 사용되나?
+     4. 이 state를 주어진 시점 (즉, 시간여행 디버깅)으로 복원할 수 있는 가치가 있나?
+     5. 데이터를 캐시 하고 싶은가(예 : 데이터를 다시 요청하는 대신 state가 있는 경우 사용하나)?
 
-15.  ### What is the purpose of registerServiceWorker in React?
+15.  ### React에서 registerServiceWorker의 목적은?
 
-     React creates a service worker for you without any configuration by default. The service worker is a web API that helps you cache your assets and other files so that when the user is offline or on slow network, he/she can still see results on the screen, as such, it helps you build a better user experience, that's what you should know about service worker's for now. It's all about adding offline capabilities to your site.
+     React는 기본적으로 별다른 구성없이 service worker를 생성할 수 있다. service worker는 자산 및 기타 파일을 캐싱하여 사용자가 오프라인 상태이거나 네트워크 속도가 느린 경우에도 화면을 볼 수 있도록 해주는 웹 API이다. 이는 더 나은 사용자 경험을 구축하는데 도움이된다. 사이트에 오프라인 기능을 추가할 수 있다.
 
      ```jsx
         import React from 'react';

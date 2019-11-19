@@ -245,7 +245,7 @@
 |217| [HOC 팩토리 구현이란?](#HOC-팩토리-구현이란)|
 |218| [React 컴포넌트에 숫자를 전달하는 방법은?](#React-컴포넌트에-숫자를-전달하는-방법은)|
 |219| [모든 state를 Redux에서 관리를 해야하나? react 내부 state를 사용해야하나?](#모든-state를-Redux에서-관리를-해야하나-react-내부-state를-사용해야하나)|
-|220| [What is the purpose of registerServiceWorker in React?](#what-is-the-purpose-of-registerserviceworker-in-react)|
+|220| [React에서 registerServiceWorker의 목적은?](#React에서-registerServiceWorker의-목적은)|
 |221| [What is React memo function?](#what-is-react-memo-function)|
 |222| [What is React lazy function?](#what-is-react-lazy-function)|
 |223| [How to prevent unnecessary updates using setState?](#how-to-prevent-unnecessary-updates-using-setstate)|
@@ -3962,9 +3962,9 @@
      4. 이 state를 주어진 시점 (즉, 시간여행 디버깅)으로 복원할 수 있는 가치가 있나?
      5. 데이터를 캐시 하고 싶은가(예 : 데이터를 다시 요청하는 대신 state가 있는 경우 사용하나)?
 
-15.  ### What is the purpose of registerServiceWorker in React?
+15.  ### React에서 registerServiceWorker의 목적은?
 
-     React creates a service worker for you without any configuration by default. The service worker is a web API that helps you cache your assets and other files so that when the user is offline or on slow network, he/she can still see results on the screen, as such, it helps you build a better user experience, that's what you should know about service worker's for now. It's all about adding offline capabilities to your site.
+     React는 기본적으로 별다른 구성없이 service worker를 생성할 수 있다. service worker는 자산 및 기타 파일을 캐싱하여 사용자가 오프라인 상태이거나 네트워크 속도가 느린 경우에도 화면을 볼 수 있도록 해주는 웹 API이다. 이는 더 나은 사용자 경험을 구축하는데 도움이된다. 사이트에 오프라인 기능을 추가할 수 있다.
 
      ```jsx
         import React from 'react';

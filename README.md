@@ -250,7 +250,7 @@
 |222| [React의 lazy function란?](#React의-lazy-function란)|
 |223| [How to prevent unnecessary updates using setState?](#how-to-prevent-unnecessary-updates-using-setstate)|
 |224| [How do you render Array, Strings and Numbers in React 16 Version?](#how-do-you-render-array-strings-and-numbers-in-react-16-version)|
-|225| [How to use class field declarations syntax in React classes?](#how-to-use-class-field-declarations-syntax-in-react-classes)|
+|225| [React 클래스에서 클래스 필드 선언 구문을 사용하는 방법은?](#React-클래스에서-클래스-필드-선언-구문을-사용하는-방법은)|
 |226| [What are hooks?](#what-are-hooks)|
 |227| [What are the rules needs to follow for hooks?](#what-are-the-rules-needs-to-follow-for-hooks)|
 |228| [How to ensure hooks followed the rules in your project?](#how-to-ensure-hooks-followed-the-rules-in-your-project)|
@@ -4047,8 +4047,8 @@
       return 2018;
      }
      ```
-20.  ### How to use class field declarations syntax in React classes?
-     React Class Components can be made much more concise using the class field declarations. You can initialize local state without using the constructor and declare class methods by using arrow functions without the extra need to bind them. Let's take a counter example to demonstrate class field declarations for state without using constructor and methods without binding,
+20.  ### React 클래스에서 클래스 필드 선언 구문을 사용하는 방법은?
+     클래스 선언문을 사용하여 React Class 컴포넌트를 훨씬 간결하게 만들 수 있다. 생성자를 사용하지 않고 지역 state를 초기화할 수 있으며, 별도의 바인딩 없이 화살표 함수를 사용해서 클래스 메서드를 선언할 수 있다. 바인딩 없는 생성자와 메서드를 사용하지 않고 state에 대한 클래스 필드 선언을 보여주는 카운터 예제를 보자.
      ```jsx
      class Counter extends Component {
        state = { value: 0 };

@@ -248,7 +248,7 @@
 |220| [React에서 registerServiceWorker의 목적은?](#React에서-registerServiceWorker의-목적은)|
 |221| [React의 memo 함수란?](#React의-memo-함수란)|
 |222| [React의 lazy function란?](#React의-lazy-function란)|
-|223| [How to prevent unnecessary updates using setState?](#how-to-prevent-unnecessary-updates-using-setstate)|
+|223| [setState를 사용하는데 있어 불필요한 업데이트를 방지하는 방법은?](#setState를-사용하는데-있어-불필요한-업데이트를-방지하는-방법은?)|
 |224| [React 16버전에서 Array, Strings와 Numbers를 렌더링하는 방법은?](#React-16버전에서-Array,-Strings와-Numbers를-렌더링하는-방법은)|
 |225| [How to use class field declarations syntax in React classes?](#how-to-use-class-field-declarations-syntax-in-react-classes)|
 |226| [What are hooks?](#what-are-hooks)|
@@ -3999,8 +3999,8 @@
      **Note:**
      React.lazy 및 Suspense는 아직 server-side 렌더링에 사용할 수 없다. 서버 렌더링 앱에서 code-splitting을 수행하려는 경우 여전히 React Loadable이 권장된다.
 
-18.  ### How to prevent unnecessary updates using setState?
-     You can compare current value of the state with an existing state value and decide whether to rerender the page or not. If the values are same then you need to return **null** to stop rerendering otherwise return the latest state value. For example, the user profile information is conditionally rendered as follows,
+18.  ### setState를 사용하는데 있어 불필요한 업데이트를 방지하는 방법은?
+     state의 현재 값과 기존의 값을 비교하여 리렌더링을 할지 말지 결정할 수 있다. 값이 같다면 **null**을 반환하여 리렌더링을 멈추고 그렇지 않으면 최신의 state 값을 반환한다. 예를 들어, 사용자 프로필 정보는 아래와 같이 조건부로 렌더링이 이루어진다.
      ```jsx
      getUserProfile = user => {
        const latestAddress = user.address;

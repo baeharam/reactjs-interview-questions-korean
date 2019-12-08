@@ -249,7 +249,7 @@
 |221| [React의 memo 함수란?](#React의-memo-함수란)|
 |222| [React의 lazy function란?](#React의-lazy-function란)|
 |223| [setState를 사용하는데 있어 불필요한 업데이트를 방지하는 방법은?](#setState를-사용하는데-있어-불필요한-업데이트를-방지하는-방법은?)|
-|224| [How do you render Array, Strings and Numbers in React 16 Version?](#how-do-you-render-array-strings-and-numbers-in-react-16-version)|
+|224| [React 16버전에서 Array, Strings와 Numbers를 렌더링하는 방법은?](#React-16버전에서-Array,-Strings와-Numbers를-렌더링하는-방법은)|
 |225| [How to use class field declarations syntax in React classes?](#how-to-use-class-field-declarations-syntax-in-react-classes)|
 |226| [What are hooks?](#what-are-hooks)|
 |227| [What are the rules needs to follow for hooks?](#what-are-the-rules-needs-to-follow-for-hooks)|
@@ -4013,8 +4013,8 @@
        });
      };
      ```
-19.  ### How do you render Array, Strings and Numbers in React 16 Version?
-     **Arrays**: Unlike older releases, you don't need to make sure **render** method return a single element in React16. You are able to return multiple sibling elements without a wrapping element by returning an array. For example, let us take the below list of developers,
+19.  ### React 16버전에서 Array, Strings와 Numbers를 렌더링하는 방법은?
+     **Arrays**: 이전 릴리즈와 다르게, React 16에서 **render** 메서드가 단일 엘리먼트를 반환할 필요는 없다. 배열을 반환함으로써 별도의 묶어주는 엘리먼트 없이 여러 형제 요소를 반환할 수 있다. 예를 들어, 아래의 개발자 목록을 보자.
      ```jsx
      const ReactJSDevs = () => {
        return [
@@ -4024,7 +4024,7 @@
        ];
      }
      ```
-     You can also merge this array of items in another array component
+     배열을 다른 배열 컴포넌트에 병합할 수 있다.
      ```jsx
      const JSDevs = () => {
        return (
@@ -4037,7 +4037,7 @@
        );
      }
      ```
-     **Strings and Numbers:** You can also return string and number type from the render method
+     **Strings과 Numbers:** render 메서드에서 문자열과 숫자 타입을 반환할 수 있다.
      ```jsx
      render() {
       return 'Welcome to ReactJS questions';

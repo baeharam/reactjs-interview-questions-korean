@@ -248,8 +248,8 @@
 |220| [React에서 registerServiceWorker의 목적은?](#React에서-registerServiceWorker의-목적은)|
 |221| [React의 memo 함수란?](#React의-memo-함수란)|
 |222| [React의 lazy function란?](#React의-lazy-function란)|
-|223| [How to prevent unnecessary updates using setState?](#how-to-prevent-unnecessary-updates-using-setstate)|
-|224| [How do you render Array, Strings and Numbers in React 16 Version?](#how-do-you-render-array-strings-and-numbers-in-react-16-version)|
+|223| [setState를 사용하는데 있어 불필요한 업데이트를 방지하는 방법은?](#setState를-사용하는데-있어-불필요한-업데이트를-방지하는-방법은?)|
+|224| [React 16버전에서 Array, Strings와 Numbers를 렌더링하는 방법은?](#React-16버전에서-Array,-Strings와-Numbers를-렌더링하는-방법은)|
 |225| [React 클래스에서 클래스 필드 선언 구문을 사용하는 방법은?](#React-클래스에서-클래스-필드-선언-구문을-사용하는-방법은)|
 |226| [What are hooks?](#what-are-hooks)|
 |227| [What are the rules needs to follow for hooks?](#what-are-the-rules-needs-to-follow-for-hooks)|
@@ -3999,8 +3999,8 @@
      **Note:**
      React.lazy 및 Suspense는 아직 server-side 렌더링에 사용할 수 없다. 서버 렌더링 앱에서 code-splitting을 수행하려는 경우 여전히 React Loadable이 권장된다.
 
-18.  ### How to prevent unnecessary updates using setState?
-     You can compare current value of the state with an existing state value and decide whether to rerender the page or not. If the values are same then you need to return **null** to stop rerendering otherwise return the latest state value. For example, the user profile information is conditionally rendered as follows,
+18.  ### setState를 사용하는데 있어 불필요한 업데이트를 방지하는 방법은?
+     state의 현재 값과 기존의 값을 비교하여 리렌더링을 할지 말지 결정할 수 있다. 값이 같다면 **null**을 반환하여 리렌더링을 멈추고 그렇지 않으면 최신의 state 값을 반환한다. 예를 들어, 사용자 프로필 정보는 아래와 같이 조건부로 렌더링이 이루어진다.
      ```jsx
      getUserProfile = user => {
        const latestAddress = user.address;
@@ -4013,8 +4013,8 @@
        });
      };
      ```
-19.  ### How do you render Array, Strings and Numbers in React 16 Version?
-     **Arrays**: Unlike older releases, you don't need to make sure **render** method return a single element in React16. You are able to return multiple sibling elements without a wrapping element by returning an array. For example, let us take the below list of developers,
+19.  ### React 16버전에서 Array, Strings와 Numbers를 렌더링하는 방법은?
+     **Arrays**: 이전 릴리즈와 다르게, React 16에서 **render** 메서드가 단일 엘리먼트를 반환할 필요는 없다. 배열을 반환함으로써 별도의 묶어주는 엘리먼트 없이 여러 형제 요소를 반환할 수 있다. 예를 들어, 아래의 개발자 목록을 보자.
      ```jsx
      const ReactJSDevs = () => {
        return [
@@ -4024,7 +4024,7 @@
        ];
      }
      ```
-     You can also merge this array of items in another array component
+     배열을 다른 배열 컴포넌트에 병합할 수 있다.
      ```jsx
      const JSDevs = () => {
        return (
@@ -4037,7 +4037,7 @@
        );
      }
      ```
-     **Strings and Numbers:** You can also return string and number type from the render method
+     **Strings과 Numbers:** render 메서드에서 문자열과 숫자 타입을 반환할 수 있다.
      ```jsx
      render() {
       return 'Welcome to ReactJS questions';

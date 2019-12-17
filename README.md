@@ -255,7 +255,7 @@
 |227| [What are the rules needs to follow for hooks?](#what-are-the-rules-needs-to-follow-for-hooks)|
 |228| [How to ensure hooks followed the rules in your project?](#how-to-ensure-hooks-followed-the-rules-in-your-project)|
 |229| [What are the differences between Flux and Redux?](#what-are-the-differences-between-flux-and-redux)|
-|230| [What are the benefits of React Router V4?](#what-are-the-benefits-of-react-router-v4)|
+|230| [React Router V4의 장점은?](#React-Router-V4의-장점은)|
 |231| [Can you describe about componentDidCatch lifecycle method signature?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)|
 |232| [In which scenarios error boundaries do not catch errors?](#in-which-scenarios-error-boundaries-do-not-catch-errors)|
 |233| [Why do not you need error boundaries for event handlers?](#why-do-not-you-need-error-boundaries-for-event-handlers)|
@@ -4134,11 +4134,11 @@
      | All the stores are disconnected and flat | Single store with hierarchical reducers|
      | It has a singleton dispatcher | There is no concept of dispatcher |
      | React components subscribe to the store | Container components uses connect function|
-25.  ### What are the benefits of React Router V4?
-     Below are the main benefits of React Router V4 module,
-     1. In React Router v4(version 4), the API is completely about components. A router can be visualized as a single component(<BrowserRouter>) which wraps specific child router components(<Route>).
-     2. You don't need to manually set history. The router module will take care history by wrapping routes with  <BrowserRouter> component.
-     3. The application size is reduced by adding only the specific router module(Web, core, or native)
+25.  ### React Router V4의 장점은?
+     다음은 React Router V4 모듈의 주요 장점이다.
+     1. React Router v4(version 4)에서 API는 컴포넌트와 관련된 것이다. 라우터는 특정 하위 라우터 컴포넌트(`<Route>`)를 감싸는 단인 컴포넌트(`<BrowserRouter>`)로 시각화할 수 있다.
+     2. history를 수동으로 설정할 필요 없다. 라우터 모듈을 `<BrowserRouter>` 컴포넌트로 경로를 줄임으로써 history를 관리한다.
+     3. 특정 라우터 모듈(웹, 코어 또는 기본)만 추가하여 응용프로그램 크기가 줄었다.
 26.  ### Can you describe about componentDidCatch lifecycle method signature?
      The **componentDidCatch** lifecycle method is invoked after an error has been thrown by a descendant component. The method receives two parameters,
      1. error: - The error object which was thrown

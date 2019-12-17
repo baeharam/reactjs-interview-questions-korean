@@ -254,7 +254,7 @@
 |226| [What are hooks?](#what-are-hooks)|
 |227| [What are the rules needs to follow for hooks?](#what-are-the-rules-needs-to-follow-for-hooks)|
 |228| [How to ensure hooks followed the rules in your project?](#how-to-ensure-hooks-followed-the-rules-in-your-project)|
-|229| [What are the differences between Flux and Redux?](#what-are-the-differences-between-flux-and-redux)|
+|229| [Flux와 Redux의 차이점은?](#Flux와-Redux의-차이점은)|
 |230| [What are the benefits of React Router V4?](#what-are-the-benefits-of-react-router-v4)|
 |231| [Can you describe about componentDidCatch lifecycle method signature?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)|
 |232| [In which scenarios error boundaries do not catch errors?](#in-which-scenarios-error-boundaries-do-not-catch-errors)|
@@ -4123,17 +4123,17 @@
      ```
      **Note:** This plugin is intended to use in Create React App by default.
 
-24.  ### What are the differences between Flux and Redux?
-     Below are the major differences between Flux and Redux
+24.  ### Flux와 Redux의 차이점은?
+     아래에 Flux와 Redux의 주요한 차이점이 있다.
 
      | Flux | Redux |
      | ----- | ------- |
-     | State is mutable | State is immutable |
-     | The Store contains both state and change logic | The Store and change logic are separate |
-     | There are multiple stores exist | There is only one store exist |
-     | All the stores are disconnected and flat | Single store with hierarchical reducers|
-     | It has a singleton dispatcher | There is no concept of dispatcher |
-     | React components subscribe to the store | Container components uses connect function|
+     | State는 변한다. | State은 불변하다. |
+     | Store는 state와 변경로직을 포함한다. | Store와 변경로직은 분리되어있다. |
+     | 멀티 store가 있다. | 하나의 store만 있다. |
+     | 모든 stores는 연결이 끊어지고 평평하다. | 수직적 reducer가 있는 단일 store이다. |
+     | 싱글톤 dispatcher가 있다. | dispatcher 개념이 없다. |
+     | React 컴포넌트는 store를 구독한다. | Container 컴포넌트는 connect 함수를 사용한다. |
 25.  ### What are the benefits of React Router V4?
      Below are the main benefits of React Router V4 module,
      1. In React Router v4(version 4), the API is completely about components. A router can be visualized as a single component(<BrowserRouter>) which wraps specific child router components(<Route>).

@@ -253,7 +253,7 @@
 |225| [React 클래스에서 클래스 필드 선언 구문을 사용하는 방법은?](#React-클래스에서-클래스-필드-선언-구문을-사용하는-방법은)|
 |226| [What are hooks?](#what-are-hooks)|
 |227| [What are the rules needs to follow for hooks?](#what-are-the-rules-needs-to-follow-for-hooks)|
-|228| [How to ensure hooks followed the rules in your project?](#how-to-ensure-hooks-followed-the-rules-in-your-project)|
+|228| [hooks가 프로젝트의 규칙을 준수하도록 하는 방법은?](#hooks가-프로젝트의-규칙을-준수하도록-하는-방법은)|
 |229| [What are the differences between Flux and Redux?](#what-are-the-differences-between-flux-and-redux)|
 |230| [What are the benefits of React Router V4?](#what-are-the-benefits-of-react-router-v4)|
 |231| [Can you describe about componentDidCatch lifecycle method signature?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)|
@@ -4102,12 +4102,12 @@
      1. Call Hooks only at the top level of your react functions. i.e, You shouldn’t call Hooks inside loops, conditions, or nested functions. This will ensure that Hooks are called in the same order each time a component renders and it preserves the state of Hooks between multiple useState and useEffect calls.
      2. Call Hooks from React Functions only. i.e, You shouldn’t call Hooks from regular JavaScript functions.
 
-23.  ### How to ensure hooks followed the rules in your project?
-     React team released an ESLint plugin called **eslint-plugin-react-hooks** that enforces these two rules. You can add this plugin to your project using the below command,
+23.  ### hooks가 프로젝트의 규칙을 준수하도록 하는 방법은?
+     React 팀은 두가지 규칙을 적용하는 **eslint-plugin-react-hooks**라는 ESLint 플러그인을 출시했다. 아래의 명령을 사용하여 플러그인을 프로젝트에 추가할 수 있다.
      ```javascript
      npm install eslint-plugin-react-hooks@next
      ```
-     And apply the below config in your ESLint config file,
+     ESLint config 파일에 아래 구성을 적용한다.
      ```javascript
      // Your ESLint configuration
      {
@@ -4121,7 +4121,7 @@
        }
      }
      ```
-     **Note:** This plugin is intended to use in Create React App by default.
+     **Note:** 이 플러그인은 Create React App에서 기본값으로 사용하도록 설계되어있다.
 
 24.  ### What are the differences between Flux and Redux?
      Below are the major differences between Flux and Redux

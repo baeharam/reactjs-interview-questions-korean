@@ -251,10 +251,10 @@
 |223| [setState를 사용하는데 있어 불필요한 업데이트를 방지하는 방법은?](#setState를-사용하는데-있어-불필요한-업데이트를-방지하는-방법은?)|
 |224| [React 16버전에서 Array, Strings와 Numbers를 렌더링하는 방법은?](#React-16버전에서-Array,-Strings와-Numbers를-렌더링하는-방법은)|
 |225| [React 클래스에서 클래스 필드 선언 구문을 사용하는 방법은?](#React-클래스에서-클래스-필드-선언-구문을-사용하는-방법은)|
-|226| [What are hooks?](#what-are-hooks)|
-|227| [What are the rules needs to follow for hooks?](#what-are-the-rules-needs-to-follow-for-hooks)|
-|228| [How to ensure hooks followed the rules in your project?](#how-to-ensure-hooks-followed-the-rules-in-your-project)|
-|229| [What are the differences between Flux and Redux?](#what-are-the-differences-between-flux-and-redux)|
+|226| [hooks이란?](#hooks이란)|
+|227| [hooks를 위해서 지켜야 하는 규칙은 무엇인가?](#hooks를-위해서-지켜야-하는-규칙은-무엇인가)|
+|228| [hooks가 프로젝트의 규칙을 준수하도록 하는 방법은?](#hooks가-프로젝트의-규칙을-준수하도록-하는-방법은)|
+|229| [Flux와 Redux의 차이점은?](#Flux와-Redux의-차이점은)|
 |230| [React Router V4의 장점은?](#React-Router-V4의-장점은)|
 |231| [Can you describe about componentDidCatch lifecycle method signature?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)|
 |232| [In which scenarios error boundaries do not catch errors?](#in-which-scenarios-error-boundaries-do-not-catch-errors)|
@@ -4077,13 +4077,13 @@
        }
      }
      ```
-21.  ### What are hooks?
-     Hooks is a new feature that lets you use state and other React features without writing a class. Let's see an example of useState hook example,
+21.  ### hooks이란?
+     Hooks란 클래스를 작성하지 않고도 state와 다른 React 기능을 사용할 수 있는 새로운 기능이다. useState hook 예제를 살펴보자.
      ```jsx
      import { useState } from 'react';
 
      function Example() {
-       // Declare a new state variable, which we'll call "count"
+       // 새로운 state 변수를 선언하며, "count"라고 불린다.
        const [count, setCount] = useState(0);
 
        return (
@@ -4096,18 +4096,18 @@
        );
      }
      ```
-22.  ### What are the rules needs to follow for hooks?
+22.  ### hooks를 위해서 지켜야 하는 규칙은 무엇인가?
 
-     You need to follow two rules inorder to use hooks
-     1. Call Hooks only at the top level of your react functions. i.e, You shouldn’t call Hooks inside loops, conditions, or nested functions. This will ensure that Hooks are called in the same order each time a component renders and it preserves the state of Hooks between multiple useState and useEffect calls.
-     2. Call Hooks from React Functions only. i.e, You shouldn’t call Hooks from regular JavaScript functions.
+     hooks를 사용하기 위해서 2가지 규칙을 따라야한다.
+     1. react 함수의 최상위에서만 Hooks를 호출한다. 예로, 반복문, 조건문 또는 중첩 함수내에서 Hooks를 호출하면 안 된다. 이렇게 하면 컴포넌트가 렌더링 될 때마다 Hooks가 동일한 순서로 호출되고, 여러 useState 및 useEffect 호출간에 Hooks state가 보장된다.
+     2. Hooks는 React 함수에서만 호출한다. 예로, 일반적인 JavaScript 함수에서 Hooks를 호출하면 안 된다.
 
-23.  ### How to ensure hooks followed the rules in your project?
-     React team released an ESLint plugin called **eslint-plugin-react-hooks** that enforces these two rules. You can add this plugin to your project using the below command,
+23.  ### hooks가 프로젝트의 규칙을 준수하도록 하는 방법은?
+     React 팀은 두가지 규칙을 적용하는 **eslint-plugin-react-hooks**라는 ESLint 플러그인을 출시했다. 아래의 명령을 사용하여 플러그인을 프로젝트에 추가할 수 있다.
      ```javascript
      npm install eslint-plugin-react-hooks@next
      ```
-     And apply the below config in your ESLint config file,
+     ESLint config 파일에 아래 구성을 적용한다.
      ```javascript
      // Your ESLint configuration
      {
@@ -4121,19 +4121,19 @@
        }
      }
      ```
-     **Note:** This plugin is intended to use in Create React App by default.
+     **Note:** 이 플러그인은 Create React App에서 기본값으로 사용하도록 설계되어있다.
 
-24.  ### What are the differences between Flux and Redux?
-     Below are the major differences between Flux and Redux
+24.  ### Flux와 Redux의 차이점은?
+     아래에 Flux와 Redux의 주요한 차이점이 있다.
 
      | Flux | Redux |
      | ----- | ------- |
-     | State is mutable | State is immutable |
-     | The Store contains both state and change logic | The Store and change logic are separate |
-     | There are multiple stores exist | There is only one store exist |
-     | All the stores are disconnected and flat | Single store with hierarchical reducers|
-     | It has a singleton dispatcher | There is no concept of dispatcher |
-     | React components subscribe to the store | Container components uses connect function|
+     | State는 변한다. | State은 불변하다. |
+     | Store는 state와 변경로직을 포함한다. | Store와 변경로직은 분리되어있다. |
+     | 멀티 store가 있다. | 하나의 store만 있다. |
+     | 모든 stores는 연결이 끊어지고 평평하다. | 수직적 reducer가 있는 단일 store이다. |
+     | 싱글톤 dispatcher가 있다. | dispatcher 개념이 없다. |
+     | React 컴포넌트는 store를 구독한다. | Container 컴포넌트는 connect 함수를 사용한다. |
 25.  ### React Router V4의 장점은?
      다음은 React Router V4 모듈의 주요 장점이다.
      1. React Router v4(version 4)에서 API는 컴포넌트와 관련된 것이다. 라우터는 특정 하위 라우터 컴포넌트(`<Route>`)를 감싸는 단인 컴포넌트(`<BrowserRouter>`)로 시각화할 수 있다.

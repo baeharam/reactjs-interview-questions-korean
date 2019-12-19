@@ -259,7 +259,7 @@
 |231| [Can you describe about componentDidCatch lifecycle method signature?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)|
 |232| [In which scenarios error boundaries do not catch errors?](#in-which-scenarios-error-boundaries-do-not-catch-errors)|
 |233| [Why do not you need error boundaries for event handlers?](#why-do-not-you-need-error-boundaries-for-event-handlers)|
-|234| [What is the difference between try cath block and error boundaries?](#what-is-the-difference-between-try-catch-block-and-error-boundaries)|
+|234| [try catch 블록과 오류 경계의 차이점은?](#try-catch-블록과-오류-경계의-차이점은)|
 |235| [What is the behavior of uncaught errors in react 16?](#what-is-the-behavior-of-uncaught-errors-in-react-16)|
 |236| [What is the proper placement for error boundaries?](#what-is-the-proper-placement-for-error-boundaries)|
 |237| [What is the benefit of component stack trace from error boundary?](#what-is-the-benefit-of-component-stack-trace-from-error-boundary)|
@@ -4181,9 +4181,9 @@
      }
      ```
      The above code is catching the error using vanilla javascript try/catch block instead of error boundaries.
-29.  ### What is the difference between try catch block and error boundaries?
-     Try catch block works with imperative code whereas error boundaries are meant for declarative code to render on the screen.
-     For example, the try catch block used for below imperative code
+29.  ### try catch 블록과 오류 경계의 차이점은?
+     Try catch 블록은 명령 코드와 함께 작동하지만, 오류 경계는 선언 코드가 화면에 렌더링할 때이다.
+     예를 들어, try catch 블록은 아래 명령 코드같이 사용된다.
      ```javascript
      try {
        showButton();
@@ -4191,13 +4191,13 @@
        // ...
      }
      ```
-     Whereas error boundaries wrap declarative code as below,
+     반면 오류 경계는 선언적 코드를 아래와 같이 감싼다.
      ```javascript
      <ErrorBoundary>
        <MyComponent />
      </ErrorBoundary>
      ```
-     So if an error occurs in a **componentDidUpdate** method caused by a **setState** somewhere deep in the tree, it will still correctly propagate to the closest error boundary.
+     따라서 tree의 어딘가 **setState**로 인해서 **componentDidUpdate** 메서드에서 오류가 발생하면, 가장 가까운 오류 경계로 전파된다.
 
 30.  ### What is the behavior of uncaught errors in react 16?
      In React 16, errors that were not caught by any error boundary will result in unmounting of the whole React component tree. The reason behind this decision is that it is worse to leave corrupted UI in place than to completely remove it. For example, it is worse for a payments app to display a wrong amount than to render nothing.

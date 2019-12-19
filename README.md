@@ -251,8 +251,8 @@
 |223| [setState를 사용하는데 있어 불필요한 업데이트를 방지하는 방법은?](#setState를-사용하는데-있어-불필요한-업데이트를-방지하는-방법은?)|
 |224| [React 16버전에서 Array, Strings와 Numbers를 렌더링하는 방법은?](#React-16버전에서-Array,-Strings와-Numbers를-렌더링하는-방법은)|
 |225| [React 클래스에서 클래스 필드 선언 구문을 사용하는 방법은?](#React-클래스에서-클래스-필드-선언-구문을-사용하는-방법은)|
-|226| [What are hooks?](#what-are-hooks)|
-|227| [What are the rules needs to follow for hooks?](#what-are-the-rules-needs-to-follow-for-hooks)|
+|226| [hooks이란?](#hooks이란)|
+|227| [hooks를 위해서 지켜야 하는 규칙은 무엇인가?](#hooks를-위해서-지켜야-하는-규칙은-무엇인가)|
 |228| [hooks가 프로젝트의 규칙을 준수하도록 하는 방법은?](#hooks가-프로젝트의-규칙을-준수하도록-하는-방법은)|
 |229| [What are the differences between Flux and Redux?](#what-are-the-differences-between-flux-and-redux)|
 |230| [What are the benefits of React Router V4?](#what-are-the-benefits-of-react-router-v4)|
@@ -4077,13 +4077,13 @@
        }
      }
      ```
-21.  ### What are hooks?
-     Hooks is a new feature that lets you use state and other React features without writing a class. Let's see an example of useState hook example,
+21.  ### hooks이란?
+     Hooks란 클래스를 작성하지 않고도 state와 다른 React 기능을 사용할 수 있는 새로운 기능이다. useState hook 예제를 살펴보자.
      ```jsx
      import { useState } from 'react';
 
      function Example() {
-       // Declare a new state variable, which we'll call "count"
+       // 새로운 state 변수를 선언하며, "count"라고 불린다.
        const [count, setCount] = useState(0);
 
        return (
@@ -4096,11 +4096,11 @@
        );
      }
      ```
-22.  ### What are the rules needs to follow for hooks?
+22.  ### hooks를 위해서 지켜야 하는 규칙은 무엇인가?
 
-     You need to follow two rules inorder to use hooks
-     1. Call Hooks only at the top level of your react functions. i.e, You shouldn’t call Hooks inside loops, conditions, or nested functions. This will ensure that Hooks are called in the same order each time a component renders and it preserves the state of Hooks between multiple useState and useEffect calls.
-     2. Call Hooks from React Functions only. i.e, You shouldn’t call Hooks from regular JavaScript functions.
+     hooks를 사용하기 위해서 2가지 규칙을 따라야한다.
+     1. react 함수의 최상위에서만 Hooks를 호출한다. 예로, 반복문, 조건문 또는 중첩 함수내에서 Hooks를 호출하면 안 된다. 이렇게 하면 컴포넌트가 렌더링 될 때마다 Hooks가 동일한 순서로 호출되고, 여러 useState 및 useEffect 호출간에 Hooks state가 보장된다.
+     2. Hooks는 React 함수에서만 호출한다. 예로, 일반적인 JavaScript 함수에서 Hooks를 호출하면 안 된다.
 
 23.  ### hooks가 프로젝트의 규칙을 준수하도록 하는 방법은?
      React 팀은 두가지 규칙을 적용하는 **eslint-plugin-react-hooks**라는 ESLint 플러그인을 출시했다. 아래의 명령을 사용하여 플러그인을 프로젝트에 추가할 수 있다.

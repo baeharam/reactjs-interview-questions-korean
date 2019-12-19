@@ -256,7 +256,7 @@
 |228| [hooks가 프로젝트의 규칙을 준수하도록 하는 방법은?](#hooks가-프로젝트의-규칙을-준수하도록-하는-방법은)|
 |229| [Flux와 Redux의 차이점은?](#Flux와-Redux의-차이점은)|
 |230| [React Router V4의 장점은?](#React-Router-V4의-장점은)|
-|231| [Can you describe about componentDidCatch lifecycle method signature?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)|
+|231| [componentDidCatch 생명주기 메서드에 대해서 설명할 수 있나?](#componentDidCatch-생명주기-메서드에-대해서-설명할-수-있나)|
 |232| [In which scenarios error boundaries do not catch errors?](#in-which-scenarios-error-boundaries-do-not-catch-errors)|
 |233| [Why do not you need error boundaries for event handlers?](#why-do-not-you-need-error-boundaries-for-event-handlers)|
 |234| [What is the difference between try cath block and error boundaries?](#what-is-the-difference-between-try-catch-block-and-error-boundaries)|
@@ -4139,12 +4139,13 @@
      1. React Router v4(version 4)에서 API는 컴포넌트와 관련된 것이다. 라우터는 특정 하위 라우터 컴포넌트(`<Route>`)를 감싸는 단인 컴포넌트(`<BrowserRouter>`)로 시각화할 수 있다.
      2. history를 수동으로 설정할 필요 없다. 라우터 모듈을 `<BrowserRouter>` 컴포넌트로 경로를 줄임으로써 history를 관리한다.
      3. 특정 라우터 모듈(웹, 코어 또는 기본)만 추가하여 응용프로그램 크기가 줄었다.
-26.  ### Can you describe about componentDidCatch lifecycle method signature?
-     The **componentDidCatch** lifecycle method is invoked after an error has been thrown by a descendant component. The method receives two parameters,
-     1. error: - The error object which was thrown
-     2. info: - An object with a componentStack key contains the information about which component threw the error.
+26.  ### componentDidCatch 생명주기 메서드에 대해서 설명할 수 있나?
+     **componentDidCatch** 생명주기 메서드는 하위 컴포넌트에서 오류가 발생하면 호출된다. 이 메서드는 2개의 매개변수를 받는다.
 
-     The method structure would be as follows
+     1. error: - 보내진 에러 객체
+     2. info: - 오류를 발생시킨 컴포넌트에 대한 정보를 포함한 componentStack key가 있는 객체
+
+     메서드의 구조는 아래와 같다.
      ```javascript
      componentDidCatch(error, info)
      ```

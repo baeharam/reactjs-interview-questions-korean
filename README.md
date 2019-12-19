@@ -251,7 +251,7 @@
 |223| [setState를 사용하는데 있어 불필요한 업데이트를 방지하는 방법은?](#setState를-사용하는데-있어-불필요한-업데이트를-방지하는-방법은?)|
 |224| [React 16버전에서 Array, Strings와 Numbers를 렌더링하는 방법은?](#React-16버전에서-Array,-Strings와-Numbers를-렌더링하는-방법은)|
 |225| [React 클래스에서 클래스 필드 선언 구문을 사용하는 방법은?](#React-클래스에서-클래스-필드-선언-구문을-사용하는-방법은)|
-|226| [What are hooks?](#what-are-hooks)|
+|226| [hooks이란?](#hooks이란)|
 |227| [What are the rules needs to follow for hooks?](#what-are-the-rules-needs-to-follow-for-hooks)|
 |228| [How to ensure hooks followed the rules in your project?](#how-to-ensure-hooks-followed-the-rules-in-your-project)|
 |229| [What are the differences between Flux and Redux?](#what-are-the-differences-between-flux-and-redux)|
@@ -4077,13 +4077,13 @@
        }
      }
      ```
-21.  ### What are hooks?
-     Hooks is a new feature that lets you use state and other React features without writing a class. Let's see an example of useState hook example,
+21.  ### hooks이란?
+     Hooks란 클래스를 작성하지 않고도 state와 다른 React 기능을 사용할 수 있는 새로운 기능이다. useState hook 예제를 살펴보자.
      ```jsx
      import { useState } from 'react';
 
      function Example() {
-       // Declare a new state variable, which we'll call "count"
+       // 새로운 state 변수를 선언하며, "count"라고 불린다.
        const [count, setCount] = useState(0);
 
        return (

@@ -253,7 +253,7 @@
 |225| [React 클래스에서 클래스 필드 선언 구문을 사용하는 방법은?](#React-클래스에서-클래스-필드-선언-구문을-사용하는-방법은)|
 |226| [hooks이란?](#hooks이란)|
 |227| [hooks를 위해서 지켜야 하는 규칙은 무엇인가?](#hooks를-위해서-지켜야-하는-규칙은-무엇인가)|
-|228| [How to ensure hooks followed the rules in your project?](#how-to-ensure-hooks-followed-the-rules-in-your-project)|
+|228| [hooks가 프로젝트의 규칙을 준수하도록 하는 방법은?](#hooks가-프로젝트의-규칙을-준수하도록-하는-방법은)|
 |229| [What are the differences between Flux and Redux?](#what-are-the-differences-between-flux-and-redux)|
 |230| [What are the benefits of React Router V4?](#what-are-the-benefits-of-react-router-v4)|
 |231| [Can you describe about componentDidCatch lifecycle method signature?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)|
@@ -4102,12 +4102,12 @@
      1. react 함수의 최상위에서만 Hooks를 호출한다. 예로, 반복문, 조건문 또는 중첩 함수내에서 Hooks를 호출하면 안 된다. 이렇게 하면 컴포넌트가 렌더링 될 때마다 Hooks가 동일한 순서로 호출되고, 여러 useState 및 useEffect 호출간에 Hooks state가 보장된다.
      2. Hooks는 React 함수에서만 호출한다. 예로, 일반적인 JavaScript 함수에서 Hooks를 호출하면 안 된다.
 
-23.  ### How to ensure hooks followed the rules in your project?
-     React team released an ESLint plugin called **eslint-plugin-react-hooks** that enforces these two rules. You can add this plugin to your project using the below command,
+23.  ### hooks가 프로젝트의 규칙을 준수하도록 하는 방법은?
+     React 팀은 두가지 규칙을 적용하는 **eslint-plugin-react-hooks**라는 ESLint 플러그인을 출시했다. 아래의 명령을 사용하여 플러그인을 프로젝트에 추가할 수 있다.
      ```javascript
      npm install eslint-plugin-react-hooks@next
      ```
-     And apply the below config in your ESLint config file,
+     ESLint config 파일에 아래 구성을 적용한다.
      ```javascript
      // Your ESLint configuration
      {
@@ -4121,7 +4121,7 @@
        }
      }
      ```
-     **Note:** This plugin is intended to use in Create React App by default.
+     **Note:** 이 플러그인은 Create React App에서 기본값으로 사용하도록 설계되어있다.
 
 24.  ### What are the differences between Flux and Redux?
      Below are the major differences between Flux and Redux

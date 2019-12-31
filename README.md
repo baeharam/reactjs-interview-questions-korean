@@ -259,7 +259,7 @@
 |231| [Can you describe about componentDidCatch lifecycle method signature?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)|
 |232| [In which scenarios error boundaries do not catch errors?](#in-which-scenarios-error-boundaries-do-not-catch-errors)|
 |233| [Why do not you need error boundaries for event handlers?](#why-do-not-you-need-error-boundaries-for-event-handlers)|
-|234| [try catch 블록과 오류 경계의 차이점은?](#try-catch-블록과-오류-경계의-차이점은)|
+|234| [try catch 블록과 에러 바운더리의 차이점은?](#try-catch-블록과-에러-바운더리의-차이점은)|
 |235| [What is the behavior of uncaught errors in react 16?](#what-is-the-behavior-of-uncaught-errors-in-react-16)|
 |236| [What is the proper placement for error boundaries?](#what-is-the-proper-placement-for-error-boundaries)|
 |237| [What is the benefit of component stack trace from error boundary?](#what-is-the-benefit-of-component-stack-trace-from-error-boundary)|
@@ -4181,7 +4181,7 @@
      }
      ```
      The above code is catching the error using vanilla javascript try/catch block instead of error boundaries.
-29.  ### try catch 블록과 오류 경계의 차이점은?
+29.  ### try catch 블록과 에러 바운더리의 차이점은?
      Try catch 블록은 명령 코드와 함께 작동하지만, 오류 경계는 선언 코드가 화면에 렌더링할 때이다.
      예를 들어, try catch 블록은 아래 명령 코드같이 사용된다.
      ```javascript

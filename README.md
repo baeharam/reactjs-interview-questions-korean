@@ -257,7 +257,7 @@
 |229| [Flux와 Redux의 차이점은?](#Flux와-Redux의-차이점은)|
 |230| [React Router V4의 장점은?](#React-Router-V4의-장점은)|
 |231| [Can you describe about componentDidCatch lifecycle method signature?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)|
-|232| [에러 바운더리(error boundary)에서는 어떤 경우 에러를 잡지 못할까?)|
+|232| [어떤 에러 바운더리(error boundary)에서 잡지 못할까?](#어떤-에러-바운더리(error-boundary)에서-잡지-못할까?)|
 |233| [Why do not you need error boundaries for event handlers?](#why-do-not-you-need-error-boundaries-for-event-handlers)|
 |234| [What is the difference between try cath block and error boundaries?](#what-is-the-difference-between-try-catch-block-and-error-boundaries)|
 |235| [What is the behavior of uncaught errors in react 16?](#what-is-the-behavior-of-uncaught-errors-in-react-16)|
@@ -4148,7 +4148,7 @@
      ```javascript
      componentDidCatch(error, info)
      ```
-27.  ### 어떤 시나리오에서 오류를 포착하지 못하나?
+27.  ### 어떤 에러 바운더리(error boundary)에서 잡지 못할까?
      아래의 경우는 오류 경계가 작동하지 않는 경우이다.
      1. Event handlers 안쪽일 경우
      2. **setTimeout이나 requestAnimationFrame** 콜백을 사용하는 비동기 코드

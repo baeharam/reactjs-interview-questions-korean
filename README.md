@@ -258,7 +258,7 @@
 |230| [React Router V4의 장점은?](#React-Router-V4의-장점은)|
 |231| [Can you describe about componentDidCatch lifecycle method signature?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)|
 |232| [In which scenarios error boundaries do not catch errors?](#in-which-scenarios-error-boundaries-do-not-catch-errors)|
-|233| [이벤트 핸들러에 오류 경계가 필요하지 않은 이유는?](#이벤트-핸들러에-오류-경계가-필요하지-않은-이유는)|
+|233| [이벤트 핸들러에 에러 바운더리가 필요하지 않은 이유는?](#이벤트-핸들러에-에러-바운더리가-필요하지-않은-이유는)|
 |234| [What is the difference between try cath block and error boundaries?](#what-is-the-difference-between-try-catch-block-and-error-boundaries)|
 |235| [What is the behavior of uncaught errors in react 16?](#what-is-the-behavior-of-uncaught-errors-in-react-16)|
 |236| [What is the proper placement for error boundaries?](#what-is-the-proper-placement-for-error-boundaries)|
@@ -4154,7 +4154,7 @@
      2. Asynchronous code using **setTimeout or requestAnimationFrame** callbacks
      3. During Server side rendering
      4. When errors thrown in the error boundary code itself
-28.  ### 이벤트 핸들러에 오류 경계가 필요하지 않은 이유는?
+28.  ### 이벤트 핸들러에 에러 바운더리가 필요하지 않은 이유는?
      오류 경계는 이벤트 핸들러내에서 오류를 잡아내지 못한다. 렌더링 메서드나 라이프 사이클 메서드와 다르게 이벤트 핸들러는 렌더링하는 동안 발생하거나 호출되지 않는다. 따라서 React는 이벤트 핸들러에서 이러한 종류의 오류를 복구하는 방법을 알고 있다.
      그래도 이벤트 핸들러내에서 오류를 잡아내야 한다면, 아래처럼 일반 Javascript try / catch 문을 사용하면 된다.
      ```javascript

@@ -257,7 +257,7 @@
 |229| [Flux와 Redux의 차이점은?](#Flux와-Redux의-차이점은)|
 |230| [React Router V4의 장점은?](#React-Router-V4의-장점은)|
 |231| [Can you describe about componentDidCatch lifecycle method signature?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)|
-|232| [어떤 시나리오에서 오류를 포착하지 못하나?](#어떤 시나리오에서 오류를 포착하지 못하나)|
+|232| [에러 바운더리(error boundary)에서는 어떤 경우 에러를 잡지 못할까?)|
 |233| [Why do not you need error boundaries for event handlers?](#why-do-not-you-need-error-boundaries-for-event-handlers)|
 |234| [What is the difference between try cath block and error boundaries?](#what-is-the-difference-between-try-catch-block-and-error-boundaries)|
 |235| [What is the behavior of uncaught errors in react 16?](#what-is-the-behavior-of-uncaught-errors-in-react-16)|

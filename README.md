@@ -4182,7 +4182,7 @@
      ```
      The above code is catching the error using vanilla javascript try/catch block instead of error boundaries.
 29.  ### try catch 블록과 에러 바운더리의 차이점은?
-     Try catch 블록은 명령 코드와 함께 작동하지만, 오류 경계는 선언 코드가 화면에 렌더링할 때이다.
+     Try catch 블록은 명령 코드와 함께 작동하지만, 에러 바운더리는 선언 코드가 화면에 렌더링할 때이다.
      예를 들어, try catch 블록은 아래 명령 코드같이 사용된다.
      ```javascript
      try {

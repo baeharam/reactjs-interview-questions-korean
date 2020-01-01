@@ -4197,7 +4197,7 @@
        <MyComponent />
      </ErrorBoundary>
      ```
-     따라서 tree의 어딘가 **setState**로 인해서 **componentDidUpdate** 메서드에서 오류가 발생하면, 가장 가까운 오류 경계로 전파된다.
+     따라서 tree의 어딘가 **setState**로 인해서 **componentDidUpdate** 메서드에서 오류가 발생하면, 가장 가까운 에러 바운더리로 전파된다.
 
 30.  ### What is the behavior of uncaught errors in react 16?
      In React 16, errors that were not caught by any error boundary will result in unmounting of the whole React component tree. The reason behind this decision is that it is worse to leave corrupted UI in place than to completely remove it. For example, it is worse for a payments app to display a wrong amount than to render nothing.

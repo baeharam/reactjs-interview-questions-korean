@@ -257,7 +257,7 @@
 |229| [Flux와 Redux의 차이점은?](#Flux와-Redux의-차이점은)|
 |230| [React Router V4의 장점은?](#React-Router-V4의-장점은)|
 |231| [componentDidCatch 생명주기 메서드에 대해서 설명할 수 있나?](#componentDidCatch-생명주기-메서드에-대해서-설명할-수-있나)|
-|232| [In which scenarios error boundaries do not catch errors?](#in-which-scenarios-error-boundaries-do-not-catch-errors)|
+|232| [어떤 에러 바운더리(error boundary)에서 잡지 못할까?](#어떤-에러-바운더리(error-boundary)에서-잡지-못할까?)|
 |233| [Why do not you need error boundaries for event handlers?](#why-do-not-you-need-error-boundaries-for-event-handlers)|
 |234| [What is the difference between try cath block and error boundaries?](#what-is-the-difference-between-try-catch-block-and-error-boundaries)|
 |235| [What is the behavior of uncaught errors in react 16?](#what-is-the-behavior-of-uncaught-errors-in-react-16)|
@@ -4149,12 +4149,12 @@
      ```javascript
      componentDidCatch(error, info)
      ```
-27.  ### In which scenarios error boundaries do not catch errors?
-     Below are the cases in which error boundaries doesn't work
-     1. Inside Event handlers
-     2. Asynchronous code using **setTimeout or requestAnimationFrame** callbacks
-     3. During Server side rendering
-     4. When errors thrown in the error boundary code itself
+27.  ### 어떤 에러 바운더리(error boundary)에서 잡지 못할까?
+     아래의 경우는 오류 경계가 작동하지 않는 경우이다.
+     1. Event handlers 안쪽일 경우
+     2. **setTimeout이나 requestAnimationFrame** 콜백을 사용하는 비동기 코드
+     3. Server side rendering을 할 경우
+     4. 오류 경계 코드 자체에서 오류가 발생한 경우
 28.  ### Why do not you need error boundaries for event handlers?
      Error boundaries do not catch errors inside event handlers. Event handlers don't happened or invoked during rendering time unlike render method or lifecycle methods. So React knows how to recover these kind of errors in event handlers.
      If still you need to catch an error inside event handler, use the regular JavaScript try / catch statement as below

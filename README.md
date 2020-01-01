@@ -4200,7 +4200,7 @@
      So if an error occurs in a **componentDidUpdate** method caused by a **setState** somewhere deep in the tree, it will still correctly propagate to the closest error boundary.
 
 30.  ### react 16에서 잡히지 않는 오류의 동작은?
-     React 16에서 오류 경계에 잡히지 않는 오류는 React 컴포넌트 tree를 마운트 해제한다. 이렇게 되는 이유는 손상된 UI를 완전히 제거하는 것보다 손상된 UI를 그대로 두는 것이 더 안 좋기 때문이다. 예를 들어, 결제 앱이 잘못된 금액을 표기하는 것보다 렌더링하지 않는 것이 낫다.
+     React 16에서 에러 바운더리에 잡히지 않는 오류는 React 컴포넌트 tree를 마운트 해제한다. 이렇게 되는 이유는 손상된 UI를 완전히 제거하는 것보다 손상된 UI를 그대로 두는 것이 더 안 좋기 때문이다. 예를 들어, 결제 앱이 잘못된 금액을 표기하는 것보다 렌더링하지 않는 것이 낫다.
 31.  ### What is the proper placement for error boundaries?
      The granularity of error boundaries usage is up to the developer based on project needs. You can follow either of these approaches,
      1. You can wrap top-level route components to display a generic error message for the entire application.

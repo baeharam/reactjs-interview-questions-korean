@@ -4155,7 +4155,7 @@
      3. During Server side rendering
      4. When errors thrown in the error boundary code itself
 28.  ### 이벤트 핸들러에 에러 바운더리가 필요하지 않은 이유는?
-     오류 경계는 이벤트 핸들러내에서 오류를 잡아내지 못한다. 렌더링 메서드나 라이프 사이클 메서드와 다르게 이벤트 핸들러는 렌더링하는 동안 발생하거나 호출되지 않는다. 따라서 React는 이벤트 핸들러에서 이러한 종류의 오류를 복구하는 방법을 알고 있다.
+     에러 바운더리는 이벤트 핸들러내에서 오류를 잡아내지 못한다. 렌더링 메서드나 라이프 사이클 메서드와 다르게 이벤트 핸들러는 렌더링하는 동안 발생하거나 호출되지 않는다. 따라서 React는 이벤트 핸들러에서 이러한 종류의 오류를 복구하는 방법을 알고 있다.
      그래도 이벤트 핸들러내에서 오류를 잡아내야 한다면, 아래처럼 일반 Javascript try / catch 문을 사용하면 된다.
      ```javascript
      class MyComponent extends React.Component {
@@ -4180,7 +4180,7 @@
        }
      }
      ```
-     위의 코드는 오류 경계 대신 바닐라 자바스크립트 try / catch 블록을 사용해서 오류를 잡아내고 있다.
+     위의 코드는 에러 바운더리 대신 바닐라 자바스크립트 try / catch 블록을 사용해서 오류를 잡아내고 있다.
 29.  ### What is the difference between try catch block and error boundaries?
      Try catch block works with imperative code whereas error boundaries are meant for declarative code to render on the screen.
      For example, the try catch block used for below imperative code

@@ -260,7 +260,7 @@
 |232| [어떤 에러 바운더리(error boundary)에서 잡지 못할까?](#어떤-에러-바운더리(error-boundary)에서-잡지-못할까?)|
 |233| [이벤트 핸들러에 에러 바운더리가 필요하지 않은 이유는?](#이벤트-핸들러에-에러-바운더리가-필요하지-않은-이유는)|
 |234| [try catch 블록과 에러 바운더리의 차이점은?](#try-catch-블록과-에러-바운더리의-차이점은)|
-|235| [What is the behavior of uncaught errors in react 16?](#what-is-the-behavior-of-uncaught-errors-in-react-16)|
+|235| [react 16에서 잡히지 않는 오류의 동작은?](#react-16에서-잡히지-않는-오류의-동작은)|
 |236| [What is the proper placement for error boundaries?](#what-is-the-proper-placement-for-error-boundaries)|
 |237| [What is the benefit of component stack trace from error boundary?](#what-is-the-benefit-of-component-stack-trace-from-error-boundary)|
 |238| [What is the required method to be defined for a class component?](#what-is-the-required-method-to-be-defined-for-a-class-component)|
@@ -4202,8 +4202,8 @@
      ```
      따라서 tree의 어딘가 **setState**로 인해서 **componentDidUpdate** 메서드에서 오류가 발생하면, 가장 가까운 에러 바운더리로 전파된다.
 
-30.  ### What is the behavior of uncaught errors in react 16?
-     In React 16, errors that were not caught by any error boundary will result in unmounting of the whole React component tree. The reason behind this decision is that it is worse to leave corrupted UI in place than to completely remove it. For example, it is worse for a payments app to display a wrong amount than to render nothing.
+30.  ### react 16에서 잡히지 않는 오류의 동작은?
+     React 16에서 에러 바운더리에 잡히지 않는 오류는 React 컴포넌트 tree를 마운트 해제한다. 이렇게 되는 이유는 손상된 UI를 완전히 제거하는 것보다 손상된 UI를 그대로 두는 것이 더 안 좋기 때문이다. 예를 들어, 결제 앱이 잘못된 금액을 표기하는 것보다 렌더링하지 않는 것이 낫다.
 31.  ### What is the proper placement for error boundaries?
      The granularity of error boundaries usage is up to the developer based on project needs. You can follow either of these approaches,
      1. You can wrap top-level route components to display a generic error message for the entire application.

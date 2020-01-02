@@ -256,8 +256,8 @@
 |228| [hooks가 프로젝트의 규칙을 준수하도록 하는 방법은?](#hooks가-프로젝트의-규칙을-준수하도록-하는-방법은)|
 |229| [Flux와 Redux의 차이점은?](#Flux와-Redux의-차이점은)|
 |230| [React Router V4의 장점은?](#React-Router-V4의-장점은)|
-|231| [Can you describe about componentDidCatch lifecycle method signature?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)|
-|232| [In which scenarios error boundaries do not catch errors?](#in-which-scenarios-error-boundaries-do-not-catch-errors)|
+|231| [componentDidCatch 생명주기 메서드에 대해서 설명할 수 있나?](#componentDidCatch-생명주기-메서드에-대해서-설명할-수-있나)|
+|232| [어떤 에러 바운더리(error boundary)에서 잡지 못할까?](#어떤-에러-바운더리(error-boundary)에서-잡지-못할까?)|
 |233| [이벤트 핸들러에 에러 바운더리가 필요하지 않은 이유는?](#이벤트-핸들러에-에러-바운더리가-필요하지-않은-이유는)|
 |234| [What is the difference between try cath block and error boundaries?](#what-is-the-difference-between-try-catch-block-and-error-boundaries)|
 |235| [What is the behavior of uncaught errors in react 16?](#what-is-the-behavior-of-uncaught-errors-in-react-16)|
@@ -4139,24 +4139,26 @@
      1. React Router v4(version 4)에서 API는 컴포넌트와 관련된 것이다. 라우터는 특정 하위 라우터 컴포넌트(`<Route>`)를 감싸는 단인 컴포넌트(`<BrowserRouter>`)로 시각화할 수 있다.
      2. history를 수동으로 설정할 필요 없다. 라우터 모듈을 `<BrowserRouter>` 컴포넌트로 경로를 줄임으로써 history를 관리한다.
      3. 특정 라우터 모듈(웹, 코어 또는 기본)만 추가하여 응용프로그램 크기가 줄었다.
-26.  ### Can you describe about componentDidCatch lifecycle method signature?
-     The **componentDidCatch** lifecycle method is invoked after an error has been thrown by a descendant component. The method receives two parameters,
-     1. error: - The error object which was thrown
-     2. info: - An object with a componentStack key contains the information about which component threw the error.
+26.  ### componentDidCatch 생명주기 메서드에 대해서 설명할 수 있나?
+     **componentDidCatch** 생명주기 메서드는 하위 컴포넌트에서 오류가 발생하면 호출된다. 이 메서드는 2개의 매개변수를 받는다.
 
-     The method structure would be as follows
+     1. error: - 보내진 에러 객체
+     2. info: - 오류를 발생시킨 컴포넌트에 대한 정보를 포함한 componentStack key가 있는 객체
+
+     메서드의 구조는 아래와 같다.
      ```javascript
      componentDidCatch(error, info)
      ```
-27.  ### In which scenarios error boundaries do not catch errors?
-     Below are the cases in which error boundaries doesn't work
-     1. Inside Event handlers
-     2. Asynchronous code using **setTimeout or requestAnimationFrame** callbacks
-     3. During Server side rendering
-     4. When errors thrown in the error boundary code itself
+27.  ### 어떤 에러 바운더리(error boundary)에서 잡지 못할까?
+     아래의 경우는 오류 경계가 작동하지 않는 경우이다.
+     1. Event handlers 안쪽일 경우
+     2. **setTimeout이나 requestAnimationFrame** 콜백을 사용하는 비동기 코드
+     3. Server side rendering을 할 경우
+     4. 오류 경계 코드 자체에서 오류가 발생한 경우
 28.  ### 이벤트 핸들러에 에러 바운더리가 필요하지 않은 이유는?
      에러 바운더리는 이벤트 핸들러내에서 오류를 잡아내지 못한다. 렌더링 메서드나 라이프 사이클 메서드와 다르게 이벤트 핸들러는 렌더링하는 동안 발생하거나 호출되지 않는다. 따라서 React는 이벤트 핸들러에서 이러한 종류의 오류를 복구하는 방법을 알고 있다.
      그래도 이벤트 핸들러내에서 오류를 잡아내야 한다면, 아래처럼 일반 Javascript try / catch 문을 사용하면 된다.
+     
      ```javascript
      class MyComponent extends React.Component {
        constructor(props) {
